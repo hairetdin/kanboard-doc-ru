@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Authentication Plugin &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="authentication-plugin">
+<h1>Authentication Plugin<a class="headerlink" href="#authentication-plugin" title="Ссылка на этот заголовок">¶</a></h1>
+<p>New authentication backends can be written with very few lines of code.</p>
+<div class="section" id="provider-registration">
+<h2>Provider Registration<a class="headerlink" href="#provider-registration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>In the method <code class="docutils literal"><span class="pre">initialize()</span></code> of your plugin, call the method
+<code class="docutils literal"><span class="pre">register()</span></code> of the class <code class="docutils literal"><span class="pre">AuthenticationManager</span></code>:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>public function initialize()
+{
+    $this-&gt;authenticationManager-&gt;register(new ReverseProxyLdapAuth($this-&gt;container));
+}
+</pre></div>
+</div>
+<p>The object provided to the method <code class="docutils literal"><span class="pre">register()</span></code> must implement one of
+the pre-defined authentication interfaces.</p>
+<p>Those interfaces are defined in the namepsace
+<code class="docutils literal"><span class="pre">Kanboard\Core\Security</span></code>:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\Security\PreAuthenticationProviderInterface</span></code></li>
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\Security\PostAuthenticationProviderInterface</span></code></li>
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\Security\PasswordAuthenticationProviderInterface</span></code></li>
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\Security\OAuthAuthenticationProviderInterface</span></code></li>
+</ul>
+<p>The only requirement is to implement the interfaces, you class can be
+written the way you want and located anywhere on the disk.</p>
+</div>
+<div class="section" id="user-provider">
+<h2>User Provider<a class="headerlink" href="#user-provider" title="Ссылка на этот заголовок">¶</a></h2>
+<p>When the authentication is successful, your driver must return an object
+that represents the user. This object must implement the interface
+<code class="docutils literal"><span class="pre">Kanboard\Core\User\UserProviderInterface</span></code>.</p>
+</div>
+<div class="section" id="example-of-authentication-plugins">
+<h2>Example of authentication plugins<a class="headerlink" href="#example-of-authentication-plugins" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/fguillot/kanboard/tree/master/app/Auth">Authentication providers included in
+Kanboard</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-reverse-proxy-ldap">Reverse-Proxy Authentication with LDAP
+support</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-sms-2fa">SMS Two-Factor
+Authentication</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Authentication Plugin</a><ul>
+<li><a class="reference internal" href="#provider-registration">Provider Registration</a></li>
+<li><a class="reference internal" href="#user-provider">User Provider</a></li>
+<li><a class="reference internal" href="#example-of-authentication-plugins">Example of authentication plugins</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-authentication.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-authentication.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

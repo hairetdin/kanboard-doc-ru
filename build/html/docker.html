@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>How to run Kanboard with Docker? &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="how-to-run-kanboard-with-docker">
+<h1>How to run Kanboard with Docker?<a class="headerlink" href="#how-to-run-kanboard-with-docker" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Kanboard can run easily with <a class="reference external" href="https://www.docker.com">Docker</a>.</p>
+<p>The image size is approximately <strong>50MB</strong> and contains:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://alpinelinux.org/">Alpine Linux</a></li>
+<li>The <a class="reference external" href="http://skarnet.org/software/s6/">process manager S6</a></li>
+<li>Nginx</li>
+<li>PHP-FPM</li>
+</ul>
+<p>The Kanboard cronjob is also running everyday at midnight. URL rewriting
+is enabled in the included config file.</p>
+<p>When the container is running, the memory utilization is around
+<strong>20MB</strong>.</p>
+<div class="section" id="use-the-stable-version">
+<h2>Use the stable version<a class="headerlink" href="#use-the-stable-version" title="Ссылка на этот заголовок">¶</a></h2>
+<p>To fetch the latest stable release of Kanboard use the tag <strong>stable</strong>:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>docker pull kanboard/kanboard
+docker run -d --name kanboard -p 80:80 -t kanboard/kanboard:stable
+</pre></div>
+</div>
+</div>
+<div class="section" id="use-the-development-version-automated-build">
+<h2>Use the development version (automated build)<a class="headerlink" href="#use-the-development-version-automated-build" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Every new commit on the repository trigger a new build on the <a class="reference external" href="https://registry.hub.docker.com/u/kanboard/kanboard/">Docker
+Hub</a>.</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>docker pull kanboard/kanboard
+docker run -d --name kanboard -p 80:80 -t kanboard/kanboard:latest
+</pre></div>
+</div>
+<p>The tag <strong>latest</strong> is the <strong>development version</strong> of Kanboard, use at
+your own risk.</p>
+</div>
+<div class="section" id="build-your-own-docker-image">
+<h2>Build your own Docker image<a class="headerlink" href="#build-your-own-docker-image" title="Ссылка на этот заголовок">¶</a></h2>
+<p>There is a <code class="docutils literal"><span class="pre">Dockerfile</span></code> in the Kanboard repository to build your own
+image. Clone the Kanboard repository and run the following command:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>docker build -t youruser/kanboard:master .
+</pre></div>
+</div>
+<p>or</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>make docker-image
+</pre></div>
+</div>
+<p>To run your container in background on the port 80:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>docker run -d --name kanboard -p 80:80 -t youruser/kanboard:master
+</pre></div>
+</div>
+</div>
+<div class="section" id="volumes">
+<h2>Volumes<a class="headerlink" href="#volumes" title="Ссылка на этот заголовок">¶</a></h2>
+<p>You can attach 2 volumes to your container:</p>
+<ul class="simple">
+<li>Data folder: <code class="docutils literal"><span class="pre">/var/www/kanboard/data</span></code></li>
+<li>Plugins folder: <code class="docutils literal"><span class="pre">/var/www/kanboard/plugins</span></code></li>
+</ul>
+<p>Use the flag <code class="docutils literal"><span class="pre">-v</span></code> to mount a volume on the host machine like described
+in <a class="reference external" href="https://docs.docker.com/engine/userguide/containers/dockervolumes/">official Docker
+documentation</a>.</p>
+</div>
+<div class="section" id="upgrade-your-container">
+<h2>Upgrade your container<a class="headerlink" href="#upgrade-your-container" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Pull the new image</li>
+<li>Remove the old container</li>
+<li>Restart a new container with the same volumes</li>
+</ul>
+</div>
+<div class="section" id="environment-variables">
+<h2>Environment variables<a class="headerlink" href="#environment-variables" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The list of environment variables is available on <a class="reference external" href="env.markdown">this
+page</a>.</p>
+</div>
+<div class="section" id="config-files">
+<h2>Config files<a class="headerlink" href="#config-files" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>The container already include a custom config file located at
+<code class="docutils literal"><span class="pre">/var/www/kanboard/config.php</span></code>.</li>
+<li>You can store your own config file on the data volume:
+<code class="docutils literal"><span class="pre">/var/www/kanboard/data/config.php</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://registry.hub.docker.com/u/kanboard/kanboard/">Official Kanboard
+images</a></li>
+<li><a class="reference external" href="https://docs.docker.com/">Docker documentation</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/docker">Dockerfile stable version</a></li>
+<li><a class="reference external" href="https://github.com/fguillot/kanboard/blob/master/Dockerfile">Dockerfile dev
+version</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How to run Kanboard with Docker?</a><ul>
+<li><a class="reference internal" href="#use-the-stable-version">Use the stable version</a></li>
+<li><a class="reference internal" href="#use-the-development-version-automated-build">Use the development version (automated build)</a></li>
+<li><a class="reference internal" href="#build-your-own-docker-image">Build your own Docker image</a></li>
+<li><a class="reference internal" href="#volumes">Volumes</a></li>
+<li><a class="reference internal" href="#upgrade-your-container">Upgrade your container</a></li>
+<li><a class="reference internal" href="#environment-variables">Environment variables</a></li>
+<li><a class="reference internal" href="#config-files">Config files</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/docker.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/docker.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

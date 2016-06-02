@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/project-views.rst:2
+msgid "Board, Calendar and List Views"
+msgstr ""
+
+#: ../../source/project-views.rst:4
+msgid ""
+"For each project, tasks can be visualized with several views: **Board, "
+"Calendar, List and Gantt**. Each view shows the result of the filter box "
+"at the top. The search engine uses the `advanced syntax "
+"<search.markdown>`__."
+msgstr ""
+
+#: ../../source/project-views.rst:10
+msgid "Board View"
+msgstr ""
+
+#: ../../source/project-views.rst:15
+msgid "Board view"
+msgstr ""
+
+#: ../../source/project-views.rst:17
+msgid "With this view you can drag and drop tasks between columns easily."
+msgstr ""
+
+#: ../../source/project-views.rst:18
+msgid ""
+"You can also use the keyboard shortcut **\"v b\"** to switch to the board"
+" view."
+msgstr ""
+
+#: ../../source/project-views.rst:20
+msgid "Tasks with a shadow are recently modified."
+msgstr ""
+
+#: ../../source/project-views.rst:25
+msgid "Board Task Limit"
+msgstr ""
+
+#: ../../source/project-views.rst:26
+msgid ""
+"When the task limit is reached for a column, the background becomes red. "
+"That means there are too many tasks in progress at the same time."
+msgstr ""
+
+#: ../../source/project-views.rst:29
+msgid "`Learn more about board configuration <board-configuration.markdown>`__"
+msgstr ""
+
+#: ../../source/project-views.rst:32
+msgid "Calendar View"
+msgstr ""
+
+#: ../../source/project-views.rst:37
+msgid "Calendar view"
+msgstr ""
+
+#: ../../source/project-views.rst:39
+msgid "With this view you can visualize tasks with a due date."
+msgstr ""
+
+#: ../../source/project-views.rst:40
+msgid "Depending of the settings, you can also see tasks in progress."
+msgstr ""
+
+#: ../../source/project-views.rst:41
+msgid ""
+"You can also use the keyboard shortcut **\"v c\"** to switch to the "
+"calendar view."
+msgstr ""
+
+#: ../../source/project-views.rst:43
+msgid ""
+"`Learn more about calendar configuration <calendar-"
+"configuration.markdown>`__"
+msgstr ""
+
+#: ../../source/project-views.rst:47
+msgid "List View"
+msgstr ""
+
+#: ../../source/project-views.rst:52
+msgid "List view"
+msgstr ""
+
+#: ../../source/project-views.rst:54
+msgid "With this view all results of your search are displayed in a table."
+msgstr ""
+
+#: ../../source/project-views.rst:55
+msgid ""
+"You can also use the keyboard shortcut **\"v l\"** to switch to the list "
+"view."
+msgstr ""
+
+#: ../../source/project-views.rst:59
+msgid "Gantt View"
+msgstr ""
+
+#: ../../source/project-views.rst:64
+msgid "Gantt view"
+msgstr ""
+
+#: ../../source/project-views.rst:66
+msgid "The Gantt view displays tasks on a horizontal timeline"
+msgstr ""
+
+#: ../../source/project-views.rst:67
+msgid "The start date and the due date are used to display the chart"
+msgstr ""
+
+#: ../../source/project-views.rst:68
+msgid "For quick access, use the keyboard shortcut: **v g**"
+msgstr ""
+
+#: ../../source/project-views.rst:71
+msgid "Project Overview"
+msgstr ""
+
+#: ../../source/project-views.rst:76
+msgid "Project overview"
+msgstr ""
+
+#: ../../source/project-views.rst:78
+msgid "View the description of the project"
+msgstr ""
+
+#: ../../source/project-views.rst:79
+msgid "Attach and upload documents to the project"
+msgstr ""
+
+#: ../../source/project-views.rst:80
+msgid "View list of project members"
+msgstr ""
+
+#: ../../source/project-views.rst:81
+msgid "View the last activities of the project"
+msgstr ""
+
+#~ msgid ""
+#~ "For each project, tasks can be "
+#~ "visualized with several views: Board, "
+#~ "Calendar, List and Gantt. Each view "
+#~ "shows the result of the filter box"
+#~ " at the top. The search engine "
+#~ "uses the advanced syntax."
+#~ msgstr ""
+
+#~ msgid "Learn more about board configuration"
+#~ msgstr ""
+

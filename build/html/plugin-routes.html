@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Custom Routes &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="custom-routes">
+<h1>Custom Routes<a class="headerlink" href="#custom-routes" title="Ссылка на этот заголовок">¶</a></h1>
+<p>When URL rewriting is enabled, you can define custom routes from your
+plugins.</p>
+<div class="section" id="define-new-routes">
+<h2>Define new routes<a class="headerlink" href="#define-new-routes" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Routes are handled by the class <code class="docutils literal"><span class="pre">Kanboard\Core\Http\Route</span></code>.</p>
+<p>New routes can be added by using the method
+<code class="docutils literal"><span class="pre">addRoute($path,</span> <span class="pre">$controller,</span> <span class="pre">$action,</span> <span class="pre">$plugin)</span></code>, here an example:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;route-&gt;addRoute(&#39;/my/custom/route&#39;, &#39;myController&#39;, &#39;myAction&#39;, &#39;myplugin&#39;);
+</pre></div>
+</div>
+<p>When the end-user go to the URL <code class="docutils literal"><span class="pre">/my/custom/route</span></code>, the method
+<code class="docutils literal"><span class="pre">Kanboard\Plugin\Myplugin\Controller\MyController::myAction()</span></code> will be
+executed.</p>
+<p>The first character of the controller and the plugin name will converted
+in uppercase with the function <code class="docutils literal"><span class="pre">ucfirst()</span></code>.</p>
+<p>You can also define routes with variables:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;route-&gt;addRoute(&#39;/my/route/:my_variable&#39;, &#39;myController&#39;, &#39;myAction&#39;, &#39;myplugin&#39;);
+</pre></div>
+</div>
+<p>The colon prefix <code class="docutils literal"><span class="pre">:</span></code>, define a variable. For example <code class="docutils literal"><span class="pre">:my_variable</span></code>
+declare a new variable named <code class="docutils literal"><span class="pre">my_variable</span></code>.</p>
+<p>To fetch the value of the variable you can use the method
+<code class="docutils literal"><span class="pre">getStringParam()</span></code> or <code class="docutils literal"><span class="pre">getIntegerParam()</span></code> from the class
+<code class="docutils literal"><span class="pre">Kanboard\Core\Http\Request</span></code>:</p>
+<p>If we have the URL <code class="docutils literal"><span class="pre">/my/route/foobar</span></code>, the value of <code class="docutils literal"><span class="pre">my_variable</span></code> is
+<code class="docutils literal"><span class="pre">foobar</span></code>:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;request-&gt;getStringParam(&#39;my_variable&#39;); // Return foobar
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-links-based-on-the-routing-table">
+<h2>Generate links based on the routing table<a class="headerlink" href="#generate-links-based-on-the-routing-table" title="Ссылка на этот заголовок">¶</a></h2>
+<p>From templates, you have to use the helper <code class="docutils literal"><span class="pre">Kanboard\Helper\Url</span></code>.</p>
+<div class="section" id="generate-a-html-link">
+<h3>Generate a HTML link<a class="headerlink" href="#generate-a-html-link" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?= $this-&gt;url-&gt;link(&#39;My link&#39;, &#39;mycontroller&#39;, &#39;myaction&#39;, array(&#39;plugin&#39; =&gt; &#39;myplugin&#39;)) ?&gt;
+</pre></div>
+</div>
+<p>Will generate this HTML:</p>
+<div class="code html highlight-python"><div class="highlight"><pre><span></span>&lt;a href=&quot;/my/custom/route&quot;&gt;My link&lt;/a&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-only-the-attribute-href">
+<h3>Generate only the attribute <code class="docutils literal"><span class="pre">href</span></code>:<a class="headerlink" href="#generate-only-the-attribute-href" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?= $this-&gt;url-&gt;href(&#39;My link&#39;, &#39;mycontroller&#39;, &#39;myaction&#39;, array(&#39;plugin&#39; =&gt; &#39;myplugin&#39;)) ?&gt;
+</pre></div>
+</div>
+<p>HTML output:</p>
+<div class="code html highlight-python"><div class="highlight"><pre><span></span>/my/custom/route
+</pre></div>
+</div>
+<p>HTML output when URL rewriting is not enabled:</p>
+<div class="code html highlight-python"><div class="highlight"><pre><span></span>?controller=mycontroller&amp;amp;action=myaction&amp;amp;plugin=myplugin
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-redirect-link">
+<h3>Generate redirect link:<a class="headerlink" href="#generate-redirect-link" title="Ссылка на этот заголовок">¶</a></h3>
+<p>From a controller, if you need to perform a redirection:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;url-&gt;to(&#39;mycontroller&#39;, &#39;myaction&#39;, array(&#39;plugin&#39; =&gt; &#39;myplugin&#39;));
+</pre></div>
+</div>
+<p>Generate:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>?controller=mycontroller&amp;action=myaction&amp;plugin=myplugin
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Custom Routes</a><ul>
+<li><a class="reference internal" href="#define-new-routes">Define new routes</a></li>
+<li><a class="reference internal" href="#generate-links-based-on-the-routing-table">Generate links based on the routing table</a><ul>
+<li><a class="reference internal" href="#generate-a-html-link">Generate a HTML link</a></li>
+<li><a class="reference internal" href="#generate-only-the-attribute-href">Generate only the attribute <code class="docutils literal"><span class="pre">href</span></code>:</a></li>
+<li><a class="reference internal" href="#generate-redirect-link">Generate redirect link:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-routes.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-routes.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

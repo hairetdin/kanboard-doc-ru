@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API Automatic Actions Procedures &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-automatic-actions-procedures">
+<h1>API Automatic Actions Procedures<a class="headerlink" href="#api-automatic-actions-procedures" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="getavailableactions">
+<h2>getAvailableActions<a class="headerlink" href="#getavailableactions" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get list of available automatic actions</strong></li>
+<li>Parameters: none</li>
+<li>Result on success: <strong>list of actions</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;getAvailableActions&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1217735483</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1217735483</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskLogMoveAnotherColumn&quot;</span><span class="p">:</span> <span class="s2">&quot;Add a comment logging moving the task between columns&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignColorUser&quot;</span><span class="p">:</span> <span class="s2">&quot;Assign a color to a specific user&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignColorColumn&quot;</span><span class="p">:</span> <span class="s2">&quot;Assign a color when the task is moved to a specific column&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignCategoryColor&quot;</span><span class="p">:</span> <span class="s2">&quot;Assign automatically a category based on a color&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignColorCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;Assign automatically a color based on a category&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignSpecificUser&quot;</span><span class="p">:</span> <span class="s2">&quot;Assign the task to a specific user&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignCurrentUser&quot;</span><span class="p">:</span> <span class="s2">&quot;Assign the task to the person who does the action&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskUpdateStartDate&quot;</span><span class="p">:</span> <span class="s2">&quot;Automatically update the start date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignUser&quot;</span><span class="p">:</span> <span class="s2">&quot;Change the assignee based on an external username&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskAssignCategoryLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;Change the category based on an external label&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskClose&quot;</span><span class="p">:</span> <span class="s2">&quot;Close a task&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\CommentCreation&quot;</span><span class="p">:</span> <span class="s2">&quot;Create a comment from an external provider&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskCreation&quot;</span><span class="p">:</span> <span class="s2">&quot;Create a task from an external provider&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskDuplicateAnotherProject&quot;</span><span class="p">:</span> <span class="s2">&quot;Duplicate the task to another project&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskMoveColumnAssigned&quot;</span><span class="p">:</span> <span class="s2">&quot;Move the task to another column when assigned to a user&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskMoveColumnUnAssigned&quot;</span><span class="p">:</span> <span class="s2">&quot;Move the task to another column when assignee is cleared&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskMoveAnotherProject&quot;</span><span class="p">:</span> <span class="s2">&quot;Move the task to another project&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskOpen&quot;</span><span class="p">:</span> <span class="s2">&quot;Open a task&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getavailableactionevents">
+<h2>getAvailableActionEvents<a class="headerlink" href="#getavailableactionevents" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get list of available events for actions</strong></li>
+<li>Parameters: none</li>
+<li>Result on success: <strong>list of events</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;getAvailableActionEvents&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2116665643</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2116665643</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;bitbucket.webhook.commit&quot;</span><span class="p">:</span> <span class="s2">&quot;Bitbucket commit received&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.close&quot;</span><span class="p">:</span> <span class="s2">&quot;Closing a task&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.commit&quot;</span><span class="p">:</span> <span class="s2">&quot;Github commit received&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.issue.assignee&quot;</span><span class="p">:</span> <span class="s2">&quot;Github issue assignee change&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.issue.closed&quot;</span><span class="p">:</span> <span class="s2">&quot;Github issue closed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.issue.commented&quot;</span><span class="p">:</span> <span class="s2">&quot;Github issue comment created&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.issue.label&quot;</span><span class="p">:</span> <span class="s2">&quot;Github issue label change&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.issue.opened&quot;</span><span class="p">:</span> <span class="s2">&quot;Github issue opened&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.issue.reopened&quot;</span><span class="p">:</span> <span class="s2">&quot;Github issue reopened&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gitlab.webhook.commit&quot;</span><span class="p">:</span> <span class="s2">&quot;Gitlab commit received&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gitlab.webhook.issue.closed&quot;</span><span class="p">:</span> <span class="s2">&quot;Gitlab issue closed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gitlab.webhook.issue.opened&quot;</span><span class="p">:</span> <span class="s2">&quot;Gitlab issue opened&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.move.column&quot;</span><span class="p">:</span> <span class="s2">&quot;Move a task to another column&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.open&quot;</span><span class="p">:</span> <span class="s2">&quot;Open a closed task&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.assignee_change&quot;</span><span class="p">:</span> <span class="s2">&quot;Task assignee change&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.create&quot;</span><span class="p">:</span> <span class="s2">&quot;Task creation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.create_update&quot;</span><span class="p">:</span> <span class="s2">&quot;Task creation or modification&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.update&quot;</span><span class="p">:</span> <span class="s2">&quot;Task modification&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getcompatibleactionevents">
+<h2>getCompatibleActionEvents<a class="headerlink" href="#getcompatibleactionevents" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get list of events compatible with an action</strong></li>
+<li>Parameters:<ul>
+<li><strong>action_name</strong> (string, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>list of events</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;getCompatibleActionEvents&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">899370297</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;\Kanboard\Action\TaskClose&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">899370297</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;bitbucket.webhook.commit&quot;</span><span class="p">:</span> <span class="s2">&quot;Bitbucket commit received&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.commit&quot;</span><span class="p">:</span> <span class="s2">&quot;Github commit received&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github.webhook.issue.closed&quot;</span><span class="p">:</span> <span class="s2">&quot;Github issue closed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gitlab.webhook.commit&quot;</span><span class="p">:</span> <span class="s2">&quot;Gitlab commit received&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gitlab.webhook.issue.closed&quot;</span><span class="p">:</span> <span class="s2">&quot;Gitlab issue closed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;task.move.column&quot;</span><span class="p">:</span> <span class="s2">&quot;Move a task to another column&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getactions">
+<h2>getActions<a class="headerlink" href="#getactions" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get list of actions for a project</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>list of actions properties</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;getActions&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1433237746</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;1&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1433237746</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;event_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;task.move.column&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;action_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;\Kanboard\Action\TaskAssignSpecificUser&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;params&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;column_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="createaction">
+<h2>createAction<a class="headerlink" href="#createaction" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Create an action</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+<li><strong>event_name</strong> (string, required)</li>
+<li><strong>action_name</strong> (string, required)</li>
+<li><strong>params</strong> (key/value parameters, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>action_id</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;createAction&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1433237746</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;project_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;event_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;task.move.column&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;action_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;\Kanboard\Action\TaskAssignSpecificUser&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;column_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1433237746</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="mi">14</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="removeaction">
+<h2>removeAction<a class="headerlink" href="#removeaction" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Remove an action</strong></li>
+<li>Parameters:<ul>
+<li><strong>action_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>true</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;removeAction&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1510741671</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mi">1</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1510741671</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API Automatic Actions Procedures</a><ul>
+<li><a class="reference internal" href="#getavailableactions">getAvailableActions</a></li>
+<li><a class="reference internal" href="#getavailableactionevents">getAvailableActionEvents</a></li>
+<li><a class="reference internal" href="#getcompatibleactionevents">getCompatibleActionEvents</a></li>
+<li><a class="reference internal" href="#getactions">getActions</a></li>
+<li><a class="reference internal" href="#createaction">createAction</a></li>
+<li><a class="reference internal" href="#removeaction">removeAction</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api-action-procedures.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/api-action-procedures.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

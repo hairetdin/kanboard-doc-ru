@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Frequently Asked Questions &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="can-you-recommend-a-web-hosting-provider-for-kanboard">
+<h2>Can you recommend a web hosting provider for Kanboard?<a class="headerlink" href="#can-you-recommend-a-web-hosting-provider-for-kanboard" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard works well with any great VPS hosting provider such as <a class="reference external" href="https://www.digitalocean.com/?refcode=4b541f47aae4">Digital
+Ocean</a>,
+<a class="reference external" href="https://www.linode.com/?r=4e381ac8a61116f40c60dc7438acc719610d8b11">Linode</a>
+or <a class="reference external" href="https://www.gandi.net/">Gandi</a>.</p>
+<p>To have the best performances, choose a provider with fast disk I/O
+because Kanboard use Sqlite by default. Avoid hosting providers that use
+a shared NFS mount point.</p>
+</div>
+<div class="section" id="i-get-a-blank-page-after-installing-or-upgrading-kanboard">
+<h2>I get a blank page after installing or upgrading Kanboard<a class="headerlink" href="#i-get-a-blank-page-after-installing-or-upgrading-kanboard" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Check if you have installed all requirements on your server</li>
+<li>Check the PHP and Apache error logs</li>
+<li>Check if the files have the correct permission</li>
+<li>If you use an aggressive OPcode caching, reload your web-server or
+php-fpm</li>
+</ul>
+</div>
+<div class="section" id="i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system">
+<h2>I have the error &#8220;There is no suitable CSPRNG installed on your system&#8221;<a class="headerlink" href="#i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system" title="Ссылка на этот заголовок">¶</a></h2>
+<p>If you use PHP &lt; 7.0, you need to have the openssl extension enabled or
+<code class="docutils literal"><span class="pre">/dev/urandom</span></code> accessible from the application if restricted by an
+<code class="docutils literal"><span class="pre">open_basedir</span></code> restriction.</p>
+</div>
+<div class="section" id="page-not-found-and-the-url-seems-wrong-amp">
+<h2>Page not found and the URL seems wrong (&amp;amp;)<a class="headerlink" href="#page-not-found-and-the-url-seems-wrong-amp" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>The URL looks like
+<code class="docutils literal"><span class="pre">/?controller=auth&amp;amp;action=login&amp;amp;redirect_query=</span></code> instead of
+<code class="docutils literal"><span class="pre">?controller=auth&amp;action=login&amp;redirect_query=</span></code></li>
+<li>Kanboard returns a &#8220;Page not found&#8221; error</li>
+</ul>
+<p>This issue comes from your PHP configuration, the value of
+<code class="docutils literal"><span class="pre">arg_separator.output</span></code> is not the PHP&#8217;s default, there is different
+ways to fix that:</p>
+<p>Change the value directly in your <code class="docutils literal"><span class="pre">php.ini</span></code> if you can:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">arg_separator</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&amp;&quot;</span>
+</pre></div>
+</div>
+<p>Override the value with a <code class="docutils literal"><span class="pre">.htaccess</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>php_value arg_separator.output &quot;&amp;&quot;
+</pre></div>
+</div>
+<p>Otherwise Kanboard will try to override the value directly in PHP.</p>
+</div>
+<div class="section" id="authentication-failure-with-the-api-and-apache-php-fpm">
+<h2>Authentication failure with the API and Apache + PHP-FPM<a class="headerlink" href="#authentication-failure-with-the-api-and-apache-php-fpm" title="Ссылка на этот заголовок">¶</a></h2>
+<p>php-cgi under Apache does not pass HTTP Basic user/pass to PHP by
+default. For this workaround to work, add these lines to your
+<code class="docutils literal"><span class="pre">.htaccess</span></code> file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>RewriteCond %{HTTP:Authorization} ^(.+)$
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</pre></div>
+</div>
+</div>
+<div class="section" id="known-issues-with-eaccelerator">
+<h2>Known issues with eAccelerator<a class="headerlink" href="#known-issues-with-eaccelerator" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard doesn&#8217;t work very well with
+<a class="reference external" href="http://eaccelerator.net">eAccelerator</a>. The issue caused can be a
+blank page or an Apache crash:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>[Wed Mar 05 21:36:56 2014] [notice] child pid 22630 exit signal Segmentation fault (11)
+</pre></div>
+</div>
+<p>The best way to avoid this issue is to disable eAccelerator or define
+manually which files you want to cache with the config parameter
+<code class="docutils literal"><span class="pre">eaccelerator.filter</span></code>.</p>
+<p>The project <a class="reference external" href="https://github.com/eaccelerator/eaccelerator/commits/master">eAccelerator seems dead and not updated since
+2012</a>.
+We recommend to switch to the last version of PHP because it&#8217;s bundled
+with <a class="reference external" href="http://php.net/manual/en/intro.opcache.php">OPcache</a>.</p>
+</div>
+<div class="section" id="why-the-minimum-requirement-is-php-5-3-3">
+<h2>Why the minimum requirement is PHP 5.3.3?<a class="headerlink" href="#why-the-minimum-requirement-is-php-5-3-3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard uses the function <code class="docutils literal"><span class="pre">password_hash()</span></code> to crypt passwords but
+it&#8217;s available only for PHP &gt;= 5.5.</p>
+<p>However, there is a back-port for <a class="reference external" href="https://github.com/ircmaxell/password_compat#requirements">older versions of
+PHP</a>. This
+library requires at least PHP 5.3.7 to work correctly.</p>
+<p>Apparently, Centos and Debian back-ports security patches so PHP 5.3.3
+should be ok.</p>
+<p>Kanboard v1.0.10 and v1.0.11 requires at least PHP 5.3.7 but this change
+has been reverted to be compatible with PHP 5.3.3 with Kanboard &gt;=
+v1.0.12</p>
+</div>
+<div class="section" id="how-to-test-kanboard-with-the-php-built-in-web-server">
+<h2>How to test Kanboard with the PHP built-in web server?<a class="headerlink" href="#how-to-test-kanboard-with-the-php-built-in-web-server" title="Ссылка на этот заголовок">¶</a></h2>
+<p>If you don&#8217;t want to install a web server like Apache on localhost. You
+can test with the <a class="reference external" href="http://www.php.net/manual/en/features.commandline.webserver.php">embedded web server of
+PHP</a>:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>unzip kanboard-VERSION.zip
+cd kanboard
+php -S localhost:8000
+open http://localhost:8000/
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-install-kanboard-on-yunohost">
+<h2>How to install Kanboard on Yunohost?<a class="headerlink" href="#how-to-install-kanboard-on-yunohost" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference external" href="https://yunohost.org/">YunoHost</a> is a server operating system aiming
+to make self-hosting accessible to everyone.</p>
+<p>There is a <a class="reference external" href="https://github.com/mbugeia/kanboard_ynh">package to install Kanboard on Yunohost
+easily</a>.</p>
+</div>
+<div class="section" id="where-can-i-find-a-list-of-related-projects">
+<h2>Where can I find a list of related projects?<a class="headerlink" href="#where-can-i-find-a-list-of-related-projects" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>[Kanboard API python client by
+&#64;freekoder](<a class="reference external" href="https://github.com/freekoder/kanboard-py">https://github.com/freekoder/kanboard-py</a>)</li>
+<li><a class="reference external" href="https://github.com/davideberlein/kanboard-presenter">Kanboard Presenter by David
+Eberlein</a></li>
+<li>[CSV2Kanboard by &#64;ashbike](<a class="reference external" href="https://github.com/ashbike/csv2kanboard">https://github.com/ashbike/csv2kanboard</a>)</li>
+<li>[Kanboard for Yunohost by
+&#64;mbugeia](<a class="reference external" href="https://github.com/mbugeia/kanboard_ynh">https://github.com/mbugeia/kanboard_ynh</a>)</li>
+<li>[Trello import script by
+&#64;matueranet](<a class="reference external" href="https://github.com/matueranet/kanboard-import-trello">https://github.com/matueranet/kanboard-import-trello</a>)</li>
+<li><a class="reference external" href="https://chrome.google.com/webstore/detail/kanboard-quickmenu/akjbeplnnihghabpgcfmfhfmifjljneh?utm_source=chrome-ntp-icon">Chrome extension by
+Timo</a>,
+<a class="reference external" href="https://github.com/BlueTeck/kanboard_chrome_extension">Source
+code</a></li>
+<li>[Python client script by
+&#64;dzudek](<a class="reference external" href="https://gist.github.com/fguillot/84c70d4928eb1e0cb374">https://gist.github.com/fguillot/84c70d4928eb1e0cb374</a>)</li>
+<li>[Shell script for SQLite to MySQL/MariaDB migration by
+&#64;oliviermaridat](<a class="reference external" href="https://github.com/oliviermaridat/kanboard-sqlite2mysql">https://github.com/oliviermaridat/kanboard-sqlite2mysql</a>)</li>
+<li><a class="reference external" href="https://github.com/gene-pavlovsky/kanboard-git-hooks">Git hooks for integration with Kanboard by Gene
+Pavlovsky</a></li>
+</ul>
+</div>
+<div class="section" id="are-there-some-tutorials-about-kanboard-in-other-languages">
+<h2>Are there some tutorials about Kanboard in other languages?<a class="headerlink" href="#are-there-some-tutorials-about-kanboard-in-other-languages" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://demaya.de/wp/2014/07/kanboard-eine-jira-alternative-im-detail-installation/">German article series about
+Kanboard</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Frequently Asked Questions</a><ul>
+<li><a class="reference internal" href="#can-you-recommend-a-web-hosting-provider-for-kanboard">Can you recommend a web hosting provider for Kanboard?</a></li>
+<li><a class="reference internal" href="#i-get-a-blank-page-after-installing-or-upgrading-kanboard">I get a blank page after installing or upgrading Kanboard</a></li>
+<li><a class="reference internal" href="#i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system">I have the error &#8220;There is no suitable CSPRNG installed on your system&#8221;</a></li>
+<li><a class="reference internal" href="#page-not-found-and-the-url-seems-wrong-amp">Page not found and the URL seems wrong (&amp;amp;)</a></li>
+<li><a class="reference internal" href="#authentication-failure-with-the-api-and-apache-php-fpm">Authentication failure with the API and Apache + PHP-FPM</a></li>
+<li><a class="reference internal" href="#known-issues-with-eaccelerator">Known issues with eAccelerator</a></li>
+<li><a class="reference internal" href="#why-the-minimum-requirement-is-php-5-3-3">Why the minimum requirement is PHP 5.3.3?</a></li>
+<li><a class="reference internal" href="#how-to-test-kanboard-with-the-php-built-in-web-server">How to test Kanboard with the PHP built-in web server?</a></li>
+<li><a class="reference internal" href="#how-to-install-kanboard-on-yunohost">How to install Kanboard on Yunohost?</a></li>
+<li><a class="reference internal" href="#where-can-i-find-a-list-of-related-projects">Where can I find a list of related projects?</a></li>
+<li><a class="reference internal" href="#are-there-some-tutorials-about-kanboard-in-other-languages">Are there some tutorials about Kanboard in other languages?</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/faq.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/faq.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Upgrade Kanboard to a new version &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="upgrade-kanboard-to-a-new-version">
+<h1>Upgrade Kanboard to a new version<a class="headerlink" href="#upgrade-kanboard-to-a-new-version" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Upgrading Kanboard to a newer version is seamless. The process can be
+summarized to simply copy your data folder to the new Kanboard folder.
+Kanboard will run database migrations automatically for you.</p>
+<div class="section" id="important-things-to-do-before-updating">
+<h2>Important things to do before updating<a class="headerlink" href="#important-things-to-do-before-updating" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Always make a backup of your data before upgrading</li>
+<li>Always read the <a class="reference external" href="https://github.com/fguillot/kanboard/blob/master/ChangeLog">change
+log</a>
+to check for breaking changes</li>
+<li>Always close all user sessions (flush all sessions on the server)</li>
+</ul>
+</div>
+<div class="section" id="from-the-archive-stable-version">
+<h2>From the archive (stable version)<a class="headerlink" href="#from-the-archive-stable-version" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>Decompress the new archive</li>
+<li>Copy the content of your data folder into the newly uncompressed
+directory</li>
+<li>Copy your custom <code class="docutils literal"><span class="pre">config.php</span></code> if you have one</li>
+<li>Copy your plugins if necessary</li>
+<li>Make sure the directory <code class="docutils literal"><span class="pre">data</span></code> is writeable by your web server user</li>
+<li>Test</li>
+<li>Remove your old Kanboard directory</li>
+</ol>
+</div>
+<div class="section" id="from-the-repository-development-version">
+<h2>From the repository (development version)<a class="headerlink" href="#from-the-repository-development-version" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span></code></li>
+<li><code class="docutils literal"><span class="pre">composer</span> <span class="pre">install</span> <span class="pre">--no-dev</span></code></li>
+<li>Login and check if everything is ok</li>
+</ol>
+<p>Note: This method will install the <strong>current development version</strong>, use
+at your own risk.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Upgrade Kanboard to a new version</a><ul>
+<li><a class="reference internal" href="#important-things-to-do-before-updating">Important things to do before updating</a></li>
+<li><a class="reference internal" href="#from-the-archive-stable-version">From the archive (stable version)</a></li>
+<li><a class="reference internal" href="#from-the-repository-development-version">From the repository (development version)</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/update.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/update.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

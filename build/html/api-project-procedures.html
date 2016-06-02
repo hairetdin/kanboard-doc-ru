@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API Project Procedures &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-project-procedures">
+<h1>API Project Procedures<a class="headerlink" href="#api-project-procedures" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="createproject">
+<h2>createProject<a class="headerlink" href="#createproject" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Create a new project</strong></li>
+<li>Parameters:<ul>
+<li><strong>name</strong> (string, required)</li>
+<li><strong>description</strong> (string, optional)</li>
+</ul>
+</li>
+<li>Result on success: <strong>project_id</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;createProject&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1797076613</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PHP client&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1797076613</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getprojectbyid">
+<h2>getProjectById<a class="headerlink" href="#getprojectbyid" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get project information</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>project properties</strong></li>
+<li>Result on failure: <strong>null</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;getProjectById&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">226760253</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">226760253</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;API test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_active&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;last_modified&quot;</span><span class="p">:</span> <span class="s2">&quot;1436119135&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_private&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_everybody_allowed&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;default_swimlane&quot;</span><span class="p">:</span> <span class="s2">&quot;Default swimlane&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;show_default_swimlane&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;board&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=board&amp;action=show&amp;project_id=1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;calendar&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=calendar&amp;action=show&amp;project_id=1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=listing&amp;action=show&amp;project_id=1&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getprojectbyname">
+<h2>getProjectByName<a class="headerlink" href="#getprojectbyname" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get project information</strong></li>
+<li>Parameters:<ul>
+<li><strong>name</strong> (string, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>project properties</strong></li>
+<li>Result on failure: <strong>null</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;getProjectByName&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1620253806</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1620253806</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_active&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;last_modified&quot;</span><span class="p">:</span> <span class="s2">&quot;1436119135&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_private&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_everybody_allowed&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;default_swimlane&quot;</span><span class="p">:</span> <span class="s2">&quot;Default swimlane&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;show_default_swimlane&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;board&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=board&amp;action=show&amp;project_id=1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;calendar&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=calendar&amp;action=show&amp;project_id=1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;list&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=listing&amp;action=show&amp;project_id=1&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getallprojects">
+<h2>getAllProjects<a class="headerlink" href="#getallprojects" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get all available projects</strong></li>
+<li>Parameters:<ul>
+<li><strong>none</strong></li>
+</ul>
+</li>
+<li>Result on success: <strong>List of projects</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;getAllProjects&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2134420212</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2134420212</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;API test&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_active&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;last_modified&quot;</span><span class="p">:</span> <span class="s2">&quot;1436119570&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_private&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_everybody_allowed&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;default_swimlane&quot;</span><span class="p">:</span> <span class="s2">&quot;Default swimlane&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;show_default_swimlane&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;board&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=board&amp;action=show&amp;project_id=1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;calendar&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=calendar&amp;action=show&amp;project_id=1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;list&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/127.0.0.1:8000\/?controller=listing&amp;action=show&amp;project_id=1&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="updateproject">
+<h2>updateProject<a class="headerlink" href="#updateproject" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Update a project</strong></li>
+<li>Parameters:<ul>
+<li><strong>id</strong> (integer, required)</li>
+<li><strong>name</strong> (string, required)</li>
+<li><strong>description</strong> (string, optional)</li>
+</ul>
+</li>
+<li>Result on success: <strong>true</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;updateProject&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1853996288</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PHP client update&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1853996288</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="removeproject">
+<h2>removeProject<a class="headerlink" href="#removeproject" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Remove a project</strong></li>
+<li>Parameters: <strong>project_id</strong> (integer, required)</li>
+<li>Result on success: <strong>true</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;removeProject&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">46285125</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">46285125</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enableproject">
+<h2>enableProject<a class="headerlink" href="#enableproject" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Enable a project</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>true</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;enableProject&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1775494839</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;1&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1775494839</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="disableproject">
+<h2>disableProject<a class="headerlink" href="#disableproject" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Disable a project</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>true</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;disableProject&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1734202312</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;1&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1734202312</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enableprojectpublicaccess">
+<h2>enableProjectPublicAccess<a class="headerlink" href="#enableprojectpublicaccess" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Enable public access for a given project</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>true</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;enableProjectPublicAccess&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">103792571</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;1&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">103792571</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="disableprojectpublicaccess">
+<h2>disableProjectPublicAccess<a class="headerlink" href="#disableprojectpublicaccess" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Disable public access for a given project</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>true</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;disableProjectPublicAccess&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">942472945</span><span class="p">,</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;1&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Response example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">942472945</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getprojectactivity">
+<h2>getProjectActivity<a class="headerlink" href="#getprojectactivity" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get activity stream for a project</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_id</strong> (integer, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>List of events</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span>{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;method&quot;: &quot;getProjectActivity&quot;,
+    &quot;id&quot;: 942472945,
+    &quot;params&quot;: [
+        &quot;project_id&quot;: 1
+    ]
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="getprojectactivities">
+<h2>getProjectActivities<a class="headerlink" href="#getprojectactivities" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Purpose: <strong>Get Activityfeed for Project(s)</strong></li>
+<li>Parameters:<ul>
+<li><strong>project_ids</strong> (integer array, required)</li>
+</ul>
+</li>
+<li>Result on success: <strong>List of events</strong></li>
+<li>Result on failure: <strong>false</strong></li>
+</ul>
+<p>Request example:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span>{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;method&quot;: &quot;getProjectActivities&quot;,
+    &quot;id&quot;: 942472945,
+    &quot;params&quot;: [
+        &quot;project_ids&quot;: [1,2]
+    ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API Project Procedures</a><ul>
+<li><a class="reference internal" href="#createproject">createProject</a></li>
+<li><a class="reference internal" href="#getprojectbyid">getProjectById</a></li>
+<li><a class="reference internal" href="#getprojectbyname">getProjectByName</a></li>
+<li><a class="reference internal" href="#getallprojects">getAllProjects</a></li>
+<li><a class="reference internal" href="#updateproject">updateProject</a></li>
+<li><a class="reference internal" href="#removeproject">removeProject</a></li>
+<li><a class="reference internal" href="#enableproject">enableProject</a></li>
+<li><a class="reference internal" href="#disableproject">disableProject</a></li>
+<li><a class="reference internal" href="#enableprojectpublicaccess">enableProjectPublicAccess</a></li>
+<li><a class="reference internal" href="#disableprojectpublicaccess">disableProjectPublicAccess</a></li>
+<li><a class="reference internal" href="#getprojectactivity">getProjectActivity</a></li>
+<li><a class="reference internal" href="#getprojectactivities">getProjectActivities</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api-project-procedures.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/api-project-procedures.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

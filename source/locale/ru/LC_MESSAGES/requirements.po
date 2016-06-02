@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/requirements.rst:2
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/requirements.rst:5
+msgid "Server side"
+msgstr ""
+
+#: ../../source/requirements.rst:8
+msgid "Compatible Operating Systems"
+msgstr ""
+
+#: ../../source/requirements.rst:10
+msgid ""
+"\\| Operating System \\| \\|--------------------------------------\\| \\|"
+" Linux Ubuntu Xenial Xerus 16.04 LTS \\| \\| Linux Ubuntu Trusty 14.04 "
+"LTS \\| \\| Linux Centos 6.x \\| \\| Linux Centos 7.x \\| \\| Linux "
+"Redhat 6.x \\| \\| Linux Redhat 7.x \\| \\| Linux Debian 8 \\| \\| "
+"FreeBSD 10.x \\| \\| Microsoft Windows 2012 R2 \\| \\| Microsoft Windows "
+"2008 \\|"
+msgstr ""
+
+#: ../../source/requirements.rst:17
+msgid "Compatible Databases"
+msgstr ""
+
+#: ../../source/requirements.rst:19
+msgid ""
+"\\| Database \\| \\|--------------------\\| \\| Sqlite 3.x \\| \\| Mysql "
+">= 5.5 \\| \\| MariaDB >= 10 \\| \\| Postgresql >= 9.3 \\|"
+msgstr ""
+
+#: ../../source/requirements.rst:22
+msgid "Which database to choose?"
+msgstr ""
+
+#: ../../source/requirements.rst:25
+msgid "Type"
+msgstr ""
+
+#: ../../source/requirements.rst:25
+msgid "Usage"
+msgstr ""
+
+#: ../../source/requirements.rst:27
+msgid "Sqlite"
+msgstr ""
+
+#: ../../source/requirements.rst:27
+msgid "Single user or small team (almost no concurrency)"
+msgstr ""
+
+#: ../../source/requirements.rst:29
+msgid "Mysql/Postgres"
+msgstr ""
+
+#: ../../source/requirements.rst:29
+msgid "Larger team, high-availability configuration"
+msgstr ""
+
+#: ../../source/requirements.rst:32
+msgid ""
+"Do not use Sqlite on NFS mounts, use Sqlite only when you have a disk "
+"with fast I/O"
+msgstr ""
+
+#: ../../source/requirements.rst:36
+msgid "Compatible Web Servers"
+msgstr ""
+
+#: ../../source/requirements.rst:38
+msgid ""
+"\\| Web Server \\| \\|--------------------\\| \\| Apache HTTP Server \\| "
+"\\| Nginx \\| \\| Microsoft IIS \\|"
+msgstr ""
+
+#: ../../source/requirements.rst:41
+msgid "Kanboard is pre-configured to work with Apache (URL rewriting)."
+msgstr ""
+
+#: ../../source/requirements.rst:44
+msgid "PHP Versions"
+msgstr ""
+
+#: ../../source/requirements.rst:46
+msgid ""
+"\\| PHP Version \\| \\|----------------\\| \\| PHP >= 5.3.3 \\| \\| PHP "
+"5.4 \\| \\| PHP 5.5 \\| \\| PHP 5.6 \\| \\| PHP 7.x \\|"
+msgstr ""
+
+#: ../../source/requirements.rst:50
+msgid "PHP Extensions Required"
+msgstr ""
+
+#: ../../source/requirements.rst:53
+msgid "PHP Extensions required"
+msgstr ""
+
+#: ../../source/requirements.rst:53
+msgid "Note"
+msgstr ""
+
+#: ../../source/requirements.rst:55
+msgid "pdo\\_sqlite"
+msgstr ""
+
+#: ../../source/requirements.rst:55
+msgid "Only if you use Sqlite"
+msgstr ""
+
+#: ../../source/requirements.rst:57
+msgid "pdo\\_mysql"
+msgstr ""
+
+#: ../../source/requirements.rst:57
+msgid "Only if you use Mysql/MariaDB"
+msgstr ""
+
+#: ../../source/requirements.rst:59
+msgid "pdo\\_pgsql"
+msgstr ""
+
+#: ../../source/requirements.rst:59
+msgid "Only if you use Postgres"
+msgstr ""
+
+#: ../../source/requirements.rst:61
+msgid "gd"
+msgstr ""
+
+#: ../../source/requirements.rst:63
+msgid "mbstring"
+msgstr ""
+
+#: ../../source/requirements.rst:65
+msgid "openssl"
+msgstr ""
+
+#: ../../source/requirements.rst:67
+msgid "json"
+msgstr ""
+
+#: ../../source/requirements.rst:69
+msgid "hash"
+msgstr ""
+
+#: ../../source/requirements.rst:71
+msgid "ctype"
+msgstr ""
+
+#: ../../source/requirements.rst:73
+msgid "session"
+msgstr ""
+
+#: ../../source/requirements.rst:75
+msgid "ldap"
+msgstr ""
+
+#: ../../source/requirements.rst:75
+msgid "Only for LDAP authentication"
+msgstr ""
+
+#: ../../source/requirements.rst:77
+msgid "Zend OPcache"
+msgstr ""
+
+#: ../../source/requirements.rst:77
+msgid "Recommended"
+msgstr ""
+
+#: ../../source/requirements.rst:81
+msgid "Recommendations"
+msgstr ""
+
+#: ../../source/requirements.rst:83
+msgid "Modern Linux or Unix operating system."
+msgstr ""
+
+#: ../../source/requirements.rst:84
+msgid ""
+"Best performances are obtained with the latest version of PHP with OPcode"
+" caching activated."
+msgstr ""
+
+#: ../../source/requirements.rst:88
+msgid "Client side"
+msgstr ""
+
+#: ../../source/requirements.rst:91
+msgid "Browsers"
+msgstr ""
+
+#: ../../source/requirements.rst:93
+msgid "Always use a modern browser with the latest version if possible:"
+msgstr ""
+
+#: ../../source/requirements.rst:95
+msgid ""
+"\\| Browser \\| \\|---------------------------------------\\| \\| Safari "
+"\\| \\| Google Chrome \\| \\| Mozilla Firefox \\| \\| Microsoft Internet "
+"Explorer >= 11 \\| \\| Microsoft Edge \\|"
+msgstr ""
+
+#: ../../source/requirements.rst:100
+msgid "Devices"
+msgstr ""
+
+#: ../../source/requirements.rst:103
+msgid "Device"
+msgstr ""
+
+#: ../../source/requirements.rst:103
+msgid "Screen resolution"
+msgstr ""
+
+#: ../../source/requirements.rst:105
+msgid "Laptop or desktop"
+msgstr ""
+
+#: ../../source/requirements.rst:105
+msgid ">= 1366 x 768"
+msgstr ""
+
+#: ../../source/requirements.rst:107
+msgid "Tablet"
+msgstr ""
+
+#: ../../source/requirements.rst:107
+msgid ">= 1024 x 768"
+msgstr ""
+
+#: ../../source/requirements.rst:110
+msgid ""
+"Kanboard is not yet optimized for smartphones. It's working but the user "
+"interface is not really convenient to use."
+msgstr ""
+
+#~ msgid ""
+#~ "| Operating System                     | "
+#~ "|--------------------------------------| | Linux "
+#~ "Ubuntu Xenial Xerus 16.04 LTS  | |"
+#~ " Linux Ubuntu Trusty 14.04 LTS        "
+#~ "| | Linux Centos 6.x                     "
+#~ "| | Linux Centos 7.x                     "
+#~ "| | Linux Redhat 6.x                     "
+#~ "| | Linux Redhat 7.x                     "
+#~ "| | Linux Debian 8                       "
+#~ "| | FreeBSD 10.x                         | "
+#~ "| Microsoft Windows 2012 R2            |"
+#~ " | Microsoft Windows 2008               |"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "| Database           | |--------------------| "
+#~ "| Sqlite 3.x         | | Mysql >="
+#~ " 5.5       | | MariaDB >= 10      "
+#~ "| | Postgresql >= 9.3  |"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "| Type            | Usage"
+#~ "                                               | "
+#~ "|-----------------|-----------------------------------------------------|"
+#~ " | Sqlite          | Single user or"
+#~ " small team (almost no concurrency)   "
+#~ "| | Mysql/Postgres  | Larger team, "
+#~ "high-availability configuration        |"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "| Web Server         | |--------------------|"
+#~ " | Apache HTTP Server | | Nginx"
+#~ "              | | Microsoft IIS      |"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "| PHP Version    | |----------------| |"
+#~ " PHP >= 5.3.3   | | PHP 5.4"
+#~ "        | | PHP 5.5        | | "
+#~ "PHP 5.6        | | PHP 7.x        "
+#~ "|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "| PHP Extensions required    | Note"
+#~ "                          | "
+#~ "|----------------------------|-------------------------------| |"
+#~ " pdo_sqlite                 | Only if you"
+#~ " use Sqlite        | | pdo_mysql"
+#~ "                  | Only if you use "
+#~ "Mysql/MariaDB | | pdo_pgsql                  |"
+#~ " Only if you use Postgres      | "
+#~ "| gd                         |"
+#~ "                               | | mbstring"
+#~ "                   |                               | |"
+#~ " openssl                    |"
+#~ "                               | | json"
+#~ "                       |                               | "
+#~ "| hash                       |"
+#~ "                               | | ctype"
+#~ "                      |                               | "
+#~ "| session                    |"
+#~ "                               | | ldap"
+#~ "                       | Only for LDAP "
+#~ "authentication  | | Zend OPcache"
+#~ "               | Recommended                   |"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "| Browser                               | "
+#~ "|---------------------------------------| | Safari"
+#~ "                                | | Google Chrome"
+#~ "                         | | Mozilla Firefox"
+#~ "                       | | Microsoft Internet "
+#~ "Explorer >= 11     | | Microsoft "
+#~ "Edge                        |"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "| Device            | Screen resolution  "
+#~ "| |-------------------|--------------------| | "
+#~ "Laptop or desktop | >= 1366 x "
+#~ "768      | | Tablet            | >= "
+#~ "1024 x 768      |"
+#~ msgstr ""
+

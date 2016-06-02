@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/plugin-authentication-architecture.rst:2
+msgid "Authentication Architecture"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:4
+msgid "Kanboard provides a flexible and pluggable authentication architecture."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:6
+msgid "By default, user authentication can be done with multiple methods:"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:8
+msgid "Username and password authentication (Local database and LDAP)"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:9
+msgid "OAuth2 authentication"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:10
+msgid "Reverse-Proxy authentication"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:11
+msgid "Cookie based authentication (Remember Me)"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:13
+msgid "More over, after a successful authentication, a Two-Factor post authentication can be done. Kanboard supports natively the TOTP standard."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:18
+msgid "Authentication Interfaces"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:20
+msgid "To have a pluggable system, authentication drivers must implement a set of interfaces:"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:24
+msgid "Interface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:24
+msgid "Role"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:26
+msgid "AuthenticationProviderInterface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:26
+msgid "Base interface for other authentication interfaces"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:28
+msgid "PreAuthenticationProviderInterface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:28
+msgid "The user is already authenticated when reaching the application, web servers usually define some environment variables"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:30
+msgid "PasswordAuthenticationProviderInterface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:30
+msgid "Authentication methods that uses the username and password provided in the login form"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:32
+msgid "OAuthAuthenticationProviderInterface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:32
+msgid "OAuth2 providers"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:34
+msgid "PostAuthenticationProviderInterface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:34
+msgid "Two-Factor auhentication drivers, ask for confirmation code"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:36
+msgid "SessionCheckProviderInterface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:36
+msgid "Providers that are able to check if the user session is valid"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:40
+msgid "Examples of authentication providers:"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:42
+msgid "The default Database method implements ``PasswordAuthenticationProviderInterface`` and ``SessionCheckProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:45
+msgid "The Reverse-Proxy method implements ``PreAuthenticationProviderInterface`` and ``SessionCheckProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:48
+msgid "The Google method implements ``OAuthAuthenticationProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:49
+msgid "The LDAP method implements ``PasswordAuthenticationProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:51
+msgid "The RememberMe cookie method implements ``PreAuthenticationProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:53
+msgid "The Two-Factor TOTP method implements ``PostAuthenticationProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:57
+msgid "Authentication Workflow"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:59
+msgid "For each HTTP request:"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:61
+msgid "If the user session is already open, execute registered providers that implements ``SessionCheckProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:63
+msgid "Execute all providers that implements ``PreAuthenticationProviderInterface``"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:65
+msgid "If the end-user submit the login form, providers that implements ``PasswordAuthenticationProviderInterface`` are executed"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:67
+msgid "If the end-user wants to use OAuth2, the selected provider will be executed"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:69
+msgid "After a successful authentication, the last registered ``PostAuthenticationProviderInterface`` will be used"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:71
+msgid "Synchronize user information if necessary"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:73
+msgid "This workflow is managed by the class ``Kanboard\\Core\\Security\\AuthenticationManager``."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:76
+msgid "Events triggered:"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:78
+msgid "``AuthenticationManager::EVENT_SUCCESS``: Successful authentication"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:79
+msgid "``AuthenticationManager::EVENT_FAILURE``: Failed authentication"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:81
+msgid "Each time a failure event occurs, the counter of failed logins is incremented."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:84
+msgid "The user account can be locked down for the configured period of time and a captcha can be shown to avoid brute force attacks."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:88
+msgid "User Provider Interface"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:90
+msgid "When the authentication is successful, the ``AuthenticationManager`` will ask the user information to your driver by calling the method ``getUser()``. This method must return an object that implements the interface ``Kanboard\\Core\\User\\UserProviderInterface``."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:95
+msgid "This class abstract the information gathered from another system."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:97
+msgid "Examples:"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:99
+msgid "``DatabaseUserProvider`` provides information for an internal user"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:100
+msgid "``LdapUserProvider`` for a LDAP user"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:101
+msgid "``ReverseProxyUserProvider`` for a Reverse-Proxy user"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:102
+msgid "``GoogleUserProvider`` represents a Google user"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:104
+msgid "Methods for User Provider Interface:"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:106
+msgid "``isUserCreationAllowed()``: Return true to allow automatic user creation"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:108
+msgid "``getExternalIdColumn()``: Get external id column name (google\\_id, github\\_id, gitlab\\_id...)"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:110
+msgid "``getInternalId()``: Get internal database id"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:111
+msgid "``getExternalId()``: Get external id (Unique id)"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:112
+msgid "``getRole()``: Get user role"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:113
+msgid "``getUsername()``: Get username"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:114
+msgid "``getName()``: Get user full name"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:115
+msgid "``getEmail()``: Get user email address"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:116
+msgid "``getExternalGroupIds()``: Get external group ids, automatically sync group membership if present"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:118
+msgid "``getExtraAttributes()``: Get extra attributes to set for the user during the local sync"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:121
+msgid "It's not mandatory to return a value for each method."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:124
+msgid "User Local Synchronization"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:126
+msgid "User information can be automatically synced with the local database."
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:128
+msgid "If the method ``getInternalId()`` return a value no synchronization is performed"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:130
+msgid "The methods ``getExternalIdColumn()`` and ``getExternalId()`` must return a value to sync the user"
+msgstr ""
+
+#: ../../source/plugin-authentication-architecture.rst:132
+msgid "Properties that returns an empty string won't be synced"
+msgstr ""
+

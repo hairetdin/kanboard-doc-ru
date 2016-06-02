@@ -1,0 +1,635 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/plugin-hooks.rst:2
+msgid "Plugin Hooks"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:5
+msgid "Application Hooks"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:7
+msgid "Hooks can extend, replace, filter data or change the default behavior. Each hook is identified with a unique name, example: ``controller:calendar:user:events``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:12
+msgid "Listen on hook events"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:14
+msgid "In your ``initialize()`` method you need to call the method ``on()`` of the class ``Kanboard\\Core\\Plugin\\Hook``:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:21
+msgid "The first argument is the name of the hook and the second is a PHP callable."
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:25
+msgid "Hooks executed only once"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:27
+msgid "Some hooks can have only one listener:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:30
+msgid "model:subtask-time-tracking:calculate:time-spent"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:32
+msgid "Override time spent calculation when sub-task timer is stopped"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:33
+#: ../../source/plugin-hooks.rst:83
+#: ../../source/plugin-hooks.rst:91
+#: ../../source/plugin-hooks.rst:101
+msgid "Arguments:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:35
+#: ../../source/plugin-hooks.rst:103
+msgid "``$user_id`` (integer)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:36
+msgid "``$start`` (DateTime)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:37
+msgid "``$end`` (DateTime)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:40
+msgid "Merge hooks"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:42
+msgid "\"Merge hooks\" act in the same way as the function ``array_merge``. The hook callback must return an array. This array will be merged with the default one."
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:46
+msgid "Example to add events in the user calendar:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:63
+msgid "Example to override default values for task forms:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:77
+msgid "List of merging hooks:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:80
+msgid "controller:task:form:default"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:82
+msgid "Override default values for task forms"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:85
+msgid "``$default_values``: actual default values (array)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:88
+msgid "controller:calendar:project:events"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:90
+msgid "Add more events to the project calendar"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:93
+msgid "``$project_id`` (integer)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:94
+#: ../../source/plugin-hooks.rst:104
+msgid "``$start`` Calendar start date (string, ISO-8601 format)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:95
+msgid "``$end`` Calendar\\` end date (string, ISO-8601 format)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:98
+msgid "controller:calendar:user:events"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:100
+msgid "Add more events to the user calendar"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:105
+msgid "``$end`` Calendar end date (string, ISO-8601 format)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:108
+msgid "Asset Hooks"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:110
+msgid "Asset hooks can be used to add a new stylesheet easily or a new JavaScript file in the layout. You can use this feature to create a theme and override all Kanboard default styles."
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:114
+msgid "Example to add a new stylesheet:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:132
+msgid "List of asset Hooks:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:134
+msgid "``template:layout:css``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:135
+msgid "``template:layout:js``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:138
+msgid "Template Hooks"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:140
+msgid "Template hooks allow to add new content in existing templates."
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:142
+msgid "Example to add new content in the dashboard sidebar:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:148
+msgid "This call is usually defined in the ``initialize()`` method. The first argument is name of the hook and the second argument is the template name."
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:152
+msgid "Template names prefixed with the plugin name and colon indicate the location of the template."
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:155
+msgid "Example with ``myplugin:dashboard/sidebar``:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:157
+msgid "``myplugin`` is the name of your plugin (lowercase)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:158
+msgid "``dashboard/sidebar`` is the template name"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:159
+msgid "On the filesystem, the plugin will be located here: ``plugins\\Myplugin\\Template\\dashboard\\sidebar.php``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:161
+msgid "Templates are written in pure PHP (don't forget to escape data)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:163
+msgid "Template names without prefix are core templates."
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:165
+msgid "List of template hooks:"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:168
+msgid "Hook"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:168
+msgid "Description"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:170
+msgid "``template:analytic:sidebar``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:170
+msgid "Sidebar on analytic pages"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:172
+msgid "``template:app:filters-helper:before``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:172
+msgid "Filter helper dropdown (top)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:174
+msgid "``template:app:filters-helper:after``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:174
+msgid "Filter helper dropdown (bottom)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:176
+msgid "``template:auth:login-form:before``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:176
+msgid "Login page (top)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:178
+msgid "``template:auth:login-form:after``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:178
+msgid "Login page (bottom)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:180
+msgid "``template:board:private:task:before-title``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:180
+msgid "Task in private board: before title"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:182
+msgid "``template:board:private:task:after-title``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:182
+msgid "Task in private board: after title"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:184
+msgid "``template:board:public:task:before-title``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:184
+msgid "Task in public board: before title"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:186
+msgid "``template:board:public:task:after-title``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:186
+msgid "Task in public board: after title"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:188
+msgid "``template:board:task:footer``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:188
+msgid "Task in board: footer"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:190
+msgid "``template:board:task:icons``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:190
+msgid "Task in board: tooltip icon"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:192
+msgid "``template:config:sidebar``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:192
+msgid "Sidebar on settings page"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:194
+msgid "``template:config:application``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:194
+msgid "Application settings form"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:196
+msgid "``template:config:integrations``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:196
+msgid "Integration page in global settings"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:198
+msgid "``template:dashboard:sidebar``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:198
+msgid "Sidebar on dashboard page"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:200
+msgid "``template:export:sidebar``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:200
+msgid "Sidebar on export pages"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:202
+msgid "``template:layout:head``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:202
+msgid "Page layout ``<head/>`` tag"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:204
+msgid "``template:layout:top``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:204
+msgid "Page layout top header"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:206
+msgid "``template:layout:bottom``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:206
+msgid "Page layout footer"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:208
+msgid "``template:project:dropdown``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:208
+msgid "\"Actions\" menu on left in different project views"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:210
+msgid "``template:project:header:before``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:210
+msgid "Project filters (before)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:212
+msgid "``template:project:header:after``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:212
+msgid "Project filters (after)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:214
+msgid "``template:project:integrations``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:214
+msgid "Integration page in projects settings"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:216
+msgid "``template:project:sidebar``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:216
+msgid "Sidebar in project settings"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:218
+msgid "``template:project-user:sidebar``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:218
+msgid "Sidebar on project user overview page"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:220
+msgid "``template:task:layout:top``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:220
+msgid "Task layout top (after page header)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:222
+msgid "``template:task:details:top``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:222
+msgid "Task summary top"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:224
+msgid "``template:task:details:bottom``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:224
+msgid "Task summary bottom"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:226
+msgid "``template:task:details:first-column``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:226
+msgid "Task summary first column"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:228
+msgid "``template:task:details:second-column``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:228
+msgid "Task summary second column"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:230
+msgid "``template:task:details:third-column``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:230
+msgid "Task summary third column"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:232
+msgid "``template:task:details:fourth-column``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:232
+msgid "Task summary fourth column"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:234
+msgid "``template:task:dropdown``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:234
+msgid "Task dropdown menu in listing pages"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:236
+msgid "``template:task:sidebar:actions``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:236
+msgid "Sidebar on task page (section actions)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:238
+msgid "``template:task:sidebar:information``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:238
+msgid "Sidebar on task page (section information)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:240
+msgid "``template:task:form:left-column``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:240
+msgid "Left column in task form"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:242
+msgid "``template:task:form:right-column``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:242
+msgid "Right column in task form"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:244
+msgid "``template:task:show:top``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:244
+msgid "Show task page: top"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:246
+msgid "``template:task:show:bottom``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:246
+msgid "Show task page: bottom"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:248
+msgid "``template:task:show:before-description``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:248
+msgid "Show task page: before description"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:250
+msgid "``template:task:show:before-tasklinks``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:250
+msgid "Show task page: before tasklinks"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:252
+msgid "``template:task:show:before-subtasks``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:252
+msgid "Show task page: before subtasks"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:254
+msgid "``template:task:show:before-timetracking``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:254
+msgid "Show task page: before timetracking"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:256
+msgid "``template:task:show:before-attachments``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:256
+msgid "Show task page: before attachments"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:258
+msgid "``template:task:show:before-comments``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:258
+msgid "Show task page: before comments"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:260
+msgid "``template:user:authentication:form``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:260
+msgid "\"Edit authentication\" form in user profile"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:262
+msgid "``template:user:create-remote:form``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:262
+msgid "\"Create remote user\" form"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:264
+msgid "``template:user:external``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:264
+msgid "\"External authentication\" page in user profile"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:266
+msgid "``template:user:integrations``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:266
+msgid "Integration page in user profile"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:268
+msgid "``template:user:sidebar:actions``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:268
+msgid "Sidebar in user profile (section actions)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:270
+msgid "``template:user:sidebar:information``"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:270
+msgid "Sidebar in user profile (section information)"
+msgstr ""
+
+#: ../../source/plugin-hooks.rst:273
+msgid "Another template hooks can be added if necessary, just ask on the issue tracker."
+msgstr ""
+

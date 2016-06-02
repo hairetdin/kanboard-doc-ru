@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plugin Development &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="plugin-development">
+<h1>Plugin Development<a class="headerlink" href="#plugin-development" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Note: The plugin API is <strong>considered alpha</strong> at the moment.</p>
+<p>Plugins are useful to extend the core functionalities of Kanboard,
+adding features, creating themes or changing the default behavior.</p>
+<p>Plugin creators should specify explicitly the compatible versions of
+Kanboard. Internal code of Kanboard may change over time and your plugin
+must be tested with new versions. Always check the
+<a class="reference external" href="https://github.com/fguillot/kanboard/blob/master/ChangeLog">ChangeLog</a>
+for breaking changes.</p>
+<ul class="simple">
+<li><a class="reference external" href="plugin-registration.markdown">Creating your plugin</a></li>
+<li><a class="reference external" href="plugin-hooks.markdown">Using plugin hooks</a></li>
+<li><a class="reference external" href="plugin-events.markdown">Events</a></li>
+<li><a class="reference external" href="plugin-overrides.markdown">Override default application
+behaviors</a></li>
+<li><a class="reference external" href="plugin-schema-migrations.markdown">Add schema migrations for
+plugins</a></li>
+<li><a class="reference external" href="plugin-routes.markdown">Custom routes</a></li>
+<li><a class="reference external" href="plugin-helpers.markdown">Add helpers</a></li>
+<li><a class="reference external" href="plugin-mail-transports.markdown">Add mail transports</a></li>
+<li><a class="reference external" href="plugin-notifications.markdown">Add notification types</a></li>
+<li><a class="reference external" href="plugin-automatic-actions.markdown">Add automatic actions</a></li>
+<li><a class="reference external" href="plugin-metadata.markdown">Attach metadata to users, tasks and
+projects</a></li>
+<li><a class="reference external" href="plugin-authentication-architecture.markdown">Authentication
+architecture</a></li>
+<li><a class="reference external" href="plugin-authentication.markdown">Authentication plugin
+registration</a></li>
+<li><a class="reference external" href="plugin-authorization-architecture.markdown">Authorization
+architecture</a></li>
+<li><a class="reference external" href="plugin-group-provider.markdown">Custom group providers</a></li>
+<li><a class="reference external" href="plugin-external-link.markdown">External link providers</a></li>
+<li><a class="reference external" href="plugin-avatar-provider.markdown">Add avatar providers</a></li>
+<li><a class="reference external" href="plugin-ldap-client.markdown">LDAP client</a></li>
+</ul>
+<div class="section" id="examples-of-plugins">
+<h2>Examples of plugins<a class="headerlink" href="#examples-of-plugins" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kanboard/plugin-sms-2fa">SMS Two-Factor
+Authentication</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-reverse-proxy-ldap">Reverse-Proxy Authentication with LDAP
+support</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-slack">Slack</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-hipchat">Hipchat</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-jabber">Jabber</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-sendgrid">Sendgrid</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-mailgun">Mailgun</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-postmark">Postmark</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-s3">Amazon S3</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-budget">Budget planning</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-timetable">User timetables</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-subtask-forecast">Subtask
+Forecast</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-example-automatic-action">Automatic Action
+example</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-example-theme">Theme plugin
+example</a></li>
+<li><a class="reference external" href="https://github.com/kanboard/plugin-example-css">CSS plugin
+example</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plugin Development</a><ul>
+<li><a class="reference internal" href="#examples-of-plugins">Examples of plugins</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugins.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugins.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

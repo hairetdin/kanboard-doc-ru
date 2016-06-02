@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LDAP Group Synchronization &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ldap-group-synchronization">
+<h1>LDAP Group Synchronization<a class="headerlink" href="#ldap-group-synchronization" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Have LDAP authentication properly configured</li>
+<li>Use a LDAP server that supports <code class="docutils literal"><span class="pre">memberOf</span></code> or <code class="docutils literal"><span class="pre">memberUid</span></code>
+(PosixGroups)</li>
+</ul>
+</div>
+<div class="section" id="define-automatically-user-roles-based-on-ldap-groups">
+<h2>Define automatically user roles based on LDAP groups<a class="headerlink" href="#define-automatically-user-roles-based-on-ldap-groups" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Use these constants in your config file:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">LDAP_GROUP_ADMIN_DN</span></code>: Distinguished names for application
+administrators</li>
+<li><code class="docutils literal"><span class="pre">LDAP_GROUP_MANAGER_DN</span></code>: Distinguished names for application
+managers</li>
+</ul>
+<div class="section" id="example-for-active-directory">
+<h3>Example for Active Directory:<a class="headerlink" href="#example-for-active-directory" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_ADMIN_DN&#39;</span><span class="p">,</span> <span class="s1">&#39;CN=Kanboard Admins,CN=Users,DC=kanboard,DC=local&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_MANAGER_DN&#39;</span><span class="p">,</span> <span class="s1">&#39;CN=Kanboard Managers,CN=Users,DC=kanboard,DC=local&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>People member of &#8220;Kanboard Admins&#8221; will have the role &#8220;Administrator&#8221;</li>
+<li>People member of &#8220;Kanboard Managers&#8221; will have the role &#8220;Managers&#8221;</li>
+<li>Everybody else will have the role &#8220;User&#8221;</li>
+</ul>
+</div>
+<div class="section" id="example-for-openldap-with-posix-groups">
+<h3>Example for OpenLDAP with Posix Groups:<a class="headerlink" href="#example-for-openldap-with-posix-groups" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_BASE_DN&#39;</span><span class="p">,</span> <span class="s1">&#39;ou=Groups,dc=kanboard,dc=local&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_USER_FILTER&#39;</span><span class="p">,</span> <span class="s1">&#39;(&amp;(objectClass=posixGroup)(memberUid=</span><span class="si">%s</span><span class="s1">))&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_ADMIN_DN&#39;</span><span class="p">,</span> <span class="s1">&#39;cn=Kanboard Admins,ou=Groups,dc=kanboard,dc=local&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_MANAGER_DN&#39;</span><span class="p">,</span> <span class="s1">&#39;cn=Kanboard Managers,ou=Groups,dc=kanboard,dc=local&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You <strong>must define the parameter</strong> <code class="docutils literal"><span class="pre">LDAP_GROUP_USER_FILTER</span></code> if your
+LDAP server use <code class="docutils literal"><span class="pre">memberUid</span></code> instead of <code class="docutils literal"><span class="pre">memberOf</span></code>. All parameters of
+this example are mandatory.</p>
+</div>
+</div>
+<div class="section" id="automatically-load-ldap-groups-for-project-permissions">
+<h2>Automatically load LDAP groups for project permissions<a class="headerlink" href="#automatically-load-ldap-groups-for-project-permissions" title="Ссылка на этот заголовок">¶</a></h2>
+<p>This feature allows you to sync automatically LDAP groups with Kanboard
+groups. Each group can have a different project role assigned.</p>
+<p>On the project permissions page, people can enter groups in the
+auto-complete field and Kanboard can search for groups with any provider
+enabled.</p>
+<p>If the group doesn&#8217;t exist in the local database, it will be
+automatically synced.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">LDAP_GROUP_PROVIDER</span></code>: Enable the LDAP group provider</li>
+<li><code class="docutils literal"><span class="pre">LDAP_GROUP_BASE_DN</span></code>: Distinguished names to find groups in LDAP
+directory</li>
+<li><code class="docutils literal"><span class="pre">LDAP_GROUP_FILTER</span></code>: LDAP filter used to perform the query</li>
+<li><code class="docutils literal"><span class="pre">LDAP_GROUP_ATTRIBUTE_NAME</span></code>: LDAP attribute used to fetch the group
+name</li>
+</ul>
+<div class="section" id="id1">
+<h3>Example for Active Directory:<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_PROVIDER&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_BASE_DN&#39;</span><span class="p">,</span> <span class="s1">&#39;CN=Groups,DC=kanboard,DC=local&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_FILTER&#39;</span><span class="p">,</span> <span class="s1">&#39;(&amp;(objectClass=group)(sAMAccountName=</span><span class="si">%s</span><span class="s1">*))&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>With the filter given as example above, Kanboard will search for groups
+that match the query. If the end-user enter the text &#8220;My group&#8221; in the
+auto-complete box, Kanboard will return all groups that match the
+pattern: <code class="docutils literal"><span class="pre">(&amp;(objectClass=group)(sAMAccountName=My</span> <span class="pre">group*))</span></code>.</p>
+<ul class="simple">
+<li>Note 1: The special characters <code class="docutils literal"><span class="pre">*</span></code> is important here, <strong>otherwise
+an exact match will be done</strong>.</li>
+<li>Note 2: This feature is only compatible with LDAP authentication
+configured in &#8220;proxy&#8221; or &#8220;anonymous&#8221; mode</li>
+</ul>
+<p><a class="reference external" href="http://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx">More examples of LDAP filters for Active
+Directory</a></p>
+</div>
+<div class="section" id="id2">
+<h3>Example for OpenLDAP with Posix Groups:<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_PROVIDER&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_BASE_DN&#39;</span><span class="p">,</span> <span class="s1">&#39;ou=Groups,dc=kanboard,dc=local&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_GROUP_FILTER&#39;</span><span class="p">,</span> <span class="s1">&#39;(&amp;(objectClass=posixGroup)(cn=</span><span class="si">%s</span><span class="s1">*))&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">LDAP Group Synchronization</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#define-automatically-user-roles-based-on-ldap-groups">Define automatically user roles based on LDAP groups</a><ul>
+<li><a class="reference internal" href="#example-for-active-directory">Example for Active Directory:</a></li>
+<li><a class="reference internal" href="#example-for-openldap-with-posix-groups">Example for OpenLDAP with Posix Groups:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#automatically-load-ldap-groups-for-project-permissions">Automatically load LDAP groups for project permissions</a><ul>
+<li><a class="reference internal" href="#id1">Example for Active Directory:</a></li>
+<li><a class="reference internal" href="#id2">Example for OpenLDAP with Posix Groups:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ldap-group-sync.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ldap-group-sync.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

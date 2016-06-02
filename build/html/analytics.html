@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Analytics &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="analytics">
+<h1>Analytics<a class="headerlink" href="#analytics" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Each project have an analytics section. Depending on how you are using
+Kanboard, you can see those reports:</p>
+<div class="section" id="user-repartition">
+<h2>User repartition<a class="headerlink" href="#user-repartition" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="User repartition" src="https://kanboard.net/screenshots/documentation/user-repartition.png" />
+<p class="caption"><span class="caption-text">User repartition</span></p>
+</div>
+<p>This pie chart show the number of open tasks assigned per user.</p>
+</div>
+<div class="section" id="task-distribution">
+<h2>Task distribution<a class="headerlink" href="#task-distribution" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="Task distribution" src="https://kanboard.net/screenshots/documentation/task-distribution.png" />
+<p class="caption"><span class="caption-text">Task distribution</span></p>
+</div>
+<p>This pie chart gives an overview of the number of open tasks per column.</p>
+</div>
+<div class="section" id="cumulative-flow-diagram">
+<h2>Cumulative flow diagram<a class="headerlink" href="#cumulative-flow-diagram" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="figure" id="id3">
+<img alt="Cumulative flow diagram" src="https://kanboard.net/screenshots/documentation/cfd.png" />
+<p class="caption"><span class="caption-text">Cumulative flow diagram</span></p>
+</div>
+<ul class="simple">
+<li>This chart shows the number of tasks cumulatively for each column
+over the time.</li>
+<li>Every day, the total number of tasks is recorded for each column.</li>
+<li>If you would like to exclude closed tasks, change the <a class="reference external" href="project-configuration.markdown">global project
+settings</a>.</li>
+</ul>
+<p>Note: You need to have at least two days of data to see the graph.</p>
+</div>
+<div class="section" id="burn-down-chart">
+<h2>Burn down chart<a class="headerlink" href="#burn-down-chart" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="figure" id="id4">
+<img alt="Burndown chart" src="https://kanboard.net/screenshots/documentation/burndown-chart.png" />
+<p class="caption"><span class="caption-text">Burndown chart</span></p>
+</div>
+<p>The <a class="reference external" href="http://en.wikipedia.org/wiki/Burn_down_chart">burn down chart</a>
+is available for each project.</p>
+<ul class="simple">
+<li>This chart is a graphical representation of work left to do versus
+time.</li>
+<li>Kanboard use the complexity or story point to generate this diagram.</li>
+<li>Everyday, the sum of the story points for each column is calculated.</li>
+</ul>
+</div>
+<div class="section" id="average-time-spent-into-each-column">
+<h2>Average time spent into each column<a class="headerlink" href="#average-time-spent-into-each-column" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="figure" id="id5">
+<img alt="Average time spent into each column" src="https://kanboard.net/screenshots/documentation/average-time-spent-into-each-column.png" />
+<p class="caption"><span class="caption-text">Average time spent into each column</span></p>
+</div>
+<p>This chart shows the average time spent into each column for the last
+1000 tasks.</p>
+<ul class="simple">
+<li>Kanboard uses the task transitions to calculate the data.</li>
+<li>The time spent is calculated until the task is closed.</li>
+</ul>
+</div>
+<div class="section" id="average-lead-and-cycle-time">
+<h2>Average Lead and Cycle time<a class="headerlink" href="#average-lead-and-cycle-time" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="figure" id="id6">
+<img alt="Average time spent into each column" src="https://kanboard.net/screenshots/documentation/average-lead-cycle-time.png" />
+<p class="caption"><span class="caption-text">Average time spent into each column</span></p>
+</div>
+<p>This chart show the average lead and cycle time for the last 1000 tasks
+over time.</p>
+<ul class="simple">
+<li>The lead time is the time between the task creation and the date of
+completion.</li>
+<li>The cycle time is time between the specified start date of the task
+to the completion date.</li>
+<li>If the task is not closed, the current time is used instead of the
+date of completion.</li>
+</ul>
+<p>Those metrics are calculated and recorded every day for the whole
+project.</p>
+<p>Note: Don&#8217;t forget to run the <a class="reference external" href="cronjob.markdown">daily cronjob</a> to
+have accurate statistics.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Analytics</a><ul>
+<li><a class="reference internal" href="#user-repartition">User repartition</a></li>
+<li><a class="reference internal" href="#task-distribution">Task distribution</a></li>
+<li><a class="reference internal" href="#cumulative-flow-diagram">Cumulative flow diagram</a></li>
+<li><a class="reference internal" href="#burn-down-chart">Burn down chart</a></li>
+<li><a class="reference internal" href="#average-time-spent-into-each-column">Average time spent into each column</a></li>
+<li><a class="reference internal" href="#average-lead-and-cycle-time">Average Lead and Cycle time</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/analytics.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/analytics.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

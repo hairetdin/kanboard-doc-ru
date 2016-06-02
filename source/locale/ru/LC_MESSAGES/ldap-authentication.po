@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/ldap-authentication.rst:2
+msgid "LDAP Authentication"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:5
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:7
+msgid "PHP LDAP extension enabled"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:8
+msgid "LDAP server:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:10
+msgid "OpenLDAP"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:11
+msgid "Microsoft Active Directory"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:12
+msgid "Novell eDirectory"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:15
+msgid "Workflow"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:17
+msgid ""
+"When the LDAP authentication is activated, the login process works like "
+"that:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:20
+msgid "Try first to authenticate the user by using the database"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:21
+msgid ""
+"If the user is not found inside the database, a LDAP authentication is "
+"performed"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:23
+msgid ""
+"If the LDAP authentication is successful, by default a local user is "
+"created automatically with no password and marked as LDAP users."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:26
+msgid ""
+"The full name and the email address are automatically fetched from the "
+"LDAP server."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:30
+msgid "Authentication Types"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:33
+msgid "Type"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:33
+msgid "Description"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:35
+msgid "Proxy User"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:35
+msgid "A specific user is used to browse LDAP directory"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:37
+msgid "User"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:37
+msgid "The end-user credentials are used for browsing LDAP directory"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:39
+msgid "Anonymous"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:39
+msgid "No authentication is performed for LDAP browsing"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:42
+msgid "**The recommended authentication method is \"Proxy\"**."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:45
+msgid "Anonymous mode"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:53
+msgid ""
+"This is the default value but some LDAP servers don't allow anonymous "
+"browsing for security reasons."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:57
+msgid "Proxy mode"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:59
+msgid "A specific user is used to browse the LDAP directory:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:68
+msgid "User mode"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:70
+msgid "This method uses the credentials provided by the end-user."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:72
+msgid ""
+"For example, Microsoft Active Directory doesn't allow anonymous browsing "
+"by default and if you don't want to use a proxy user you can use this "
+"method."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:82
+msgid ""
+"In this case, the constant ``LDAP_USERNAME`` is used as a pattern to the "
+"ldap username, examples:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:85
+#, python-format
+msgid "``%s@kanboard.local`` will be replaced by ``my_user@kanboard.local``"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:86
+#, python-format
+msgid "``KANBOARD\\\\%s`` will be replaced by ``KANBOARD\\my_user``"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:89
+msgid "User LDAP filter"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:91
+msgid ""
+"The configuration parameter ``LDAP_USER_FILTER`` is used to find users in"
+" LDAP directory."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:94
+msgid "Examples:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:96
+#, python-format
+msgid ""
+"``(&(objectClass=user)(sAMAccountName=%s))`` is replaced by "
+"``(&(objectClass=user)(sAMAccountName=my_username))``"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:98
+#, python-format
+msgid "``uid=%s`` is replaced by ``uid=my_username``"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:100
+msgid ""
+"Other examples of `filters for Active Directory "
+"<http://social.technet.microsoft.com/wiki/contents/articles/5392.active-"
+"directory-ldap-syntax-filters.aspx>`__"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:103
+msgid "Example to filter access to Kanboard:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:105
+#, python-format
+msgid ""
+"``(&(objectClass=user)(sAMAccountName=%s)(memberOf=CN=Kanboard "
+"Users,CN=Users,DC=kanboard,DC=local))``"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:107
+msgid ""
+"This example allows only people members of the group \"Kanboard Users\" "
+"to connect to Kanboard."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:111
+msgid "Example for Microsoft Active Directory"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:113
+msgid ""
+"Let's say we have a domain ``KANBOARD`` (kanboard.local) and the primary "
+"controller is ``myserver.kanboard.local``."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:116
+msgid "First example with proxy mode:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:136
+msgid "Second example with user mode:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:157
+msgid "Example for OpenLDAP"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:159
+msgid ""
+"Our LDAP server is ``myserver.example.com`` and all users are stored "
+"under ``ou=People,dc=example,dc=com``."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:162
+msgid "For this example we use the anonymous binding."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:179
+msgid "Disable automatic account creation"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:181
+msgid ""
+"By default, Kanboard will create a user account automatically if nothing "
+"is found."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:184
+msgid ""
+"You can disable this behavior if you prefer to create user accounts "
+"manually to restrict Kanboard to only some people."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:187
+msgid "Just change the value of ``LDAP_ACCOUNT_CREATION`` to ``false``:"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:195
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:200
+msgid ""
+"If SELinux is enabled, you have to allow Apache to reach out your LDAP "
+"server."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:203
+msgid ""
+"You can switch SELinux to the permissive mode or disable it (not "
+"recommended)"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:205
+msgid ""
+"You can allow all network connections, by example ``setsebool -P "
+"httpd_can_network_connect=1`` or have a more restrictive rule"
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:209
+msgid "In any case, refer to the official Redhat/Centos documentation."
+msgstr ""
+
+#: ../../source/ldap-authentication.rst:214
+msgid ""
+"If you are not able to setup correctly the LDAP authentication, you can "
+"`enable the debug mode <config.markdown>`__ and watch log files."
+msgstr ""
+
+#~ msgid ""
+#~ "| Type       | Description"
+#~ "                                                     | "
+#~ "|------------|-----------------------------------------------------------------|"
+#~ " | Proxy User | A specific user"
+#~ " is used to browse LDAP directory"
+#~ "                | | User       | The "
+#~ "end-user credentials are used for "
+#~ "browsing LDAP directory   | | Anonymous"
+#~ "  | No authentication is performed "
+#~ "for LDAP browsing                |"
+#~ msgstr ""
+
+#~ msgid "The recommended authentication method is \"Proxy\"."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this case, the constant LDAP_USERNAME"
+#~ " is used as a pattern to the"
+#~ " ldap username, examples:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The configuration parameter LDAP_USER_FILTER "
+#~ "is used to find users in LDAP "
+#~ "directory."
+#~ msgstr ""
+
+#~ msgid "Other examples of filters for Active Directory"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(&(objectClass=user)(sAMAccountName=%s)(memberOf=CN=Kanboard "
+#~ "Users,CN=Users,DC=kanboard,DC=local))"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let's say we have a domain "
+#~ "KANBOARD (kanboard.local) and the primary "
+#~ "controller is myserver.kanboard.local."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our LDAP server is myserver.example.com "
+#~ "and all users are stored under "
+#~ "ou=People,dc=example,dc=com."
+#~ msgstr ""
+
+#~ msgid "Just change the value of LDAP_ACCOUNT_CREATION to false:"
+#~ msgstr ""
+
+#~ msgid "SELinux restrictions"
+#~ msgstr ""
+
+#~ msgid "Enable debug mode"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are not able to setup "
+#~ "correctly the LDAP authentication, you "
+#~ "can enable the debug mode and "
+#~ "watch log files."
+#~ msgstr ""
+

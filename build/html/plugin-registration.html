@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plugin Registration &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="plugin-registration">
+<h1>Plugin Registration<a class="headerlink" href="#plugin-registration" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="directory-structure">
+<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Plugins are stored in the <code class="docutils literal"><span class="pre">plugins</span></code> subdirectory. An example of a
+plugin directory structure:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>plugins
+└── Budget            &lt;= Plugin name
+    ├── Asset         &lt;= Javascript/CSS files
+    ├── Controller
+    ├── LICENSE       &lt;= Plugin license
+    ├── Locale
+    │   ├── fr_FR
+    │   ├── it_IT
+    │   ├── ja_JP
+    │   └── zh_CN
+    ├── Model
+    ├── Plugin.php    &lt;= Plugin registration file
+    ├── README.md
+    ├── Schema        &lt;= Database migrations
+    ├── Template
+    └── Test          &lt;= Unit tests
+</pre></div>
+</div>
+<p>Only the registration file <code class="docutils literal"><span class="pre">Plugin.php</span></code> is required. Other folders are
+optional.</p>
+<p>The first letter of the plugin name must be capitalized.</p>
+</div>
+<div class="section" id="plugin-registration-file">
+<h2>Plugin Registration File<a class="headerlink" href="#plugin-registration-file" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard will scan the directory <code class="docutils literal"><span class="pre">plugins</span></code> and load automatically
+everything under this directory. The file <code class="docutils literal"><span class="pre">Plugin.php</span></code> is used to load
+and register the plugin.</p>
+<p>Example of <code class="docutils literal"><span class="pre">Plugin.php</span></code> file (<code class="docutils literal"><span class="pre">plugins/Foobar/Plugin.php</span></code>):</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+
+namespace Kanboard\Plugin\Foobar;
+
+use Kanboard\Core\Plugin\Base;
+
+class Plugin extends Base
+{
+    public function initialize()
+    {
+        $this-&gt;template-&gt;hook-&gt;attach(&#39;template:layout:head&#39;, &#39;theme:layout/head&#39;);
+    }
+}
+</pre></div>
+</div>
+<p>This file should contain a class <code class="docutils literal"><span class="pre">Plugin</span></code> defined under the namespace
+<code class="docutils literal"><span class="pre">Kanboard\Plugin\Yourplugin</span></code> and extends
+<code class="docutils literal"><span class="pre">Kanboard\Core\Plugin\Base</span></code>.</p>
+<p>The only required method is <code class="docutils literal"><span class="pre">initialize()</span></code>. This method is called for
+each request when the plugin is loaded.</p>
+</div>
+<div class="section" id="plugin-methods">
+<h2>Plugin Methods<a class="headerlink" href="#plugin-methods" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Available methods from <code class="docutils literal"><span class="pre">Kanboard\Core\Plugin\Base</span></code>:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">initialize()</span></code>: Executed when the plugin is loaded</li>
+<li><code class="docutils literal"><span class="pre">getClasses()</span></code>: Return all classes that should be stored in the
+dependency injection container</li>
+<li><code class="docutils literal"><span class="pre">on($event,</span> <span class="pre">$callback)</span></code>: Listen on internal events</li>
+<li><code class="docutils literal"><span class="pre">getPluginName()</span></code>: Should return plugin name</li>
+<li><code class="docutils literal"><span class="pre">getPluginAuthor()</span></code>: Should return plugin author</li>
+<li><code class="docutils literal"><span class="pre">getPluginVersion()</span></code>: Should return plugin version</li>
+<li><code class="docutils literal"><span class="pre">getPluginDescription()</span></code>: Should return plugin description</li>
+<li><code class="docutils literal"><span class="pre">getPluginHomepage()</span></code>: Should return plugin Homepage (link)</li>
+<li><code class="docutils literal"><span class="pre">setContentSecurityPolicy(array</span> <span class="pre">$rules)</span></code>: Override default HTTP CSP
+rules</li>
+<li><code class="docutils literal"><span class="pre">onStartup()</span></code>: If present, this method is executed automatically
+when the event &#8220;app.bootstrap&#8221; is triggered</li>
+</ul>
+<p>Your plugin registration class can also inherit from Kanboard, that way
+you can access all classes and methods of Kanboard easily.</p>
+<p>This example will fetch the user #123:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;user-&gt;getById(123);
+</pre></div>
+</div>
+</div>
+<div class="section" id="plugin-translations">
+<h2>Plugin Translations<a class="headerlink" href="#plugin-translations" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Plugin can be translated in the same way as the rest of the application.
+You must load the translations yourself when the session is created:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>public function onStartup()
+{
+    Translator::load($this-&gt;language-&gt;getCurrentLanguage(), __DIR__.&#39;/Locale&#39;);
+}
+</pre></div>
+</div>
+<p>The translations must be stored in the file
+<code class="docutils literal"><span class="pre">plugins/Myplugin/Locale/xx_XX/translations.php</span></code> (replace xx_XX by
+the language code fr_FR, en_US...).</p>
+<p>Translations are stored in a dictionary, if you would like to override
+an existing string, you just need to use the same key in your
+translation file.</p>
+</div>
+<div class="section" id="dependency-injection-container">
+<h2>Dependency Injection Container<a class="headerlink" href="#dependency-injection-container" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard uses Pimple, a simple PHP Dependency Injection Container.
+However, Kanboard can register any class in the container easily.</p>
+<p>Those classes are available everywhere in the application and only one
+instance is created.</p>
+<p>Here an example to register your own models in the container:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>public function getClasses()
+{
+    return array(
+        &#39;Plugin\Budget\Model&#39; =&gt; array(
+            &#39;HourlyRateModel&#39;,
+            &#39;BudgetModel&#39;,
+        )
+    );
+}
+</pre></div>
+</div>
+<p>Now, if you use a class that extends from <code class="docutils literal"><span class="pre">Core\Base</span></code>, you can access
+directly to those class instance:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;hourlyRateModel-&gt;remove(123);
+$this-&gt;budgetModel-&gt;getDailyBudgetBreakdown(456);
+
+// It&#39;s the same thing as using the container:
+$this-&gt;container[&#39;hourlyRateModel&#39;]-&gt;getAll();
+</pre></div>
+</div>
+<p>Keys of the containers are unique across the application. If you
+override an existing class, you will change the default behavior.</p>
+</div>
+<div class="section" id="add-new-api-methods">
+<h2>Add new API methods<a class="headerlink" href="#add-new-api-methods" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard use this library
+<a class="reference external" href="https://github.com/fguillot/JsonRPC">JSON-RPC</a> to handle API calls.</p>
+<p>To add a new method you can do something like that from your plugin:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;api-&gt;getProcedureHandler()-&gt;withCallback(&#39;my_method&#39;, function() {
+    return &#39;foobar&#39;;
+});
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">$this-&gt;container['api']</span></code> or <code class="docutils literal"><span class="pre">$this-&gt;api</span></code> expose an instance of the
+object <code class="docutils literal"><span class="pre">JsonRPC\Server</span></code>.</p>
+<p>Read the library documentation for more information.</p>
+</div>
+<div class="section" id="add-new-console-commands">
+<h2>Add new console commands<a class="headerlink" href="#add-new-console-commands" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard use the library <a class="reference external" href="http://symfony.com/doc/current/components/console/introduction.html">Symfony
+Console</a>
+to handle local command lines.</p>
+<p>Kanboard expose an instance of the object
+<code class="docutils literal"><span class="pre">Symfony\Component\Console\Application</span></code> via <code class="docutils literal"><span class="pre">$this-&gt;cli</span></code>. You can
+add new commands from your plugin:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;cli-&gt;add(new MyCommand());
+</pre></div>
+</div>
+<p>Read the library documentation for more information.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plugin Registration</a><ul>
+<li><a class="reference internal" href="#directory-structure">Directory structure</a></li>
+<li><a class="reference internal" href="#plugin-registration-file">Plugin Registration File</a></li>
+<li><a class="reference internal" href="#plugin-methods">Plugin Methods</a></li>
+<li><a class="reference internal" href="#plugin-translations">Plugin Translations</a></li>
+<li><a class="reference internal" href="#dependency-injection-container">Dependency Injection Container</a></li>
+<li><a class="reference internal" href="#add-new-api-methods">Add new API methods</a></li>
+<li><a class="reference internal" href="#add-new-console-commands">Add new console commands</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-registration.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-registration.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Authorization Architecture &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="authorization-architecture">
+<h1>Authorization Architecture<a class="headerlink" href="#authorization-architecture" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Kanboard <a class="reference external" href="roles.markdown">supports multiple roles</a> at the application
+level and at the project level.</p>
+<div class="section" id="authorization-workflow">
+<h2>Authorization Workflow<a class="headerlink" href="#authorization-workflow" title="Ссылка на этот заголовок">¶</a></h2>
+<p>For each HTTP request:</p>
+<ol class="arabic simple">
+<li>Authorize or not access to the resource based on the application
+access list</li>
+<li>If the resource is for a project (board, task...):<ol class="arabic">
+<li>Fetch user role for this project</li>
+<li>Grant/Denied access based on the project access map</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="extending-access-map">
+<h2>Extending Access Map<a class="headerlink" href="#extending-access-map" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The Access List (ACL) is based on the controller class name and the
+method name. The list of access is handled by the class
+<code class="docutils literal"><span class="pre">Kanboard\Core\Security\AccessMap</span></code>.</p>
+<p>There are two access map: one for the application and another one for
+projects.</p>
+<ul class="simple">
+<li>Application access map: <code class="docutils literal"><span class="pre">$this-&gt;applicationAccessMap</span></code></li>
+<li>Project access map: <code class="docutils literal"><span class="pre">$this-&gt;projectAccessMap</span></code></li>
+</ul>
+<p>Examples to define a new policy from your plugin:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// All methods of the class MyController:
+$this-&gt;projectAccessMap-&gt;add(&#39;MyController&#39;, &#39;*&#39;, Role::PROJECT_MANAGER);
+
+// All some methods:
+$this-&gt;projectAccessMap-&gt;add(&#39;MyOtherController&#39;, array(&#39;create&#39;, &#39;save&#39;), Role::PROJECT_MEMBER);
+</pre></div>
+</div>
+<p>Roles are defined in the class <code class="docutils literal"><span class="pre">Kanboard\Core\Security\Role</span></code>.</p>
+<p>The Authorization class (<code class="docutils literal"><span class="pre">Kanboard\Core\Security\Authorization</span></code>) will
+check the access for each page.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Authorization Architecture</a><ul>
+<li><a class="reference internal" href="#authorization-workflow">Authorization Workflow</a></li>
+<li><a class="reference internal" href="#extending-access-map">Extending Access Map</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-authorization-architecture.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-authorization-architecture.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

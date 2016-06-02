@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plugin Hooks &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="plugin-hooks">
+<h1>Plugin Hooks<a class="headerlink" href="#plugin-hooks" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="application-hooks">
+<h2>Application Hooks<a class="headerlink" href="#application-hooks" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Hooks can extend, replace, filter data or change the default behavior.
+Each hook is identified with a unique name, example:
+<code class="docutils literal"><span class="pre">controller:calendar:user:events</span></code></p>
+<div class="section" id="listen-on-hook-events">
+<h3>Listen on hook events<a class="headerlink" href="#listen-on-hook-events" title="Ссылка на этот заголовок">¶</a></h3>
+<p>In your <code class="docutils literal"><span class="pre">initialize()</span></code> method you need to call the method <code class="docutils literal"><span class="pre">on()</span></code> of
+the class <code class="docutils literal"><span class="pre">Kanboard\Core\Plugin\Hook</span></code>:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;hook-&gt;on(&#39;hook_name&#39;, $callable);
+</pre></div>
+</div>
+<p>The first argument is the name of the hook and the second is a PHP
+callable.</p>
+</div>
+<div class="section" id="hooks-executed-only-once">
+<h3>Hooks executed only once<a class="headerlink" href="#hooks-executed-only-once" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Some hooks can have only one listener:</p>
+<div class="section" id="model-subtask-time-tracking-calculate-time-spent">
+<h4>model:subtask-time-tracking:calculate:time-spent<a class="headerlink" href="#model-subtask-time-tracking-calculate-time-spent" title="Ссылка на этот заголовок">¶</a></h4>
+<ul class="simple">
+<li>Override time spent calculation when sub-task timer is stopped</li>
+<li>Arguments:<ul>
+<li><code class="docutils literal"><span class="pre">$user_id</span></code> (integer)</li>
+<li><code class="docutils literal"><span class="pre">$start</span></code> (DateTime)</li>
+<li><code class="docutils literal"><span class="pre">$end</span></code> (DateTime)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="merge-hooks">
+<h3>Merge hooks<a class="headerlink" href="#merge-hooks" title="Ссылка на этот заголовок">¶</a></h3>
+<p>&#8220;Merge hooks&#8221; act in the same way as the function <code class="docutils literal"><span class="pre">array_merge</span></code>. The
+hook callback must return an array. This array will be merged with the
+default one.</p>
+<p>Example to add events in the user calendar:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>class Plugin extends Base
+{
+    public function initialize()
+    {
+        $container = $this-&gt;container;
+
+        $this-&gt;hook-&gt;on(&#39;controller:calendar:user:events&#39;, function($user_id, $start, $end) use ($container) {
+            $model = new SubtaskForecast($container);
+            return $model-&gt;getCalendarEvents($user_id, $end); // Return new events
+        });
+    }
+}
+</pre></div>
+</div>
+<p>Example to override default values for task forms:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>class Plugin extends Base
+{
+    public function initialize()
+    {
+        $this-&gt;hook-&gt;on(&#39;controller:task:form:default&#39;, function (array $default_values) {
+            return empty($default_values[&#39;score&#39;]) ? array(&#39;score&#39; =&gt; 4) : array();
+        });
+    }
+}
+</pre></div>
+</div>
+<p>List of merging hooks:</p>
+<div class="section" id="controller-task-form-default">
+<h4>controller:task:form:default<a class="headerlink" href="#controller-task-form-default" title="Ссылка на этот заголовок">¶</a></h4>
+<ul class="simple">
+<li>Override default values for task forms</li>
+<li>Arguments:<ul>
+<li><code class="docutils literal"><span class="pre">$default_values</span></code>: actual default values (array)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="controller-calendar-project-events">
+<h4>controller:calendar:project:events<a class="headerlink" href="#controller-calendar-project-events" title="Ссылка на этот заголовок">¶</a></h4>
+<ul class="simple">
+<li>Add more events to the project calendar</li>
+<li>Arguments:<ul>
+<li><code class="docutils literal"><span class="pre">$project_id</span></code> (integer)</li>
+<li><code class="docutils literal"><span class="pre">$start</span></code> Calendar start date (string, ISO-8601 format)</li>
+<li><code class="docutils literal"><span class="pre">$end</span></code> Calendar` end date (string, ISO-8601 format)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="controller-calendar-user-events">
+<h4>controller:calendar:user:events<a class="headerlink" href="#controller-calendar-user-events" title="Ссылка на этот заголовок">¶</a></h4>
+<ul class="simple">
+<li>Add more events to the user calendar</li>
+<li>Arguments:<ul>
+<li><code class="docutils literal"><span class="pre">$user_id</span></code> (integer)</li>
+<li><code class="docutils literal"><span class="pre">$start</span></code> Calendar start date (string, ISO-8601 format)</li>
+<li><code class="docutils literal"><span class="pre">$end</span></code> Calendar end date (string, ISO-8601 format)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="asset-hooks">
+<h2>Asset Hooks<a class="headerlink" href="#asset-hooks" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Asset hooks can be used to add a new stylesheet easily or a new
+JavaScript file in the layout. You can use this feature to create a
+theme and override all Kanboard default styles.</p>
+<p>Example to add a new stylesheet:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+
+namespace Kanboard\Plugin\Css;
+
+use Kanboard\Core\Plugin\Base;
+
+class Plugin extends Base
+{
+    public function initialize()
+    {
+        $this-&gt;hook-&gt;on(&#39;template:layout:css&#39;, &#39;plugins/Css/skin.css&#39;);
+    }
+}
+</pre></div>
+</div>
+<p>List of asset Hooks:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">template:layout:css</span></code></li>
+<li><code class="docutils literal"><span class="pre">template:layout:js</span></code></li>
+</ul>
+</div>
+<div class="section" id="template-hooks">
+<h2>Template Hooks<a class="headerlink" href="#template-hooks" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Template hooks allow to add new content in existing templates.</p>
+<p>Example to add new content in the dashboard sidebar:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;template-&gt;hook-&gt;attach(&#39;template:dashboard:sidebar&#39;, &#39;myplugin:dashboard/sidebar&#39;);
+</pre></div>
+</div>
+<p>This call is usually defined in the <code class="docutils literal"><span class="pre">initialize()</span></code> method. The first
+argument is name of the hook and the second argument is the template
+name.</p>
+<p>Template names prefixed with the plugin name and colon indicate the
+location of the template.</p>
+<p>Example with <code class="docutils literal"><span class="pre">myplugin:dashboard/sidebar</span></code>:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">myplugin</span></code> is the name of your plugin (lowercase)</li>
+<li><code class="docutils literal"><span class="pre">dashboard/sidebar</span></code> is the template name</li>
+<li>On the filesystem, the plugin will be located here:
+<code class="docutils literal"><span class="pre">plugins\Myplugin\Template\dashboard\sidebar.php</span></code></li>
+<li>Templates are written in pure PHP (don&#8217;t forget to escape data)</li>
+</ul>
+<p>Template names without prefix are core templates.</p>
+<p>List of template hooks:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Hook</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:analytic:sidebar</span></code></td>
+<td>Sidebar on analytic pages</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:app:filters-helper:before</span></code></td>
+<td>Filter helper dropdown (top)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:app:filters-helper:after</span></code></td>
+<td>Filter helper dropdown (bottom)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:auth:login-form:before</span></code></td>
+<td>Login page (top)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:auth:login-form:after</span></code></td>
+<td>Login page (bottom)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:board:private:task:before-title</span></code></td>
+<td>Task in private board: before title</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:board:private:task:after-title</span></code></td>
+<td>Task in private board: after title</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:board:public:task:before-title</span></code></td>
+<td>Task in public board: before title</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:board:public:task:after-title</span></code></td>
+<td>Task in public board: after title</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:board:task:footer</span></code></td>
+<td>Task in board: footer</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:board:task:icons</span></code></td>
+<td>Task in board: tooltip icon</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:config:sidebar</span></code></td>
+<td>Sidebar on settings page</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:config:application</span></code></td>
+<td>Application settings form</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:config:integrations</span></code></td>
+<td>Integration page in global settings</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:dashboard:sidebar</span></code></td>
+<td>Sidebar on dashboard page</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:export:sidebar</span></code></td>
+<td>Sidebar on export pages</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:layout:head</span></code></td>
+<td>Page layout <code class="docutils literal"><span class="pre">&lt;head/&gt;</span></code> tag</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:layout:top</span></code></td>
+<td>Page layout top header</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:layout:bottom</span></code></td>
+<td>Page layout footer</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:project:dropdown</span></code></td>
+<td>&#8220;Actions&#8221; menu on left in different project views</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:project:header:before</span></code></td>
+<td>Project filters (before)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:project:header:after</span></code></td>
+<td>Project filters (after)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:project:integrations</span></code></td>
+<td>Integration page in projects settings</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:project:sidebar</span></code></td>
+<td>Sidebar in project settings</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:project-user:sidebar</span></code></td>
+<td>Sidebar on project user overview page</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:layout:top</span></code></td>
+<td>Task layout top (after page header)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:details:top</span></code></td>
+<td>Task summary top</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:details:bottom</span></code></td>
+<td>Task summary bottom</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:details:first-column</span></code></td>
+<td>Task summary first column</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:details:second-column</span></code></td>
+<td>Task summary second column</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:details:third-column</span></code></td>
+<td>Task summary third column</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:details:fourth-column</span></code></td>
+<td>Task summary fourth column</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:dropdown</span></code></td>
+<td>Task dropdown menu in listing pages</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:sidebar:actions</span></code></td>
+<td>Sidebar on task page (section actions)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:sidebar:information</span></code></td>
+<td>Sidebar on task page (section information)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:form:left-column</span></code></td>
+<td>Left column in task form</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:form:right-column</span></code></td>
+<td>Right column in task form</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:show:top</span></code></td>
+<td>Show task page: top</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:show:bottom</span></code></td>
+<td>Show task page: bottom</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:show:before-description</span></code></td>
+<td>Show task page: before description</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:show:before-tasklinks</span></code></td>
+<td>Show task page: before tasklinks</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:show:before-subtasks</span></code></td>
+<td>Show task page: before subtasks</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:show:before-timetracking</span></code></td>
+<td>Show task page: before timetracking</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:task:show:before-attachments</span></code></td>
+<td>Show task page: before attachments</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:task:show:before-comments</span></code></td>
+<td>Show task page: before comments</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:user:authentication:form</span></code></td>
+<td>&#8220;Edit authentication&#8221; form in user profile</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:user:create-remote:form</span></code></td>
+<td>&#8220;Create remote user&#8221; form</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:user:external</span></code></td>
+<td>&#8220;External authentication&#8221; page in user profile</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:user:integrations</span></code></td>
+<td>Integration page in user profile</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">template:user:sidebar:actions</span></code></td>
+<td>Sidebar in user profile (section actions)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">template:user:sidebar:information</span></code></td>
+<td>Sidebar in user profile (section information)</td>
+</tr>
+</tbody>
+</table>
+<p>Another template hooks can be added if necessary, just ask on the issue
+tracker.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plugin Hooks</a><ul>
+<li><a class="reference internal" href="#application-hooks">Application Hooks</a><ul>
+<li><a class="reference internal" href="#listen-on-hook-events">Listen on hook events</a></li>
+<li><a class="reference internal" href="#hooks-executed-only-once">Hooks executed only once</a><ul>
+<li><a class="reference internal" href="#model-subtask-time-tracking-calculate-time-spent">model:subtask-time-tracking:calculate:time-spent</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#merge-hooks">Merge hooks</a><ul>
+<li><a class="reference internal" href="#controller-task-form-default">controller:task:form:default</a></li>
+<li><a class="reference internal" href="#controller-calendar-project-events">controller:calendar:project:events</a></li>
+<li><a class="reference internal" href="#controller-calendar-user-events">controller:calendar:user:events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#asset-hooks">Asset Hooks</a></li>
+<li><a class="reference internal" href="#template-hooks">Template Hooks</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-hooks.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-hooks.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

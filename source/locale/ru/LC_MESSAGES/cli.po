@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/cli.rst:2
+msgid "Command Line Interface"
+msgstr ""
+
+#: ../../source/cli.rst:4
+msgid ""
+"Kanboard provides a simple command line interface that can be used from "
+"any Unix terminal. This tool can be used only on the local machine."
+msgstr ""
+
+#: ../../source/cli.rst:7
+msgid ""
+"This feature is useful to run commands outside of the web server "
+"processes."
+msgstr ""
+
+#: ../../source/cli.rst:11
+msgid "Usage"
+msgstr ""
+
+#: ../../source/cli.rst:13
+msgid ""
+"Open a terminal and go to your Kanboard directory (example: ``cd "
+"/var/www/kanboard``)"
+msgstr ""
+
+#: ../../source/cli.rst:15
+msgid "Run the command ``./kanboard``"
+msgstr ""
+
+#: ../../source/cli.rst:60
+msgid "Available commands"
+msgstr ""
+
+#: ../../source/cli.rst:63
+msgid "Tasks CSV export"
+msgstr ""
+
+#: ../../source/cli.rst:65 ../../source/cli.rst:82 ../../source/cli.rst:97
+msgid "Usage:"
+msgstr ""
+
+#: ../../source/cli.rst:71 ../../source/cli.rst:88 ../../source/cli.rst:103
+#: ../../source/cli.rst:118
+msgid "Example:"
+msgstr ""
+
+#: ../../source/cli.rst:77
+msgid "CSV data are sent to ``stdout``."
+msgstr ""
+
+#: ../../source/cli.rst:80
+msgid "Subtasks CSV export"
+msgstr ""
+
+#: ../../source/cli.rst:95
+msgid "Task transitions CSV export"
+msgstr ""
+
+#: ../../source/cli.rst:110
+msgid "Export daily summaries data in CSV"
+msgstr ""
+
+#: ../../source/cli.rst:112
+msgid "The exported data will be printed on the standard output:"
+msgstr ""
+
+#: ../../source/cli.rst:125
+msgid "Send notifications for overdue tasks"
+msgstr ""
+
+#: ../../source/cli.rst:127
+msgid "Emails will be sent to all users with notifications enabled."
+msgstr ""
+
+#: ../../source/cli.rst:133
+msgid "Optional parameters:"
+msgstr ""
+
+#: ../../source/cli.rst:135
+msgid "``--show``: Display notifications sent"
+msgstr ""
+
+#: ../../source/cli.rst:136
+msgid ""
+"``--group``: Group all overdue tasks for one user (from all projects) in "
+"one email"
+msgstr ""
+
+#: ../../source/cli.rst:138
+msgid "``--manager``: Send all overdue tasks to project manager(s) in one email"
+msgstr ""
+
+#: ../../source/cli.rst:141
+msgid "You can also display the overdue tasks with the flag ``--show``:"
+msgstr ""
+
+#: ../../source/cli.rst:154
+msgid "Run daily project stats calculation"
+msgstr ""
+
+#: ../../source/cli.rst:156
+msgid "This command calculate the statistics of each project:"
+msgstr ""
+
+#: ../../source/cli.rst:166
+msgid "Trigger for tasks"
+msgstr ""
+
+#: ../../source/cli.rst:168
+msgid ""
+"This command send a \"daily cronjob event\" to all open tasks of each "
+"project."
+msgstr ""
+
+#: ../../source/cli.rst:177
+msgid "Reset user password"
+msgstr ""
+
+#: ../../source/cli.rst:183
+msgid ""
+"You will be prompted for a password and confirmation. Characters are not "
+"printed to the screen."
+msgstr ""
+
+#: ../../source/cli.rst:187
+msgid "Remove two-factor authentication for a user"
+msgstr ""
+
+#: ../../source/cli.rst:194
+msgid "Install a plugin"
+msgstr ""
+
+#: ../../source/cli.rst:200
+msgid "Note: Installed files will have the same permissions as the current user"
+msgstr ""
+
+#: ../../source/cli.rst:203
+msgid "Remove a plugin"
+msgstr ""
+
+#: ../../source/cli.rst:210
+msgid "Upgrade all plugins"
+msgstr ""
+
+#~ msgid "CSV data are sent to stdout."
+#~ msgstr ""
+
+#~ msgid "You can also display the overdue tasks with the flag --show:"
+#~ msgstr ""
+

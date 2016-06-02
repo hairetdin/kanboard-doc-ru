@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/bruteforce-protection.rst:2
+msgid "Brute Force Protection"
+msgstr ""
+
+#: ../../source/bruteforce-protection.rst:4
+msgid "The brute force protection of Kanboard works at the user account level:"
+msgstr ""
+
+#: ../../source/bruteforce-protection.rst:6
+msgid "After 3 authentication failure for the same username, the login form shows a captcha image to prevent automated bot tentatives."
+msgstr ""
+
+#: ../../source/bruteforce-protection.rst:8
+msgid "After 6 authentication failure, the user account is locked down for a period of 15 minutes."
+msgstr ""
+
+#: ../../source/bruteforce-protection.rst:11
+msgid "This feature works only for authentication methods that use the login form."
+msgstr ""
+
+#: ../../source/bruteforce-protection.rst:14
+msgid "However, **after three authentication failure through the user API**, the account has to be unlocked by using the login form."
+msgstr ""
+
+#: ../../source/bruteforce-protection.rst:17
+msgid "Kanboard doesn't block any IP addresses since bots can use several anonymous proxies. However, you can use external tools like `fail2ban <http://www.fail2ban.org>`__ to avoid massive scans."
+msgstr ""
+
+#: ../../source/bruteforce-protection.rst:21
+msgid "Default settings can be changed with these configuration variables:"
+msgstr ""
+

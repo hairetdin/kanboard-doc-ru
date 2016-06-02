@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ical.rst:2
+msgid "Syncing your calendars"
+msgstr ""
+
+#: ../../source/ical.rst:4
+msgid "Kanboard supports iCal feeds for projects and users. This feature allows you to import Kanboard tasks in almost any calendar program (by example Microsoft Outlook, Apple Calendar, Mozilla Thunderbird and Google Calendar)."
+msgstr ""
+
+#: ../../source/ical.rst:9
+msgid "Calendar subscriptions are **read-only** access, you cannot create tasks from external calendar software. The Calendar feed export follows the iCal standard."
+msgstr ""
+
+#: ../../source/ical.rst:13
+msgid "Note: Only tasks within the date range of -2 months to +6 months are exported to the iCalendar feed."
+msgstr ""
+
+#: ../../source/ical.rst:17
+msgid "Project calendars"
+msgstr ""
+
+#: ../../source/ical.rst:19
+msgid "Each project has its own calendar."
+msgstr ""
+
+#: ../../source/ical.rst:20
+msgid "The subscription link is unique per project, the link is activated when you enable the public access of your project: **Project settings > Public access**."
+msgstr ""
+
+#: ../../source/ical.rst:23
+msgid "This calendar shows only tasks for the selected project."
+msgstr ""
+
+#: ../../source/ical.rst:26
+msgid "User calendars"
+msgstr ""
+
+#: ../../source/ical.rst:28
+msgid "Each user has its own calendar."
+msgstr ""
+
+#: ../../source/ical.rst:29
+msgid "The subscription link is unique per user, the link is activated when you enable the public access of your user: **User profile > Public access**."
+msgstr ""
+
+#: ../../source/ical.rst:32
+msgid "This calendar show tasks assigned to the user for all projects."
+msgstr ""
+
+#: ../../source/ical.rst:35
+msgid "Adding your Kanboard calendar to Apple Calendar"
+msgstr ""
+
+#: ../../source/ical.rst:37
+msgid "Open Calendar"
+msgstr ""
+
+#: ../../source/ical.rst:38
+msgid "Select **File > New Calendar Subscription**"
+msgstr ""
+
+#: ../../source/ical.rst:39
+#: ../../source/ical.rst:64
+#: ../../source/ical.rst:84
+#: ../../source/ical.rst:98
+msgid "Copy and paste the iCal feed URL from Kanboard"
+msgstr ""
+
+#: ../../source/ical.rst:44
+msgid "Add iCal subscription"
+msgstr ""
+
+#: ../../source/ical.rst:46
+msgid "You can choose to synchronize the calendar with iCloud to be available across all your devices"
+msgstr ""
+
+#: ../../source/ical.rst:48
+msgid "Don't forget to select the refresh frequency"
+msgstr ""
+
+#: ../../source/ical.rst:53
+msgid "Edit iCal subscription"
+msgstr ""
+
+#: ../../source/ical.rst:55
+msgid "Adding your Kanboard calendar to Microsoft Outlook"
+msgstr ""
+
+#: ../../source/ical.rst:60
+msgid "Outlook Add Internet Calendar"
+msgstr ""
+
+#: ../../source/ical.rst:62
+msgid "Open Outlook"
+msgstr ""
+
+#: ../../source/ical.rst:63
+msgid "Select **Open Calendar > From Internet**"
+msgstr ""
+
+#: ../../source/ical.rst:69
+msgid "Outlook Edit Internet Calendar"
+msgstr ""
+
+#: ../../source/ical.rst:71
+msgid "Adding your Kanboard calendar to Mozilla Thunderbird"
+msgstr ""
+
+#: ../../source/ical.rst:73
+msgid "Install the Add-on **Lightning** to add calendar support to Thunderbird"
+msgstr ""
+
+#: ../../source/ical.rst:75
+msgid "Click on **File > New Calendar**"
+msgstr ""
+
+#: ../../source/ical.rst:76
+msgid "In the dialog box, choose **On the Network**"
+msgstr ""
+
+#: ../../source/ical.rst:81
+msgid "Thunderbird Step 1"
+msgstr ""
+
+#: ../../source/ical.rst:83
+msgid "Choose the format iCalendar"
+msgstr ""
+
+#: ../../source/ical.rst:89
+msgid "Thunderbird Step 2"
+msgstr ""
+
+#: ../../source/ical.rst:91
+msgid "Choose the colors and other settings and finally save"
+msgstr ""
+
+#: ../../source/ical.rst:94
+msgid "Adding your Kanboard calendar to Google Calendar"
+msgstr ""
+
+#: ../../source/ical.rst:96
+msgid "Click the down-arrow next to **Other calendars**."
+msgstr ""
+
+#: ../../source/ical.rst:97
+msgid "Select **Add by URL** from the menu."
+msgstr ""
+
+#: ../../source/ical.rst:103
+msgid "Google Calendar"
+msgstr ""
+
+#: ../../source/ical.rst:104
+msgid "Your Kanboard calendar can also be available from your Android device if you enable the synchronization."
+msgstr ""
+
+#: ../../source/ical.rst:107
+msgid "Note: According to the Google Support, external calendars are not refreshed very often, `read the documentation <https://support.google.com/calendar/answer/37100?hl=en&ref_topic=1672445>`__."
+msgstr ""
+

@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Config file &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="config-file">
+<h1>Config file<a class="headerlink" href="#config-file" title="Ссылка на этот заголовок">¶</a></h1>
+<p>You can customize the default settings of Kanboard by adding a file
+<code class="docutils literal"><span class="pre">config.php</span></code> at the project root or in the <code class="docutils literal"><span class="pre">data</span></code> folder. You can
+also rename the file <code class="docutils literal"><span class="pre">config.default.php</span></code> to <code class="docutils literal"><span class="pre">config.php</span></code> and change
+the desired values.</p>
+<div class="section" id="enable-disable-debug-mode">
+<h2>Enable/Disable debug mode<a class="headerlink" href="#enable-disable-debug-mode" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;DEBUG&#39;, true);
+define(&#39;LOG_DRIVER&#39;, &#39;file&#39;); // Other drivers are: syslog, stdout, stderr or file
+</pre></div>
+</div>
+<p>The log driver must be defined if you enable the debug mode. The debug
+mode logs all SQL queries and the time taken to generate pages.</p>
+</div>
+<div class="section" id="plugins">
+<h2>Plugins<a class="headerlink" href="#plugins" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Plugin folder:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;PLUGINS_DIR&#39;</span><span class="p">,</span> <span class="s1">&#39;data/plugins&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Enable/disable plugin installation from the user interface:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;PLUGIN_INSTALLER&#39;, true); // Default is true
+</pre></div>
+</div>
+</div>
+<div class="section" id="folder-for-uploaded-files">
+<h2>Folder for uploaded files<a class="headerlink" href="#folder-for-uploaded-files" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;FILES_DIR&#39;</span><span class="p">,</span> <span class="s1">&#39;data/files&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable-disable-url-rewrite">
+<h2>Enable/disable url rewrite<a class="headerlink" href="#enable-disable-url-rewrite" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="email-configuration">
+<h2>Email configuration<a class="headerlink" href="#email-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// E-mail address for the &quot;From&quot; header (notifications)
+define(&#39;MAIL_FROM&#39;, &#39;notifications@kanboard.local&#39;);
+
+// Mail transport to use: &quot;smtp&quot;, &quot;sendmail&quot; or &quot;mail&quot; (PHP mail function)
+define(&#39;MAIL_TRANSPORT&#39;, &#39;mail&#39;);
+
+// SMTP configuration to use when the &quot;smtp&quot; transport is chosen
+define(&#39;MAIL_SMTP_HOSTNAME&#39;, &#39;&#39;);
+define(&#39;MAIL_SMTP_PORT&#39;, 25);
+define(&#39;MAIL_SMTP_USERNAME&#39;, &#39;&#39;);
+define(&#39;MAIL_SMTP_PASSWORD&#39;, &#39;&#39;);
+define(&#39;MAIL_SMTP_ENCRYPTION&#39;, null); // Valid values are &quot;null&quot;, &quot;ssl&quot; or &quot;tls&quot;
+
+// Sendmail command to use when the transport is &quot;sendmail&quot;
+define(&#39;MAIL_SENDMAIL_COMMAND&#39;, &#39;/usr/sbin/sendmail -bs&#39;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="database-settings">
+<h2>Database settings<a class="headerlink" href="#database-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Database driver: sqlite, mysql or postgres (sqlite by default)
+define(&#39;DB_DRIVER&#39;, &#39;sqlite&#39;);
+
+// Mysql/Postgres username
+define(&#39;DB_USERNAME&#39;, &#39;root&#39;);
+
+// Mysql/Postgres password
+define(&#39;DB_PASSWORD&#39;, &#39;&#39;);
+
+// Mysql/Postgres hostname
+define(&#39;DB_HOSTNAME&#39;, &#39;localhost&#39;);
+
+// Mysql/Postgres database name
+define(&#39;DB_NAME&#39;, &#39;kanboard&#39;);
+
+// Mysql/Postgres custom port (null = default port)
+define(&#39;DB_PORT&#39;, null);
+
+// Mysql SSL key
+define(&#39;DB_SSL_KEY&#39;, null);
+
+// Mysql SSL certificate
+define(&#39;DB_SSL_CERT&#39;, null);
+
+// Mysql SSL CA
+define(&#39;DB_SSL_CA&#39;, null);
+</pre></div>
+</div>
+</div>
+<div class="section" id="ldap-settings">
+<h2>LDAP settings<a class="headerlink" href="#ldap-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable LDAP authentication (false by default)
+define(&#39;LDAP_AUTH&#39;, false);
+
+// LDAP server hostname
+define(&#39;LDAP_SERVER&#39;, &#39;&#39;);
+
+// LDAP server port (389 by default)
+define(&#39;LDAP_PORT&#39;, 389);
+
+// By default, require certificate to be verified for ldaps:// style URL. Set to false to skip the verification
+define(&#39;LDAP_SSL_VERIFY&#39;, true);
+
+// Enable LDAP START_TLS
+define(&#39;LDAP_START_TLS&#39;, false);
+
+// By default Kanboard lowercase the ldap username to avoid duplicate users (the database is case sensitive)
+// Set to true if you want to preserve the case
+define(&#39;LDAP_USERNAME_CASE_SENSITIVE&#39;, false);
+
+// LDAP bind type: &quot;anonymous&quot;, &quot;user&quot; or &quot;proxy&quot;
+define(&#39;LDAP_BIND_TYPE&#39;, &#39;anonymous&#39;);
+
+// LDAP username to use with proxy mode
+// LDAP username pattern to use with user mode
+define(&#39;LDAP_USERNAME&#39;, null);
+
+// LDAP password to use for proxy mode
+define(&#39;LDAP_PASSWORD&#39;, null);
+
+// LDAP DN for users
+// Example for ActiveDirectory: CN=Users,DC=kanboard,DC=local
+// Example for OpenLDAP: ou=People,dc=example,dc=com
+define(&#39;LDAP_USER_BASE_DN&#39;, &#39;&#39;);
+
+// LDAP pattern to use when searching for a user account
+// Example for ActiveDirectory: &#39;(&amp;(objectClass=user)(sAMAccountName=%s))&#39;
+// Example for OpenLDAP: &#39;uid=%s&#39;
+define(&#39;LDAP_USER_FILTER&#39;, &#39;&#39;);
+
+// LDAP attribute for username
+// Example for ActiveDirectory: &#39;samaccountname&#39;
+// Example for OpenLDAP: &#39;uid&#39;
+define(&#39;LDAP_USER_ATTRIBUTE_USERNAME&#39;, &#39;uid&#39;);
+
+// LDAP attribute for user full name
+// Example for ActiveDirectory: &#39;displayname&#39;
+// Example for OpenLDAP: &#39;cn&#39;
+define(&#39;LDAP_USER_ATTRIBUTE_FULLNAME&#39;, &#39;cn&#39;);
+
+// LDAP attribute for user email
+define(&#39;LDAP_USER_ATTRIBUTE_EMAIL&#39;, &#39;mail&#39;);
+
+// LDAP attribute to find groups in user profile
+define(&#39;LDAP_USER_ATTRIBUTE_GROUPS&#39;, &#39;memberof&#39;);
+
+// LDAP attribute for user avatar image: thumbnailPhoto or jpegPhoto
+define(&#39;LDAP_USER_ATTRIBUTE_PHOTO&#39;, &#39;&#39;);
+
+// LDAP attribute for user language, example: &#39;preferredlanguage&#39;
+// Put an empty string to disable language sync
+define(&#39;LDAP_USER_ATTRIBUTE_LANGUAGE&#39;, &#39;&#39;);
+
+// Allow automatic LDAP user creation
+define(&#39;LDAP_USER_CREATION&#39;, true);
+
+// LDAP DN for administrators
+// Example: CN=Kanboard-Admins,CN=Users,DC=kanboard,DC=local
+define(&#39;LDAP_GROUP_ADMIN_DN&#39;, &#39;&#39;);
+
+// LDAP DN for managers
+// Example: CN=Kanboard Managers,CN=Users,DC=kanboard,DC=local
+define(&#39;LDAP_GROUP_MANAGER_DN&#39;, &#39;&#39;);
+
+// Enable LDAP group provider for project permissions
+// The end-user will be able to browse LDAP groups from the user interface and allow access to specified projects
+define(&#39;LDAP_GROUP_PROVIDER&#39;, false);
+
+// LDAP Base DN for groups
+define(&#39;LDAP_GROUP_BASE_DN&#39;, &#39;&#39;);
+
+// LDAP group filter
+// Example for ActiveDirectory: (&amp;(objectClass=group)(sAMAccountName=%s*))
+define(&#39;LDAP_GROUP_FILTER&#39;, &#39;&#39;);
+
+// LDAP user group filter
+// If this filter is configured, Kanboard will search user groups in LDAP_GROUP_BASE_DN
+// Example for OpenLDAP: (&amp;(objectClass=posixGroup)(memberUid=%s))
+define(&#39;LDAP_GROUP_USER_FILTER&#39;, &#39;&#39;);
+
+// LDAP attribute for the group name
+define(&#39;LDAP_GROUP_ATTRIBUTE_NAME&#39;, &#39;cn&#39;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="reverse-proxy-authentication-settings">
+<h2>Reverse-Proxy Authentication settings<a class="headerlink" href="#reverse-proxy-authentication-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable/disable the reverse proxy authentication
+define(&#39;REVERSE_PROXY_AUTH&#39;, false);
+
+// Header name to use for the username
+define(&#39;REVERSE_PROXY_USER_HEADER&#39;, &#39;REMOTE_USER&#39;);
+
+// Username of the admin, by default blank
+define(&#39;REVERSE_PROXY_DEFAULT_ADMIN&#39;, &#39;&#39;);
+
+// Default domain to use for setting the email address
+define(&#39;REVERSE_PROXY_DEFAULT_DOMAIN&#39;, &#39;&#39;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="rememberme-authentication-settings">
+<h2>RememberMe Authentication settings<a class="headerlink" href="#rememberme-authentication-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable/disable remember me authentication
+define(&#39;REMEMBER_ME_AUTH&#39;, true);
+</pre></div>
+</div>
+</div>
+<div class="section" id="secure-http-headers-settings">
+<h2>Secure HTTP headers settings<a class="headerlink" href="#secure-http-headers-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable or disable &quot;Strict-Transport-Security&quot; HTTP header
+define(&#39;ENABLE_HSTS&#39;, true);
+
+// Enable or disable &quot;X-Frame-Options: DENY&quot; HTTP header
+define(&#39;ENABLE_XFRAME&#39;, true);
+</pre></div>
+</div>
+</div>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Ссылка на этот заголовок">¶</a></h2>
+<p>By default, Kanboard do not log anything. If you want to enable the
+logging, you have to set a log driver.</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Available log drivers: syslog, stderr, stdout or file
+define(&#39;LOG_DRIVER&#39;, &#39;&#39;);
+
+// Log filename if the log driver is &quot;file&quot;
+define(&#39;LOG_FILE&#39;, __DIR__.DIRECTORY_SEPARATOR.&#39;data&#39;.DIRECTORY_SEPARATOR.&#39;debug.log&#39;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="brute-force-protection">
+<h2>Brute-force protection<a class="headerlink" href="#brute-force-protection" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable captcha after 3 authentication failure
+define(&#39;BRUTEFORCE_CAPTCHA&#39;, 3);
+
+// Lock the account after 6 authentication failure
+define(&#39;BRUTEFORCE_LOCKDOWN&#39;, 6);
+
+// Lock account duration in minute
+define(&#39;BRUTEFORCE_LOCKDOWN_DURATION&#39;, 15);
+</pre></div>
+</div>
+</div>
+<div class="section" id="session">
+<h2>Session<a class="headerlink" href="#session" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Session duration in second (0 = until the browser is closed)
+// See http://php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime
+define(&#39;SESSION_DURATION&#39;, 0);
+</pre></div>
+</div>
+</div>
+<div class="section" id="http-client-proxy">
+<h2>HTTP client proxy<a class="headerlink" href="#http-client-proxy" title="Ссылка на этот заголовок">¶</a></h2>
+<p>If external HTTP requests need to be sent through a proxy:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;HTTP_PROXY_HOSTNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;HTTP_PROXY_PORT&#39;</span><span class="p">,</span> <span class="s1">&#39;3128&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;HTTP_PROXY_USERNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="n">define</span><span class="p">(</span><span class="s1">&#39;HTTP_PROXY_PASSWORD&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="various-settings">
+<h2>Various settings<a class="headerlink" href="#various-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Escape html inside markdown text
+define(&#39;MARKDOWN_ESCAPE_HTML&#39;, true);
+
+// API alternative authentication header, the default is HTTP Basic Authentication defined in RFC2617
+define(&#39;API_AUTHENTICATION_HEADER&#39;, &#39;&#39;);
+
+// Hide login form, useful if all your users use Google/Github/ReverseProxy authentication
+define(&#39;HIDE_LOGIN_FORM&#39;, false);
+
+// Disabling logout (for external SSO authentication)
+define(&#39;DISABLE_LOGOUT&#39;, false);
+
+// Override API token stored in the database, useful for automated tests
+define(&#39;API_AUTHENTICATION_TOKEN&#39;, &#39;My unique API Token&#39;);
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Config file</a><ul>
+<li><a class="reference internal" href="#enable-disable-debug-mode">Enable/Disable debug mode</a></li>
+<li><a class="reference internal" href="#plugins">Plugins</a></li>
+<li><a class="reference internal" href="#folder-for-uploaded-files">Folder for uploaded files</a></li>
+<li><a class="reference internal" href="#enable-disable-url-rewrite">Enable/disable url rewrite</a></li>
+<li><a class="reference internal" href="#email-configuration">Email configuration</a></li>
+<li><a class="reference internal" href="#database-settings">Database settings</a></li>
+<li><a class="reference internal" href="#ldap-settings">LDAP settings</a></li>
+<li><a class="reference internal" href="#reverse-proxy-authentication-settings">Reverse-Proxy Authentication settings</a></li>
+<li><a class="reference internal" href="#rememberme-authentication-settings">RememberMe Authentication settings</a></li>
+<li><a class="reference internal" href="#secure-http-headers-settings">Secure HTTP headers settings</a></li>
+<li><a class="reference internal" href="#logging">Logging</a></li>
+<li><a class="reference internal" href="#brute-force-protection">Brute-force protection</a></li>
+<li><a class="reference internal" href="#session">Session</a></li>
+<li><a class="reference internal" href="#http-client-proxy">HTTP client proxy</a></li>
+<li><a class="reference internal" href="#various-settings">Various settings</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/config.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/config.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

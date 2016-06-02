@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Two-Factor Authentication &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="two-factor-authentication">
+<h1>Two-Factor Authentication<a class="headerlink" href="#two-factor-authentication" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Each user can enable the <a class="reference external" href="http://en.wikipedia.org/wiki/Two_factor_authentication">two-factor
+authentication</a>.
+After a successful login, a one-time code (6 characters) is asked to the
+user to allow access to Kanboard.</p>
+<p>This code has to be provided by a compatible software generally
+installed on your smartphone.</p>
+<p>Kanboard use the <a class="reference external" href="http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">Time-based One-time Password
+Algorithm</a>
+defined in the <a class="reference external" href="http://tools.ietf.org/html/rfc6238">RFC 6238</a>.</p>
+<p>There are many software compatible with the standard TOTP system. For
+example, you can use these free and open source applications:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/google/google-authenticator/">Google
+Authenticator</a>
+(Android, iOS, Blackberry)</li>
+<li><a class="reference external" href="https://fedorahosted.org/freeotp/">FreeOTP</a> (Android, iOS)</li>
+<li><a class="reference external" href="http://www.nongnu.org/oath-toolkit/">OATH Toolkit</a> (Command line
+utility on Unix/Linux)</li>
+</ul>
+<p>This system can work offline and you don&#8217;t necessarily need to have a
+mobile phone.</p>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>Go to your user profile</li>
+<li>On the left, click on <strong>Two factor authentication</strong> and check the box</li>
+<li>A secret key is generated for you</li>
+</ol>
+<div class="figure" id="id1">
+<img alt="2FA" src="https://kanboard.net/screenshots/documentation/2fa.png" />
+<p class="caption"><span class="caption-text">2FA</span></p>
+</div>
+<ul class="simple">
+<li>You have to save the secret key in your TOTP software. If you use a
+smartphone, the easiest solution is to scan the QR code with FreeOTP
+or Google Authenticator.</li>
+<li>Each time you will open a new session, a new code will be asked</li>
+<li>Don&#8217;t forget to test your device before closing your session</li>
+</ul>
+<p>A new secret key is generated each time you enable/disable this feature.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Two-Factor Authentication</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/2fa.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/2fa.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/centos-installation.rst:2
+msgid "Centos Installation"
+msgstr ""
+
+#: ../../source/centos-installation.rst:4
+msgid "Note: Some features of Kanboard require that you run `a daily background job <cronjob.markdown>`__."
+msgstr ""
+
+#: ../../source/centos-installation.rst:8
+msgid "Centos 7"
+msgstr ""
+
+#: ../../source/centos-installation.rst:10
+#: ../../source/centos-installation.rst:54
+msgid "Install PHP and Apache:"
+msgstr ""
+
+#: ../../source/centos-installation.rst:16
+msgid "By default Centos 7 use PHP 5.4.16 and Apache 2.4.6."
+msgstr ""
+
+#: ../../source/centos-installation.rst:18
+#: ../../source/centos-installation.rst:67
+msgid "Restart Apache:"
+msgstr ""
+
+#: ../../source/centos-installation.rst:24
+#: ../../source/centos-installation.rst:73
+msgid "Install Kanboard:"
+msgstr ""
+
+#: ../../source/centos-installation.rst:34
+msgid "If SELinux is enabled, be sure that the Apache user can write to the directory data:"
+msgstr ""
+
+#: ../../source/centos-installation.rst:41
+msgid "Be sure to configure your server to allow Kanboard to send emails and make external network requests, by example with SELinux:"
+msgstr ""
+
+#: ../../source/centos-installation.rst:48
+msgid "Allowing external connections is necessary if you use LDAP, SMTP, Web hooks or any third-party integration."
+msgstr ""
+
+#: ../../source/centos-installation.rst:52
+msgid "Centos 6.x"
+msgstr ""
+
+#: ../../source/centos-installation.rst:60
+msgid "By default Centos 6.5 use PHP 5.3.3 and Apache 2.2.15."
+msgstr ""
+
+#: ../../source/centos-installation.rst:62
+msgid "Enable short tags:"
+msgstr ""
+
+#: ../../source/centos-installation.rst:64
+msgid "Edit the file ``/etc/php.ini``"
+msgstr ""
+
+#: ../../source/centos-installation.rst:65
+msgid "Change the line ``short_open_tag = On``"
+msgstr ""
+
+#: ../../source/centos-installation.rst:83
+msgid "Go to ``http://your_server/kanboard/``."
+msgstr ""
+

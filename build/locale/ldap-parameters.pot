@@ -1,0 +1,283 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ldap-parameters.rst:2
+msgid "LDAP Configuration Parameters"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:4
+msgid "Here is the list of available LDAP parameters:"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:7
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:7
+msgid "Default value"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:7
+msgid "Description"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:9
+msgid "``LDAP_AUTH``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:9
+#: ../../source/ldap-parameters.rst:17
+#: ../../source/ldap-parameters.rst:19
+#: ../../source/ldap-parameters.rst:49
+msgid "false"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:9
+msgid "Enable LDAP authentication"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:11
+msgid "``LDAP_SERVER``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:11
+#: ../../source/ldap-parameters.rst:27
+#: ../../source/ldap-parameters.rst:29
+#: ../../source/ldap-parameters.rst:39
+#: ../../source/ldap-parameters.rst:41
+#: ../../source/ldap-parameters.rst:45
+#: ../../source/ldap-parameters.rst:47
+#: ../../source/ldap-parameters.rst:51
+#: ../../source/ldap-parameters.rst:53
+msgid "Empty"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:11
+msgid "LDAP server hostname"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:13
+msgid "``LDAP_PORT``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:13
+msgid "389"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:13
+msgid "LDAP server port"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:15
+msgid "``LDAP_SSL_VERIFY``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:15
+#: ../../source/ldap-parameters.rst:43
+msgid "true"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:15
+msgid "Validate certificate for ``ldaps://`` style URL"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:17
+msgid "``LDAP_START_TLS``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:17
+msgid "Enable LDAP start TLS"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:19
+msgid "``LDAP_USERNAME_CASE_SENSITIVE``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:19
+msgid "Kanboard lowercase the ldap username to avoid duplicate users (the database is case sensitive)"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:21
+msgid "``LDAP_BIND_TYPE``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:21
+msgid "anonymous"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:21
+msgid "Bind type: \"anonymous\", \"user\" or \"proxy\""
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:23
+msgid "``LDAP_USERNAME``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:23
+#: ../../source/ldap-parameters.rst:25
+msgid "null"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:23
+msgid "LDAP username to use with proxy mode or username pattern to use with user mode"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:25
+msgid "``LDAP_PASSWORD``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:25
+msgid "LDAP password to use for proxy mode"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:27
+msgid "``LDAP_USER_BASE_DN``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:27
+msgid "LDAP DN for users (Example: \"CN=Users,DC=kanboard,DC=local\")"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:29
+msgid "``LDAP_USER_FILTER``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:29
+msgid "LDAP pattern to use when searching for a user account (Example: \"(&(objectClass=user)(sAMAccountName=%s))\")"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:31
+msgid "``LDAP_USER_ATTRIBUTE_USERNAME``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:31
+msgid "uid"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:31
+msgid "LDAP attribute for username (Example: \"samaccountname\")"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:33
+msgid "``LDAP_USER_ATTRIBUTE_FULLNAME``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:33
+msgid "cn"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:33
+msgid "LDAP attribute for user full name (Example: \"displayname\")"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:35
+msgid "``LDAP_USER_ATTRIBUTE_EMAIL``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:35
+msgid "mail"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:35
+msgid "LDAP attribute for user email"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:37
+msgid "``LDAP_USER_ATTRIBUTE_GROUPS``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:37
+msgid "memberof"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:37
+msgid "LDAP attribute to find groups in user profile"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:39
+msgid "``LDAP_USER_ATTRIBUTE_PHOTO``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:39
+msgid "LDAP attribute to find user photo (jpegPhoto or thumbnailPhoto"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:41
+msgid "``LDAP_USER_ATTRIBUTE_LANGUAGE``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:41
+msgid "LDAP attribute for user language (preferredlanguage), the accepted language format is \"fr-FR\""
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:43
+msgid "``LDAP_USER_CREATION``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:43
+msgid "Enable automatic LDAP user creation"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:45
+msgid "``LDAP_GROUP_ADMIN_DN``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:45
+msgid "LDAP DN for administrators (Example: \"CN=Kanboard-Admins,CN=Users,DC=kanboard,DC=local\")"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:47
+msgid "``LDAP_GROUP_MANAGER_DN``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:47
+msgid "LDAP DN for managers (Example: \"CN=Kanboard Managers,CN=Users,DC=kanboard,DC=local\")"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:49
+msgid "``LDAP_GROUP_PROVIDER``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:49
+msgid "Enable LDAP group provider for project permissions"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:51
+msgid "``LDAP_GROUP_BASE_DN``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:51
+msgid "LDAP Base DN for groups"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:53
+msgid "``LDAP_GROUP_FILTER``"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:53
+msgid "LDAP group filter (Example: \"(&(objectClass=group)(sAMAccountName=%s\\*))\") \\| \\| ``LDAP_GROUP_USER_FILTER`` \\| Empty \\| If defined, Kanboard will search user groups in LDAP\\_GROUP\\_BASE\\_DN with this filter, it's useful only for posixGroups (Example: ``(&(objectClass=posixGroup)(memberUid=%s))``) \\| \\| ``LDAP_GROUP_ATTRIBUTE_NAME`` \\| cn \\| LDAP attribute for the group name \\|"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:56
+msgid "Notes:"
+msgstr ""
+
+#: ../../source/ldap-parameters.rst:58
+msgid "LDAP attributes must be in lowercase"
+msgstr ""
+

@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ldap-group-sync.rst:2
+msgid "LDAP Group Synchronization"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:5
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:7
+msgid "Have LDAP authentication properly configured"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:8
+msgid "Use a LDAP server that supports ``memberOf`` or ``memberUid`` (PosixGroups)"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:12
+msgid "Define automatically user roles based on LDAP groups"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:14
+msgid "Use these constants in your config file:"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:16
+msgid "``LDAP_GROUP_ADMIN_DN``: Distinguished names for application administrators"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:18
+msgid "``LDAP_GROUP_MANAGER_DN``: Distinguished names for application managers"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:22
+#: ../../source/ldap-group-sync.rst:68
+msgid "Example for Active Directory:"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:29
+msgid "People member of \"Kanboard Admins\" will have the role \"Administrator\""
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:30
+msgid "People member of \"Kanboard Managers\" will have the role \"Managers\""
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:31
+msgid "Everybody else will have the role \"User\""
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:34
+#: ../../source/ldap-group-sync.rst:90
+msgid "Example for OpenLDAP with Posix Groups:"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:43
+msgid "You **must define the parameter** ``LDAP_GROUP_USER_FILTER`` if your LDAP server use ``memberUid`` instead of ``memberOf``. All parameters of this example are mandatory."
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:48
+msgid "Automatically load LDAP groups for project permissions"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:50
+msgid "This feature allows you to sync automatically LDAP groups with Kanboard groups. Each group can have a different project role assigned."
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:53
+msgid "On the project permissions page, people can enter groups in the auto-complete field and Kanboard can search for groups with any provider enabled."
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:57
+msgid "If the group doesn't exist in the local database, it will be automatically synced."
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:60
+msgid "``LDAP_GROUP_PROVIDER``: Enable the LDAP group provider"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:61
+msgid "``LDAP_GROUP_BASE_DN``: Distinguished names to find groups in LDAP directory"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:63
+msgid "``LDAP_GROUP_FILTER``: LDAP filter used to perform the query"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:64
+msgid "``LDAP_GROUP_ATTRIBUTE_NAME``: LDAP attribute used to fetch the group name"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:76
+msgid "With the filter given as example above, Kanboard will search for groups that match the query. If the end-user enter the text \"My group\" in the auto-complete box, Kanboard will return all groups that match the pattern: ``(&(objectClass=group)(sAMAccountName=My group*))``."
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:81
+msgid "Note 1: The special characters ``*`` is important here, **otherwise an exact match will be done**."
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:83
+msgid "Note 2: This feature is only compatible with LDAP authentication configured in \"proxy\" or \"anonymous\" mode"
+msgstr ""
+
+#: ../../source/ldap-group-sync.rst:86
+msgid "`More examples of LDAP filters for Active Directory <http://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx>`__"
+msgstr ""
+

@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ldap-profile-picture.rst:2
+msgid "LDAP User Profile Photo"
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:4
+msgid "Kanboard can download automatically user pictures from the LDAP server."
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:6
+msgid "This feature is enabled only if LDAP authentication is activated and the parameter ``LDAP_USER_ATTRIBUTE_PHOTO`` is defined."
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:10
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:12
+msgid "In your ``config.php``, you have to set the LDAP attribute used to store the image."
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:19
+msgid "Usually, the attributes ``jpegPhoto`` or ``thumbnailPhoto`` are used. The image can be stored in JPEG or PNG format."
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:22
+msgid "To upload the image in the user profile, Active Directory administrators may use software like `AD Photo Edit <http://www.cjwdev.co.uk/Software/ADPhotoEdit/Info.html>`__."
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:27
+msgid "Notes"
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:29
+msgid "The profile image is **downloaded at login time only if the user do not already have uploaded an image previously**."
+msgstr ""
+
+#: ../../source/ldap-profile-picture.rst:32
+msgid "To change the user photo, the previous one have to be removed manually in the user profile."
+msgstr ""
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Command Line Interface &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="command-line-interface">
+<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Kanboard provides a simple command line interface that can be used from
+any Unix terminal. This tool can be used only on the local machine.</p>
+<p>This feature is useful to run commands outside of the web server
+processes.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Open a terminal and go to your Kanboard directory (example:
+<code class="docutils literal"><span class="pre">cd</span> <span class="pre">/var/www/kanboard</span></code>)</li>
+<li>Run the command <code class="docutils literal"><span class="pre">./kanboard</span></code></li>
+</ul>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>Kanboard version master
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display this help message
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi            Force ANSI output
+      --no-ansi         Disable ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  cronjob                            Execute daily cronjob
+  help                               Displays help for a command
+  list                               Lists commands
+ export
+  export:daily-project-column-stats  Daily project column stats CSV export (number of tasks per column and per day)
+  export:subtasks                    Subtasks CSV export
+  export:tasks                       Tasks CSV export
+  export:transitions                 Task transitions CSV export
+ locale
+  locale:compare                     Compare application translations with the fr_FR locale
+  locale:sync                        Synchronize all translations based on the fr_FR locale
+ notification
+  notification:overdue-tasks         Send notifications for overdue tasks
+ plugin
+  plugin:install                     Install a plugin from a remote Zip archive
+  plugin:uninstall                   Remove a plugin
+  plugin:upgrade                     Update all installed plugins
+ projects
+  projects:daily-stats               Calculate daily statistics for all projects
+ trigger
+  trigger:tasks                      Trigger scheduler event for all tasks
+ user
+  user:reset-2fa                     Remove two-factor authentication for a user
+  user:reset-password                Change user password
+</pre></div>
+</div>
+</div>
+<div class="section" id="available-commands">
+<h2>Available commands<a class="headerlink" href="#available-commands" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="tasks-csv-export">
+<h3>Tasks CSV export<a class="headerlink" href="#tasks-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Usage:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:tasks &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:tasks 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
+</pre></div>
+</div>
+<p>CSV data are sent to <code class="docutils literal"><span class="pre">stdout</span></code>.</p>
+</div>
+<div class="section" id="subtasks-csv-export">
+<h3>Subtasks CSV export<a class="headerlink" href="#subtasks-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Usage:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:subtasks &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:subtasks 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
+</pre></div>
+</div>
+</div>
+<div class="section" id="task-transitions-csv-export">
+<h3>Task transitions CSV export<a class="headerlink" href="#task-transitions-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Usage:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:transitions &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:transitions 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
+</pre></div>
+</div>
+</div>
+<div class="section" id="export-daily-summaries-data-in-csv">
+<h3>Export daily summaries data in CSV<a class="headerlink" href="#export-daily-summaries-data-in-csv" title="Ссылка на этот заголовок">¶</a></h3>
+<p>The exported data will be printed on the standard output:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:daily-project-column-stats &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:daily-project-column-stats 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
+</pre></div>
+</div>
+</div>
+<div class="section" id="send-notifications-for-overdue-tasks">
+<h3>Send notifications for overdue tasks<a class="headerlink" href="#send-notifications-for-overdue-tasks" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Emails will be sent to all users with notifications enabled.</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard notification:overdue-tasks
+</pre></div>
+</div>
+<p>Optional parameters:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">--show</span></code>: Display notifications sent</li>
+<li><code class="docutils literal"><span class="pre">--group</span></code>: Group all overdue tasks for one user (from all projects)
+in one email</li>
+<li><code class="docutils literal"><span class="pre">--manager</span></code>: Send all overdue tasks to project manager(s) in one
+email</li>
+</ul>
+<p>You can also display the overdue tasks with the flag <code class="docutils literal"><span class="pre">--show</span></code>:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard notification:overdue-tasks --show
++-----+---------+------------+------------+--------------+----------+
+| Id  | Title   | Due date   | Project Id | Project name | Assignee |
++-----+---------+------------+------------+--------------+----------+
+| 201 | Test    | 2014-10-26 | 1          | Project #0   | admin    |
+| 202 | My task | 2014-10-28 | 1          | Project #0   |          |
++-----+---------+------------+------------+--------------+----------+
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-daily-project-stats-calculation">
+<h3>Run daily project stats calculation<a class="headerlink" href="#run-daily-project-stats-calculation" title="Ссылка на этот заголовок">¶</a></h3>
+<p>This command calculate the statistics of each project:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard projects:daily-stats
+Run calculation for Project #0
+Run calculation for Project #1
+Run calculation for Project #10
+</pre></div>
+</div>
+</div>
+<div class="section" id="trigger-for-tasks">
+<h3>Trigger for tasks<a class="headerlink" href="#trigger-for-tasks" title="Ссылка на этот заголовок">¶</a></h3>
+<p>This command send a &#8220;daily cronjob event&#8221; to all open tasks of each
+project.</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard trigger:tasks
+Trigger task event: project_id=2, nb_tasks=1
+</pre></div>
+</div>
+</div>
+<div class="section" id="reset-user-password">
+<h3>Reset user password<a class="headerlink" href="#reset-user-password" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard user:reset-password my_user
+</pre></div>
+</div>
+<p>You will be prompted for a password and confirmation. Characters are not
+printed to the screen.</p>
+</div>
+<div class="section" id="remove-two-factor-authentication-for-a-user">
+<h3>Remove two-factor authentication for a user<a class="headerlink" href="#remove-two-factor-authentication-for-a-user" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard user:reset-2fa my_user
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-a-plugin">
+<h3>Install a plugin<a class="headerlink" href="#install-a-plugin" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard plugin:install https://github.com/kanboard/plugin-github-auth/releases/download/v1.0.1/GithubAuth-1.0.1.zip
+</pre></div>
+</div>
+<p>Note: Installed files will have the same permissions as the current user</p>
+</div>
+<div class="section" id="remove-a-plugin">
+<h3>Remove a plugin<a class="headerlink" href="#remove-a-plugin" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard plugin:uninstall Budget
+</pre></div>
+</div>
+</div>
+<div class="section" id="upgrade-all-plugins">
+<h3>Upgrade all plugins<a class="headerlink" href="#upgrade-all-plugins" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard plugin:upgrade
+* Updating plugin: Budget Planning
+* Plugin up to date: Github Authentication
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Command Line Interface</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#available-commands">Available commands</a><ul>
+<li><a class="reference internal" href="#tasks-csv-export">Tasks CSV export</a></li>
+<li><a class="reference internal" href="#subtasks-csv-export">Subtasks CSV export</a></li>
+<li><a class="reference internal" href="#task-transitions-csv-export">Task transitions CSV export</a></li>
+<li><a class="reference internal" href="#export-daily-summaries-data-in-csv">Export daily summaries data in CSV</a></li>
+<li><a class="reference internal" href="#send-notifications-for-overdue-tasks">Send notifications for overdue tasks</a></li>
+<li><a class="reference internal" href="#run-daily-project-stats-calculation">Run daily project stats calculation</a></li>
+<li><a class="reference internal" href="#trigger-for-tasks">Trigger for tasks</a></li>
+<li><a class="reference internal" href="#reset-user-password">Reset user password</a></li>
+<li><a class="reference internal" href="#remove-two-factor-authentication-for-a-user">Remove two-factor authentication for a user</a></li>
+<li><a class="reference internal" href="#install-a-plugin">Install a plugin</a></li>
+<li><a class="reference internal" href="#remove-a-plugin">Remove a plugin</a></li>
+<li><a class="reference internal" href="#upgrade-all-plugins">Upgrade all plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/cli.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/cli.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

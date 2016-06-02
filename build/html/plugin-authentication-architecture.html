@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Authentication Architecture &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="authentication-architecture">
+<h1>Authentication Architecture<a class="headerlink" href="#authentication-architecture" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Kanboard provides a flexible and pluggable authentication architecture.</p>
+<p>By default, user authentication can be done with multiple methods:</p>
+<ul class="simple">
+<li>Username and password authentication (Local database and LDAP)</li>
+<li>OAuth2 authentication</li>
+<li>Reverse-Proxy authentication</li>
+<li>Cookie based authentication (Remember Me)</li>
+</ul>
+<p>More over, after a successful authentication, a Two-Factor post
+authentication can be done. Kanboard supports natively the TOTP
+standard.</p>
+<div class="section" id="authentication-interfaces">
+<h2>Authentication Interfaces<a class="headerlink" href="#authentication-interfaces" title="Ссылка на этот заголовок">¶</a></h2>
+<p>To have a pluggable system, authentication drivers must implement a set
+of interfaces:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Interface</th>
+<th class="head">Role</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>AuthenticationProviderInterface</td>
+<td>Base interface for other authentication interfaces</td>
+</tr>
+<tr class="row-odd"><td>PreAuthenticationProviderInterface</td>
+<td>The user is already authenticated when reaching the application, web servers usually define some environment variables</td>
+</tr>
+<tr class="row-even"><td>PasswordAuthenticationProviderInterface</td>
+<td>Authentication methods that uses the username and password provided in the login form</td>
+</tr>
+<tr class="row-odd"><td>OAuthAuthenticationProviderInterface</td>
+<td>OAuth2 providers</td>
+</tr>
+<tr class="row-even"><td>PostAuthenticationProviderInterface</td>
+<td>Two-Factor auhentication drivers, ask for confirmation code</td>
+</tr>
+<tr class="row-odd"><td>SessionCheckProviderInterface</td>
+<td>Providers that are able to check if the user session is valid</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="examples-of-authentication-providers">
+<h3>Examples of authentication providers:<a class="headerlink" href="#examples-of-authentication-providers" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>The default Database method implements
+<code class="docutils literal"><span class="pre">PasswordAuthenticationProviderInterface</span></code> and
+<code class="docutils literal"><span class="pre">SessionCheckProviderInterface</span></code></li>
+<li>The Reverse-Proxy method implements
+<code class="docutils literal"><span class="pre">PreAuthenticationProviderInterface</span></code> and
+<code class="docutils literal"><span class="pre">SessionCheckProviderInterface</span></code></li>
+<li>The Google method implements <code class="docutils literal"><span class="pre">OAuthAuthenticationProviderInterface</span></code></li>
+<li>The LDAP method implements
+<code class="docutils literal"><span class="pre">PasswordAuthenticationProviderInterface</span></code></li>
+<li>The RememberMe cookie method implements
+<code class="docutils literal"><span class="pre">PreAuthenticationProviderInterface</span></code></li>
+<li>The Two-Factor TOTP method implements
+<code class="docutils literal"><span class="pre">PostAuthenticationProviderInterface</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="authentication-workflow">
+<h2>Authentication Workflow<a class="headerlink" href="#authentication-workflow" title="Ссылка на этот заголовок">¶</a></h2>
+<p>For each HTTP request:</p>
+<ol class="arabic simple">
+<li>If the user session is already open, execute registered providers
+that implements <code class="docutils literal"><span class="pre">SessionCheckProviderInterface</span></code></li>
+<li>Execute all providers that implements
+<code class="docutils literal"><span class="pre">PreAuthenticationProviderInterface</span></code></li>
+<li>If the end-user submit the login form, providers that implements
+<code class="docutils literal"><span class="pre">PasswordAuthenticationProviderInterface</span></code> are executed</li>
+<li>If the end-user wants to use OAuth2, the selected provider will be
+executed</li>
+<li>After a successful authentication, the last registered
+<code class="docutils literal"><span class="pre">PostAuthenticationProviderInterface</span></code> will be used</li>
+<li>Synchronize user information if necessary</li>
+</ol>
+<p>This workflow is managed by the class
+<code class="docutils literal"><span class="pre">Kanboard\Core\Security\AuthenticationManager</span></code>.</p>
+<p>Events triggered:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">AuthenticationManager::EVENT_SUCCESS</span></code>: Successful authentication</li>
+<li><code class="docutils literal"><span class="pre">AuthenticationManager::EVENT_FAILURE</span></code>: Failed authentication</li>
+</ul>
+<p>Each time a failure event occurs, the counter of failed logins is
+incremented.</p>
+<p>The user account can be locked down for the configured period of time
+and a captcha can be shown to avoid brute force attacks.</p>
+</div>
+<div class="section" id="user-provider-interface">
+<h2>User Provider Interface<a class="headerlink" href="#user-provider-interface" title="Ссылка на этот заголовок">¶</a></h2>
+<p>When the authentication is successful, the <code class="docutils literal"><span class="pre">AuthenticationManager</span></code>
+will ask the user information to your driver by calling the method
+<code class="docutils literal"><span class="pre">getUser()</span></code>. This method must return an object that implements the
+interface <code class="docutils literal"><span class="pre">Kanboard\Core\User\UserProviderInterface</span></code>.</p>
+<p>This class abstract the information gathered from another system.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">DatabaseUserProvider</span></code> provides information for an internal user</li>
+<li><code class="docutils literal"><span class="pre">LdapUserProvider</span></code> for a LDAP user</li>
+<li><code class="docutils literal"><span class="pre">ReverseProxyUserProvider</span></code> for a Reverse-Proxy user</li>
+<li><code class="docutils literal"><span class="pre">GoogleUserProvider</span></code> represents a Google user</li>
+</ul>
+<p>Methods for User Provider Interface:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">isUserCreationAllowed()</span></code>: Return true to allow automatic user
+creation</li>
+<li><code class="docutils literal"><span class="pre">getExternalIdColumn()</span></code>: Get external id column name (google_id,
+github_id, gitlab_id...)</li>
+<li><code class="docutils literal"><span class="pre">getInternalId()</span></code>: Get internal database id</li>
+<li><code class="docutils literal"><span class="pre">getExternalId()</span></code>: Get external id (Unique id)</li>
+<li><code class="docutils literal"><span class="pre">getRole()</span></code>: Get user role</li>
+<li><code class="docutils literal"><span class="pre">getUsername()</span></code>: Get username</li>
+<li><code class="docutils literal"><span class="pre">getName()</span></code>: Get user full name</li>
+<li><code class="docutils literal"><span class="pre">getEmail()</span></code>: Get user email address</li>
+<li><code class="docutils literal"><span class="pre">getExternalGroupIds()</span></code>: Get external group ids, automatically sync
+group membership if present</li>
+<li><code class="docutils literal"><span class="pre">getExtraAttributes()</span></code>: Get extra attributes to set for the user
+during the local sync</li>
+</ul>
+<p>It&#8217;s not mandatory to return a value for each method.</p>
+</div>
+<div class="section" id="user-local-synchronization">
+<h2>User Local Synchronization<a class="headerlink" href="#user-local-synchronization" title="Ссылка на этот заголовок">¶</a></h2>
+<p>User information can be automatically synced with the local database.</p>
+<ul class="simple">
+<li>If the method <code class="docutils literal"><span class="pre">getInternalId()</span></code> return a value no synchronization
+is performed</li>
+<li>The methods <code class="docutils literal"><span class="pre">getExternalIdColumn()</span></code> and <code class="docutils literal"><span class="pre">getExternalId()</span></code> must
+return a value to sync the user</li>
+<li>Properties that returns an empty string won&#8217;t be synced</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Authentication Architecture</a><ul>
+<li><a class="reference internal" href="#authentication-interfaces">Authentication Interfaces</a><ul>
+<li><a class="reference internal" href="#examples-of-authentication-providers">Examples of authentication providers:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#authentication-workflow">Authentication Workflow</a></li>
+<li><a class="reference internal" href="#user-provider-interface">User Provider Interface</a></li>
+<li><a class="reference internal" href="#user-local-synchronization">User Local Synchronization</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-authentication-architecture.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-authentication-architecture.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

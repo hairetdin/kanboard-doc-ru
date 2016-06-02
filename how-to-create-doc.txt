@@ -1,0 +1,86 @@
+- Установил Sphinx:
+$ pip install Sphinx
+
+- Создал проект документации для kanboard-doc-ru (раздельные директории source и build)
+$ sphinx-quickstart
+
+- Из проекта Kanboard беру документацию в формате markdown (расширение тоже .markdown).
+Копирую в каталог source.
+Хотел было использовать формат markdown, в документации
+http://docs.sphinxdocs.com/en/latest/finish.html#markdown-support
+заявлена поддержка markdown. Но при создании русской документации по
+инструкции http://www.sphinx-doc.org/en/stable/intl.html с использоанием sphinx-intl
+в po файлах почему-то не отображается все что было в исходном файле с форматом markdown.
+Получается, что в sphinx markdown поддерживается, но при создании po файлов уже
+не поддерживается. Ну да ладно. Конечна цель - перевод. Я решил не тратить время
+и сконвертировал markdown в rst.
+
+- Конвертирую файлы source/*.markdown в source/*.rst. Для этого сделал
+скрипт convert-markdown-to-rst.py:
+
+# convert markdown to rst
+import os
+import pypandoc
+
+source_dir = os.getcwd() + '/source'
+cwd = os.chdir(source_dir)
+
+for file_name in os.listdir(source_dir):
+    file_name_split = file_name.split('.')
+    print('Source file: ' + file_name)
+    if len(file_name_split) == 2:
+        if file_name_split[1] == 'markdown':
+            rst_file_name = (file_name_split[0]+'.rst')
+            output = pypandoc.convert(file_name, 'rst', format='md', outputfile=(file_name_split[0]+'.rst'))
+            print(source_dir + '/' + rst_file_name + ' ' + 'created')
+
+Теперь уже работаем со стандартным для sphinx - reStructuredText.
+Можно собрать английскую документацию:
+$ make html
+Документация в формате html появилась в build/html.
+
+Но, ссылки в документах имеют расширение markdown и соответсвенно не работают.
+Не обращаю на это внимание и иду создавать русскую локализацию по следующему документу -
+http://www.sphinx-doc.org/en/stable/intl.html#id8
+
+1. Устанавливаю sphinx-intl:
+$ pip install sphinx-intl
+
+2. Добавляю в source/conf.py:
+
+    locale_dirs = ['locale/']   # рекомендуется использовать именно такой путь
+    gettext_compact = False     # необязательный параметр
+
+3. Извлекаю переводимые тексты в pot файлы:
+
+$ make gettext
+
+В результате много pot файлов созданы в build/locale директории.
+
+4. Создаю/обновляю locale_dir:
+
+$ sphinx-intl update -p build/locale -l ru
+
+Готово. Теперь имеется директория с po файлами:
+  source/locale/ru/LC_MESSAGES/
+
+
+5. Переводите po файлы из source/locale/ru/LC_MESSAGES/.
+
+Небольшое замечание для переводчиков: оригинальные документы были созданы в
+markdown формате и содержат ссылки на документы с расширением .markdown .
+Когда собираем конечные html документы командой make html, то в папке
+build/html появляются файлы с расширение html. Поэтому, самое простое решение
+это переименовать расширение .markdown на .html .
+
+6. Создание документов с переводом
+
+Нужно указать языковой параметр в conf.py или вы можете установить параметр через коммандную строку:
+
+    $ make -e SPHINXOPTS="-D language='ru'" html
+
+Поздравляем! Теперь вы можете использовать переведенные документы в build/html директории.
+
+7. Если появились изменения в оригинальном документе, то вновь выполните команду:
+
+$ sphinx-intl update -p build/locale -l ru

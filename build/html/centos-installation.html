@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Centos Installation &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="centos-installation">
+<h1>Centos Installation<a class="headerlink" href="#centos-installation" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Note: Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
+job</a>.</p>
+<div class="section" id="centos-7">
+<h2>Centos 7<a class="headerlink" href="#centos-7" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Install PHP and Apache:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>yum install -y php php-mbstring php-pdo php-gd unzip wget
+</pre></div>
+</div>
+<p>By default Centos 7 use PHP 5.4.16 and Apache 2.4.6.</p>
+<p>Restart Apache:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>systemctl restart httpd.service
+</pre></div>
+</div>
+<p>Install Kanboard:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
+wget https://kanboard.net/kanboard-latest.zip
+unzip kanboard-latest.zip
+chown -R apache:apache kanboard/data
+rm kanboard-latest.zip
+</pre></div>
+</div>
+<p>If SELinux is enabled, be sure that the Apache user can write to the
+directory data:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>chcon -R -t httpd_sys_content_rw_t /var/www/html/kanboard/data
+</pre></div>
+</div>
+<p>Be sure to configure your server to allow Kanboard to send emails and
+make external network requests, by example with SELinux:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>setsebool -P httpd_can_network_connect=1
+</pre></div>
+</div>
+<p>Allowing external connections is necessary if you use LDAP, SMTP, Web
+hooks or any third-party integration.</p>
+</div>
+<div class="section" id="centos-6-x">
+<h2>Centos 6.x<a class="headerlink" href="#centos-6-x" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Install PHP and Apache:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>yum install -y php php-mbstring php-pdo php-gd unzip wget
+</pre></div>
+</div>
+<p>By default Centos 6.5 use PHP 5.3.3 and Apache 2.2.15.</p>
+<p>Enable short tags:</p>
+<ul class="simple">
+<li>Edit the file <code class="docutils literal"><span class="pre">/etc/php.ini</span></code></li>
+<li>Change the line <code class="docutils literal"><span class="pre">short_open_tag</span> <span class="pre">=</span> <span class="pre">On</span></code></li>
+</ul>
+<p>Restart Apache:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>service httpd restart
+</pre></div>
+</div>
+<p>Install Kanboard:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
+wget https://kanboard.net/kanboard-latest.zip
+unzip kanboard-latest.zip
+chown -R apache:apache kanboard/data
+rm kanboard-latest.zip
+</pre></div>
+</div>
+<p>Go to <code class="docutils literal"><span class="pre">http://your_server/kanboard/</span></code>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Centos Installation</a><ul>
+<li><a class="reference internal" href="#centos-7">Centos 7</a></li>
+<li><a class="reference internal" href="#centos-6-x">Centos 6.x</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/centos-installation.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/centos-installation.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

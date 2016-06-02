@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Sqlite database management &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sqlite-database-management">
+<h1>Sqlite database management<a class="headerlink" href="#sqlite-database-management" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Kanboard uses Sqlite by default to store its data. All tasks, projects
+and users are stored inside this database.</p>
+<p>Technically, the database is just a single file located inside the
+directory <code class="docutils literal"><span class="pre">data</span></code> and named <code class="docutils literal"><span class="pre">db.sqlite</span></code>.</p>
+<div class="section" id="export-backup">
+<h2>Export/Backup<a class="headerlink" href="#export-backup" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="command-line">
+<h3>Command line<a class="headerlink" href="#command-line" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Doing a backup is very easy, just copy the file <code class="docutils literal"><span class="pre">data/db.sqlite</span></code>
+somewhere else when nobody use the software.</p>
+</div>
+<div class="section" id="user-interface">
+<h3>User interface<a class="headerlink" href="#user-interface" title="Ссылка на этот заголовок">¶</a></h3>
+<p>You can also download at any time the database directly from the
+<strong>settings</strong> menu.</p>
+<p>The downloaded database is compressed with Gzip, the filename becomes
+<code class="docutils literal"><span class="pre">db.sqlite.gz</span></code>.</p>
+</div>
+</div>
+<div class="section" id="import-restoration">
+<h2>Import/Restoration<a class="headerlink" href="#import-restoration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>There is actually no way to restore the database from the user
+interface. The restoration must be done manually when no body use the
+software.</p>
+<ul class="simple">
+<li>To restore an old backup, just replace and overwrite the actual file
+<code class="docutils literal"><span class="pre">data/db.sqlite</span></code>.</li>
+<li>To uncompress a gzipped database, execute this command from a
+terminal <code class="docutils literal"><span class="pre">gunzip</span> <span class="pre">db.sqlite.gz</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Occasionally, it&#8217;s possible to optimize the database file by running the
+command <code class="docutils literal"><span class="pre">VACUUM</span></code>. This command rebuild the entire database and can be
+used for several reasons:</p>
+<ul class="simple">
+<li>Reduce the file size, deleting data produce empty space but doesn&#8217;t
+change the file size.</li>
+<li>The database is fragmented due to frequent inserts or updates.</li>
+</ul>
+<div class="section" id="from-the-command-line">
+<h3>From the command line<a class="headerlink" href="#from-the-command-line" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span>sqlite3 data/db.sqlite &#39;VACUUM&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="from-the-user-interface">
+<h3>From the user interface<a class="headerlink" href="#from-the-user-interface" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Go to the menu <strong>settings</strong> and click on the link <strong>Optimize the
+database</strong>.</p>
+<p>For more information, read the <a class="reference external" href="https://sqlite.org/lang_vacuum.html">Sqlite
+documentation</a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Sqlite database management</a><ul>
+<li><a class="reference internal" href="#export-backup">Export/Backup</a><ul>
+<li><a class="reference internal" href="#command-line">Command line</a></li>
+<li><a class="reference internal" href="#user-interface">User interface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#import-restoration">Import/Restoration</a></li>
+<li><a class="reference internal" href="#optimization">Optimization</a><ul>
+<li><a class="reference internal" href="#from-the-command-line">From the command line</a></li>
+<li><a class="reference internal" href="#from-the-user-interface">From the user interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sqlite-database.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/sqlite-database.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

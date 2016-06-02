@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/sqlite-database.rst:2
+msgid "Sqlite database management"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:4
+msgid ""
+"Kanboard uses Sqlite by default to store its data. All tasks, projects "
+"and users are stored inside this database."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:7
+msgid ""
+"Technically, the database is just a single file located inside the "
+"directory ``data`` and named ``db.sqlite``."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:11
+msgid "Export/Backup"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:14
+msgid "Command line"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:16
+msgid ""
+"Doing a backup is very easy, just copy the file ``data/db.sqlite`` "
+"somewhere else when nobody use the software."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:20
+msgid "User interface"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:22
+msgid ""
+"You can also download at any time the database directly from the "
+"**settings** menu."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:25
+msgid ""
+"The downloaded database is compressed with Gzip, the filename becomes "
+"``db.sqlite.gz``."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:29
+msgid "Import/Restoration"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:31
+msgid ""
+"There is actually no way to restore the database from the user interface."
+" The restoration must be done manually when no body use the software."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:35
+msgid ""
+"To restore an old backup, just replace and overwrite the actual file "
+"``data/db.sqlite``."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:37
+msgid ""
+"To uncompress a gzipped database, execute this command from a terminal "
+"``gunzip db.sqlite.gz``."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:41
+msgid "Optimization"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:43
+msgid ""
+"Occasionally, it's possible to optimize the database file by running the "
+"command ``VACUUM``. This command rebuild the entire database and can be "
+"used for several reasons:"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:47
+msgid ""
+"Reduce the file size, deleting data produce empty space but doesn't "
+"change the file size."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:49
+msgid "The database is fragmented due to frequent inserts or updates."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:52
+msgid "From the command line"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:59
+msgid "From the user interface"
+msgstr ""
+
+#: ../../source/sqlite-database.rst:61
+msgid ""
+"Go to the menu **settings** and click on the link **Optimize the "
+"database**."
+msgstr ""
+
+#: ../../source/sqlite-database.rst:64
+msgid ""
+"For more information, read the `Sqlite documentation "
+"<https://sqlite.org/lang_vacuum.html>`__."
+msgstr ""
+
+#~ msgid ""
+#~ "Technically, the database is just a "
+#~ "single file located inside the directory"
+#~ " data and named db.sqlite."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Doing a backup is very easy, just"
+#~ " copy the file data/db.sqlite somewhere "
+#~ "else when nobody use the software."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can also download at any time"
+#~ " the database directly from the "
+#~ "settings menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The downloaded database is compressed "
+#~ "with Gzip, the filename becomes "
+#~ "db.sqlite.gz."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Occasionally, it's possible to optimize "
+#~ "the database file by running the "
+#~ "command VACUUM. This command rebuild the"
+#~ " entire database and can be used "
+#~ "for several reasons:"
+#~ msgstr ""
+
+#~ msgid "Go to the menu settings and click on the link Optimize the database."
+#~ msgstr ""
+
+#~ msgid "For more information, read the Sqlite documentation."
+#~ msgstr ""
+

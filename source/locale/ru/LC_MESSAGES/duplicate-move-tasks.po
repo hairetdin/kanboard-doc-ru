@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/duplicate-move-tasks.rst:2
+msgid "Duplicate and move tasks"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:5
+msgid "Duplicate a task into the same project"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:7
+msgid "Go to the task view and choose **Duplicate** on the left."
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:12
+msgid "Task Duplication"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:13
+msgid "A new task will be created with the same properties as the original."
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:16
+msgid "Duplicate a task to another project"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:18
+msgid "Go to the task view and choose **Duplicate to another project**."
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:23
+msgid "Task Duplication Another Project"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:24
+msgid "Only projects where you are members will be shown in the drop-down."
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:26
+msgid ""
+"Before to copy the tasks, Kanboard will ask you the destination "
+"properties that are not common between the source and destination "
+"project."
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:30
+msgid "Basically, you need to define:"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:32
+msgid "The destination swim lane"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:33
+msgid "The column"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:34
+msgid "The category"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:35
+msgid "The assignee"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:38
+msgid "Move a task to another project"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:40
+msgid "Go to the task view and choose **Move to another project**."
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:42
+msgid ""
+"Moving a task to another project work in the same way as the duplication,"
+" you have to choose the new properties of the task."
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:46
+msgid "List of fields duplicated"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:48
+msgid "Here are the list of properties duplicated:"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:50
+msgid "title"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:51
+msgid "description"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:52
+msgid "date\\_due"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:53
+msgid "color\\_id"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:54
+msgid "project\\_id"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:55
+msgid "column\\_id"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:56
+msgid "owner\\_id"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:57
+msgid "score"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:58
+msgid "category\\_id"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:59
+msgid "time\\_estimated"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:60
+msgid "swimlane\\_id"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:61
+msgid "recurrence\\_status"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:62
+msgid "recurrence\\_trigger"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:63
+msgid "recurrence\\_factor"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:64
+msgid "recurrence\\_timeframe"
+msgstr ""
+
+#: ../../source/duplicate-move-tasks.rst:65
+msgid "recurrence\\_basedate"
+msgstr ""
+
+#~ msgid "Go to the task view and choose Duplicate on the left."
+#~ msgstr ""
+
+#~ msgid "Go to the task view and choose Duplicate to another project."
+#~ msgstr ""
+
+#~ msgid "Go to the task view and choose Move to another project."
+#~ msgstr ""
+

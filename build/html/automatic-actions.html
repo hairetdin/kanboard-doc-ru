@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Automatic Actions &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="automatic-actions">
+<h1>Automatic Actions<a class="headerlink" href="#automatic-actions" title="Ссылка на этот заголовок">¶</a></h1>
+<p>To minimize the user interaction, Kanboard support automated actions.</p>
+<p>Each automatic action is defined like that:</p>
+<ul class="simple">
+<li>An event to listen</li>
+<li>Action linked to this event</li>
+<li>Eventually there is some parameters to define</li>
+</ul>
+<p>Each project has a different set of automatic actions, the configuration
+panel is located on the project listing page, just click on the link
+<strong>Automatic actions</strong>.</p>
+<div class="section" id="add-a-new-action">
+<h2>Add a new action<a class="headerlink" href="#add-a-new-action" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Click on the link <strong>Add a new automatic action</strong>.</p>
+<div class="figure" id="id1">
+<img alt="Automatique action" src="_images/automatic-action-creation.png" />
+<p class="caption"><span class="caption-text">Automatique action</span></p>
+</div>
+<ul class="simple">
+<li>Choose an action</li>
+<li>Then, select an event</li>
+<li>And finally, define the parameters</li>
+</ul>
+</div>
+<div class="section" id="list-of-available-actions">
+<h2>List of available actions<a class="headerlink" href="#list-of-available-actions" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Create a comment from an external provider</li>
+<li>Add a comment log when moving the task between columns</li>
+<li>Assign automatically a category based on a color</li>
+<li>Change the category based on an external label</li>
+<li>Assign automatically a category based on a link</li>
+<li>Assign automatically a color based on a category</li>
+<li>Assign a color when the task is moved to a specific column</li>
+<li>Change task color when using a specific task link</li>
+<li>Assign a color to a specific user</li>
+<li>Assign the task to the person who does the action</li>
+<li>Assign the task to the person who does the action when the column is
+changed</li>
+<li>Assign the task to a specific user</li>
+<li>Change the assignee based on an external username</li>
+<li>Close the task</li>
+<li>Close a task in a specific column</li>
+<li>Create a task from an external provider</li>
+<li>Duplicate the task to another project</li>
+<li>Send a task by email to someone</li>
+<li>Move the task to another project</li>
+<li>Move the task to another column when assigned to a user</li>
+<li>Move the task to another column when the category is changed</li>
+<li>Move the task to another column when assignee is cleared</li>
+<li>Open a task</li>
+<li>Automatically update the start date</li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Here are some examples used in real life:</p>
+<div class="section" id="when-i-move-a-task-to-the-column-done-automatically-close-this-task">
+<h3>When I move a task to the column &#8220;Done&#8221;, automatically close this task<a class="headerlink" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Choose action: <strong>Close a task in a specific column</strong></li>
+<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li>Define action parameter: <strong>Column = Done</strong> (this is the destination
+column)</li>
+</ul>
+</div>
+<div class="section" id="when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user">
+<h3>When I move a task to the column &#8220;To be validated&#8221;, assign this task to a specific user<a class="headerlink" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Choose the action: <strong>Assign the task to a specific user</strong></li>
+<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li>Define the action parameters: <strong>Column = To be validated</strong> and <strong>User
+= Bob</strong> (Bob is our tester)</li>
+</ul>
+</div>
+<div class="section" id="when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user">
+<h3>When I move a task to the column &#8220;Work in progress&#8221;, assign this task to the current user<a class="headerlink" href="#when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Choose action: <strong>Assign the task to the person who does the action
+when the column is changed</strong></li>
+<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li>Define action parameter: <strong>Column = Work in progress</strong></li>
+</ul>
+</div>
+<div class="section" id="when-a-task-is-completed-duplicate-this-task-to-another-project">
+<h3>When a task is completed, duplicate this task to another project<a class="headerlink" href="#when-a-task-is-completed-duplicate-this-task-to-another-project" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Let&#8217;s say we have two projects &#8220;Customer orders&#8221; and &#8220;Production&#8221;, once
+the order is validated, swap it to the &#8220;Production&#8221; project.</p>
+<ul class="simple">
+<li>Choose action: <strong>Duplicate the task to another project</strong></li>
+<li>Choose the event: <strong>Closing a task</strong></li>
+<li>Define action parameters: <strong>Column = Validated</strong> and <strong>Project =
+Production</strong></li>
+</ul>
+</div>
+<div class="section" id="when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project">
+<h3>When a task is moved to the last column, move the exact same task to another project<a class="headerlink" href="#when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Let&#8217;s say we have two projects &#8220;Ideas&#8221; and &#8220;Development&#8221;, once the idea
+is validated, swap it to the &#8220;Development&#8221; project.</p>
+<ul class="simple">
+<li>Choose action: <strong>Move the task to another project</strong></li>
+<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li>Define action parameters: <strong>Column = Validated</strong> and <strong>Project =
+Development</strong></li>
+</ul>
+</div>
+<div class="section" id="i-want-to-assign-automatically-a-color-to-the-user-bob">
+<h3>I want to assign automatically a color to the user Bob<a class="headerlink" href="#i-want-to-assign-automatically-a-color-to-the-user-bob" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Choose action: <strong>Assign a color to a specific user</strong></li>
+<li>Choose the event: <strong>Task assignee change</strong></li>
+<li>Define action parameters: <strong>Color = Green</strong> and <strong>Assignee = Bob</strong></li>
+</ul>
+</div>
+<div class="section" id="i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request">
+<h3>I want to assign a color automatically to the defined category &#8220;Feature Request&#8221;<a class="headerlink" href="#i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Choose action: <strong>Assign automatically a color based on a category</strong></li>
+<li>Choose the event: <strong>Task creation or modification</strong></li>
+<li>Define action parameters: <strong>Color = Blue</strong> and <strong>Category = Feature
+Request</strong></li>
+</ul>
+</div>
+<div class="section" id="i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress">
+<h3>I want to set the start date automatically when the task is moved to the column &#8220;Work in progress&#8221;<a class="headerlink" href="#i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Choose action: <strong>Automatically update the start date</strong></li>
+<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li>Define action parameters: <strong>Column = Work in progress</strong></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Automatic Actions</a><ul>
+<li><a class="reference internal" href="#add-a-new-action">Add a new action</a></li>
+<li><a class="reference internal" href="#list-of-available-actions">List of available actions</a></li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task">When I move a task to the column &#8220;Done&#8221;, automatically close this task</a></li>
+<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user">When I move a task to the column &#8220;To be validated&#8221;, assign this task to a specific user</a></li>
+<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user">When I move a task to the column &#8220;Work in progress&#8221;, assign this task to the current user</a></li>
+<li><a class="reference internal" href="#when-a-task-is-completed-duplicate-this-task-to-another-project">When a task is completed, duplicate this task to another project</a></li>
+<li><a class="reference internal" href="#when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project">When a task is moved to the last column, move the exact same task to another project</a></li>
+<li><a class="reference internal" href="#i-want-to-assign-automatically-a-color-to-the-user-bob">I want to assign automatically a color to the user Bob</a></li>
+<li><a class="reference internal" href="#i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request">I want to assign a color automatically to the defined category &#8220;Feature Request&#8221;</a></li>
+<li><a class="reference internal" href="#i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress">I want to set the start date automatically when the task is moved to the column &#8220;Work in progress&#8221;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/automatic-actions.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/automatic-actions.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

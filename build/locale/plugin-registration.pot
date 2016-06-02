@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/plugin-registration.rst:2
+msgid "Plugin Registration"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:5
+msgid "Directory structure"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:7
+msgid "Plugins are stored in the ``plugins`` subdirectory. An example of a plugin directory structure:"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:29
+msgid "Only the registration file ``Plugin.php`` is required. Other folders are optional."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:32
+msgid "The first letter of the plugin name must be capitalized."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:35
+msgid "Plugin Registration File"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:37
+msgid "Kanboard will scan the directory ``plugins`` and load automatically everything under this directory. The file ``Plugin.php`` is used to load and register the plugin."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:41
+msgid "Example of ``Plugin.php`` file (``plugins/Foobar/Plugin.php``):"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:59
+msgid "This file should contain a class ``Plugin`` defined under the namespace ``Kanboard\\Plugin\\Yourplugin`` and extends ``Kanboard\\Core\\Plugin\\Base``."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:63
+msgid "The only required method is ``initialize()``. This method is called for each request when the plugin is loaded."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:67
+msgid "Plugin Methods"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:69
+msgid "Available methods from ``Kanboard\\Core\\Plugin\\Base``:"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:71
+msgid "``initialize()``: Executed when the plugin is loaded"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:72
+msgid "``getClasses()``: Return all classes that should be stored in the dependency injection container"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:74
+msgid "``on($event, $callback)``: Listen on internal events"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:75
+msgid "``getPluginName()``: Should return plugin name"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:76
+msgid "``getPluginAuthor()``: Should return plugin author"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:77
+msgid "``getPluginVersion()``: Should return plugin version"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:78
+msgid "``getPluginDescription()``: Should return plugin description"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:79
+msgid "``getPluginHomepage()``: Should return plugin Homepage (link)"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:80
+msgid "``setContentSecurityPolicy(array $rules)``: Override default HTTP CSP rules"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:82
+msgid "``onStartup()``: If present, this method is executed automatically when the event \"app.bootstrap\" is triggered"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:85
+msgid "Your plugin registration class can also inherit from Kanboard, that way you can access all classes and methods of Kanboard easily."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:88
+msgid "This example will fetch the user #123:"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:95
+msgid "Plugin Translations"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:97
+msgid "Plugin can be translated in the same way as the rest of the application. You must load the translations yourself when the session is created:"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:107
+msgid "The translations must be stored in the file ``plugins/Myplugin/Locale/xx_XX/translations.php`` (replace xx\\_XX by the language code fr\\_FR, en\\_US...)."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:111
+msgid "Translations are stored in a dictionary, if you would like to override an existing string, you just need to use the same key in your translation file."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:116
+msgid "Dependency Injection Container"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:118
+msgid "Kanboard uses Pimple, a simple PHP Dependency Injection Container. However, Kanboard can register any class in the container easily."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:121
+msgid "Those classes are available everywhere in the application and only one instance is created."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:124
+msgid "Here an example to register your own models in the container:"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:138
+msgid "Now, if you use a class that extends from ``Core\\Base``, you can access directly to those class instance:"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:149
+msgid "Keys of the containers are unique across the application. If you override an existing class, you will change the default behavior."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:153
+msgid "Add new API methods"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:155
+msgid "Kanboard use this library `JSON-RPC <https://github.com/fguillot/JsonRPC>`__ to handle API calls."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:158
+msgid "To add a new method you can do something like that from your plugin:"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:166
+msgid "``$this->container['api']`` or ``$this->api`` expose an instance of the object ``JsonRPC\\Server``."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:169
+#: ../../source/plugin-registration.rst:186
+msgid "Read the library documentation for more information."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:172
+msgid "Add new console commands"
+msgstr ""
+
+#: ../../source/plugin-registration.rst:174
+msgid "Kanboard use the library `Symfony Console <http://symfony.com/doc/current/components/console/introduction.html>`__ to handle local command lines."
+msgstr ""
+
+#: ../../source/plugin-registration.rst:178
+msgid "Kanboard expose an instance of the object ``Symfony\\Component\\Console\\Application`` via ``$this->cli``. You can add new commands from your plugin:"
+msgstr ""
+

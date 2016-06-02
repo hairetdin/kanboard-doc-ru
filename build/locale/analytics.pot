@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/analytics.rst:2
+msgid "Analytics"
+msgstr ""
+
+#: ../../source/analytics.rst:4
+msgid "Each project have an analytics section. Depending on how you are using Kanboard, you can see those reports:"
+msgstr ""
+
+#: ../../source/analytics.rst:8
+#: ../../source/analytics.rst:13
+msgid "User repartition"
+msgstr ""
+
+#: ../../source/analytics.rst:14
+msgid "This pie chart show the number of open tasks assigned per user."
+msgstr ""
+
+#: ../../source/analytics.rst:17
+#: ../../source/analytics.rst:22
+msgid "Task distribution"
+msgstr ""
+
+#: ../../source/analytics.rst:23
+msgid "This pie chart gives an overview of the number of open tasks per column."
+msgstr ""
+
+#: ../../source/analytics.rst:26
+#: ../../source/analytics.rst:31
+msgid "Cumulative flow diagram"
+msgstr ""
+
+#: ../../source/analytics.rst:33
+msgid "This chart shows the number of tasks cumulatively for each column over the time."
+msgstr ""
+
+#: ../../source/analytics.rst:35
+msgid "Every day, the total number of tasks is recorded for each column."
+msgstr ""
+
+#: ../../source/analytics.rst:36
+msgid "If you would like to exclude closed tasks, change the `global project settings <project-configuration.markdown>`__."
+msgstr ""
+
+#: ../../source/analytics.rst:39
+msgid "Note: You need to have at least two days of data to see the graph."
+msgstr ""
+
+#: ../../source/analytics.rst:42
+msgid "Burn down chart"
+msgstr ""
+
+#: ../../source/analytics.rst:47
+msgid "Burndown chart"
+msgstr ""
+
+#: ../../source/analytics.rst:48
+msgid "The `burn down chart <http://en.wikipedia.org/wiki/Burn_down_chart>`__ is available for each project."
+msgstr ""
+
+#: ../../source/analytics.rst:51
+msgid "This chart is a graphical representation of work left to do versus time."
+msgstr ""
+
+#: ../../source/analytics.rst:53
+msgid "Kanboard use the complexity or story point to generate this diagram."
+msgstr ""
+
+#: ../../source/analytics.rst:54
+msgid "Everyday, the sum of the story points for each column is calculated."
+msgstr ""
+
+#: ../../source/analytics.rst:57
+#: ../../source/analytics.rst:62
+#: ../../source/analytics.rst:75
+msgid "Average time spent into each column"
+msgstr ""
+
+#: ../../source/analytics.rst:63
+msgid "This chart shows the average time spent into each column for the last 1000 tasks."
+msgstr ""
+
+#: ../../source/analytics.rst:66
+msgid "Kanboard uses the task transitions to calculate the data."
+msgstr ""
+
+#: ../../source/analytics.rst:67
+msgid "The time spent is calculated until the task is closed."
+msgstr ""
+
+#: ../../source/analytics.rst:70
+msgid "Average Lead and Cycle time"
+msgstr ""
+
+#: ../../source/analytics.rst:76
+msgid "This chart show the average lead and cycle time for the last 1000 tasks over time."
+msgstr ""
+
+#: ../../source/analytics.rst:79
+msgid "The lead time is the time between the task creation and the date of completion."
+msgstr ""
+
+#: ../../source/analytics.rst:81
+msgid "The cycle time is time between the specified start date of the task to the completion date."
+msgstr ""
+
+#: ../../source/analytics.rst:83
+msgid "If the task is not closed, the current time is used instead of the date of completion."
+msgstr ""
+
+#: ../../source/analytics.rst:86
+msgid "Those metrics are calculated and recorded every day for the whole project."
+msgstr ""
+
+#: ../../source/analytics.rst:89
+msgid "Note: Don't forget to run the `daily cronjob <cronjob.markdown>`__ to have accurate statistics."
+msgstr ""
+

@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-project-procedures.rst:2
+msgid "API Project Procedures"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:5
+msgid "createProject"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:7
+msgid "Purpose: **Create a new project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:8
+#: ../../source/api-project-procedures.rst:43
+#: ../../source/api-project-procedures.rst:95
+#: ../../source/api-project-procedures.rst:147
+#: ../../source/api-project-procedures.rst:198
+#: ../../source/api-project-procedures.rst:266
+#: ../../source/api-project-procedures.rst:300
+#: ../../source/api-project-procedures.rst:334
+#: ../../source/api-project-procedures.rst:368
+#: ../../source/api-project-procedures.rst:402
+#: ../../source/api-project-procedures.rst:426
+msgid "Parameters:"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:10
+#: ../../source/api-project-procedures.rst:97
+#: ../../source/api-project-procedures.rst:201
+msgid "**name** (string, required)"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:11
+#: ../../source/api-project-procedures.rst:202
+msgid "**description** (string, optional)"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:13
+msgid "Result on success: **project\\_id**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:14
+#: ../../source/api-project-procedures.rst:152
+#: ../../source/api-project-procedures.rst:205
+#: ../../source/api-project-procedures.rst:237
+#: ../../source/api-project-procedures.rst:271
+#: ../../source/api-project-procedures.rst:305
+#: ../../source/api-project-procedures.rst:339
+#: ../../source/api-project-procedures.rst:373
+#: ../../source/api-project-procedures.rst:407
+#: ../../source/api-project-procedures.rst:431
+msgid "Result on failure: **false**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:16
+#: ../../source/api-project-procedures.rst:50
+#: ../../source/api-project-procedures.rst:102
+#: ../../source/api-project-procedures.rst:154
+#: ../../source/api-project-procedures.rst:207
+#: ../../source/api-project-procedures.rst:239
+#: ../../source/api-project-procedures.rst:273
+#: ../../source/api-project-procedures.rst:307
+#: ../../source/api-project-procedures.rst:341
+#: ../../source/api-project-procedures.rst:375
+#: ../../source/api-project-procedures.rst:409
+#: ../../source/api-project-procedures.rst:433
+msgid "Request example:"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:29
+#: ../../source/api-project-procedures.rst:63
+#: ../../source/api-project-procedures.rst:115
+#: ../../source/api-project-procedures.rst:164
+#: ../../source/api-project-procedures.rst:221
+#: ../../source/api-project-procedures.rst:252
+#: ../../source/api-project-procedures.rst:286
+#: ../../source/api-project-procedures.rst:320
+#: ../../source/api-project-procedures.rst:354
+#: ../../source/api-project-procedures.rst:388
+msgid "Response example:"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:40
+msgid "getProjectById"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:42
+#: ../../source/api-project-procedures.rst:94
+msgid "Purpose: **Get project information**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:45
+#: ../../source/api-project-procedures.rst:268
+#: ../../source/api-project-procedures.rst:302
+#: ../../source/api-project-procedures.rst:336
+#: ../../source/api-project-procedures.rst:370
+#: ../../source/api-project-procedures.rst:404
+msgid "**project\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:47
+#: ../../source/api-project-procedures.rst:99
+msgid "Result on success: **project properties**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:48
+#: ../../source/api-project-procedures.rst:100
+msgid "Result on failure: **null**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:92
+msgid "getProjectByName"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:144
+msgid "getAllProjects"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:146
+msgid "Purpose: **Get all available projects**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:149
+msgid "**none**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:151
+msgid "Result on success: **List of projects**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:195
+msgid "updateProject"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:197
+msgid "Purpose: **Update a project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:200
+msgid "**id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:204
+#: ../../source/api-project-procedures.rst:236
+#: ../../source/api-project-procedures.rst:270
+#: ../../source/api-project-procedures.rst:304
+#: ../../source/api-project-procedures.rst:338
+#: ../../source/api-project-procedures.rst:372
+msgid "Result on success: **true**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:232
+msgid "removeProject"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:234
+msgid "Purpose: **Remove a project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:235
+msgid "Parameters: **project\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:263
+msgid "enableProject"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:265
+msgid "Purpose: **Enable a project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:297
+msgid "disableProject"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:299
+msgid "Purpose: **Disable a project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:331
+msgid "enableProjectPublicAccess"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:333
+msgid "Purpose: **Enable public access for a given project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:365
+msgid "disableProjectPublicAccess"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:367
+msgid "Purpose: **Disable public access for a given project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:399
+msgid "getProjectActivity"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:401
+msgid "Purpose: **Get activity stream for a project**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:406
+#: ../../source/api-project-procedures.rst:430
+msgid "Result on success: **List of events**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:423
+msgid "getProjectActivities"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:425
+msgid "Purpose: **Get Activityfeed for Project(s)**"
+msgstr ""
+
+#: ../../source/api-project-procedures.rst:428
+msgid "**project\\_ids** (integer array, required)"
+msgstr ""
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Automated tests &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="automated-tests">
+<h1>Automated tests<a class="headerlink" href="#automated-tests" title="Ссылка на этот заголовок">¶</a></h1>
+<p><a class="reference external" href="https://phpunit.de/">PHPUnit</a> is used to run automated tests on
+Kanboard.</p>
+<p>You can run tests across different databases (Sqlite, Mysql and
+Postgresql) to be sure that the result is the same everywhere.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Linux/Unix machine</li>
+<li>PHP cli</li>
+<li>PHPUnit installed</li>
+<li>Mysql and Postgresql (optional)</li>
+</ul>
+</div>
+<div class="section" id="unit-tests">
+<h2>Unit Tests<a class="headerlink" href="#unit-tests" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="test-with-sqlite">
+<h3>Test with Sqlite<a class="headerlink" href="#test-with-sqlite" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Sqlite tests use a in-memory database, nothing is written on the file
+system.</p>
+<p>The PHPUnit config file is <code class="docutils literal"><span class="pre">tests/units.sqlite.xml</span></code>. From your
+Kanboard directory, run the command
+<code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.sqlite.xml</span></code>.</p>
+<p>Example:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>phpunit -c tests/units.sqlite.xml
+
+PHPUnit 5.0.0 by Sebastian Bergmann and contributors.
+
+...............................................................  63 / 649 (  9%)
+............................................................... 126 / 649 ( 19%)
+............................................................... 189 / 649 ( 29%)
+............................................................... 252 / 649 ( 38%)
+............................................................... 315 / 649 ( 48%)
+............................................................... 378 / 649 ( 58%)
+............................................................... 441 / 649 ( 67%)
+............................................................... 504 / 649 ( 77%)
+............................................................... 567 / 649 ( 87%)
+............................................................... 630 / 649 ( 97%)
+...................                                             649 / 649 (100%)
+
+Time: 1.22 minutes, Memory: 151.25Mb
+
+OK (649 tests, 43595 assertions)
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-with-mysql">
+<h3>Test with Mysql<a class="headerlink" href="#test-with-mysql" title="Ссылка на этот заголовок">¶</a></h3>
+<p>You must have Mysql or MariaDb installed on localhost.</p>
+<p>By default, those credentials are used:</p>
+<ul class="simple">
+<li>Hostname: <strong>localhost</strong></li>
+<li>Username: <strong>root</strong></li>
+<li>Password: none</li>
+<li>Database: <strong>kanboard_unit_test</strong></li>
+</ul>
+<p>For each execution the database is dropped and created again.</p>
+<p>The PHPUnit config file is <code class="docutils literal"><span class="pre">tests/units.mysql.xml</span></code>. From your Kanboard
+directory, run the command <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.mysql.xml</span></code>.</p>
+</div>
+<div class="section" id="test-with-postgresql">
+<h3>Test with Postgresql<a class="headerlink" href="#test-with-postgresql" title="Ссылка на этот заголовок">¶</a></h3>
+<p>You must have Postgresql installed on localhost.</p>
+<p>By default, those credentials are used:</p>
+<ul class="simple">
+<li>Hostname: <strong>localhost</strong></li>
+<li>Username: <strong>postgres</strong></li>
+<li>Password: none</li>
+<li>Database: <strong>kanboard_unit_test</strong></li>
+</ul>
+<p>Be sure to allow the user <code class="docutils literal"><span class="pre">postgres</span></code> to create and drop databases. The
+database is recreated for each execution.</p>
+<p>The PHPUnit config file is <code class="docutils literal"><span class="pre">tests/units.postgres.xml</span></code>. From your
+Kanboard directory, run the command
+<code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.postgres.xml</span></code>.</p>
+</div>
+</div>
+<div class="section" id="integration-tests">
+<h2>Integration Tests<a class="headerlink" href="#integration-tests" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Actually only the API calls are tested.</p>
+<p>Real HTTP calls are made with those tests. So a local instance of
+Kanboard is necessary and must listen on <code class="docutils literal"><span class="pre">http://localhost:8000/</span></code>.</p>
+<p>All data will be removed/altered by the test suite. Moreover the script
+will reset and set a new API key.</p>
+<ol class="arabic simple">
+<li>Start a local instance of Kanboard <code class="docutils literal"><span class="pre">php</span> <span class="pre">-S</span> <span class="pre">127.0.0.1:8000</span></code></li>
+<li>Run the test suite from another terminal</li>
+</ol>
+<p>The same method as above is used to run tests across different
+databases:</p>
+<ul class="simple">
+<li>Sqlite: <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/integration.sqlite.xml</span></code></li>
+<li>Mysql: <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/integration.mysql.xml</span></code></li>
+<li>Postgresql: <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/integration.postgres.xml</span></code></li>
+</ul>
+<p>Example:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>phpunit -c tests/integration.sqlite.xml
+
+PHPUnit 5.0.0 by Sebastian Bergmann and contributors.
+
+...............................................................  63 / 135 ( 46%)
+............................................................... 126 / 135 ( 93%)
+.........                                                       135 / 135 (100%)
+
+Time: 1.18 minutes, Memory: 14.75Mb
+
+OK (135 tests, 526 assertions)
+</pre></div>
+</div>
+</div>
+<div class="section" id="continuous-integration-with-travis-ci">
+<h2>Continuous Integration with Travis-CI<a class="headerlink" href="#continuous-integration-with-travis-ci" title="Ссылка на этот заголовок">¶</a></h2>
+<p>After each commit pushed on the main repository, unit tests are executed
+across 5 different versions of PHP:</p>
+<ul class="simple">
+<li>PHP 7.0</li>
+<li>PHP 5.6</li>
+<li>PHP 5.5</li>
+<li>PHP 5.4</li>
+<li>PHP 5.3</li>
+</ul>
+<p>Each version of PHP is tested against the 3 supported database: Sqlite,
+Mysql and Postgresql.</p>
+<p>The Travis config file <code class="docutils literal"><span class="pre">.travis.yml</span></code> is located on the root directory
+of Kanboard.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Automated tests</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#unit-tests">Unit Tests</a><ul>
+<li><a class="reference internal" href="#test-with-sqlite">Test with Sqlite</a></li>
+<li><a class="reference internal" href="#test-with-mysql">Test with Mysql</a></li>
+<li><a class="reference internal" href="#test-with-postgresql">Test with Postgresql</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#integration-tests">Integration Tests</a></li>
+<li><a class="reference internal" href="#continuous-integration-with-travis-ci">Continuous Integration with Travis-CI</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tests.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/tests.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

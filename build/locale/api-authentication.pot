@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-authentication.rst:2
+msgid "API Authentication"
+msgstr ""
+
+#: ../../source/api-authentication.rst:5
+msgid "Default method (HTTP Basic)"
+msgstr ""
+
+#: ../../source/api-authentication.rst:7
+msgid "The API credentials are available on the settings page."
+msgstr ""
+
+#: ../../source/api-authentication.rst:9
+msgid "API end-point: ``https://YOUR_SERVER/jsonrpc.php``"
+msgstr ""
+
+#: ../../source/api-authentication.rst:11
+msgid "If you want to use the \"application api\":"
+msgstr ""
+
+#: ../../source/api-authentication.rst:13
+msgid "Username: ``jsonrpc``"
+msgstr ""
+
+#: ../../source/api-authentication.rst:14
+msgid "Password: API token on the settings page"
+msgstr ""
+
+#: ../../source/api-authentication.rst:16
+msgid "Otherwise for the \"user api\", just use the real username/passsword."
+msgstr ""
+
+#: ../../source/api-authentication.rst:18
+msgid "The API use the `HTTP Basic Authentication Scheme described in the RFC2617 <http://www.ietf.org/rfc/rfc2617.txt>`__. If there is an authentication error, you will receive the HTTP status code ``401 Not Authorized``."
+msgstr ""
+
+#: ../../source/api-authentication.rst:24
+msgid "Authorized User API procedures"
+msgstr ""
+
+#: ../../source/api-authentication.rst:26
+msgid "getMe"
+msgstr ""
+
+#: ../../source/api-authentication.rst:27
+msgid "getMyDashboard"
+msgstr ""
+
+#: ../../source/api-authentication.rst:28
+msgid "getMyActivityStream"
+msgstr ""
+
+#: ../../source/api-authentication.rst:29
+msgid "createMyPrivateProject"
+msgstr ""
+
+#: ../../source/api-authentication.rst:30
+msgid "getMyProjectsList"
+msgstr ""
+
+#: ../../source/api-authentication.rst:31
+msgid "getMyProjects"
+msgstr ""
+
+#: ../../source/api-authentication.rst:32
+msgid "getTimezone"
+msgstr ""
+
+#: ../../source/api-authentication.rst:33
+msgid "getVersion"
+msgstr ""
+
+#: ../../source/api-authentication.rst:34
+msgid "getDefaultTaskColor"
+msgstr ""
+
+#: ../../source/api-authentication.rst:35
+msgid "getDefaultTaskColors"
+msgstr ""
+
+#: ../../source/api-authentication.rst:36
+msgid "getColorList"
+msgstr ""
+
+#: ../../source/api-authentication.rst:37
+msgid "getProjectById"
+msgstr ""
+
+#: ../../source/api-authentication.rst:38
+msgid "getTask"
+msgstr ""
+
+#: ../../source/api-authentication.rst:39
+msgid "getTaskByReference"
+msgstr ""
+
+#: ../../source/api-authentication.rst:40
+msgid "getAllTasks"
+msgstr ""
+
+#: ../../source/api-authentication.rst:41
+msgid "openTask"
+msgstr ""
+
+#: ../../source/api-authentication.rst:42
+msgid "closeTask"
+msgstr ""
+
+#: ../../source/api-authentication.rst:43
+msgid "moveTaskPosition"
+msgstr ""
+
+#: ../../source/api-authentication.rst:44
+msgid "createTask"
+msgstr ""
+
+#: ../../source/api-authentication.rst:45
+msgid "updateTask"
+msgstr ""
+
+#: ../../source/api-authentication.rst:46
+msgid "getBoard"
+msgstr ""
+
+#: ../../source/api-authentication.rst:47
+msgid "getProjectActivity"
+msgstr ""
+
+#: ../../source/api-authentication.rst:48
+msgid "getMyOverdueTasks"
+msgstr ""
+
+#: ../../source/api-authentication.rst:51
+msgid "Custom HTTP header"
+msgstr ""
+
+#: ../../source/api-authentication.rst:53
+msgid "You can use an alternative HTTP header for the authentication if your server have a very specific configuration."
+msgstr ""
+
+#: ../../source/api-authentication.rst:56
+msgid "The header name can be anything you want, by example ``X-API-Auth``."
+msgstr ""
+
+#: ../../source/api-authentication.rst:57
+msgid "The header value is the ``username:password`` encoded in Base64."
+msgstr ""
+
+#: ../../source/api-authentication.rst:59
+msgid "Configuration:"
+msgstr ""
+
+#: ../../source/api-authentication.rst:61
+msgid "Define your custom header in your ``config.php``: ``define('API_AUTHENTICATION_HEADER', 'X-API-Auth');``"
+msgstr ""
+
+#: ../../source/api-authentication.rst:63
+msgid "Encode the credentials in Base64, example with PHP ``base64_encode('jsonrpc:19ffd9709d03ce50675c3a43d1c49c1ac207f4bc45f06c5b2701fbdf8929');``"
+msgstr ""
+
+#: ../../source/api-authentication.rst:65
+msgid "Test with curl:"
+msgstr ""
+

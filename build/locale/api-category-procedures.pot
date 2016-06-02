@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-category-procedures.rst:2
+msgid "API Category Procedures"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:5
+msgid "createCategory"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:7
+msgid "Purpose: **Create a new category**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:8
+#: ../../source/api-category-procedures.rst:44
+#: ../../source/api-category-procedures.rst:83
+#: ../../source/api-category-procedures.rst:123
+#: ../../source/api-category-procedures.rst:159
+msgid "Parameters:"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:9
+#: ../../source/api-category-procedures.rst:85
+msgid "**project\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:11
+msgid "**name** (string, required, must be unique for the given project)"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:13
+msgid "Result on success: **category\\_id**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:14
+#: ../../source/api-category-procedures.rst:88
+#: ../../source/api-category-procedures.rst:129
+#: ../../source/api-category-procedures.rst:164
+msgid "Result on failure: **false**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:16
+#: ../../source/api-category-procedures.rst:51
+#: ../../source/api-category-procedures.rst:90
+#: ../../source/api-category-procedures.rst:131
+#: ../../source/api-category-procedures.rst:166
+msgid "Request example:"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:30
+#: ../../source/api-category-procedures.rst:64
+#: ../../source/api-category-procedures.rst:103
+#: ../../source/api-category-procedures.rst:145
+#: ../../source/api-category-procedures.rst:179
+msgid "Response example:"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:41
+msgid "getCategory"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:43
+msgid "Purpose: **Get category information**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:46
+msgid "**category\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:48
+msgid "Result on success: **category properties**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:49
+msgid "Result on failure: **null**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:80
+msgid "getAllCategories"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:82
+msgid "Purpose: **Get all available categories**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:87
+msgid "Result on success: **List of categories**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:120
+msgid "updateCategory"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:122
+msgid "Purpose: **Update a category**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:125
+msgid "**id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:126
+msgid "**name** (string, required)"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:128
+#: ../../source/api-category-procedures.rst:163
+msgid "Result on success: **true**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:156
+msgid "removeCategory"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:158
+msgid "Purpose: **Remove a category**"
+msgstr ""
+
+#: ../../source/api-category-procedures.rst:161
+msgid "**category\\_id** (integer)"
+msgstr ""
+

@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-task-procedures.rst:2
+msgid "API Task Procedures"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:5
+msgid "createTask"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:7
+msgid "Purpose: **Create a new task**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:8
+#: ../../source/api-task-procedures.rst:72
+#: ../../source/api-task-procedures.rst:142
+#: ../../source/api-task-procedures.rst:209
+#: ../../source/api-task-procedures.rst:409
+#: ../../source/api-task-procedures.rst:457
+#: ../../source/api-task-procedures.rst:491
+#: ../../source/api-task-procedures.rst:525
+#: ../../source/api-task-procedures.rst:560
+#: ../../source/api-task-procedures.rst:601
+#: ../../source/api-task-procedures.rst:641
+#: ../../source/api-task-procedures.rst:681
+msgid "Parameters:"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:10
+msgid "**title** (string, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:11
+#: ../../source/api-task-procedures.rst:144
+#: ../../source/api-task-procedures.rst:211
+#: ../../source/api-task-procedures.rst:562
+#: ../../source/api-task-procedures.rst:604
+#: ../../source/api-task-procedures.rst:644
+#: ../../source/api-task-procedures.rst:683
+msgid "**project\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:12
+#: ../../source/api-task-procedures.rst:413
+msgid "**color\\_id** (string, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:13
+#: ../../source/api-task-procedures.rst:606
+#: ../../source/api-task-procedures.rst:646
+msgid "**column\\_id** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:14
+#: ../../source/api-task-procedures.rst:414
+#: ../../source/api-task-procedures.rst:608
+#: ../../source/api-task-procedures.rst:648
+msgid "**owner\\_id** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:15
+msgid "**creator\\_id** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:16
+#: ../../source/api-task-procedures.rst:415
+msgid "**date\\_due**: ISO8601 format (string, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:17
+#: ../../source/api-task-procedures.rst:416
+msgid "**description** Markdown content (string, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:18
+#: ../../source/api-task-procedures.rst:417
+#: ../../source/api-task-procedures.rst:607
+#: ../../source/api-task-procedures.rst:647
+msgid "**category\\_id** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:19
+#: ../../source/api-task-procedures.rst:418
+msgid "**score** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:20
+#: ../../source/api-task-procedures.rst:605
+#: ../../source/api-task-procedures.rst:645
+msgid "**swimlane\\_id** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:21
+#: ../../source/api-task-procedures.rst:419
+msgid "**priority** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:22
+#: ../../source/api-task-procedures.rst:420
+msgid "**recurrence\\_status** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:23
+#: ../../source/api-task-procedures.rst:421
+msgid "**recurrence\\_trigger** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:24
+#: ../../source/api-task-procedures.rst:422
+msgid "**recurrence\\_factor** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:25
+#: ../../source/api-task-procedures.rst:423
+msgid "**recurrence\\_timeframe** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:26
+#: ../../source/api-task-procedures.rst:424
+msgid "**recurrence\\_basedate** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:28
+#: ../../source/api-task-procedures.rst:650
+msgid "Result on success: **task\\_id**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:29
+#: ../../source/api-task-procedures.rst:216
+#: ../../source/api-task-procedures.rst:313
+#: ../../source/api-task-procedures.rst:360
+#: ../../source/api-task-procedures.rst:427
+#: ../../source/api-task-procedures.rst:462
+#: ../../source/api-task-procedures.rst:496
+#: ../../source/api-task-procedures.rst:530
+#: ../../source/api-task-procedures.rst:569
+#: ../../source/api-task-procedures.rst:611
+#: ../../source/api-task-procedures.rst:651
+#: ../../source/api-task-procedures.rst:687
+msgid "Result on failure: **false**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:31
+#: ../../source/api-task-procedures.rst:79
+#: ../../source/api-task-procedures.rst:150
+#: ../../source/api-task-procedures.rst:464
+#: ../../source/api-task-procedures.rst:498
+#: ../../source/api-task-procedures.rst:532
+#: ../../source/api-task-procedures.rst:571
+#: ../../source/api-task-procedures.rst:613
+#: ../../source/api-task-procedures.rst:653
+#: ../../source/api-task-procedures.rst:689
+msgid "Request example:"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:58
+#: ../../source/api-task-procedures.rst:92
+#: ../../source/api-task-procedures.rst:164
+#: ../../source/api-task-procedures.rst:232
+#: ../../source/api-task-procedures.rst:325
+#: ../../source/api-task-procedures.rst:375
+#: ../../source/api-task-procedures.rst:443
+#: ../../source/api-task-procedures.rst:477
+#: ../../source/api-task-procedures.rst:511
+#: ../../source/api-task-procedures.rst:545
+#: ../../source/api-task-procedures.rst:587
+#: ../../source/api-task-procedures.rst:627
+#: ../../source/api-task-procedures.rst:667
+#: ../../source/api-task-procedures.rst:703
+msgid "Response example:"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:69
+msgid "getTask"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:71
+msgid "Purpose: **Get task by the unique id**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:74
+#: ../../source/api-task-procedures.rst:459
+#: ../../source/api-task-procedures.rst:493
+#: ../../source/api-task-procedures.rst:527
+#: ../../source/api-task-procedures.rst:563
+#: ../../source/api-task-procedures.rst:603
+#: ../../source/api-task-procedures.rst:643
+msgid "**task\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:76
+#: ../../source/api-task-procedures.rst:147
+msgid "Result on success: **task properties**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:77
+#: ../../source/api-task-procedures.rst:148
+msgid "Result on failure: **null**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:139
+msgid "getTaskByReference"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:141
+msgid "Purpose: **Get task by the external reference**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:145
+msgid "**reference** (string, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:206
+msgid "getAllTasks"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:208
+msgid "Purpose: **Get all available tasks**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:212
+msgid "**status\\_id**: The value 1 for active tasks and 0 for inactive (integer, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:215
+#: ../../source/api-task-procedures.rst:312
+#: ../../source/api-task-procedures.rst:359
+msgid "Result on success: **List of tasks**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:218
+#: ../../source/api-task-procedures.rst:315
+#: ../../source/api-task-procedures.rst:362
+msgid "Request example to fetch all tasks on the board:"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:309
+msgid "getOverdueTasks"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:311
+msgid "Purpose: **Get all overdue tasks**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:356
+msgid "getOverdueTasksByProject"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:358
+msgid "Purpose: **Get all overdue tasks for a special project**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:406
+msgid "updateTask"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:408
+msgid "Purpose: **Update a task**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:411
+msgid "**id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:412
+msgid "**title** (string, optional)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:426
+#: ../../source/api-task-procedures.rst:461
+#: ../../source/api-task-procedures.rst:495
+#: ../../source/api-task-procedures.rst:529
+#: ../../source/api-task-procedures.rst:568
+#: ../../source/api-task-procedures.rst:610
+msgid "Result on success: **true**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:429
+msgid "Request example to change the task color:"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:454
+msgid "openTask"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:456
+msgid "Purpose: **Set a task to the status open**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:488
+msgid "closeTask"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:490
+msgid "Purpose: **Set a task to the status close**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:522
+msgid "removeTask"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:524
+msgid "Purpose: **Remove a task**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:556
+msgid "moveTaskPosition"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:558
+msgid "Purpose: **Move a task to another column, position or swimlane inside the same board**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:564
+msgid "**column\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:565
+msgid "**position** (integer, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:566
+msgid "**swimlane\\_id** (integer, optional, default=0)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:598
+msgid "moveTaskToProject"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:600
+msgid "Purpose: **Move a task to another project**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:638
+msgid "duplicateTaskToProject"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:640
+msgid "Purpose: **Move a task to another column or another position**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:678
+msgid "searchTasks"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:680
+msgid "Purpose: **Find tasks by using the search engine**"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:684
+msgid "**query** (string, required)"
+msgstr ""
+
+#: ../../source/api-task-procedures.rst:686
+msgid "Result on success: **list of tasks**"
+msgstr ""
+

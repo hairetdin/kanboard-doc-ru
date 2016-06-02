@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Json-RPC API &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="json-rpc-api">
+<h1>Json-RPC API<a class="headerlink" href="#json-rpc-api" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="user-and-application-api">
+<h2>User and application API<a class="headerlink" href="#user-and-application-api" title="Ссылка на этот заголовок">¶</a></h2>
+<p>There are two types of API access:</p>
+<div class="section" id="application-api">
+<h3>Application API<a class="headerlink" href="#application-api" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Access to the API with the user &#8220;jsonrpc&#8221; and the token available in
+settings</li>
+<li>Access to all procedures</li>
+<li>No permission checked</li>
+<li>There is no user session on the server</li>
+<li>Example of possible clients: tools to migrate/import data, create
+tasks from another system, etc...</li>
+</ul>
+</div>
+<div class="section" id="user-api">
+<h3>User API<a class="headerlink" href="#user-api" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>Access to the API with the user credentials (username and password)</li>
+<li>Access to a restricted set of procedures</li>
+<li>The project permissions are checked</li>
+<li>A user session is created on the server</li>
+<li>Example of possible clients: mobile/desktop application, command line
+utility, etc...</li>
+</ul>
+</div>
+</div>
+<div class="section" id="security">
+<h2>Security<a class="headerlink" href="#security" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Always use HTTPS with a valid certificate</li>
+<li>If you make a mobile application, it&#8217;s your job to store securely the
+user credentials on the device</li>
+<li>After 3 authentication failure on the user api, the end-user have to
+unlock his account by using the login form</li>
+<li>Two factor authentication is not yet available through the API</li>
+</ul>
+</div>
+<div class="section" id="protocol">
+<h2>Protocol<a class="headerlink" href="#protocol" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Kanboard use the protocol Json-RPC to interact with external programs.</p>
+<p>JSON-RPC is a remote procedure call protocol encoded in JSON. Almost the
+same thing as XML-RPC but with the JSON format.</p>
+<p>We use the <a class="reference external" href="http://www.jsonrpc.org/specification">version 2 of the
+protocol</a>. You must call the
+API with a <code class="docutils literal"><span class="pre">POST</span></code> HTTP request.</p>
+<p>Kanboard support batch requests, so you can make multiple API calls in a
+single HTTP request. It&#8217;s particularly useful for mobile clients with
+higher network latency.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="api-authentication.markdown">Authentication</a></li>
+<li><a class="reference external" href="api-examples.markdown">Examples</a></li>
+<li><a class="reference external" href="api-application-procedures.markdown">Application</a></li>
+<li><a class="reference external" href="api-project-procedures.markdown">Projects</a></li>
+<li><a class="reference external" href="api-project-permission-procedures.markdown">Project Permissions</a></li>
+<li><a class="reference external" href="api-board-procedures.markdown">Boards</a></li>
+<li><a class="reference external" href="api-column-procedures.markdown">Columns</a></li>
+<li><a class="reference external" href="api-swimlane-procedures.markdown">Swimlanes</a></li>
+<li><a class="reference external" href="api-category-procedures.markdown">Categories</a></li>
+<li><a class="reference external" href="api-action-procedures.markdown">Automatic Actions</a></li>
+<li><a class="reference external" href="api-task-procedures.markdown">Tasks</a></li>
+<li><a class="reference external" href="api-subtask-procedures.markdown">Subtasks</a></li>
+<li><a class="reference external" href="api-file-procedures.markdown">Files</a></li>
+<li><a class="reference external" href="api-link-procedures.markdown">Links</a></li>
+<li><a class="reference external" href="api-comment-procedures.markdown">Comments</a></li>
+<li><a class="reference external" href="api-user-procedures.markdown">Users</a></li>
+<li><a class="reference external" href="api-group-procedures.markdown">Groups</a></li>
+<li><a class="reference external" href="api-group-member-procedures.markdown">Group Members</a></li>
+<li><a class="reference external" href="api-me-procedures.markdown">Me</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Json-RPC API</a><ul>
+<li><a class="reference internal" href="#user-and-application-api">User and application API</a><ul>
+<li><a class="reference internal" href="#application-api">Application API</a></li>
+<li><a class="reference internal" href="#user-api">User API</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#security">Security</a></li>
+<li><a class="reference internal" href="#protocol">Protocol</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api-json-rpc.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/api-json-rpc.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

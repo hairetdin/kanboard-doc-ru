@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/plugin-routes.rst:2
+msgid "Custom Routes"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:4
+msgid "When URL rewriting is enabled, you can define custom routes from your plugins."
+msgstr ""
+
+#: ../../source/plugin-routes.rst:8
+msgid "Define new routes"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:10
+msgid "Routes are handled by the class ``Kanboard\\Core\\Http\\Route``."
+msgstr ""
+
+#: ../../source/plugin-routes.rst:12
+msgid "New routes can be added by using the method ``addRoute($path, $controller, $action, $plugin)``, here an example:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:19
+msgid "When the end-user go to the URL ``/my/custom/route``, the method ``Kanboard\\Plugin\\Myplugin\\Controller\\MyController::myAction()`` will be executed."
+msgstr ""
+
+#: ../../source/plugin-routes.rst:23
+msgid "The first character of the controller and the plugin name will converted in uppercase with the function ``ucfirst()``."
+msgstr ""
+
+#: ../../source/plugin-routes.rst:26
+msgid "You can also define routes with variables:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:32
+msgid "The colon prefix ``:``, define a variable. For example ``:my_variable`` declare a new variable named ``my_variable``."
+msgstr ""
+
+#: ../../source/plugin-routes.rst:35
+msgid "To fetch the value of the variable you can use the method ``getStringParam()`` or ``getIntegerParam()`` from the class ``Kanboard\\Core\\Http\\Request``:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:39
+msgid "If we have the URL ``/my/route/foobar``, the value of ``my_variable`` is ``foobar``:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:47
+msgid "Generate links based on the routing table"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:49
+msgid "From templates, you have to use the helper ``Kanboard\\Helper\\Url``."
+msgstr ""
+
+#: ../../source/plugin-routes.rst:52
+msgid "Generate a HTML link"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:58
+msgid "Will generate this HTML:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:65
+msgid "Generate only the attribute ``href``:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:71
+msgid "HTML output:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:77
+msgid "HTML output when URL rewriting is not enabled:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:84
+msgid "Generate redirect link:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:86
+msgid "From a controller, if you need to perform a redirection:"
+msgstr ""
+
+#: ../../source/plugin-routes.rst:92
+msgid "Generate:"
+msgstr ""
+

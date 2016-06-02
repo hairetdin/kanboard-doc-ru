@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/reverse-proxy-authentication.rst:2
+msgid "Reverse Proxy Authentication"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:4
+msgid ""
+"This authentication method is often used for `SSO "
+"<http://en.wikipedia.org/wiki/Single_sign-on>`__ (Single Sign-On) "
+"especially for large organizations."
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:8
+msgid ""
+"The authentication is done by another system, Kanboard doesn't know your "
+"password and suppose you are already authenticated."
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:12
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:14
+msgid "A well-configured reverse proxy"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:16
+msgid "or"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:18
+msgid "Apache Auth on the same server"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:21
+msgid "How does this work?"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:23
+msgid ""
+"Your reverse proxy authenticates the user and send the username through a"
+" HTTP header."
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:25
+msgid "Kanboard retrieve the username from the request"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:27
+msgid "The user is created automatically if necessary"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:28
+msgid "Open a new Kanboard session without any prompt assuming it's valid"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:31
+msgid "Installation instructions"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:34
+msgid "Setting up your reverse proxy"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:36
+msgid ""
+"This is not in the scope of this documentation. You should check the user"
+" login is sent by the reverse proxy using a HTTP header, and find out "
+"which one."
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:41
+msgid "Setting up Kanboard"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:43
+msgid ""
+"Create a custom ``config.php`` file or copy the ``config.default.php`` "
+"file:"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:66
+msgid "Notes:"
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:68
+msgid ""
+"If the proxy is the same web server that runs Kanboard, according the "
+"`CGI protocol <http://www.ietf.org/rfc/rfc3875>`__ the header name will "
+"be ``REMOTE_USER``. By example, Apache add ``REMOTE_USER`` by default if "
+"``Require valid-user`` is set."
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:73
+msgid ""
+"If Apache is a reverse proxy to another Apache running Kanboard, the "
+"header ``REMOTE_USER`` is not set (same behavior with IIS and Nginx)."
+msgstr ""
+
+#: ../../source/reverse-proxy-authentication.rst:76
+msgid ""
+"If you have a real reverse proxy, the `HTTP ICAP draft "
+"<http://tools.ietf.org/html/draft-stecher-icap-subid-00#section-3.4>`__ "
+"proposes the header to be ``X-Authenticated-User``. This de facto "
+"standard has been adopted by a number of tools."
+msgstr ""
+
+#~ msgid ""
+#~ "This authentication method is often used"
+#~ " for SSO (Single Sign-On) especially"
+#~ " for large organizations."
+#~ msgstr ""
+
+#~ msgid "Create a custom config.php file or copy the config.default.php file:"
+#~ msgstr ""
+

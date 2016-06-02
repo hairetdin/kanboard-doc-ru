@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/keyboard-shortcuts.rst:2
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:4
+msgid "Keyboard shortcuts availability depends of the page you are presently."
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:7
+msgid "Project views (Board, Calendar, List, Gantt)"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:9
+msgid "Switch to the project overview = **v o**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:10
+msgid "Switch to the board view = **v b** (press on **v** then **b**)"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:11
+msgid "Switch to the calendar view = **v c**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:12
+msgid "Switch to the list view = **v l**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:13
+msgid "Switch to the Gantt view = **v g**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:16
+msgid "Board view"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:18
+msgid "New task = **n**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:19
+msgid "Expand/collapse tasks = **s**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:20
+msgid "Compact/wide view = **c**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:23
+msgid "Task view"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:25
+msgid "Edit task = **e**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:26
+msgid "New subtask = **s**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:27
+msgid "New comment = **c**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:28
+msgid "New internal link = **l**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:31
+msgid "Application"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:33
+msgid "Display list of keyboard shortcuts = **?**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:34
+msgid "Open board switcher = **b**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:35
+msgid "Go to the search box = **f**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:36
+msgid "Reset the search box = **r**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:37
+msgid "Close dialog box = **ESC**"
+msgstr ""
+
+#: ../../source/keyboard-shortcuts.rst:38
+msgid "Submit form = **CTRL+ENTER** or **⌘+ENTER**"
+msgstr ""
+

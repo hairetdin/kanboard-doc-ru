@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/mysql-configuration.rst:2
+msgid "Mysql/MariaDB Configuration"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:4
+msgid ""
+"By default Kanboard use Sqlite to stores its data. However it's possible "
+"to use Mysql or MariaDB instead of Sqlite."
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:8
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:10
+msgid "Mysql server"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:11
+msgid "The PHP extension ``pdo_mysql`` installed"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:13
+msgid "Note: Kanboard is tested with **Mysql >= 5.5 and MariaDB >= 10.0**"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:16
+msgid "Mysql configuration"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:19
+msgid "Create a database"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:21
+msgid ""
+"The first step is to create a database on your Mysql server. By example, "
+"you can do that with the command line mysql client:"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:29
+msgid "Create a config file"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:31
+msgid "The file ``config.php`` should contains those values:"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:46
+msgid ""
+"Note: You can also rename the template file ``config.default.php`` to "
+"``config.php``."
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:50
+msgid "Importing SQL dump (alternative method)"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:52
+msgid ""
+"For the first time, Kanboard will run one by one each database migration "
+"and this process can take some time according to your configuration."
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:55
+msgid ""
+"To avoid any potential timeout you can initialize the database directly "
+"by importing the SQL schema:"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:62
+msgid ""
+"The file ``app/Schema/Sql/mysql.sql`` is a SQL dump that represents the "
+"last version of the database."
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:66
+msgid "SSL configuration"
+msgstr ""
+
+#: ../../source/mysql-configuration.rst:68
+msgid "These parameters have to be defined to enable the Mysql SSL connection:"
+msgstr ""
+
+#~ msgid "Note: Kanboard is tested with Mysql >= 5.5 and MariaDB >= 10.0"
+#~ msgstr ""
+
+#~ msgid "The file config.php should contains those values:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note: You can also rename the "
+#~ "template file config.default.php to "
+#~ "config.php."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The file app/Schema/Sql/mysql.sql is a "
+#~ "SQL dump that represents the last "
+#~ "version of the database."
+#~ msgstr ""
+

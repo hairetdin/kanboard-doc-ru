@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>External Link Providers &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="external-link-providers">
+<h1>External Link Providers<a class="headerlink" href="#external-link-providers" title="Ссылка на этот заголовок">¶</a></h1>
+<p>This functionality allows you to link a task to additional items stored
+on another system.</p>
+<p>For example, you can link a task to:</p>
+<ul class="simple">
+<li>Traditional web page</li>
+<li>Attachment (PDF documents stored on the web, archive...)</li>
+<li>Any ticketing system (bug tracker, customer support ticket...)</li>
+</ul>
+<p>Each item has a type, a URL, a dependency type and a title.</p>
+<p>By default, Kanboard includes two kinds of providers:</p>
+<ul class="simple">
+<li>Web Link: You copy and paste a link and Kanboard will fetch the page
+title automatically</li>
+<li>Attachment: Link to anything that is not a web page</li>
+</ul>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>The end-user copy and paste the URL to the form and submit</li>
+<li>If the link type is &#8220;auto&#8221;, Kanboard will loop through all providers
+registered until there is a match</li>
+<li>Then, the link provider returns a object that implements the
+interface <code class="docutils literal"><span class="pre">ExternalLinkInterface</span></code></li>
+<li>A form is shown to the user with all pre-filled data before to save
+the link</li>
+</ol>
+</div>
+<div class="section" id="interfaces">
+<h2>Interfaces<a class="headerlink" href="#interfaces" title="Ссылка на этот заголовок">¶</a></h2>
+<p>To implement a new link provider from a plugin, you need to create 2
+classes that implement those interfaces:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\ExternalLink\ExternalLinkProviderInterface</span></code></li>
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\ExternalLink\ExternalLinkInterface</span></code></li>
+</ul>
+<div class="section" id="externallinkproviderinterface">
+<h3>ExternalLinkProviderInterface<a class="headerlink" href="#externallinkproviderinterface" title="Ссылка на этот заголовок">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method</th>
+<th class="head">Usage</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">getName()</span></code></td>
+<td>Get provider name (label)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">getType()</span></code></td>
+<td>Get link type (will be saved in the database)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">getDependencies()</span></code></td>
+<td>Get a dictionary of supported dependency types by the provider</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">setUserTextInput($input)</span></code></td>
+<td>Set text entered by the user</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">match()</span></code></td>
+<td>Return true if the provider can parse correctly the user input</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">getLink()</span></code></td>
+<td>Get the link found with the properties</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="externallinkinterface">
+<h3>ExternalLinkInterface<a class="headerlink" href="#externallinkinterface" title="Ссылка на этот заголовок">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method</th>
+<th class="head">Usage</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">getTitle()</span></code></td>
+<td>Get link title</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">getUrl()</span></code></td>
+<td>Get link URL</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">setUrl($url)</span></code></td>
+<td>Set link URL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="register-a-new-link-provider">
+<h2>Register a new link provider<a class="headerlink" href="#register-a-new-link-provider" title="Ссылка на этот заголовок">¶</a></h2>
+<p>In your <code class="docutils literal"><span class="pre">Plugin.php</span></code>, just call the method <code class="docutils literal"><span class="pre">register()</span></code> from the
+object <code class="docutils literal"><span class="pre">ExternalLinkManager</span></code>:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+
+namespace Kanboard\Plugin\MyExternalLink;
+
+use Kanboard\Core\Plugin\Base;
+
+class Plugin extends Base
+{
+    public function initialize()
+    {
+        $this-&gt;externalLinkManager-&gt;register(new MyLinkProvider());
+    }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Kanboard includes the default providers &#8220;WebLink&#8221; and &#8220;Attachment&#8221;</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">External Link Providers</a><ul>
+<li><a class="reference internal" href="#workflow">Workflow</a></li>
+<li><a class="reference internal" href="#interfaces">Interfaces</a><ul>
+<li><a class="reference internal" href="#externallinkproviderinterface">ExternalLinkProviderInterface</a></li>
+<li><a class="reference internal" href="#externallinkinterface">ExternalLinkInterface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#register-a-new-link-provider">Register a new link provider</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-external-link.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-external-link.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

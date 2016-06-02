@@ -1,0 +1,475 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/search.rst:2
+msgid "Advanced Search Syntax"
+msgstr ""
+
+#: ../../source/search.rst:4
+msgid ""
+"Kanboard uses a simple query language for advanced search. You can search"
+" in tasks, comments, subtasks, links but also in the activity stream."
+msgstr ""
+
+#: ../../source/search.rst:9
+msgid "Example of query"
+msgstr ""
+
+#: ../../source/search.rst:11
+msgid ""
+"This example will return all tasks assigned to me with a due date for "
+"tomorrow and a title that contains \"my title\":"
+msgstr ""
+
+#: ../../source/search.rst:19
+msgid "Global search"
+msgstr ""
+
+#: ../../source/search.rst:22
+msgid "Search by task id or title"
+msgstr ""
+
+#: ../../source/search.rst:24 ../../source/search.rst:195
+msgid "Search by task id: ``#123``"
+msgstr ""
+
+#: ../../source/search.rst:25
+msgid "Search by task id and task title: ``123``"
+msgstr ""
+
+#: ../../source/search.rst:26
+msgid "Search by task title: anything that doesn't match any search attributes"
+msgstr ""
+
+#: ../../source/search.rst:30
+msgid "Search by status"
+msgstr ""
+
+#: ../../source/search.rst:32 ../../source/search.rst:200
+msgid "Attribute: **status**"
+msgstr ""
+
+#: ../../source/search.rst:34
+msgid "Query to find open tasks: ``status:open``"
+msgstr ""
+
+#: ../../source/search.rst:35
+msgid "Query to find closed tasks: ``status:closed``"
+msgstr ""
+
+#: ../../source/search.rst:38
+msgid "Search by assignee"
+msgstr ""
+
+#: ../../source/search.rst:40
+msgid "Attribute: **assignee**"
+msgstr ""
+
+#: ../../source/search.rst:42
+msgid "Query with the full name: ``assignee:\"Frederic Guillot\"``"
+msgstr ""
+
+#: ../../source/search.rst:43
+msgid "Query with the username: ``assignee:fguillot``"
+msgstr ""
+
+#: ../../source/search.rst:44
+msgid "Multiple assignee lookup: ``assignee:user1 assignee:\"John Doe\"``"
+msgstr ""
+
+#: ../../source/search.rst:45
+msgid "Query for unassigned tasks: ``assignee:nobody``"
+msgstr ""
+
+#: ../../source/search.rst:46
+msgid "Query for my assigned tasks: ``assignee:me``"
+msgstr ""
+
+#: ../../source/search.rst:49
+msgid "Search by task creator"
+msgstr ""
+
+#: ../../source/search.rst:51 ../../source/search.rst:205
+msgid "Attribute: **creator**"
+msgstr ""
+
+#: ../../source/search.rst:53
+msgid "Tasks created by myself: ``creator:me``"
+msgstr ""
+
+#: ../../source/search.rst:54
+msgid "Tasks created by John Doe: ``creator:\"John Doe\"``"
+msgstr ""
+
+#: ../../source/search.rst:55
+msgid "Tasks created by the user id #1: ``creator:1``"
+msgstr ""
+
+#: ../../source/search.rst:58
+msgid "Search by subtask assignee"
+msgstr ""
+
+#: ../../source/search.rst:60
+msgid "Attribute: **subtask:assignee**"
+msgstr ""
+
+#: ../../source/search.rst:62
+msgid "Example: ``subtask:assignee:\"John Doe\"``"
+msgstr ""
+
+#: ../../source/search.rst:65
+msgid "Search by color"
+msgstr ""
+
+#: ../../source/search.rst:67
+msgid "Attribute: **color**"
+msgstr ""
+
+#: ../../source/search.rst:69
+msgid "Query to search by color id: ``color:blue``"
+msgstr ""
+
+#: ../../source/search.rst:70
+msgid "Query to search by color name: ``color:\"Deep Orange\"``"
+msgstr ""
+
+#: ../../source/search.rst:73
+msgid "Search by the due date"
+msgstr ""
+
+#: ../../source/search.rst:75
+msgid "Attribute: **due**"
+msgstr ""
+
+#: ../../source/search.rst:77
+msgid "Search tasks due today: ``due:today``"
+msgstr ""
+
+#: ../../source/search.rst:78
+msgid "Search tasks due tomorrow: ``due:tomorrow``"
+msgstr ""
+
+#: ../../source/search.rst:79
+msgid "Search tasks due yesterday: ``due:yesterday``"
+msgstr ""
+
+#: ../../source/search.rst:80
+msgid "Search tasks due with the exact date: ``due:2015-06-29``"
+msgstr ""
+
+#: ../../source/search.rst:82
+msgid "The date must use the ISO 8601 format: **YYYY-MM-DD**."
+msgstr ""
+
+#: ../../source/search.rst:84
+msgid ""
+"All string formats supported by the ``strtotime()`` function are "
+"supported, for example ``next Thursday``, ``-2 days``, ``+2 months``, "
+"``tomorrow``, etc."
+msgstr ""
+
+#: ../../source/search.rst:88
+msgid "Operators supported with a date:"
+msgstr ""
+
+#: ../../source/search.rst:90
+msgid "Greater than: **due:>2015-06-29**"
+msgstr ""
+
+#: ../../source/search.rst:91
+msgid "Lower than: **due:<2015-06-29**"
+msgstr ""
+
+#: ../../source/search.rst:92
+msgid "Greater than or equal: **due:>=2015-06-29**"
+msgstr ""
+
+#: ../../source/search.rst:93
+msgid "Lower than or equal: **due:<=2015-06-29**"
+msgstr ""
+
+#: ../../source/search.rst:96
+msgid "Search by modification date"
+msgstr ""
+
+#: ../../source/search.rst:98
+msgid "Attribute: **modified** or **updated**"
+msgstr ""
+
+#: ../../source/search.rst:100
+msgid "The date formats are the same as the due date."
+msgstr ""
+
+#: ../../source/search.rst:102
+msgid "There is also a filter by recently modified tasks: ``modified:recently``."
+msgstr ""
+
+#: ../../source/search.rst:105
+msgid ""
+"This query will use the same value as the board highlight period "
+"configured in settings."
+msgstr ""
+
+#: ../../source/search.rst:109
+msgid "Search by creation date"
+msgstr ""
+
+#: ../../source/search.rst:111 ../../source/search.rst:210
+msgid "Attribute: **created**"
+msgstr ""
+
+#: ../../source/search.rst:113
+msgid "Works in the same way as the modification date queries."
+msgstr ""
+
+#: ../../source/search.rst:116
+msgid "Search by description"
+msgstr ""
+
+#: ../../source/search.rst:118
+msgid "Attribute: **description** or **desc**"
+msgstr ""
+
+#: ../../source/search.rst:120
+msgid "Example: ``description:\"text search\"``"
+msgstr ""
+
+#: ../../source/search.rst:123
+msgid "Search by external reference"
+msgstr ""
+
+#: ../../source/search.rst:125
+msgid ""
+"The task reference is an external id of your task, by example a ticket "
+"number from another software."
+msgstr ""
+
+#: ../../source/search.rst:128
+msgid "Find tasks with a reference: ``ref:1234`` or ``reference:TICKET-1234``"
+msgstr ""
+
+#: ../../source/search.rst:132
+msgid "Search by category"
+msgstr ""
+
+#: ../../source/search.rst:134
+msgid "Attribute: **category**"
+msgstr ""
+
+#: ../../source/search.rst:136
+msgid "Find tasks with a specific category: ``category:\"Feature Request\"``"
+msgstr ""
+
+#: ../../source/search.rst:137
+msgid ""
+"Find all tasks that have those categories: ``category:\"Bug\" "
+"category:\"Improvements\"``"
+msgstr ""
+
+#: ../../source/search.rst:139
+msgid "Find tasks with no category assigned: ``category:none``"
+msgstr ""
+
+#: ../../source/search.rst:142
+msgid "Search by project"
+msgstr ""
+
+#: ../../source/search.rst:144 ../../source/search.rst:215
+msgid "Attribute: **project**"
+msgstr ""
+
+#: ../../source/search.rst:146
+msgid "Find tasks by project name: ``project:\"My project name\"``"
+msgstr ""
+
+#: ../../source/search.rst:147
+msgid "Find tasks by project id: ``project:23``"
+msgstr ""
+
+#: ../../source/search.rst:148
+msgid ""
+"Find tasks for several projects: ``project:\"My project A\" project:\"My "
+"project B\"``"
+msgstr ""
+
+#: ../../source/search.rst:152
+msgid "Search by columns"
+msgstr ""
+
+#: ../../source/search.rst:154
+msgid "Attribute: **column**"
+msgstr ""
+
+#: ../../source/search.rst:156
+msgid "Find tasks by column name: ``column:\"Work in progress\"``"
+msgstr ""
+
+#: ../../source/search.rst:157
+msgid "Find tasks for several columns: ``column:\"Backlog\" column:ready``"
+msgstr ""
+
+#: ../../source/search.rst:160
+msgid "Search by swim-lane"
+msgstr ""
+
+#: ../../source/search.rst:162
+msgid "Attribute: **swimlane**"
+msgstr ""
+
+#: ../../source/search.rst:164
+msgid "Find tasks by swim-lane: ``swimlane:\"Version 42\"``"
+msgstr ""
+
+#: ../../source/search.rst:165
+msgid "Find tasks in the default swim-lane: ``swimlane:default``"
+msgstr ""
+
+#: ../../source/search.rst:166
+msgid ""
+"Find tasks into several swim-lanes: ``swimlane:\"Version 1.2\" "
+"swimlane:\"Version 1.3\"``"
+msgstr ""
+
+#: ../../source/search.rst:170
+msgid "Search by task link"
+msgstr ""
+
+#: ../../source/search.rst:172
+msgid "Attribute: **link**"
+msgstr ""
+
+#: ../../source/search.rst:174
+msgid "Find tasks by link name: ``link:\"is a milestone of\"``"
+msgstr ""
+
+#: ../../source/search.rst:175
+msgid ""
+"Find tasks into several links: ``link:\"is a milestone of\" "
+"link:\"relates to\"``"
+msgstr ""
+
+#: ../../source/search.rst:179
+msgid "Search by comment"
+msgstr ""
+
+#: ../../source/search.rst:181
+msgid "Attribute: **comment**"
+msgstr ""
+
+#: ../../source/search.rst:183
+msgid "Find comments that contains this title: ``comment:\"My comment message\"``"
+msgstr ""
+
+#: ../../source/search.rst:187
+msgid "Activity stream search"
+msgstr ""
+
+#: ../../source/search.rst:190
+msgid "Search events by task title"
+msgstr ""
+
+#: ../../source/search.rst:192
+msgid "Attribute: **title** or none (default)"
+msgstr ""
+
+#: ../../source/search.rst:194
+msgid "Example: ``title:\"My task\"``"
+msgstr ""
+
+#: ../../source/search.rst:198
+msgid "Search events by task status"
+msgstr ""
+
+#: ../../source/search.rst:203
+msgid "Search by event creator"
+msgstr ""
+
+#: ../../source/search.rst:208
+msgid "Search by event creation date"
+msgstr ""
+
+#: ../../source/search.rst:213
+msgid "Search events by project"
+msgstr ""
+
+#~ msgid "Attribute: status"
+#~ msgstr ""
+
+#~ msgid "Attribute: assignee"
+#~ msgstr ""
+
+#~ msgid "Attribute: creator"
+#~ msgstr ""
+
+#~ msgid "Attribute: subtask:assignee"
+#~ msgstr ""
+
+#~ msgid "Attribute: color"
+#~ msgstr ""
+
+#~ msgid "Attribute: due"
+#~ msgstr ""
+
+#~ msgid "The date must use the ISO 8601 format: YYYY-MM-DD."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All string formats supported by the "
+#~ "strtotime() function are supported, for "
+#~ "example next Thursday, -2 days, +2 "
+#~ "months, tomorrow, etc."
+#~ msgstr ""
+
+#~ msgid "Attribute: modified or updated"
+#~ msgstr ""
+
+#~ msgid "There is also a filter by recently modified tasks: modified:recently."
+#~ msgstr ""
+
+#~ msgid "Attribute: created"
+#~ msgstr ""
+
+#~ msgid "Attribute: description or desc"
+#~ msgstr ""
+
+#~ msgid "Example: description:\"text search\""
+#~ msgstr ""
+
+#~ msgid "Attribute: category"
+#~ msgstr ""
+
+#~ msgid "Attribute: project"
+#~ msgstr ""
+
+#~ msgid "Attribute: column"
+#~ msgstr ""
+
+#~ msgid "Attribute: swimlane"
+#~ msgstr ""
+
+#~ msgid "Attribute: link"
+#~ msgstr ""
+
+#~ msgid "Attribute: comment"
+#~ msgstr ""
+
+#~ msgid "Attribute: title or none (default)"
+#~ msgstr ""
+

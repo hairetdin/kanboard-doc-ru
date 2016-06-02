@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/gantt-chart-projects.rst:2
+#: ../../source/gantt-chart-projects.rst:16
+msgid "Gantt Chart for all projects"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:4
+msgid ""
+"The goal of this Gantt chart is to display an overview of all projects "
+"based on the start and end dates."
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:7
+msgid "This Gantt chart is available in the project management section"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:8
+msgid "Only project administrators and administrators can access this section"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:10
+msgid "Project administrators will see only projects where they are members"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:11
+msgid "Private projects are not shown on this chart"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:18
+msgid ""
+"The **start date** and the **end date** of projects are used to draw the "
+"chart"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:20
+msgid "Horizontal bars can be resized and moved horizontally with your mouse"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:21
+msgid "There is no vertical drag and drop"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:22
+msgid ""
+"Project bars are displayed in black when there is no start or end date "
+"defined"
+msgstr ""
+
+#: ../../source/gantt-chart-projects.rst:24
+msgid ""
+"The information tooltip shows the list of project managers and standard "
+"members"
+msgstr ""
+

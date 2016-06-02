@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create-tasks-by-email.rst:2
+msgid "Create tasks by email"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:4
+msgid "You can create tasks directly by sending an email. This feature is available by using plugins."
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:7
+msgid "At the moment, Kanboard is integrated with 3 external services:"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:9
+msgid "`Mailgun <https://github.com/kanboard/plugin-mailgun>`__"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:10
+msgid "`Sendgrid <https://github.com/kanboard/plugin-sendgrid>`__"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:11
+msgid "`Postmark <https://github.com/kanboard/plugin-postmark>`__"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:13
+msgid "These services handle incoming emails without having to configure any SMTP server."
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:16
+msgid "When an email is received, Kanboard receive the message on a specific end-point. All complicated works are already handled by those services."
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:20
+msgid "Incoming emails workflow"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:22
+msgid "You send an email to a specific address, for example **something+myproject@inbound.mydomain.tld**"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:24
+msgid "Your email is forwarded to the third-party SMTP servers"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:25
+msgid "The SMTP provider call the Kanboard web hook with the email in JSON or multipart/form-data formats"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:27
+msgid "Kanboard parses the received email and create the task to the right project"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:30
+msgid "Note: New tasks are automatically created in the first column."
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:33
+msgid "Email format"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:35
+msgid "The local part of the email address must use the plus separator, for example **kanboard+project123**"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:37
+msgid "The string defined after the plus sign must match a project identifier, for example **project123** is the identifier of the project **Project 123**"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:40
+msgid "The email subject becomes the task title"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:41
+msgid "The email body becomes the task description (Markdown format)"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:43
+msgid "Incoming emails can be written in text or HTML formats. **Kanboard is able to convert simple HTML emails to Markdown**."
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:47
+msgid "Security and requirements"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:49
+msgid "The Kanboard web hook is protected by a random token"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:50
+msgid "The sender email address must match a Kanboard user"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:51
+msgid "The Kanboard project must have a unique identifier, for example **MYPROJECT**"
+msgstr ""
+
+#: ../../source/create-tasks-by-email.rst:53
+msgid "The Kanboard user must be a member of the project"
+msgstr ""
+

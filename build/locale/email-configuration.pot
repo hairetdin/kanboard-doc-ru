@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/email-configuration.rst:2
+msgid "Email configuration"
+msgstr ""
+
+#: ../../source/email-configuration.rst:5
+msgid "User settings"
+msgstr ""
+
+#: ../../source/email-configuration.rst:7
+msgid "To receive email notifications, users of Kanboard must have:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:9
+msgid "Activated notifications in their profile"
+msgstr ""
+
+#: ../../source/email-configuration.rst:10
+msgid "Have a valid email address in their profile"
+msgstr ""
+
+#: ../../source/email-configuration.rst:11
+msgid "Be a member of the project that will trigger notifications"
+msgstr ""
+
+#: ../../source/email-configuration.rst:13
+msgid "Note: The logged user who performs the action doesn't receive any notifications, only other project members."
+msgstr ""
+
+#: ../../source/email-configuration.rst:17
+msgid "Email transports"
+msgstr ""
+
+#: ../../source/email-configuration.rst:19
+msgid "There are several email transports available:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:21
+msgid "SMTP"
+msgstr ""
+
+#: ../../source/email-configuration.rst:22
+msgid "Sendmail"
+msgstr ""
+
+#: ../../source/email-configuration.rst:23
+#: ../../source/email-configuration.rst:79
+msgid "PHP native mail function"
+msgstr ""
+
+#: ../../source/email-configuration.rst:24
+msgid "Other methods can be provided by external plugins: Postmark, Sendgrid and Mailgun"
+msgstr ""
+
+#: ../../source/email-configuration.rst:28
+msgid "Server settings"
+msgstr ""
+
+#: ../../source/email-configuration.rst:30
+msgid "By default, Kanboard will use the bundled PHP mail function to send emails. Usually that requires no configuration if your server can already send emails."
+msgstr ""
+
+#: ../../source/email-configuration.rst:34
+msgid "However, it's possible to use other methods, the SMTP protocol and Sendmail."
+msgstr ""
+
+#: ../../source/email-configuration.rst:38
+msgid "SMTP configuration"
+msgstr ""
+
+#: ../../source/email-configuration.rst:40
+msgid "Rename the file ``config.default.php`` to ``config.php`` and change these values:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:56
+msgid "It's also possible to use a secure connection, TLS or SSL:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:63
+msgid "Sendmail configuration"
+msgstr ""
+
+#: ../../source/email-configuration.rst:65
+msgid "By default the sendmail command will be ``/usr/sbin/sendmail -bs`` but you can customize that in your config file."
+msgstr ""
+
+#: ../../source/email-configuration.rst:68
+msgid "Example:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:81
+msgid "This is the default configuration:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:88
+msgid "The sender email address"
+msgstr ""
+
+#: ../../source/email-configuration.rst:90
+msgid "By default, emails will use the sender address ``notifications@kanboard.local``. It's not possible to reply to this address."
+msgstr ""
+
+#: ../../source/email-configuration.rst:94
+msgid "You can customize this address by changing the value of the constant ``MAIL_FROM`` in your config file."
+msgstr ""
+
+#: ../../source/email-configuration.rst:101
+msgid "That can be useful if your SMTP server configuration doesn't accept the default address."
+msgstr ""
+
+#: ../../source/email-configuration.rst:105
+msgid "How to display a link to the task in notifications?"
+msgstr ""
+
+#: ../../source/email-configuration.rst:107
+msgid "To do that, you have to specify the URL of your Kanboard installation in your `Application Settings <https://kanboard.net/documentation/application-configuration>`__. By default, nothing is defined, so no links will be displayed."
+msgstr ""
+
+#: ../../source/email-configuration.rst:112
+msgid "Examples:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:114
+msgid "http://demo.kanboard.net/"
+msgstr ""
+
+#: ../../source/email-configuration.rst:115
+msgid "http://myserver/kanboard/"
+msgstr ""
+
+#: ../../source/email-configuration.rst:116
+msgid "http://kanboard.mydomain.com/"
+msgstr ""
+
+#: ../../source/email-configuration.rst:118
+msgid "Don't forget the ending slash ``/``."
+msgstr ""
+
+#: ../../source/email-configuration.rst:120
+msgid "You need to define that manually because Kanboard cannot guess the URL from a command line script and some people have a very specific configuration."
+msgstr ""
+
+#: ../../source/email-configuration.rst:125
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/email-configuration.rst:127
+msgid "If no emails are sent and you are sure that everything is configured correctly:"
+msgstr ""
+
+#: ../../source/email-configuration.rst:130
+msgid "Check your spam folder"
+msgstr ""
+
+#: ../../source/email-configuration.rst:131
+msgid "Enable the debug mode and check the debug file ``data/debug.log``, you should see the exact error"
+msgstr ""
+
+#: ../../source/email-configuration.rst:133
+msgid "Be sure that your server or your hosting provider allows you to send emails"
+msgstr ""
+
+#: ../../source/email-configuration.rst:135
+msgid "If you use SeLinux, allow PHP to send emails"
+msgstr ""
+

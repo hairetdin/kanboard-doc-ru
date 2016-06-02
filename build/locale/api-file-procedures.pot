@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-file-procedures.rst:2
+msgid "API File Procedures"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:5
+msgid "createTaskFile"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:7
+msgid "Purpose: **Create and upload a new task attachment**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:8
+#: ../../source/api-file-procedures.rst:50
+#: ../../source/api-file-procedures.rst:97
+#: ../../source/api-file-procedures.rst:140
+#: ../../source/api-file-procedures.rst:174
+#: ../../source/api-file-procedures.rst:208
+msgid "Parameters:"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:10
+msgid "**project\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:11
+#: ../../source/api-file-procedures.rst:52
+#: ../../source/api-file-procedures.rst:210
+msgid "**task\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:12
+msgid "**filename** (integer, required)"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:13
+msgid "**blob** File content encoded in base64 (string, required)"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:15
+msgid "Result on success: **file\\_id**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:16
+#: ../../source/api-file-procedures.rst:55
+#: ../../source/api-file-procedures.rst:102
+#: ../../source/api-file-procedures.rst:179
+#: ../../source/api-file-procedures.rst:213
+msgid "Result on failure: **false**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:17
+msgid "Note: **The maximum file size depends of your PHP configuration, this method should not be used to upload large files**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:20
+#: ../../source/api-file-procedures.rst:57
+#: ../../source/api-file-procedures.rst:104
+#: ../../source/api-file-procedures.rst:147
+#: ../../source/api-file-procedures.rst:181
+#: ../../source/api-file-procedures.rst:215
+msgid "Request example:"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:36
+#: ../../source/api-file-procedures.rst:70
+#: ../../source/api-file-procedures.rst:117
+#: ../../source/api-file-procedures.rst:160
+#: ../../source/api-file-procedures.rst:194
+#: ../../source/api-file-procedures.rst:228
+msgid "Response example:"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:47
+msgid "getAllTaskFiles"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:49
+msgid "Purpose: **Get all files attached to task**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:54
+msgid "Result on success: **list of files**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:94
+msgid "getTaskFile"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:96
+msgid "Purpose: **Get file information**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:99
+#: ../../source/api-file-procedures.rst:142
+#: ../../source/api-file-procedures.rst:176
+msgid "**file\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:101
+msgid "Result on success: **file properties**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:137
+msgid "downloadTaskFile"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:139
+msgid "Purpose: **Download file contents (encoded in base64)**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:144
+msgid "Result on success: **base64 encoded string**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:145
+msgid "Result on failure: **empty string**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:171
+msgid "removeTaskFile"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:173
+msgid "Purpose: **Remove file**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:178
+#: ../../source/api-file-procedures.rst:212
+msgid "Result on success: **true**"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:205
+msgid "removeAllTaskFiles"
+msgstr ""
+
+#: ../../source/api-file-procedures.rst:207
+msgid "Purpose: **Remove all files associated to a task**"
+msgstr ""
+

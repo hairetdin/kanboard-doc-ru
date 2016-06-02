@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API Examples &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-examples">
+<h1>API Examples<a class="headerlink" href="#api-examples" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="example-with-curl">
+<h2>Example with cURL<a class="headerlink" href="#example-with-curl" title="Ссылка на этот заголовок">¶</a></h2>
+<p>From the command line:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl \
+-u &quot;jsonrpc:19ffd9709d03ce50675c3a43d1c49c1ac207f4bc45f06c5b2701fbdf8929&quot; \
+-d &#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;getAllProjects&quot;, &quot;id&quot;: 1}&#39; \
+http://localhost/kanboard/jsonrpc.php
+</pre></div>
+</div>
+<p>Response from the server:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;API test&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_active&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;token&quot;</span><span class="p">:</span><span class="s2">&quot;6bd0932fe7f4b5e6e4bc3c72800bfdef36a2c5de2f38f756dfb5bd632ebf&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;last_modified&quot;</span><span class="p">:</span><span class="s2">&quot;1403392631&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-with-python">
+<h2>Example with Python<a class="headerlink" href="#example-with-python" title="Ссылка на этот заголовок">¶</a></h2>
+<p>You can use the <a class="reference external" href="https://github.com/kanboard/kanboard-api-python">official Python client for
+Kanboard</a>:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>pip install kanboard
+</pre></div>
+</div>
+<p>Here an example to create a project and a task:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kanboard</span> <span class="kn">import</span> <span class="n">Kanboard</span>
+
+<span class="n">kb</span> <span class="o">=</span> <span class="n">Kanboard</span><span class="p">(</span><span class="s2">&quot;http://localhost/jsonrpc.php&quot;</span><span class="p">,</span> <span class="s2">&quot;jsonrpc&quot;</span><span class="p">,</span> <span class="s2">&quot;your_api_token&quot;</span><span class="p">)</span>
+
+<span class="n">project_id</span> <span class="o">=</span> <span class="n">kb</span><span class="o">.</span><span class="n">create_project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;My project&quot;</span><span class="p">)</span>
+
+<span class="n">task_id</span> <span class="o">=</span> <span class="n">kb</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My task title&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There are more examples on the <a class="reference external" href="https://github.com/kanboard/kanboard-api-python">official
+website</a>.</p>
+</div>
+<div class="section" id="example-with-a-php-client">
+<h2>Example with a PHP client<a class="headerlink" href="#example-with-a-php-client" title="Ссылка на этот заголовок">¶</a></h2>
+<p>You can use this <a class="reference external" href="https://github.com/fguillot/JsonRPC">Json-RPC Client/Server library for
+PHP</a>, here an example:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+
+$client = new JsonRPC\Client(&#39;http://localhost:8000/jsonrpc.php&#39;);
+$client-&gt;authentication(&#39;jsonrpc&#39;, &#39;19ffd9709d03ce50675c3a43d1c49c1ac207f4bc45f06c5b2701fbdf8929&#39;);
+
+print_r($client-&gt;getAllProjects());
+</pre></div>
+</div>
+<p>The response:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>Array
+(
+    [0] =&gt; Array
+        (
+            [id] =&gt; 1
+            [name] =&gt; API test
+            [is_active] =&gt; 1
+            [token] =&gt; 6bd0932fe7f4b5e6e4bc3c72800bfdef36a2c5de2f38f756dfb5bd632ebf
+            [last_modified] =&gt; 1403392631
+        )
+
+)
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-with-ruby">
+<h2>Example with Ruby<a class="headerlink" href="#example-with-ruby" title="Ссылка на этот заголовок">¶</a></h2>
+<p>This example can be used with Kanboard configured with Reverse-Proxy
+authentication and the API configured with a custom authentication
+header:</p>
+<div class="code ruby highlight-python"><div class="highlight"><pre><span></span>require &#39;faraday&#39;
+
+conn = Faraday.new(:url =&gt; &#39;https://kanboard.example.com&#39;) do |faraday|
+    faraday.response :logger
+    faraday.headers[&#39;X-API-Auth&#39;] = &#39;XXX&#39;      # base64_encode(&#39;jsonrpc:API_KEY&#39;)
+    faraday.basic_auth(ENV[&#39;user&#39;], ENV[&#39;pw&#39;]) # user/pass to get through basic auth
+    faraday.adapter Faraday.default_adapter    # make requests with Net::HTTP
+end
+
+response = conn.post do |req|
+    req.url &#39;/jsonrpc.php&#39;
+    req.headers[&#39;Content-Type&#39;] = &#39;application/json&#39;
+    req.body = &#39;{ &quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 1, &quot;method&quot;: &quot;getAllProjects&quot; }&#39;
+end
+
+puts response.body
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-with-java">
+<h2>Example with Java<a class="headerlink" href="#example-with-java" title="Ссылка на этот заголовок">¶</a></h2>
+<p>This is a basic example using Spring. For proper usage see <a class="reference external" href="http://spring.io/guides/gs/consuming-rest">this
+link</a>.</p>
+<div class="code java highlight-python"><div class="highlight"><pre><span></span>import java.io.UnsupportedEncodingException;
+import java.util.Base64;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.web.client.RestTemplate;
+
+public class ProjectService {
+
+    public void getAllProjects() throws UnsupportedEncodingException {
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        String url = &quot;http://localhost/kanboard/jsonrpc.php&quot;;
+        String requestJson = &quot;{\&quot;jsonrpc\&quot;: \&quot;2.0\&quot;, \&quot;method\&quot;: \&quot;getAllProjects\&quot;, \&quot;id\&quot;: 1}&quot;;
+        String user = &quot;jsonrpc&quot;;
+        String apiToken = &quot;19ffd9709d03ce50675c3a43d1c49c1ac207f4bc45f06c5b2701fbdf8929&quot;;
+
+        // encode api token
+        byte[] xApiAuthTokenBytes = String.join(&quot;:&quot;, user, apiToken).getBytes(&quot;utf-8&quot;);
+        String xApiAuthToken = Base64.getEncoder().encodeToString(xApiAuthTokenBytes);
+
+        // consume request
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(&quot;X-API-Auth&quot;, xApiAuthToken);
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity&lt;String&gt; entity = new HttpEntity&lt;String&gt;(requestJson, headers);
+        String answer = restTemplate.postForObject(url, entity, String.class);
+        System.out.println(answer);
+    }
+}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API Examples</a><ul>
+<li><a class="reference internal" href="#example-with-curl">Example with cURL</a></li>
+<li><a class="reference internal" href="#example-with-python">Example with Python</a></li>
+<li><a class="reference internal" href="#example-with-a-php-client">Example with a PHP client</a></li>
+<li><a class="reference internal" href="#example-with-ruby">Example with Ruby</a></li>
+<li><a class="reference internal" href="#example-with-java">Example with Java</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api-examples.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/api-examples.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

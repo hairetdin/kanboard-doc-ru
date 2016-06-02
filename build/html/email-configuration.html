@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Email configuration &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="email-configuration">
+<h1>Email configuration<a class="headerlink" href="#email-configuration" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="user-settings">
+<h2>User settings<a class="headerlink" href="#user-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<p>To receive email notifications, users of Kanboard must have:</p>
+<ul class="simple">
+<li>Activated notifications in their profile</li>
+<li>Have a valid email address in their profile</li>
+<li>Be a member of the project that will trigger notifications</li>
+</ul>
+<p>Note: The logged user who performs the action doesn&#8217;t receive any
+notifications, only other project members.</p>
+</div>
+<div class="section" id="email-transports">
+<h2>Email transports<a class="headerlink" href="#email-transports" title="Ссылка на этот заголовок">¶</a></h2>
+<p>There are several email transports available:</p>
+<ul class="simple">
+<li>SMTP</li>
+<li>Sendmail</li>
+<li>PHP native mail function</li>
+<li>Other methods can be provided by external plugins: Postmark, Sendgrid
+and Mailgun</li>
+</ul>
+</div>
+<div class="section" id="server-settings">
+<h2>Server settings<a class="headerlink" href="#server-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<p>By default, Kanboard will use the bundled PHP mail function to send
+emails. Usually that requires no configuration if your server can
+already send emails.</p>
+<p>However, it&#8217;s possible to use other methods, the SMTP protocol and
+Sendmail.</p>
+<div class="section" id="smtp-configuration">
+<h3>SMTP configuration<a class="headerlink" href="#smtp-configuration" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Rename the file <code class="docutils literal"><span class="pre">config.default.php</span></code> to <code class="docutils literal"><span class="pre">config.php</span></code> and change
+these values:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// We choose &quot;smtp&quot; as mail transport
+define(&#39;MAIL_TRANSPORT&#39;, &#39;smtp&#39;);
+
+// We define our server settings
+define(&#39;MAIL_SMTP_HOSTNAME&#39;, &#39;mail.example.com&#39;);
+define(&#39;MAIL_SMTP_PORT&#39;, 25);
+
+// Credentials for authentication on the SMTP server (not mandatory)
+define(&#39;MAIL_SMTP_USERNAME&#39;, &#39;username&#39;);
+define(&#39;MAIL_SMTP_PASSWORD&#39;, &#39;super password&#39;);
+</pre></div>
+</div>
+<p>It&#8217;s also possible to use a secure connection, TLS or SSL:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;MAIL_SMTP_ENCRYPTION&#39;, &#39;ssl&#39;); // Valid values are &quot;null&quot;, &quot;ssl&quot; or &quot;tls&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="sendmail-configuration">
+<h3>Sendmail configuration<a class="headerlink" href="#sendmail-configuration" title="Ссылка на этот заголовок">¶</a></h3>
+<p>By default the sendmail command will be <code class="docutils literal"><span class="pre">/usr/sbin/sendmail</span> <span class="pre">-bs</span></code> but
+you can customize that in your config file.</p>
+<p>Example:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// We choose &quot;sendmail&quot; as mail transport
+define(&#39;MAIL_TRANSPORT&#39;, &#39;sendmail&#39;);
+
+// If you need to change the sendmail command, replace the value
+define(&#39;MAIL_SENDMAIL_COMMAND&#39;, &#39;/usr/sbin/sendmail -bs&#39;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="php-native-mail-function">
+<h3>PHP native mail function<a class="headerlink" href="#php-native-mail-function" title="Ссылка на этот заголовок">¶</a></h3>
+<p>This is the default configuration:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;MAIL_TRANSPORT&#39;</span><span class="p">,</span> <span class="s1">&#39;mail&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-sender-email-address">
+<h3>The sender email address<a class="headerlink" href="#the-sender-email-address" title="Ссылка на этот заголовок">¶</a></h3>
+<p>By default, emails will use the sender address
+<code class="docutils literal"><span class="pre">notifications&#64;kanboard.local</span></code>. It&#8217;s not possible to reply to this
+address.</p>
+<p>You can customize this address by changing the value of the constant
+<code class="docutils literal"><span class="pre">MAIL_FROM</span></code> in your config file.</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;MAIL_FROM&#39;</span><span class="p">,</span> <span class="s1">&#39;kanboard@mydomain.tld&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>That can be useful if your SMTP server configuration doesn&#8217;t accept the
+default address.</p>
+</div>
+<div class="section" id="how-to-display-a-link-to-the-task-in-notifications">
+<h3>How to display a link to the task in notifications?<a class="headerlink" href="#how-to-display-a-link-to-the-task-in-notifications" title="Ссылка на этот заголовок">¶</a></h3>
+<p>To do that, you have to specify the URL of your Kanboard installation in
+your <a class="reference external" href="https://kanboard.net/documentation/application-configuration">Application
+Settings</a>.
+By default, nothing is defined, so no links will be displayed.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://demo.kanboard.net/">http://demo.kanboard.net/</a></li>
+<li><a class="reference external" href="http://myserver/kanboard/">http://myserver/kanboard/</a></li>
+<li><a class="reference external" href="http://kanboard.mydomain.com/">http://kanboard.mydomain.com/</a></li>
+</ul>
+<p>Don&#8217;t forget the ending slash <code class="docutils literal"><span class="pre">/</span></code>.</p>
+<p>You need to define that manually because Kanboard cannot guess the URL
+from a command line script and some people have a very specific
+configuration.</p>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Ссылка на этот заголовок">¶</a></h2>
+<p>If no emails are sent and you are sure that everything is configured
+correctly:</p>
+<ul class="simple">
+<li>Check your spam folder</li>
+<li>Enable the debug mode and check the debug file <code class="docutils literal"><span class="pre">data/debug.log</span></code>,
+you should see the exact error</li>
+<li>Be sure that your server or your hosting provider allows you to send
+emails</li>
+<li>If you use SeLinux, allow PHP to send emails</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Email configuration</a><ul>
+<li><a class="reference internal" href="#user-settings">User settings</a></li>
+<li><a class="reference internal" href="#email-transports">Email transports</a></li>
+<li><a class="reference internal" href="#server-settings">Server settings</a><ul>
+<li><a class="reference internal" href="#smtp-configuration">SMTP configuration</a></li>
+<li><a class="reference internal" href="#sendmail-configuration">Sendmail configuration</a></li>
+<li><a class="reference internal" href="#php-native-mail-function">PHP native mail function</a></li>
+<li><a class="reference internal" href="#the-sender-email-address">The sender email address</a></li>
+<li><a class="reference internal" href="#how-to-display-a-link-to-the-task-in-notifications">How to display a link to the task in notifications?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/email-configuration.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/email-configuration.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

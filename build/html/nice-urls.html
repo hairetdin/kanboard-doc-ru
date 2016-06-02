@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>URL rewriting &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="url-rewriting">
+<h1>URL rewriting<a class="headerlink" href="#url-rewriting" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Kanboard is able to work indifferently with URL rewriting enabled or
+not.</p>
+<ul class="simple">
+<li>Example of URL rewritten: <code class="docutils literal"><span class="pre">/board/123</span></code></li>
+<li>Otherwise: <code class="docutils literal"><span class="pre">?controller=board&amp;action=show&amp;project_id=123</span></code></li>
+</ul>
+<p>If you use Kanboard with Apache and with the mode rewrite enabled, nice
+URLs will be used automatically. In case you get a &#8220;404 Not Found&#8221;, you
+might need to set at least the following overrides for your DocumentRoot
+to get the .htaccess files working:</p>
+<div class="code sh highlight-python"><div class="highlight"><pre><span></span>&lt;Directory /var/www/kanboard/&gt;
+    AllowOverride FileInfo Options=All,MultiViews AuthConfig
+&lt;/Directory&gt;
+</pre></div>
+</div>
+<div class="section" id="url-shortcuts">
+<h2>URL Shortcuts<a class="headerlink" href="#url-shortcuts" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Go to the task #123: <strong>/t/123</strong></li>
+<li>Go to the board of the project #2: <strong>/b/2</strong></li>
+<li>Go to the project calendar #5: <strong>/c/5</strong></li>
+<li>Go to the list view of the project #8: <strong>/l/8</strong></li>
+<li>Go to the project settings for the project id #42: <strong>/p/42</strong></li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>By default, Kanboard will check if the Apache mode rewrite is enabled.</p>
+<p>To avoid the automatic detection of URL rewriting from the web server,
+you can enable this feature in your config file:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>When this constant is at <code class="docutils literal"><span class="pre">true</span></code>:</p>
+<ul class="simple">
+<li>URLs generated from command line tools will be also converted</li>
+<li>If you use another web server than Apache, by example Nginx or
+Microsoft IIS, you have to configure yourself the URL rewriting</li>
+</ul>
+<p>Note: Kanboard always fallback to old school URLs when it&#8217;s not
+configured, this configuration is optional.</p>
+</div>
+<div class="section" id="nginx-configuration-example">
+<h2>Nginx configuration example<a class="headerlink" href="#nginx-configuration-example" title="Ссылка на этот заголовок">¶</a></h2>
+<p>In the section <code class="docutils literal"><span class="pre">server</span></code> of your Nginx config file you can use this
+example:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>index index.php;
+
+location / {
+    try_files $uri $uri/ /index.php$is_args$args;
+
+    # If Kanboard is under a subfolder
+    # try_files $uri $uri/ /kanboard/index.php;
+}
+
+location ~ \.php$ {
+    try_files $uri =404;
+    fastcgi_split_path_info ^(.+\.php)(/.+)$;
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_index index.php;
+    include fastcgi_params;
+}
+
+# Deny access to the directory data
+location ~* /data {
+    deny all;
+    return 404;
+}
+
+# Deny access to .htaccess
+location ~ /\.ht {
+    deny all;
+    return 404;
+}
+</pre></div>
+</div>
+<p>In your Kanboard <code class="docutils literal"><span class="pre">config.php</span></code>:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Adapt the example above according to your own configuration.</p>
+</div>
+<div class="section" id="iis-configuration-example">
+<h2>IIS configuration example<a class="headerlink" href="#iis-configuration-example" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Create a web.config in you installation folder:</p>
+<div class="code xml highlight-python"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;system.webServer&gt;
+        &lt;rewrite&gt;
+            &lt;rules&gt;
+                &lt;rule name=&quot;Imported Rule 1&quot; stopProcessing=&quot;true&quot;&gt;
+                    &lt;match url=&quot;^&quot; ignoreCase=&quot;false&quot; /&gt;
+                    &lt;conditions logicalGrouping=&quot;MatchAll&quot;&gt;
+                        &lt;add input=&quot;{REQUEST_FILENAME}&quot; matchType=&quot;IsFile&quot; ignoreCase=&quot;false&quot; negate=&quot;true&quot; /&gt;
+                    &lt;/conditions&gt;
+                    &lt;action type=&quot;Rewrite&quot; url=&quot;index.php&quot; appendQueryString=&quot;true&quot; /&gt;
+                &lt;/rule&gt;
+            &lt;/rules&gt;
+        &lt;/rewrite&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+</pre></div>
+</div>
+<p>In your Kanboard <code class="docutils literal"><span class="pre">config.php</span></code>:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Adapt the example above according to your own configuration.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">URL rewriting</a><ul>
+<li><a class="reference internal" href="#url-shortcuts">URL Shortcuts</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#nginx-configuration-example">Nginx configuration example</a></li>
+<li><a class="reference internal" href="#iis-configuration-example">IIS configuration example</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nice-urls.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/nice-urls.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

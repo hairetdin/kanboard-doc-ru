@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mysql/MariaDB Configuration &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mysql-mariadb-configuration">
+<h1>Mysql/MariaDB Configuration<a class="headerlink" href="#mysql-mariadb-configuration" title="Ссылка на этот заголовок">¶</a></h1>
+<p>By default Kanboard use Sqlite to stores its data. However it&#8217;s possible
+to use Mysql or MariaDB instead of Sqlite.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>Mysql server</li>
+<li>The PHP extension <code class="docutils literal"><span class="pre">pdo_mysql</span></code> installed</li>
+</ul>
+<p>Note: Kanboard is tested with <strong>Mysql &gt;= 5.5 and MariaDB &gt;= 10.0</strong></p>
+</div>
+<div class="section" id="mysql-configuration">
+<h2>Mysql configuration<a class="headerlink" href="#mysql-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="create-a-database">
+<h3>Create a database<a class="headerlink" href="#create-a-database" title="Ссылка на этот заголовок">¶</a></h3>
+<p>The first step is to create a database on your Mysql server. By example,
+you can do that with the command line mysql client:</p>
+<div class="code sql highlight-python"><div class="highlight"><pre><span></span>CREATE DATABASE kanboard;
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-config-file">
+<h3>Create a config file<a class="headerlink" href="#create-a-config-file" title="Ссылка на этот заголовок">¶</a></h3>
+<p>The file <code class="docutils literal"><span class="pre">config.php</span></code> should contains those values:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+
+// We choose to use Mysql instead of Sqlite
+define(&#39;DB_DRIVER&#39;, &#39;mysql&#39;);
+
+// Mysql parameters
+define(&#39;DB_USERNAME&#39;, &#39;REPLACE_ME&#39;);
+define(&#39;DB_PASSWORD&#39;, &#39;REPLACE_ME&#39;);
+define(&#39;DB_HOSTNAME&#39;, &#39;REPLACE_ME&#39;);
+define(&#39;DB_NAME&#39;, &#39;kanboard&#39;);
+</pre></div>
+</div>
+<p>Note: You can also rename the template file <code class="docutils literal"><span class="pre">config.default.php</span></code> to
+<code class="docutils literal"><span class="pre">config.php</span></code>.</p>
+</div>
+<div class="section" id="importing-sql-dump-alternative-method">
+<h3>Importing SQL dump (alternative method)<a class="headerlink" href="#importing-sql-dump-alternative-method" title="Ссылка на этот заголовок">¶</a></h3>
+<p>For the first time, Kanboard will run one by one each database migration
+and this process can take some time according to your configuration.</p>
+<p>To avoid any potential timeout you can initialize the database directly
+by importing the SQL schema:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>mysql -u root -p my_database &lt; app/Schema/Sql/mysql.sql
+</pre></div>
+</div>
+<p>The file <code class="docutils literal"><span class="pre">app/Schema/Sql/mysql.sql</span></code> is a SQL dump that represents the
+last version of the database.</p>
+</div>
+</div>
+<div class="section" id="ssl-configuration">
+<h2>SSL configuration<a class="headerlink" href="#ssl-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>These parameters have to be defined to enable the Mysql SSL connection:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Mysql SSL key
+define(&#39;DB_SSL_KEY&#39;, &#39;/path/to/client-key.pem&#39;);
+
+// Mysql SSL certificate
+define(&#39;DB_SSL_CERT&#39;, &#39;/path/to/client-cert.pem&#39;);
+
+// Mysql SSL CA
+define(&#39;DB_SSL_CA&#39;, &#39;/path/to/ca-cert.pem&#39;);
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mysql/MariaDB Configuration</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#mysql-configuration">Mysql configuration</a><ul>
+<li><a class="reference internal" href="#create-a-database">Create a database</a></li>
+<li><a class="reference internal" href="#create-a-config-file">Create a config file</a></li>
+<li><a class="reference internal" href="#importing-sql-dump-alternative-method">Importing SQL dump (alternative method)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ssl-configuration">SSL configuration</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mysql-configuration.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/mysql-configuration.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

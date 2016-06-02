@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Reverse Proxy Authentication &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="reverse-proxy-authentication">
+<h1>Reverse Proxy Authentication<a class="headerlink" href="#reverse-proxy-authentication" title="Ссылка на этот заголовок">¶</a></h1>
+<p>This authentication method is often used for
+<a class="reference external" href="http://en.wikipedia.org/wiki/Single_sign-on">SSO</a> (Single Sign-On)
+especially for large organizations.</p>
+<p>The authentication is done by another system, Kanboard doesn&#8217;t know your
+password and suppose you are already authenticated.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li>A well-configured reverse proxy</li>
+</ul>
+<p>or</p>
+<ul class="simple">
+<li>Apache Auth on the same server</li>
+</ul>
+</div>
+<div class="section" id="how-does-this-work">
+<h2>How does this work?<a class="headerlink" href="#how-does-this-work" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>Your reverse proxy authenticates the user and send the username
+through a HTTP header.</li>
+<li>Kanboard retrieve the username from the request<ul>
+<li>The user is created automatically if necessary</li>
+<li>Open a new Kanboard session without any prompt assuming it&#8217;s valid</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="installation-instructions">
+<h2>Installation instructions<a class="headerlink" href="#installation-instructions" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="setting-up-your-reverse-proxy">
+<h3>Setting up your reverse proxy<a class="headerlink" href="#setting-up-your-reverse-proxy" title="Ссылка на этот заголовок">¶</a></h3>
+<p>This is not in the scope of this documentation. You should check the
+user login is sent by the reverse proxy using a HTTP header, and find
+out which one.</p>
+</div>
+<div class="section" id="setting-up-kanboard">
+<h3>Setting up Kanboard<a class="headerlink" href="#setting-up-kanboard" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Create a custom <code class="docutils literal"><span class="pre">config.php</span></code> file or copy the <code class="docutils literal"><span class="pre">config.default.php</span></code>
+file:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+
+// Enable/disable reverse proxy authentication
+define(&#39;REVERSE_PROXY_AUTH&#39;, true); // Set this value to true
+
+// The HTTP header to retrieve. If not specified, REMOTE_USER is the default
+define(&#39;REVERSE_PROXY_USER_HEADER&#39;, &#39;REMOTE_USER&#39;);
+
+// The default Kanboard admin for your organization.
+// Since everything should be filtered by the reverse proxy,
+// you should want to have a bootstrap admin user.
+define(&#39;REVERSE_PROXY_DEFAULT_ADMIN&#39;, &#39;myadmin&#39;);
+
+// The default domain to assume for the email address.
+// In case the username is not an email address, it
+// will be updated automatically as USER@mydomain.com
+define(&#39;REVERSE_PROXY_DEFAULT_DOMAIN&#39;, &#39;mydomain.com&#39;);
+</pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li>If the proxy is the same web server that runs Kanboard, according the
+<a class="reference external" href="http://www.ietf.org/rfc/rfc3875">CGI protocol</a> the header name
+will be <code class="docutils literal"><span class="pre">REMOTE_USER</span></code>. By example, Apache add <code class="docutils literal"><span class="pre">REMOTE_USER</span></code> by
+default if <code class="docutils literal"><span class="pre">Require</span> <span class="pre">valid-user</span></code> is set.</li>
+<li>If Apache is a reverse proxy to another Apache running Kanboard, the
+header <code class="docutils literal"><span class="pre">REMOTE_USER</span></code> is not set (same behavior with IIS and Nginx).</li>
+<li>If you have a real reverse proxy, the <a class="reference external" href="http://tools.ietf.org/html/draft-stecher-icap-subid-00#section-3.4">HTTP ICAP
+draft</a>
+proposes the header to be <code class="docutils literal"><span class="pre">X-Authenticated-User</span></code>. This de facto
+standard has been adopted by a number of tools.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Reverse Proxy Authentication</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#how-does-this-work">How does this work?</a></li>
+<li><a class="reference internal" href="#installation-instructions">Installation instructions</a><ul>
+<li><a class="reference internal" href="#setting-up-your-reverse-proxy">Setting up your reverse proxy</a></li>
+<li><a class="reference internal" href="#setting-up-kanboard">Setting up Kanboard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/reverse-proxy-authentication.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/reverse-proxy-authentication.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

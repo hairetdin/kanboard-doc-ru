@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/plugin-mail-transports.rst:2
+msgid "Plugin: Add Mail Transport"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:4
+msgid "By default Kanboard supports 3 standards mail transports:"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:6
+msgid "Mail (PHP mail function)"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:7
+msgid "Smtp"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:8
+msgid "Sendmail command"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:10
+msgid "With the plugin API you can add a driver for any email provider. For example, your plugin can add a mail transport for a provider that uses an HTTP API."
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:15
+msgid "Implementation"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:17
+msgid "Your plugin must implement the interface ``Kanboard\\Core\\Mail\\ClientInterface`` and extends from ``Kanboard\\Core\\Base``."
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:21
+msgid "The only method you need to implement is ``sendEmail()``:"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:40
+msgid "To register your new mail transport, use the method ``setTransport($transport, $class)`` from the class ``Kanboard\\Core\\Mail\\Client``:"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:48
+msgid "The second argument contains the absolute name space of your concrete class."
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:52
+msgid "Examples of mail transport plugins"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:54
+msgid "`Sendgrid <https://github.com/kanboard/plugin-sendgrid>`__"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:55
+msgid "`Mailgun <https://github.com/kanboard/plugin-mailgun>`__"
+msgstr ""
+
+#: ../../source/plugin-mail-transports.rst:56
+msgid "`Postmark <https://github.com/kanboard/plugin-postmark>`__"
+msgstr ""
+

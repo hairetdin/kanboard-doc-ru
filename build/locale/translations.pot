@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/translations.rst:2
+msgid "Translations"
+msgstr ""
+
+#: ../../source/translations.rst:5
+msgid "How to translate Kanboard to a new language?"
+msgstr ""
+
+#: ../../source/translations.rst:7
+msgid "Translations are stored inside the directory ``app/Locale``"
+msgstr ""
+
+#: ../../source/translations.rst:8
+msgid "There is a subdirectory for each language, for example in French we have ``fr_FR``, Italian ``it_IT`` etc."
+msgstr ""
+
+#: ../../source/translations.rst:10
+msgid "A translation is a PHP file that returns an Array with a key-value pairs"
+msgstr ""
+
+#: ../../source/translations.rst:12
+msgid "The key is the original text in English and the value is the translation of the corresponding language"
+msgstr ""
+
+#: ../../source/translations.rst:14
+msgid "**French translations are always up to date**"
+msgstr ""
+
+#: ../../source/translations.rst:15
+msgid "Always use the last version (branch master)"
+msgstr ""
+
+#: ../../source/translations.rst:18
+msgid "Create a new translation:"
+msgstr ""
+
+#: ../../source/translations.rst:20
+msgid "Make a new directory: ``app/Locale/xx_XX`` for example ``app/Locale/fr_CA`` for French Canadian"
+msgstr ""
+
+#: ../../source/translations.rst:22
+msgid "Create a new file for the translation: ``app/Locale/xx_XX/translations.php``"
+msgstr ""
+
+#: ../../source/translations.rst:24
+msgid "Use the content of the French locales and replace the values"
+msgstr ""
+
+#: ../../source/translations.rst:25
+msgid "Update the file ``app/Model/Language.php``"
+msgstr ""
+
+#: ../../source/translations.rst:26
+msgid "Check with your local installation of Kanboard if everything is OK"
+msgstr ""
+
+#: ../../source/translations.rst:27
+msgid "Send a `pull-request with Github <https://help.github.com/articles/using-pull-requests/>`__"
+msgstr ""
+
+#: ../../source/translations.rst:31
+msgid "How to update an existing translation?"
+msgstr ""
+
+#: ../../source/translations.rst:33
+msgid "Open the translation file ``app/Locale/xx_XX/translations.php``"
+msgstr ""
+
+#: ../../source/translations.rst:34
+msgid "Missing translations are commented with ``//`` and the values are empty, just fill blank and remove the comment"
+msgstr ""
+
+#: ../../source/translations.rst:36
+msgid "Check with your local installation of Kanboard and send a `pull-request <https://help.github.com/articles/using-pull-requests/>`__"
+msgstr ""
+
+#: ../../source/translations.rst:40
+msgid "How to add new translated text in the application?"
+msgstr ""
+
+#: ../../source/translations.rst:42
+msgid "Translations are displayed with the following functions in the source code:"
+msgstr ""
+
+#: ../../source/translations.rst:45
+msgid "``t()``: display text with HTML escaping"
+msgstr ""
+
+#: ../../source/translations.rst:46
+msgid "``e()``: display text without HTML escaping"
+msgstr ""
+
+#: ../../source/translations.rst:48
+msgid "Always use the english version in the source code."
+msgstr ""
+
+#: ../../source/translations.rst:50
+msgid "Text strings use the function ``sprintf()`` to replace elements:"
+msgstr ""
+
+#: ../../source/translations.rst:52
+msgid "``%s`` is used to replace a string"
+msgstr ""
+
+#: ../../source/translations.rst:53
+msgid "``%d`` is used to replace an integer"
+msgstr ""
+
+#: ../../source/translations.rst:55
+msgid "All formats are available in the `PHP documentation <http://php.net/sprintf>`__."
+msgstr ""
+
+#: ../../source/translations.rst:59
+msgid "How to find missing translations in the applications?"
+msgstr ""
+
+#: ../../source/translations.rst:61
+msgid "From a terminal, run the following command:"
+msgstr ""
+
+#: ../../source/translations.rst:67
+msgid "All missing and unused translations are displayed on the screen. Put that in the French locale and sync other locales (see below)."
+msgstr ""
+
+#: ../../source/translations.rst:71
+msgid "How to synchronize translation files?"
+msgstr ""
+
+#: ../../source/translations.rst:73
+msgid "From a Unix shell run this command:"
+msgstr ""
+
+#: ../../source/translations.rst:79
+msgid "The French translation is used a reference to other locales."
+msgstr ""
+

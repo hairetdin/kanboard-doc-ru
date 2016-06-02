@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API Authentication &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-authentication">
+<h1>API Authentication<a class="headerlink" href="#api-authentication" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="default-method-http-basic">
+<h2>Default method (HTTP Basic)<a class="headerlink" href="#default-method-http-basic" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The API credentials are available on the settings page.</p>
+<ul class="simple">
+<li>API end-point: <code class="docutils literal"><span class="pre">https://YOUR_SERVER/jsonrpc.php</span></code></li>
+</ul>
+<p>If you want to use the &#8220;application api&#8221;:</p>
+<ul class="simple">
+<li>Username: <code class="docutils literal"><span class="pre">jsonrpc</span></code></li>
+<li>Password: API token on the settings page</li>
+</ul>
+<p>Otherwise for the &#8220;user api&#8221;, just use the real username/passsword.</p>
+<p>The API use the <a class="reference external" href="http://www.ietf.org/rfc/rfc2617.txt">HTTP Basic Authentication Scheme described in the
+RFC2617</a>. If there is an
+authentication error, you will receive the HTTP status code
+<code class="docutils literal"><span class="pre">401</span> <span class="pre">Not</span> <span class="pre">Authorized</span></code>.</p>
+<div class="section" id="authorized-user-api-procedures">
+<h3>Authorized User API procedures<a class="headerlink" href="#authorized-user-api-procedures" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li>getMe</li>
+<li>getMyDashboard</li>
+<li>getMyActivityStream</li>
+<li>createMyPrivateProject</li>
+<li>getMyProjectsList</li>
+<li>getMyProjects</li>
+<li>getTimezone</li>
+<li>getVersion</li>
+<li>getDefaultTaskColor</li>
+<li>getDefaultTaskColors</li>
+<li>getColorList</li>
+<li>getProjectById</li>
+<li>getTask</li>
+<li>getTaskByReference</li>
+<li>getAllTasks</li>
+<li>openTask</li>
+<li>closeTask</li>
+<li>moveTaskPosition</li>
+<li>createTask</li>
+<li>updateTask</li>
+<li>getBoard</li>
+<li>getProjectActivity</li>
+<li>getMyOverdueTasks</li>
+</ul>
+</div>
+</div>
+<div class="section" id="custom-http-header">
+<h2>Custom HTTP header<a class="headerlink" href="#custom-http-header" title="Ссылка на этот заголовок">¶</a></h2>
+<p>You can use an alternative HTTP header for the authentication if your
+server have a very specific configuration.</p>
+<ul class="simple">
+<li>The header name can be anything you want, by example <code class="docutils literal"><span class="pre">X-API-Auth</span></code>.</li>
+<li>The header value is the <code class="docutils literal"><span class="pre">username:password</span></code> encoded in Base64.</li>
+</ul>
+<p>Configuration:</p>
+<ol class="arabic simple">
+<li>Define your custom header in your <code class="docutils literal"><span class="pre">config.php</span></code>:
+<code class="docutils literal"><span class="pre">define('API_AUTHENTICATION_HEADER',</span> <span class="pre">'X-API-Auth');</span></code></li>
+<li>Encode the credentials in Base64, example with PHP
+<code class="docutils literal"><span class="pre">base64_encode('jsonrpc:19ffd9709d03ce50675c3a43d1c49c1ac207f4bc45f06c5b2701fbdf8929');</span></code></li>
+<li>Test with curl:</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>curl \
+-H &#39;X-API-Auth: anNvbnJwYzoxOWZmZDk3MDlkMDNjZTUwNjc1YzNhNDNkMWM0OWMxYWMyMDdmNGJjNDVmMDZjNWIyNzAxZmJkZjg5Mjk=&#39; \
+-d &#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;getAllProjects&quot;, &quot;id&quot;: 1}&#39; \
+http://localhost/kanboard/jsonrpc.php
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API Authentication</a><ul>
+<li><a class="reference internal" href="#default-method-http-basic">Default method (HTTP Basic)</a><ul>
+<li><a class="reference internal" href="#authorized-user-api-procedures">Authorized User API procedures</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#custom-http-header">Custom HTTP header</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api-authentication.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/api-authentication.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

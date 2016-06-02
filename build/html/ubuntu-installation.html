@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>How to install Kanboard on Ubuntu? &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="how-to-install-kanboard-on-ubuntu">
+<h1>How to install Kanboard on Ubuntu?<a class="headerlink" href="#how-to-install-kanboard-on-ubuntu" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="ubuntu-xenial-16-04-lts">
+<h2>Ubuntu Xenial 16.04 LTS<a class="headerlink" href="#ubuntu-xenial-16-04-lts" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Install Apache and PHP:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>sudo apt-get update
+sudo apt-get install -y apache2 libapache2-mod-php7.0 php7.0-cli php7.0-mbstring php7.0-sqlite3 \
+    php7.0-opcache php7.0-json php7.0-mysql php7.0-pgsql php7.0-ldap php7.0-gd
+</pre></div>
+</div>
+<p>Install Kanboard:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
+sudo wget https://kanboard.net/kanboard-latest.zip
+sudo unzip kanboard-latest.zip
+sudo chown -R www-data:www-data kanboard/data
+sudo rm kanboard-latest.zip
+</pre></div>
+</div>
+</div>
+<div class="section" id="ubuntu-trusty-14-04-lts">
+<h2>Ubuntu Trusty 14.04 LTS<a class="headerlink" href="#ubuntu-trusty-14-04-lts" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Install Apache and PHP:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>sudo apt-get update
+sudo apt-get install -y php5 php5-sqlite php5-mysql php5-pgsql php5-ldap php5-gd php5-json php5-mcrypt unzip
+</pre></div>
+</div>
+<p>Install Kanboard:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
+sudo wget https://kanboard.net/kanboard-latest.zip
+sudo unzip kanboard-latest.zip
+sudo chown -R www-data:www-data kanboard/data
+sudo rm kanboard-latest.zip
+</pre></div>
+</div>
+</div>
+<div class="section" id="ubuntu-precise-12-04-lts">
+<h2>Ubuntu Precise 12.04 LTS<a class="headerlink" href="#ubuntu-precise-12-04-lts" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Install Apache and PHP:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>sudo apt-get update
+sudo apt-get install -y php5 php5-sqlite php5-mysql php5-pgsql php5-ldap php5-gd php5-json php5-mcrypt unzip
+</pre></div>
+</div>
+<p>Install Kanboard:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www
+sudo wget https://kanboard.net/kanboard-latest.zip
+sudo unzip kanboard-latest.zip
+sudo chown -R www-data:www-data kanboard/data
+sudo rm kanboard-latest.zip
+</pre></div>
+</div>
+<p>Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
+job</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How to install Kanboard on Ubuntu?</a><ul>
+<li><a class="reference internal" href="#ubuntu-xenial-16-04-lts">Ubuntu Xenial 16.04 LTS</a></li>
+<li><a class="reference internal" href="#ubuntu-trusty-14-04-lts">Ubuntu Trusty 14.04 LTS</a></li>
+<li><a class="reference internal" href="#ubuntu-precise-12-04-lts">Ubuntu Precise 12.04 LTS</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ubuntu-installation.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ubuntu-installation.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

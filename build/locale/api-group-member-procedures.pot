@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-group-member-procedures.rst:2
+msgid "Group Member API Procedures"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:5
+msgid "getMemberGroups"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:7
+msgid "Purpose: **Get all groups for a given user**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:8
+#: ../../source/api-group-member-procedures.rst:47
+#: ../../source/api-group-member-procedures.rst:101
+#: ../../source/api-group-member-procedures.rst:137
+#: ../../source/api-group-member-procedures.rst:173
+msgid "Parameters:"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:10
+#: ../../source/api-group-member-procedures.rst:104
+#: ../../source/api-group-member-procedures.rst:140
+#: ../../source/api-group-member-procedures.rst:176
+msgid "**user\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:12
+msgid "Result on success: **List of groups**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:13
+#: ../../source/api-group-member-procedures.rst:52
+#: ../../source/api-group-member-procedures.rst:107
+#: ../../source/api-group-member-procedures.rst:143
+#: ../../source/api-group-member-procedures.rst:179
+msgid "Result on failure: **false**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:15
+#: ../../source/api-group-member-procedures.rst:54
+#: ../../source/api-group-member-procedures.rst:109
+#: ../../source/api-group-member-procedures.rst:145
+#: ../../source/api-group-member-procedures.rst:181
+msgid "Request example:"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:28
+#: ../../source/api-group-member-procedures.rst:67
+#: ../../source/api-group-member-procedures.rst:123
+#: ../../source/api-group-member-procedures.rst:159
+#: ../../source/api-group-member-procedures.rst:195
+msgid "Response example:"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:44
+msgid "getGroupMembers"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:46
+msgid "Purpose: **Get all members of a group**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:49
+#: ../../source/api-group-member-procedures.rst:103
+#: ../../source/api-group-member-procedures.rst:139
+#: ../../source/api-group-member-procedures.rst:175
+msgid "**group\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:51
+msgid "Result on success: **List of users**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:98
+msgid "addGroupMember"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:100
+msgid "Purpose: **Add a user to a group**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:106
+#: ../../source/api-group-member-procedures.rst:142
+#: ../../source/api-group-member-procedures.rst:178
+msgid "Result on success: **true**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:134
+msgid "removeGroupMember"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:136
+msgid "Purpose: **Remove a user from a group**"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:170
+msgid "isGroupMember"
+msgstr ""
+
+#: ../../source/api-group-member-procedures.rst:172
+msgid "Purpose: **Check if a user is member of a group**"
+msgstr ""
+

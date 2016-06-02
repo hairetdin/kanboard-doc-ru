@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LDAP Library &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ldap-library">
+<h1>LDAP Library<a class="headerlink" href="#ldap-library" title="Ссылка на этот заголовок">¶</a></h1>
+<p>To facilitate LDAP integration, Kanboard has its own LDAP library. This
+library can perform common operations.</p>
+<div class="section" id="client">
+<h2>Client<a class="headerlink" href="#client" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Class: <code class="docutils literal"><span class="pre">Kanboard\Core\Ldap\Client</span></code></p>
+<p>To connect to your LDAP server easily, use this method:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>use Kanboard\Core\Ldap\Client as LdapClient;
+use Kanboard\Core\Ldap\ClientException as LdapException;
+
+try {
+    $client = LdapClient::connect();
+
+    // Get native LDAP resource
+    $resource = $client-&gt;getConnection();
+
+    // ...
+
+} catch (LdapException $e) {
+    // ...
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="ldap-queries">
+<h2>LDAP Queries<a class="headerlink" href="#ldap-queries" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Classes:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\Ldap\Query</span></code></li>
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\Ldap\Entries</span></code></li>
+<li><code class="docutils literal"><span class="pre">Kanboard\Core\Ldap\Entry</span></code></li>
+</ul>
+<p>Example to query the LDAP directory:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$query = new Query($client)
+$query-&gt;execute(&#39;ou=People,dc=kanboard,dc=local&#39;, &#39;uid=my_user&#39;, array(&#39;cn&#39;, &#39;mail&#39;));
+
+if ($query-&gt;hasResult()) {
+    $entries = $query-&gt;getEntries(); // Return an instance of Entries
+}
+</pre></div>
+</div>
+<p>Read one entry:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$firstEntry = $query-&gt;getEntries()-&gt;getFirstEntry();
+$email = $firstEntry-&gt;getFirstValue(&#39;mail&#39;);
+$name = $firstEntry-&gt;getFirstValue(&#39;cn&#39;, &#39;Default Name&#39;);
+</pre></div>
+</div>
+<p>Read multiple entries:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>foreach ($query-&gt;getEntries()-&gt;getAll() as $entry) {
+    $emails = $entry-&gt;getAll(&#39;mail&#39;); // Fetch all emails
+    $dn = $entry-&gt;getDn(); // Get LDAP DN of this user
+
+    // Check if a value is present for an attribute
+    if ($entry-&gt;hasValue(&#39;mail&#39;, &#39;user2@localhost&#39;)) {
+        // ...
+    }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="user-helper">
+<h2>User Helper<a class="headerlink" href="#user-helper" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Class: <code class="docutils literal"><span class="pre">Kanboard\Core\Ldap\User</span></code></p>
+<p>Fetch a single user in one line:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Return an instance of LdapUserProvider
+$user = User::getUser($client, &#39;my_username&#39;);
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-helper">
+<h2>Group Helper<a class="headerlink" href="#group-helper" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Class: <code class="docutils literal"><span class="pre">Kanboard\Core\Ldap\Group</span></code></p>
+<p>Fetch groups in one line:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>// Define LDAP filter
+$filter = &#39;(&amp;(objectClass=group)(sAMAccountName=My group*))&#39;;
+
+// Return a list of LdapGroupProvider
+$groups = Group::getGroups($client, $filter);
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">LDAP Library</a><ul>
+<li><a class="reference internal" href="#client">Client</a></li>
+<li><a class="reference internal" href="#ldap-queries">LDAP Queries</a></li>
+<li><a class="reference internal" href="#user-helper">User Helper</a></li>
+<li><a class="reference internal" href="#group-helper">Group Helper</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-ldap-client.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-ldap-client.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

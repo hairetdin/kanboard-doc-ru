@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:38+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-link-procedures.rst:2
+msgid "API Link Procedures"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:5
+msgid "getAllLinks"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:7
+msgid "Purpose: **Get the list of possible relations between tasks**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:8
+msgid "Parameters: none"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:9
+msgid "Result on success: **List of links**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:10
+#: ../../source/api-link-procedures.rst:97
+#: ../../source/api-link-procedures.rst:131
+#: ../../source/api-link-procedures.rst:169
+#: ../../source/api-link-procedures.rst:208
+#: ../../source/api-link-procedures.rst:245
+#: ../../source/api-link-procedures.rst:281
+#: ../../source/api-link-procedures.rst:317
+#: ../../source/api-link-procedures.rst:356
+#: ../../source/api-link-procedures.rst:393
+#: ../../source/api-link-procedures.rst:432
+#: ../../source/api-link-procedures.rst:481
+msgid "Result on failure: **false**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:12
+#: ../../source/api-link-procedures.rst:99
+#: ../../source/api-link-procedures.rst:133
+#: ../../source/api-link-procedures.rst:171
+#: ../../source/api-link-procedures.rst:210
+#: ../../source/api-link-procedures.rst:247
+#: ../../source/api-link-procedures.rst:283
+#: ../../source/api-link-procedures.rst:319
+#: ../../source/api-link-procedures.rst:358
+#: ../../source/api-link-procedures.rst:395
+#: ../../source/api-link-procedures.rst:434
+#: ../../source/api-link-procedures.rst:483
+msgid "Request example:"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:22
+#: ../../source/api-link-procedures.rst:112
+#: ../../source/api-link-procedures.rst:146
+#: ../../source/api-link-procedures.rst:184
+#: ../../source/api-link-procedures.rst:224
+#: ../../source/api-link-procedures.rst:262
+#: ../../source/api-link-procedures.rst:296
+#: ../../source/api-link-procedures.rst:334
+#: ../../source/api-link-procedures.rst:374
+#: ../../source/api-link-procedures.rst:408
+#: ../../source/api-link-procedures.rst:447
+#: ../../source/api-link-procedures.rst:496
+msgid "Response example:"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:89
+msgid "getOppositeLinkId"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:91
+msgid "Purpose: **Get the opposite link id of a task link**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:92
+#: ../../source/api-link-procedures.rst:126
+#: ../../source/api-link-procedures.rst:164
+#: ../../source/api-link-procedures.rst:202
+#: ../../source/api-link-procedures.rst:238
+#: ../../source/api-link-procedures.rst:276
+#: ../../source/api-link-procedures.rst:310
+#: ../../source/api-link-procedures.rst:348
+#: ../../source/api-link-procedures.rst:388
+#: ../../source/api-link-procedures.rst:427
+#: ../../source/api-link-procedures.rst:476
+msgid "Parameters:"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:94
+#: ../../source/api-link-procedures.rst:166
+#: ../../source/api-link-procedures.rst:240
+#: ../../source/api-link-procedures.rst:278
+#: ../../source/api-link-procedures.rst:314
+#: ../../source/api-link-procedures.rst:353
+msgid "**link\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:96
+#: ../../source/api-link-procedures.rst:207
+msgid "Result on success: **link\\_id**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:123
+msgid "getLinkByLabel"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:125
+msgid "Purpose: **Get a link by label**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:128
+#: ../../source/api-link-procedures.rst:204
+msgid "**label** (integer, required)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:130
+#: ../../source/api-link-procedures.rst:168
+msgid "Result on success: **link properties**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:161
+msgid "getLinkById"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:163
+msgid "Purpose: **Get a link by id**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:199
+msgid "createLink"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:201
+msgid "Purpose: **Create a new task relation**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:205
+msgid "**opposite\\_label** (integer, optional)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:235
+msgid "updateLink"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:237
+msgid "Purpose: **Update a link**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:241
+msgid "**opposite\\_link\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:242
+msgid "**label** (string, required)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:244
+#: ../../source/api-link-procedures.rst:280
+#: ../../source/api-link-procedures.rst:355
+#: ../../source/api-link-procedures.rst:480
+msgid "Result on success: **true**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:273
+msgid "removeLink"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:275
+msgid "Purpose: **Remove a link**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:307
+msgid "createTaskLink"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:309
+msgid "Purpose: **Create a link between two tasks**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:312
+#: ../../source/api-link-procedures.rst:351
+#: ../../source/api-link-procedures.rst:429
+msgid "**task\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:313
+#: ../../source/api-link-procedures.rst:352
+msgid "**opposite\\_task\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:316
+msgid "Result on success: **task\\_link\\_id**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:345
+msgid "updateTaskLink"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:347
+msgid "Purpose: **Update task link**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:350
+#: ../../source/api-link-procedures.rst:390
+#: ../../source/api-link-procedures.rst:478
+msgid "**task\\_link\\_id** (integer, required)"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:385
+msgid "getTaskLinkById"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:387
+msgid "Purpose: **Get a task link**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:392
+msgid "Result on success: **task link properties**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:424
+msgid "getAllTaskLinks"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:426
+msgid "Purpose: **Get all links related to a task**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:431
+msgid "Result on success: **list of task link**"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:473
+msgid "removeTaskLink"
+msgstr ""
+
+#: ../../source/api-link-procedures.rst:475
+msgid "Purpose: **Remove a link between two tasks**"
+msgstr ""
+

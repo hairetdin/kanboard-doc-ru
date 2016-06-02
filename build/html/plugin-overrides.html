@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plugin Overrides &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="plugin-overrides">
+<h1>Plugin Overrides<a class="headerlink" href="#plugin-overrides" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="override-http-content-security-policy">
+<h2>Override HTTP Content Security Policy<a class="headerlink" href="#override-http-content-security-policy" title="Ссылка на этот заголовок">¶</a></h2>
+<p>If you would like to replace the default HTTP Content Security Policy
+header, you can use the method <code class="docutils literal"><span class="pre">setContentSecurityPolicy()</span></code>:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+
+namespace Kanboard\Plugin\Csp;
+
+use Kanboard\Core\Plugin\Base;
+
+class Plugin extends Base
+{
+    public function initialize()
+    {
+        $this-&gt;setContentSecurityPolicy(array(&#39;script-src&#39; =&gt; &#39;something&#39;));
+    }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="template-overrides">
+<h2>Template Overrides<a class="headerlink" href="#template-overrides" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Any templates defined in the core can be overridden. For example, you
+can redefine the default layout or change email notifications.</p>
+<p>Example of template override:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>$this-&gt;template-&gt;setTemplateOverride(&#39;header&#39;, &#39;theme:layout/header&#39;);
+</pre></div>
+</div>
+<p>The first argument is the original template name and the second argument
+the template to use as replacement.</p>
+<p>You can still use the original template using the &#8220;kanboard:&#8221; prefix:</p>
+<div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?= $this-&gt;render(&#39;kanboard:header&#39;) ?&gt;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plugin Overrides</a><ul>
+<li><a class="reference internal" href="#override-http-content-security-policy">Override HTTP Content Security Policy</a></li>
+<li><a class="reference internal" href="#template-overrides">Template Overrides</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/plugin-overrides.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/plugin-overrides.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
