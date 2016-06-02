@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 12:28+0500\n"
-"PO-Revision-Date: 2016-06-01 16:43+0500\n"
+"PO-Revision-Date: 2016-06-02 15:25+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -55,16 +55,19 @@ msgstr "`Доска, Календарь, Список и Гант предста
 #: ../../source/index.rst:19
 msgid "`Collapsed and expanded mode <board-collapsed-expanded.markdown>`__"
 msgstr ""
+"`Краткое или раширенное представление <board-collapsed-expanded.html>`__"
 
 #: ../../source/index.rst:20
 msgid ""
 "`Horizontal scrolling and compact mode <board-horizontal-scrolling-and-"
 "compact-view.markdown>`__"
 msgstr ""
+"`Горизонтальная прокрутка и компактный вид <board-horizontal-scrolling-and-"
+"compact-view.html>`__"
 
 #: ../../source/index.rst:22
 msgid "`Show and hide columns <board-show-hide-columns.markdown>`__"
-msgstr ""
+msgstr "`Отображение и скрытие колонок <board-show-hide-columns.html>`__"
 
 #: ../../source/index.rst:25
 msgid "Working with projects"
@@ -72,51 +75,51 @@ msgstr "Работа с проектами"
 
 #: ../../source/index.rst:27
 msgid "`Project Types <project-types.markdown>`__"
-msgstr ""
+msgstr "`Типы проектов <project-types.html>`__"
 
 #: ../../source/index.rst:28
 msgid "`Creating projects <creating-projects.markdown>`__"
-msgstr ""
+msgstr "`Создание проектов <creating-projects.html>`__"
 
 #: ../../source/index.rst:29
 msgid "`Editing projects <editing-projects.markdown>`__"
-msgstr ""
+msgstr "`Редактирование проектов <editing-projects.html>`__"
 
 #: ../../source/index.rst:30
 msgid "`Sharing boards and tasks <sharing-projects.markdown>`__"
-msgstr ""
+msgstr "`Публичные доски и задачи <sharing-projects.html>`__"
 
 #: ../../source/index.rst:31
 msgid "`Automatic actions <automatic-actions.markdown>`__"
-msgstr ""
+msgstr "`Автоматизация процессов <automatic-actions.html>`__"
 
 #: ../../source/index.rst:32
 msgid "`Project permissions <project-permissions.markdown>`__"
-msgstr ""
+msgstr "`Права доступа к проекту <project-permissions.html>`__"
 
 #: ../../source/index.rst:33
 msgid "`Swimlanes <swimlanes.markdown>`__"
-msgstr ""
+msgstr "`Дорожки <swimlanes.html>`__"
 
 #: ../../source/index.rst:34
 msgid "`Calendar <calendar.markdown>`__"
-msgstr ""
+msgstr "`Календарь <calendar.html>`__"
 
 #: ../../source/index.rst:35
 msgid "`Analytics <analytics.markdown>`__"
-msgstr ""
+msgstr "`Аналитика <analytics.html>`__"
 
 #: ../../source/index.rst:36
 msgid "`Gantt chart for tasks <gantt-chart-tasks.markdown>`__"
-msgstr ""
+msgstr "`Диаграмма Ганта для задач <gantt-chart-tasks.html>`__"
 
 #: ../../source/index.rst:37
 msgid "`Gantt chart for projects <gantt-chart-projects.markdown>`__"
-msgstr ""
+msgstr "`Диаграмма Ганта для проектов <gantt-chart-projects.html>`__"
 
 #: ../../source/index.rst:38
 msgid "`Custom filters <custom-filters.markdown>`__"
-msgstr ""
+msgstr "`Пользовательские фильтры <custom-filters.html>`__"
 
 #: ../../source/index.rst:41
 msgid "Working with tasks"
@@ -124,51 +127,51 @@ msgstr "Работа с задачами"
 
 #: ../../source/index.rst:43
 msgid "`Creating tasks <creating-tasks.markdown>`__"
-msgstr ""
+msgstr "`Создание задач <creating-tasks.html>`__"
 
 #: ../../source/index.rst:44
 msgid "`Closing tasks <closing-tasks.markdown>`__"
-msgstr ""
+msgstr "`Закрытие задач <closing-tasks.html>`__"
 
 #: ../../source/index.rst:45
 msgid "`Duplicate and move tasks <duplicate-move-tasks.markdown>`__"
-msgstr ""
+msgstr "`Дублирование и перенос задач <duplicate-move-tasks.html>`__"
 
 #: ../../source/index.rst:46
 msgid "`Adding screenshots <screenshots.markdown>`__"
-msgstr ""
+msgstr "`Добавление картинок <screenshots.html>`__"
 
 #: ../../source/index.rst:47
 msgid "`Task links <task-links.markdown>`__"
-msgstr ""
+msgstr "`Ссылки на задачу <task-links.html>`__"
 
 #: ../../source/index.rst:48
 msgid "`Transitions <transitions.markdown>`__"
-msgstr ""
+msgstr "`Перемещения <transitions.html>`__"
 
 #: ../../source/index.rst:49
 msgid "`Time tracking <time-tracking.markdown>`__"
-msgstr ""
+msgstr "`Отслеживание времени <time-tracking.html>`__"
 
 #: ../../source/index.rst:50
 msgid "`Recurring tasks <recurring-tasks.markdown>`__"
-msgstr ""
+msgstr "`Повторяющиеся задачи <recurring-tasks.html>`__"
 
 #: ../../source/index.rst:51
 msgid "`Create tasks by email <create-tasks-by-email.markdown>`__"
-msgstr ""
+msgstr "`Создание задач через email <create-tasks-by-email.html>`__"
 
 #: ../../source/index.rst:52
 msgid "`Subtasks <subtasks.markdown>`__"
-msgstr ""
+msgstr "`Подзадачи <subtasks.html>`__"
 
 #: ../../source/index.rst:53
 msgid "`Analytics for tasks <analytics-tasks.markdown>`__"
-msgstr ""
+msgstr "`Аналитика для задач <analytics-tasks.html>`__"
 
 #: ../../source/index.rst:54
 msgid "`User mentions <user-mentions.markdown>`__"
-msgstr ""
+msgstr "`Ссылка на пользователя <user-mentions.html>`__"
 
 #: ../../source/index.rst:57
 msgid "Working with users and groups"
@@ -176,27 +179,27 @@ msgstr "Работа с пользователями и группами"
 
 #: ../../source/index.rst:59
 msgid "`Roles <roles.markdown>`__"
-msgstr ""
+msgstr "`Роли <roles.markdown>`__"
 
 #: ../../source/index.rst:60
 msgid "`User Types <user-types.markdown>`__"
-msgstr ""
+msgstr "`Типы пользователей <user-types.html>`__"
 
 #: ../../source/index.rst:61
 msgid "`Group management <groups.markdown>`__"
-msgstr ""
+msgstr "`Управление группами <groups.html>`__"
 
 #: ../../source/index.rst:62
 msgid "`User management <user-management.markdown>`__"
-msgstr ""
+msgstr "`Управление пользователями <user-management.html>`__"
 
 #: ../../source/index.rst:63
 msgid "`Notifications <notifications.markdown>`__"
-msgstr ""
+msgstr "`Уведомления <notifications.html>`__"
 
 #: ../../source/index.rst:64
 msgid "`Two factor authentication <2fa.markdown>`__"
-msgstr ""
+msgstr "`Двухуровневая аутентификация <2fa.html>`__"
 
 #: ../../source/index.rst:67
 msgid "Settings"
@@ -204,31 +207,31 @@ msgstr "Настройки"
 
 #: ../../source/index.rst:69
 msgid "`Keyboard shortcuts <keyboard-shortcuts.markdown>`__"
-msgstr ""
+msgstr "`Горячие клавиши <keyboard-shortcuts.html>`__"
 
 #: ../../source/index.rst:70
 msgid "`Application settings <application-configuration.markdown>`__"
-msgstr ""
+msgstr "`Настройки приложения <application-configuration.html>`__"
 
 #: ../../source/index.rst:71
 msgid "`Project settings <project-configuration.markdown>`__"
-msgstr ""
+msgstr "`Настройки проекта <project-configuration.html>`__"
 
 #: ../../source/index.rst:72
 msgid "`Board settings <board-configuration.markdown>`__"
-msgstr ""
+msgstr "`Настройка Доски <board-configuration.html>`__"
 
 #: ../../source/index.rst:73
 msgid "`Calendar settings <calendar-configuration.markdown>`__"
-msgstr ""
+msgstr "`Настройки календаря <calendar-configuration.html>`__"
 
 #: ../../source/index.rst:74
 msgid "`Link settings <link-labels.markdown>`__"
-msgstr ""
+msgstr "`Настройка ссылок <link-labels.markdown>`__"
 
 #: ../../source/index.rst:75
 msgid "`Currency rate <currency-rate.markdown>`__"
-msgstr ""
+msgstr "`Курс валюты <currency-rate.html>`__"
 
 #: ../../source/index.rst:78
 msgid "Integrations"
@@ -236,23 +239,23 @@ msgstr "Встроенные возможности"
 
 #: ../../source/index.rst:80
 msgid "`iCalendar subscriptions <ical.markdown>`__"
-msgstr ""
+msgstr "`iCalendar подписки <ical.html>`__"
 
 #: ../../source/index.rst:81
 msgid "`RSS/Atom subscriptions <rss.markdown>`__"
-msgstr ""
+msgstr "`RSS/Atom подписки <rss.html>`__"
 
 #: ../../source/index.rst:82
 msgid "`Json-RPC API <api-json-rpc.markdown>`__"
-msgstr ""
+msgstr "`Json-RPC API <api-json-rpc.html>`__"
 
 #: ../../source/index.rst:83
 msgid "`Webhooks <webhooks.markdown>`__"
-msgstr ""
+msgstr "`Webhooks <webhooks.html>`__"
 
 #: ../../source/index.rst:84
 msgid "`Plugins <plugins.markdown>`__"
-msgstr ""
+msgstr "`Плагины <plugins.html>`__"
 
 #: ../../source/index.rst:87
 msgid "More"
@@ -260,23 +263,23 @@ msgstr "Дополнительно"
 
 #: ../../source/index.rst:89
 msgid "`Advanced Search Syntax <search.markdown>`__"
-msgstr ""
+msgstr "`Синтаксис расширенного поиска <search.html>`__"
 
 #: ../../source/index.rst:90
 msgid "`Command line interface <cli.markdown>`__"
-msgstr ""
+msgstr "`Интерфейс командной строки <cli.html>`__"
 
 #: ../../source/index.rst:91
 msgid "`Syntax guide <syntax-guide.markdown>`__"
-msgstr ""
+msgstr "`Руководство по синтаксису <syntax-guide.html>`__"
 
 #: ../../source/index.rst:92
 msgid "`Brute force protection <bruteforce-protection.markdown>`__"
-msgstr ""
+msgstr "`Защита от Brute force <bruteforce-protection.html>`__"
 
 #: ../../source/index.rst:93
 msgid "`Frequently asked questions <faq.markdown>`__"
-msgstr ""
+msgstr "`Часто задаваемые вопросы <faq.html>`__"
 
 #: ../../source/index.rst:96
 msgid "Technical details"
@@ -288,67 +291,68 @@ msgstr "Инсталяция"
 
 #: ../../source/index.rst:101
 msgid "`Requirements <requirements.markdown>`__"
-msgstr ""
+msgstr "`Требования <requirements.html>`__"
 
 #: ../../source/index.rst:102
 msgid "`Installation instructions <installation.markdown>`__"
-msgstr ""
+msgstr "`Инструкция по инсталяции <installation.html>`__"
 
 #: ../../source/index.rst:103
 msgid "`Upgrade Kanboard to a new version <update.markdown>`__"
-msgstr ""
+msgstr "`Обновление Kanboard до новой версии <update.html>`__"
 
 #: ../../source/index.rst:104
 msgid "`Installation on Ubuntu <ubuntu-installation.markdown>`__"
-msgstr ""
+msgstr "`Инсталяция на Ubuntu <ubuntu-installation.html>`__"
 
 #: ../../source/index.rst:105
 msgid "`Installation on Debian <debian-installation.markdown>`__"
-msgstr ""
+msgstr "`Инсталяция на Debian <debian-installation.html>`__"
 
 #: ../../source/index.rst:106
 msgid "`Installation on Centos <centos-installation.markdown>`__"
-msgstr ""
+msgstr "`Инсталяция на Centos <centos-installation.html>`__"
 
 #: ../../source/index.rst:107
 msgid "`Installation on OpenSuse <suse-installation.markdown>`__"
-msgstr ""
+msgstr "`Инсталяция на OpenSuse <suse-installation.html>`__"
 
 #: ../../source/index.rst:108
 msgid "`Installation on FreeBSD <freebsd-installation.markdown>`__"
-msgstr ""
+msgstr "`Инсталяция на FreeBSD <freebsd-installation.html>`__"
 
 #: ../../source/index.rst:109
 msgid ""
 "`Installation on Windows Server with IIS <windows-iis-installation."
 "markdown>`__"
-msgstr ""
+msgstr "`Инсталяция на Windows Server и IIS <windows-iis-installation.html>`__"
 
 #: ../../source/index.rst:111
 msgid ""
 "`Installation on Windows Server with Apache <windows-apache-installation."
 "markdown>`__"
 msgstr ""
+"`Инсталяция на Windows Server и Apache <windows-apache-installation.html>`__"
 
 #: ../../source/index.rst:113
 msgid "`Installation on Heroku <heroku.markdown>`__"
-msgstr ""
+msgstr "`Инсталяция на Heroku <heroku.html>`__"
 
 #: ../../source/index.rst:114
 msgid "`Run Kanboard with Docker <docker.markdown>`__"
-msgstr ""
+msgstr "`Запуск Kanboard под Docker <docker.html>`__"
 
 #: ../../source/index.rst:115
 msgid "`Run Kanboard with Vagrant <vagrant.markdown>`__"
-msgstr ""
+msgstr "`Запуск Kanboard под Vagrant <vagrant.html>`__"
 
 #: ../../source/index.rst:116
 msgid "`Run Kanboard on Cloudron <cloudron.markdown>`__"
-msgstr ""
+msgstr "`Запуск Kanboard на Cloudron <cloudron.html>`__"
 
 #: ../../source/index.rst:117
 msgid "`Run Kanboard on Nitrous <nitrous.markdown>`__"
-msgstr ""
+msgstr "`Запуск Kanboard на Nitrous <nitrous.html>`__"
 
 #: ../../source/index.rst:120
 msgid "Configuration"
@@ -356,27 +360,27 @@ msgstr "Настройка"
 
 #: ../../source/index.rst:122
 msgid "`Daily background job <cronjob.markdown>`__"
-msgstr ""
+msgstr "`Ежедневные фоновые задачи <cronjob.html>`__"
 
 #: ../../source/index.rst:123
 msgid "`Config file <config.markdown>`__"
-msgstr ""
+msgstr "`Конфигурационный файл <config.html>`__"
 
 #: ../../source/index.rst:124
 msgid "`Environment variables <env.markdown>`__"
-msgstr ""
+msgstr "`Переменные окружения <env.html>`__"
 
 #: ../../source/index.rst:125
 msgid "`Email configuration <email-configuration.markdown>`__"
-msgstr ""
+msgstr "`Настройка email <email-configuration.html>`__"
 
 #: ../../source/index.rst:126
 msgid "`URL rewriting <nice-urls.markdown>`__"
-msgstr ""
+msgstr "`Переопределение URL <nice-urls.html>`__"
 
 #: ../../source/index.rst:127
 msgid "`Plugin Directory <plugin-directory.markdown>`__"
-msgstr ""
+msgstr "`Директория плагинов <plugin-directory.html>`__"
 
 #: ../../source/index.rst:130
 msgid "Database"
@@ -384,15 +388,15 @@ msgstr "База данных"
 
 #: ../../source/index.rst:132
 msgid "`Sqlite database management <sqlite-database.markdown>`__"
-msgstr ""
+msgstr "`База данных Sqlite <sqlite-database.html>`__"
 
 #: ../../source/index.rst:133
 msgid "`How to use Mysql <mysql-configuration.markdown>`__"
-msgstr ""
+msgstr "`Как использовать Mysql <mysql-configuration.html>`__"
 
 #: ../../source/index.rst:134
 msgid "`How to use Postgresql <postgresql-configuration.markdown>`__"
-msgstr ""
+msgstr "`Как использовать Postgresql <postgresql-configuration.html>`__"
 
 #: ../../source/index.rst:137
 msgid "Authentication"
@@ -400,28 +404,28 @@ msgstr "Аутентификация"
 
 #: ../../source/index.rst:139
 msgid "`LDAP authentication <ldap-authentication.markdown>`__"
-msgstr ""
+msgstr "`LDAP аутентификация <ldap-authentication.html>`__"
 
 #: ../../source/index.rst:140
 msgid "`LDAP group synchronization <ldap-group-sync.markdown>`__"
-msgstr ""
+msgstr "`Синхронизация групп LDAP <ldap-group-sync.html>`__"
 
 #: ../../source/index.rst:141
 msgid "`LDAP profile picture <ldap-profile-picture.markdown>`__"
-msgstr ""
+msgstr "`Изображения из профиля LDAP <ldap-profile-picture.html>`__"
 
 #: ../../source/index.rst:142
 msgid "`LDAP parameters <ldap-parameters.markdown>`__"
-msgstr ""
+msgstr "`Параметры LDAP <ldap-parameters.html>`__"
 
 #: ../../source/index.rst:143
 msgid "`LDAP configuration examples <ldap-configuration-examples.markdown>`__"
-msgstr ""
+msgstr "`Пример конфигурации LDAP <ldap-configuration-examples.html>`__"
 
 #: ../../source/index.rst:145
 msgid ""
 "`Reverse proxy authentication <reverse-proxy-authentication.markdown>`__"
-msgstr ""
+msgstr "`Аутентификация Reverse proxy <reverse-proxy-authentication.html>`__"
 
 #: ../../source/index.rst:149
 msgid "Contributors"
@@ -429,30 +433,39 @@ msgstr "Участие в проекте"
 
 #: ../../source/index.rst:151
 msgid "`Contributor guide <contributing.markdown>`__"
-msgstr ""
+msgstr "`Руководство для участников проекта <contributing.html>`__"
 
 #: ../../source/index.rst:152
 msgid "`Translations <translations.markdown>`__"
-msgstr ""
+msgstr "`Переводы <translations.html>`__"
 
 #: ../../source/index.rst:153
 msgid "`Coding standards <coding-standards.markdown>`__"
-msgstr ""
+msgstr "`Стандарты при написании кода <coding-standards.html>`__"
 
 #: ../../source/index.rst:154
 msgid "`Running tests <tests.markdown>`__"
-msgstr ""
+msgstr "`Выполнение тестов <tests.html>`__"
 
+# В русском языке термин assets переводится как "активы". Активы - это более экономический термин и в данном контексте перевод "активы" не совсем подходит. Поэтому assets оставил как есть.
 #: ../../source/index.rst:155
 msgid "`Build assets <assets.markdown>`__"
-msgstr ""
+msgstr "`Создание assets <assets.html>`__"
 
 #: ../../source/index.rst:157
-#, fuzzy
 msgid ""
 "The documentation is written in `Markdown <http://en.wikipedia.org/wiki/"
 "Markdown>`__. If you want to improve the documentation, just send a pull-"
 "request."
 msgstr ""
-"Документация написана в Markdown. Если вы желаете улучшить документацию - "
-"пошлите pull-request."
+"`Оригинальная документация <https://github.com/fguillot/kanboard/tree/master/"
+"doc>`__ написана в `Markdown <https://ru.wikipedia.org/wiki/Markdown>`__. "
+"Если вы желаете улучшить документацию - пошлите pull-request. \n"
+"* `Русская документация <https://github.com/hairetdin/kanboard-doc-ru>`__ "
+"написана в `Sphinx-doc <https://ru.wikipedia.org/wiki/Sphinx_"
+"%28%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80_%D0%B4%D0%BE%D0%BA"
+"%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%29>`__. Вы можете "
+"принять участие в переводе документации на русский язык. Переводите "
+"`<https://github.com/hairetdin/kanboard-doc-ru/tree/master/source/locale/ru/"
+"LC_MESSAGES>`__ .po файлы и присылайте pull request. Редакторы .po файлов - "
+"gtranslator, poedit"
