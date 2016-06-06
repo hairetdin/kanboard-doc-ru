@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: 2016-06-06 14:32+0500\n"
+"PO-Revision-Date: 2016-06-06 14:37+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "Описание"
 
 #: ../../source/project-types.rst:9
 msgid "Team Project"
-msgstr "Коммандный проект"
+msgstr "Командный проект"
 
 #: ../../source/project-types.rst:9
 msgid "Project with user and group management"
@@ -57,8 +57,8 @@ msgstr ""
 #: ../../source/project-types.rst:14
 msgid "Only Administrators and Application Managers can create team projects."
 msgstr ""
-"Коммандный проект могут создавать только пользователи с ролью Администратор "
-"и Менеджер."
+"Командный проект могут создавать только пользователи с ролью Администратор и "
+"Менеджер."
 
 #: ../../source/project-types.rst:16
 msgid "Private projects can be created by anyone."
