@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: 2016-06-06 11:24+0500\n"
+"PO-Revision-Date: 2016-06-06 11:37+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../source/board-collapsed-expanded.rst:2
 msgid "Collapsed and Expanded mode"
-msgstr "Компактный и расширенный вид"
+msgstr "Компактное и развернутое отображение задач"
 
 #: ../../source/board-collapsed-expanded.rst:4
 msgid ""
@@ -30,10 +30,10 @@ msgid ""
 "Switching from one view to another can be done with the keyboard shortcut **"
 "\"s\"** or by using the drop-down menu on the left."
 msgstr ""
-"Задачи на Доске могут быть отображены в компактном или расширенном виде. "
-"Переключение между компактным и расширенным видом может быть выполнено с "
+"Задачи на Доске могут быть отображены в компактном или развернутом виде. "
+"Переключение между компактным и развернутым видом может быть выполнено с "
 "помощью горячей клавиши **\"s\"** или в раскрывающемся Меню (слева вверху) -"
-"> Компактный вид или Широкий вид."
+"> Развернуть задачи или Свернуть задачи."
 
 #: ../../source/board-collapsed-expanded.rst:9
 msgid "Collapsed mode"
@@ -41,7 +41,7 @@ msgstr "Компактный вид"
 
 #: ../../source/board-collapsed-expanded.rst:14
 msgid "Tasks collapsed"
-msgstr "Задачи представлены в компактном виде"
+msgstr "Рисунок. Задачи представлены в компактном виде"
 
 #: ../../source/board-collapsed-expanded.rst:16
 msgid ""
@@ -61,8 +61,8 @@ msgstr ""
 
 #: ../../source/board-collapsed-expanded.rst:22
 msgid "Expanded mode"
-msgstr "Расширенный вид"
+msgstr "Развернутый вид"
 
 #: ../../source/board-collapsed-expanded.rst:27
 msgid "Tasks expanded"
-msgstr "Так выглядит расширенный вид"
+msgstr "Рисунок. Развернутый вид"
