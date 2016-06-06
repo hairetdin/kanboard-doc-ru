@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Automatic Actions &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Автоматизация процессов &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,77 +41,107 @@
           <div class="body" role="main">
             
   <div class="section" id="automatic-actions">
-<h1>Automatic Actions<a class="headerlink" href="#automatic-actions" title="Ссылка на этот заголовок">¶</a></h1>
-<p>To minimize the user interaction, Kanboard support automated actions.</p>
-<p>Each automatic action is defined like that:</p>
+<h1>Автоматизация процессов<a class="headerlink" href="#automatic-actions" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Для минимизации пользовательских действий, Kanboard поддерживает автоматизацию процессов.</p>
+<p>Каждый автоматизированный процесс представляет следующее:</p>
 <ul class="simple">
-<li>An event to listen</li>
-<li>Action linked to this event</li>
-<li>Eventually there is some parameters to define</li>
+<li><p class="first">Ожидание наступления события</p>
+</li>
+<li><p class="first">Выполняется действие при наступлении этого события</p>
+</li>
+<li><p class="first">В результате устанавливается определенный параметр</p>
+</li>
 </ul>
-<p>Each project has a different set of automatic actions, the configuration
-panel is located on the project listing page, just click on the link
-<strong>Automatic actions</strong>.</p>
+<p>Каждый проект может иметь свой набор автоматических процессов. Автоматические процессы доступны в панеле настроек (<strong>Меню</strong> -&gt; <strong>Настройки</strong>) <strong>Автоматические действия</strong>.</p>
 <div class="section" id="add-a-new-action">
-<h2>Add a new action<a class="headerlink" href="#add-a-new-action" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Click on the link <strong>Add a new automatic action</strong>.</p>
+<h2>Добавление нового действия<a class="headerlink" href="#add-a-new-action" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Нажмите на ссылку <strong>Добавить новое действие</strong>.</p>
 <div class="figure" id="id1">
 <img alt="Automatique action" src="_images/automatic-action-creation.png" />
-<p class="caption"><span class="caption-text">Automatique action</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Автоматическое действие.</span></p>
 </div>
 <ul class="simple">
-<li>Choose an action</li>
-<li>Then, select an event</li>
-<li>And finally, define the parameters</li>
+<li><p class="first">Выберете действие</p>
+</li>
+<li><p class="first">Затем, выберете событие</p>
+</li>
+<li><p class="first">И в завершении, задайте параметр</p>
+</li>
 </ul>
 </div>
 <div class="section" id="list-of-available-actions">
-<h2>List of available actions<a class="headerlink" href="#list-of-available-actions" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Список доступных действий<a class="headerlink" href="#list-of-available-actions" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Create a comment from an external provider</li>
-<li>Add a comment log when moving the task between columns</li>
-<li>Assign automatically a category based on a color</li>
-<li>Change the category based on an external label</li>
-<li>Assign automatically a category based on a link</li>
-<li>Assign automatically a color based on a category</li>
-<li>Assign a color when the task is moved to a specific column</li>
-<li>Change task color when using a specific task link</li>
-<li>Assign a color to a specific user</li>
-<li>Assign the task to the person who does the action</li>
-<li>Assign the task to the person who does the action when the column is
-changed</li>
-<li>Assign the task to a specific user</li>
-<li>Change the assignee based on an external username</li>
-<li>Close the task</li>
-<li>Close a task in a specific column</li>
-<li>Create a task from an external provider</li>
-<li>Duplicate the task to another project</li>
-<li>Send a task by email to someone</li>
-<li>Move the task to another project</li>
-<li>Move the task to another column when assigned to a user</li>
-<li>Move the task to another column when the category is changed</li>
-<li>Move the task to another column when assignee is cleared</li>
-<li>Open a task</li>
-<li>Automatically update the start date</li>
+<li><p class="first">Создать комментарий из внешнего источника</p>
+</li>
+<li><p class="first">Добавлять запись при перемещении задачи между колонками</p>
+</li>
+<li><p class="first">Автоматически назначать категорию по цвету</p>
+</li>
+<li><p class="first">Изменить категорию основываясь на внешнем ярлыке</p>
+</li>
+<li><p class="first">Автоматически назначать категории на основе ссылки</p>
+</li>
+<li><p class="first">Автоматически назначать цвет по категории</p>
+</li>
+<li><p class="first">Назначить цвет, когда задача перемещается в определенную колонку</p>
+</li>
+<li><p class="first">Изменение цвета задач при использовании ссылки на определенные задачи</p>
+</li>
+<li><p class="first">Назначить определенный цвет пользователю</p>
+</li>
+<li><p class="first">Назначить задачу тому кто выполнит действие</p>
+</li>
+<li><p class="first">Назначить задачу пользователю, который произвел изменение в колонке</p>
+</li>
+<li><p class="first">Назначить задачу определенному пользователю</p>
+</li>
+<li><p class="first">Изменить назначенного основываясь на внешнем имени пользователя</p>
+</li>
+<li><p class="first">Закрыть задачу</p>
+</li>
+<li><p class="first">Закрыть задачу в выбранной колонке</p>
+</li>
+<li><p class="first">Создать задачу из внешнего источника</p>
+</li>
+<li><p class="first">Создать дубликат задачи в другом проекте</p>
+</li>
+<li><p class="first">Отправить задачу по email</p>
+</li>
+<li><p class="first">Переместить задачу в другой проект</p>
+</li>
+<li><p class="first">Переместить задачу в другую колонку, когда она назначена пользователю</p>
+</li>
+<li><p class="first">Переносить задачи в другую колонку при изменении категории</p>
+</li>
+<li><p class="first">Переместить задачу в другую колонку, когда назначение снято</p>
+</li>
+<li><p class="first">Открыть задачу</p>
+</li>
+<li><p class="first">Автоматическое обновление даты начала</p>
+</li>
 </ul>
 </div>
 <div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Here are some examples used in real life:</p>
+<h2>Примеры<a class="headerlink" href="#examples" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Здесь предствалены примеры использованные в реальной жизни:</p>
 <div class="section" id="when-i-move-a-task-to-the-column-done-automatically-close-this-task">
-<h3>When I move a task to the column &#8220;Done&#8221;, automatically close this task<a class="headerlink" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Когда я перемещаю задачу в колонку &#8220;Выполнено&#8221;, автоматически закрывать эту задачу<a class="headerlink" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Choose action: <strong>Close a task in a specific column</strong></li>
-<li>Choose the event: <strong>Move a task to another column</strong></li>
-<li>Define action parameter: <strong>Column = Done</strong> (this is the destination
-column)</li>
+<li><p class="first">Выбирите действия: <strong>Закрыть задачу в выбранной колонке</strong></p>
+</li>
+<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
+<li><p class="first">Установите парамер действия: <strong>Колонка = Выполнено</strong> (это колонка в которую будет перемещена задача)</p>
+</li>
 </ul>
 </div>
 <div class="section" id="when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user">
 <h3>When I move a task to the column &#8220;To be validated&#8221;, assign this task to a specific user<a class="headerlink" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
 <li>Choose the action: <strong>Assign the task to a specific user</strong></li>
-<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
 <li>Define the action parameters: <strong>Column = To be validated</strong> and <strong>User
 = Bob</strong> (Bob is our tester)</li>
 </ul>
@@ -121,7 +151,8 @@ column)</li>
 <ul class="simple">
 <li>Choose action: <strong>Assign the task to the person who does the action
 when the column is changed</strong></li>
-<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
 <li>Define action parameter: <strong>Column = Work in progress</strong></li>
 </ul>
 </div>
@@ -142,7 +173,8 @@ Production</strong></li>
 is validated, swap it to the &#8220;Development&#8221; project.</p>
 <ul class="simple">
 <li>Choose action: <strong>Move the task to another project</strong></li>
-<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
 <li>Define action parameters: <strong>Column = Validated</strong> and <strong>Project =
 Development</strong></li>
 </ul>
@@ -168,7 +200,8 @@ Request</strong></li>
 <h3>I want to set the start date automatically when the task is moved to the column &#8220;Work in progress&#8221;<a class="headerlink" href="#i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
 <li>Choose action: <strong>Automatically update the start date</strong></li>
-<li>Choose the event: <strong>Move a task to another column</strong></li>
+<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
 <li>Define action parameters: <strong>Column = Work in progress</strong></li>
 </ul>
 </div>
@@ -183,11 +216,11 @@ Request</strong></li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Automatic Actions</a><ul>
-<li><a class="reference internal" href="#add-a-new-action">Add a new action</a></li>
-<li><a class="reference internal" href="#list-of-available-actions">List of available actions</a></li>
-<li><a class="reference internal" href="#examples">Examples</a><ul>
-<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task">When I move a task to the column &#8220;Done&#8221;, automatically close this task</a></li>
+<li><a class="reference internal" href="#">Автоматизация процессов</a><ul>
+<li><a class="reference internal" href="#add-a-new-action">Добавление нового действия</a></li>
+<li><a class="reference internal" href="#list-of-available-actions">Список доступных действий</a></li>
+<li><a class="reference internal" href="#examples">Примеры</a><ul>
+<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task">Когда я перемещаю задачу в колонку &#8220;Выполнено&#8221;, автоматически закрывать эту задачу</a></li>
 <li><a class="reference internal" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user">When I move a task to the column &#8220;To be validated&#8221;, assign this task to a specific user</a></li>
 <li><a class="reference internal" href="#when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user">When I move a task to the column &#8220;Work in progress&#8221;, assign this task to the current user</a></li>
 <li><a class="reference internal" href="#when-a-task-is-completed-duplicate-this-task-to-another-project">When a task is completed, duplicate this task to another project</a></li>

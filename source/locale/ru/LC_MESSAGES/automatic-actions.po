@@ -3,44 +3,48 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-06 17:07+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/automatic-actions.rst:2
 msgid "Automatic Actions"
-msgstr ""
+msgstr "Автоматизация процессов"
 
 #: ../../source/automatic-actions.rst:4
 msgid "To minimize the user interaction, Kanboard support automated actions."
 msgstr ""
+"Для минимизации пользовательских действий, Kanboard поддерживает "
+"автоматизацию процессов."
 
 #: ../../source/automatic-actions.rst:6
 msgid "Each automatic action is defined like that:"
-msgstr ""
+msgstr "Каждый автоматизированный процесс представляет следующее:"
 
 #: ../../source/automatic-actions.rst:8
 msgid "An event to listen"
-msgstr ""
+msgstr "Ожидание наступления события"
 
 #: ../../source/automatic-actions.rst:9
 msgid "Action linked to this event"
-msgstr ""
+msgstr "Выполняется действие при наступлении этого события"
 
 #: ../../source/automatic-actions.rst:10
 msgid "Eventually there is some parameters to define"
-msgstr ""
+msgstr "В результате устанавливается определенный параметр"
 
 #: ../../source/automatic-actions.rst:12
 msgid ""
@@ -48,165 +52,172 @@ msgid ""
 "panel is located on the project listing page, just click on the link "
 "**Automatic actions**."
 msgstr ""
+"Каждый проект может иметь свой набор автоматических процессов. "
+"Автоматические процессы доступны в панеле настроек (**Меню** -> "
+"**Настройки**) **Автоматические действия**."
 
 #: ../../source/automatic-actions.rst:17
 msgid "Add a new action"
-msgstr ""
+msgstr "Добавление нового действия"
 
 #: ../../source/automatic-actions.rst:19
 msgid "Click on the link **Add a new automatic action**."
-msgstr ""
+msgstr "Нажмите на ссылку **Добавить новое действие**."
 
 #: ../../source/automatic-actions.rst:24
 msgid "Automatique action"
-msgstr ""
+msgstr "Рисунок. Автоматическое действие."
 
 #: ../../source/automatic-actions.rst:26
 msgid "Choose an action"
-msgstr ""
+msgstr "Выберете действие"
 
 #: ../../source/automatic-actions.rst:27
 msgid "Then, select an event"
-msgstr ""
+msgstr "Затем, выберете событие"
 
 #: ../../source/automatic-actions.rst:28
 msgid "And finally, define the parameters"
-msgstr ""
+msgstr "И в завершении, задайте параметр"
 
 #: ../../source/automatic-actions.rst:31
 msgid "List of available actions"
-msgstr ""
+msgstr "Список доступных действий"
 
 #: ../../source/automatic-actions.rst:33
 msgid "Create a comment from an external provider"
-msgstr ""
+msgstr "Создать комментарий из внешнего источника"
 
 #: ../../source/automatic-actions.rst:34
 msgid "Add a comment log when moving the task between columns"
-msgstr ""
+msgstr "Добавлять запись при перемещении задачи между колонками"
 
 #: ../../source/automatic-actions.rst:35
 msgid "Assign automatically a category based on a color"
-msgstr ""
+msgstr "Автоматически назначать категорию по цвету"
 
 #: ../../source/automatic-actions.rst:36
 msgid "Change the category based on an external label"
-msgstr ""
+msgstr "Изменить категорию основываясь на внешнем ярлыке"
 
 #: ../../source/automatic-actions.rst:37
 msgid "Assign automatically a category based on a link"
-msgstr ""
+msgstr "Автоматически назначать категории на основе ссылки"
 
 #: ../../source/automatic-actions.rst:38
 msgid "Assign automatically a color based on a category"
-msgstr ""
+msgstr "Автоматически назначать цвет по категории"
 
 #: ../../source/automatic-actions.rst:39
 msgid "Assign a color when the task is moved to a specific column"
-msgstr ""
+msgstr "Назначить цвет, когда задача перемещается в определенную колонку"
 
 #: ../../source/automatic-actions.rst:40
 msgid "Change task color when using a specific task link"
-msgstr ""
+msgstr "Изменение цвета задач при использовании ссылки на определенные задачи"
 
 #: ../../source/automatic-actions.rst:41
 msgid "Assign a color to a specific user"
-msgstr ""
+msgstr "Назначить определенный цвет пользователю"
 
 #: ../../source/automatic-actions.rst:42
 msgid "Assign the task to the person who does the action"
-msgstr ""
+msgstr "Назначить задачу тому кто выполнит действие"
 
 #: ../../source/automatic-actions.rst:43
 msgid ""
-"Assign the task to the person who does the action when the column is "
-"changed"
-msgstr ""
+"Assign the task to the person who does the action when the column is changed"
+msgstr "Назначить задачу пользователю, который произвел изменение в колонке"
 
 #: ../../source/automatic-actions.rst:45
 msgid "Assign the task to a specific user"
-msgstr ""
+msgstr "Назначить задачу определенному пользователю"
 
 #: ../../source/automatic-actions.rst:46
 msgid "Change the assignee based on an external username"
-msgstr ""
+msgstr "Изменить назначенного основываясь на внешнем имени пользователя"
 
 #: ../../source/automatic-actions.rst:47
 msgid "Close the task"
-msgstr ""
+msgstr "Закрыть задачу"
 
 #: ../../source/automatic-actions.rst:48
 msgid "Close a task in a specific column"
-msgstr ""
+msgstr "Закрыть задачу в выбранной колонке"
 
 #: ../../source/automatic-actions.rst:49
 msgid "Create a task from an external provider"
-msgstr ""
+msgstr "Создать задачу из внешнего источника"
 
 #: ../../source/automatic-actions.rst:50
 msgid "Duplicate the task to another project"
-msgstr ""
+msgstr "Создать дубликат задачи в другом проекте"
 
 #: ../../source/automatic-actions.rst:51
 msgid "Send a task by email to someone"
-msgstr ""
+msgstr "Отправить задачу по email"
 
 #: ../../source/automatic-actions.rst:52
 msgid "Move the task to another project"
-msgstr ""
+msgstr "Переместить задачу в другой проект"
 
 #: ../../source/automatic-actions.rst:53
 msgid "Move the task to another column when assigned to a user"
-msgstr ""
+msgstr "Переместить задачу в другую колонку, когда она назначена пользователю"
 
 #: ../../source/automatic-actions.rst:54
 msgid "Move the task to another column when the category is changed"
-msgstr ""
+msgstr "Переносить задачи в другую колонку при изменении категории"
 
 #: ../../source/automatic-actions.rst:55
 msgid "Move the task to another column when assignee is cleared"
-msgstr ""
+msgstr "Переместить задачу в другую колонку, когда назначение снято"
 
 #: ../../source/automatic-actions.rst:56
 msgid "Open a task"
-msgstr ""
+msgstr "Открыть задачу"
 
 #: ../../source/automatic-actions.rst:57
 msgid "Automatically update the start date"
-msgstr ""
+msgstr "Автоматическое обновление даты начала"
 
 #: ../../source/automatic-actions.rst:60
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../source/automatic-actions.rst:62
 msgid "Here are some examples used in real life:"
-msgstr ""
+msgstr "Здесь предствалены примеры использованные в реальной жизни:"
 
 #: ../../source/automatic-actions.rst:65
-msgid "When I move a task to the column \"Done\", automatically close this task"
+msgid ""
+"When I move a task to the column \"Done\", automatically close this task"
 msgstr ""
+"Когда я перемещаю задачу в колонку \"Выполнено\", автоматически закрывать "
+"эту задачу"
 
 #: ../../source/automatic-actions.rst:67
 msgid "Choose action: **Close a task in a specific column**"
-msgstr ""
+msgstr "Выбирите действия: **Закрыть задачу в выбранной колонке**"
 
 #: ../../source/automatic-actions.rst:68 ../../source/automatic-actions.rst:76
-#: ../../source/automatic-actions.rst:85 ../../source/automatic-actions.rst:106
+#: ../../source/automatic-actions.rst:85
+#: ../../source/automatic-actions.rst:106
 #: ../../source/automatic-actions.rst:129
 msgid "Choose the event: **Move a task to another column**"
-msgstr ""
+msgstr "Выбирите событие: **Переместить задачу в другую колонку**"
 
 #: ../../source/automatic-actions.rst:69
 msgid ""
-"Define action parameter: **Column = Done** (this is the destination "
-"column)"
+"Define action parameter: **Column = Done** (this is the destination column)"
 msgstr ""
+"Установите парамер действия: **Колонка = Выполнено** (это колонка в которую "
+"будет перемещена задача)"
 
 #: ../../source/automatic-actions.rst:73
 msgid ""
-"When I move a task to the column \"To be validated\", assign this task to"
-" a specific user"
+"When I move a task to the column \"To be validated\", assign this task to a "
+"specific user"
 msgstr ""
 
 #: ../../source/automatic-actions.rst:75
@@ -221,14 +232,14 @@ msgstr ""
 
 #: ../../source/automatic-actions.rst:81
 msgid ""
-"When I move a task to the column \"Work in progress\", assign this task "
-"to the current user"
+"When I move a task to the column \"Work in progress\", assign this task to "
+"the current user"
 msgstr ""
 
 #: ../../source/automatic-actions.rst:83
 msgid ""
-"Choose action: **Assign the task to the person who does the action when "
-"the column is changed**"
+"Choose action: **Assign the task to the person who does the action when the "
+"column is changed**"
 msgstr ""
 
 #: ../../source/automatic-actions.rst:86
@@ -241,8 +252,8 @@ msgstr ""
 
 #: ../../source/automatic-actions.rst:91
 msgid ""
-"Let's say we have two projects \"Customer orders\" and \"Production\", "
-"once the order is validated, swap it to the \"Production\" project."
+"Let's say we have two projects \"Customer orders\" and \"Production\", once "
+"the order is validated, swap it to the \"Production\" project."
 msgstr ""
 
 #: ../../source/automatic-actions.rst:94
@@ -255,20 +266,19 @@ msgstr ""
 
 #: ../../source/automatic-actions.rst:96
 msgid ""
-"Define action parameters: **Column = Validated** and **Project = "
-"Production**"
+"Define action parameters: **Column = Validated** and **Project = Production**"
 msgstr ""
 
 #: ../../source/automatic-actions.rst:100
 msgid ""
-"When a task is moved to the last column, move the exact same task to "
-"another project"
+"When a task is moved to the last column, move the exact same task to another "
+"project"
 msgstr ""
 
 #: ../../source/automatic-actions.rst:102
 msgid ""
-"Let's say we have two projects \"Ideas\" and \"Development\", once the "
-"idea is validated, swap it to the \"Development\" project."
+"Let's say we have two projects \"Ideas\" and \"Development\", once the idea "
+"is validated, swap it to the \"Development\" project."
 msgstr ""
 
 #: ../../source/automatic-actions.rst:105
@@ -313,8 +323,7 @@ msgstr ""
 
 #: ../../source/automatic-actions.rst:122
 msgid ""
-"Define action parameters: **Color = Blue** and **Category = Feature "
-"Request**"
+"Define action parameters: **Color = Blue** and **Category = Feature Request**"
 msgstr ""
 
 #: ../../source/automatic-actions.rst:126
@@ -330,15 +339,3 @@ msgstr ""
 #: ../../source/automatic-actions.rst:130
 msgid "Define action parameters: **Column = Work in progress**"
 msgstr ""
-
-#~ msgid ""
-#~ "Each project has a different set "
-#~ "of automatic actions, the configuration "
-#~ "panel is located on the project "
-#~ "listing page, just click on the "
-#~ "link Automatic actions."
-#~ msgstr ""
-
-#~ msgid "Click on the link Add a new automatic action."
-#~ msgstr ""
-
