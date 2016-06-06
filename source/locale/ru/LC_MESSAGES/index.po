@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 12:28+0500\n"
-"PO-Revision-Date: 2016-06-02 15:25+0500\n"
+"PO-Revision-Date: 2016-06-06 11:17+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -54,8 +54,7 @@ msgstr "`Доска, Календарь, Список и Гант предста
 
 #: ../../source/index.rst:19
 msgid "`Collapsed and expanded mode <board-collapsed-expanded.markdown>`__"
-msgstr ""
-"`Краткое или раширенное представление <board-collapsed-expanded.html>`__"
+msgstr "`Компактный или раширенный вид <board-collapsed-expanded.html>`__"
 
 #: ../../source/index.rst:20
 msgid ""
