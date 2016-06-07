@@ -3,105 +3,126 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-07 16:40+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/creating-tasks.rst:2
 msgid "Creating Tasks"
-msgstr ""
+msgstr "Создание задач"
 
 #: ../../source/creating-tasks.rst:4
 msgid "From the board, click on the plus sign next to the column name:"
-msgstr ""
+msgstr "На Доске нажмите значок плюс рядом с названием колонки:"
 
 #: ../../source/creating-tasks.rst:9
 msgid "Task creation from the board"
-msgstr ""
+msgstr "Рисунок. Создание задачи на Доске"
 
 #: ../../source/creating-tasks.rst:10
 msgid "Then the task creation form appears:"
-msgstr ""
+msgstr "Далее появится форма создания задачи:"
 
 #: ../../source/creating-tasks.rst:15
 msgid "Task creation form"
-msgstr ""
+msgstr "Рисунок. Форма создания задачи."
 
 #: ../../source/creating-tasks.rst:16
 msgid "The only mandatory field is the title."
-msgstr ""
+msgstr "Только поле **Название** является обязательным полем для заполнения."
 
 #: ../../source/creating-tasks.rst:18
 msgid "Field description:"
-msgstr ""
+msgstr "Описание полей:"
 
 #: ../../source/creating-tasks.rst:20
-msgid "**Title**: The title of your task, which will be displayed on the board."
+msgid ""
+"**Title**: The title of your task, which will be displayed on the board."
 msgstr ""
+"**Название**: Название вашей задачи, которое будет отображаться на доске."
 
 #: ../../source/creating-tasks.rst:22
 msgid ""
 "**Description**: Allow you to add more information about the task, the "
-"content can be written in `Markdown <https://kanboard.net/documentation"
-"/syntax-guide>`__."
+"content can be written in `Markdown <https://kanboard.net/documentation/"
+"syntax-guide>`__."
 msgstr ""
+"**Описание**: Позволяет вам добавить больше информации о задаче, содержимое "
+"может содержать синтаксис `Markdown <syntax-guide.html>`__."
 
 #: ../../source/creating-tasks.rst:25
 msgid ""
-"**Create another task**: Check this box if you want to create a similar "
-"task (some fields will be pre-filled)."
+"**Create another task**: Check this box if you want to create a similar task "
+"(some fields will be pre-filled)."
 msgstr ""
+"**Создать другую задачу**: Отметьте этот чекбокс если вы хотите создать "
+"похожую задачу (некоторые поля будут заполнены)."
 
 #: ../../source/creating-tasks.rst:27
 msgid "**Assignee**: The person that will work on the task."
 msgstr ""
+"**Назначена**: Пользователь, которому будет назначена для выполнения эта "
+"задача."
 
 #: ../../source/creating-tasks.rst:28
 msgid "**Category**: Only one category can be assigned to a task."
-msgstr ""
+msgstr "**Категория**: Только одна категория может быть назначена задаче."
 
 #: ../../source/creating-tasks.rst:29
 msgid ""
 "**Column**: The column where the task will be created, your task will be "
 "positioned at the bottom."
 msgstr ""
+"**Колонка**: Колонка в которой задача будет создана, ваша задача будет "
+"помещена вниз."
 
 #: ../../source/creating-tasks.rst:31
 msgid "**Color**: Choose the color of the card."
-msgstr ""
+msgstr "**Цвет**: Выберите цвет для карточки."
 
 #: ../../source/creating-tasks.rst:32
 msgid ""
-"**Complexity**: Used in agile project management (Scrum), the complexity "
-"or story points is a number that tells the team how hard the story is. "
-"Often, people use the Fibonacci series."
+"**Complexity**: Used in agile project management (Scrum), the complexity or "
+"story points is a number that tells the team how hard the story is. Often, "
+"people use the Fibonacci series."
 msgstr ""
+"**Сложность**: используется в быстрых управлениях проектами (Scrum); "
+"сложность - это число, которое говорит команде проекта насколько тяжело "
+"выполнить задачу. Обычно пользователи используют шкалу Фибоначи. "
 
 #: ../../source/creating-tasks.rst:35
 msgid "**Original Estimate**: Estimation in hours to complete the tasks."
 msgstr ""
+"**Запланировано часов**: Планирование времени, которое будет затрачено на "
+"выполнение задачи. Измеряется в часах."
 
 #: ../../source/creating-tasks.rst:36
 msgid ""
-"**Due Date**: Overdue tasks will have a red due date and upcoming due "
-"dates will be black on the board. Several date format are accepted in "
-"addition to the date picker."
+"**Due Date**: Overdue tasks will have a red due date and upcoming due dates "
+"will be black on the board. Several date format are accepted in addition to "
+"the date picker."
 msgstr ""
+"**Сделать до**: Просроченные задачи будут иметь дату завершения красного "
+"цвета, а предстоящие задачи будут иметь дату завершения черного цвета. "
 
+# Notes:
+# Говорится про ссылку на предварительный просмотр, но я такую ссылку при создании задачи не увидел, поэтому переводить этот абзат не буду
+# (Edit)
 #: ../../source/creating-tasks.rst:40
 msgid ""
-"With the preview link, you can see the task description converted from "
-"the Markdown syntax."
-msgstr ""
-
+"With the preview link, you can see the task description converted from the "
+"Markdown syntax."
+msgstr "**-**"
