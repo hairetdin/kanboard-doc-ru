@@ -3,160 +3,184 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-07 12:25+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/analytics.rst:2
 msgid "Analytics"
-msgstr ""
+msgstr "Аналитика"
 
 #: ../../source/analytics.rst:4
 msgid ""
 "Each project have an analytics section. Depending on how you are using "
 "Kanboard, you can see those reports:"
 msgstr ""
+"Каждый проект имеет анлитический раздел. В зависимости от того как вы "
+"используете Канборд, вы можете видеть подобные отчеты:"
 
+# Я считаю, что здесь более уместно использовать не дословный перевод, а смысловой - "загрузка", но оставляю "перераспределение" для того, чтобы не путать пользователя (в программе переведено - "перераспределение")
 #: ../../source/analytics.rst:8 ../../source/analytics.rst:13
 msgid "User repartition"
-msgstr ""
+msgstr "Перераспределение(загрузка) пользователей"
 
 #: ../../source/analytics.rst:14
 msgid "This pie chart show the number of open tasks assigned per user."
 msgstr ""
+"Круговая диаграмма, представленная выше, показыает количество открытых задач "
+"назначенных определенным пользователям."
 
 #: ../../source/analytics.rst:17 ../../source/analytics.rst:22
 msgid "Task distribution"
-msgstr ""
+msgstr "Распределение задач"
 
 #: ../../source/analytics.rst:23
-msgid "This pie chart gives an overview of the number of open tasks per column."
+msgid ""
+"This pie chart gives an overview of the number of open tasks per column."
 msgstr ""
+"На рисунке выше, представлена круговая диаграмма, которая показывает "
+"количество открытых задач в определенных колонках."
 
 #: ../../source/analytics.rst:26 ../../source/analytics.rst:31
 msgid "Cumulative flow diagram"
-msgstr ""
+msgstr "Накопительная диаграмма"
 
 #: ../../source/analytics.rst:33
 msgid ""
-"This chart shows the number of tasks cumulatively for each column over "
-"the time."
+"This chart shows the number of tasks cumulatively for each column over the "
+"time."
 msgstr ""
+"Эта диаграмма отображает количество задач выполненных в каждой колонке в "
+"определенный промежуток времени."
 
 #: ../../source/analytics.rst:35
 msgid "Every day, the total number of tasks is recorded for each column."
-msgstr ""
+msgstr "Счетчик задач записывается для каждой колонки каждый день."
 
 #: ../../source/analytics.rst:36
 msgid ""
 "If you would like to exclude closed tasks, change the `global project "
 "settings <project-configuration.markdown>`__."
 msgstr ""
+"Если вы хотите исключить закрытые задачи, измените `глобальные настройки "
+"проекта <project-configuration.html>`__."
 
 #: ../../source/analytics.rst:39
 msgid "Note: You need to have at least two days of data to see the graph."
 msgstr ""
+"Заметка: Для того чтобы увидеть этот график, вам нужно иметь, как минимум, "
+"данные за два дня."
 
 #: ../../source/analytics.rst:42
 msgid "Burn down chart"
-msgstr ""
+msgstr "Диаграмма сгорания"
 
 #: ../../source/analytics.rst:47
 msgid "Burndown chart"
-msgstr ""
+msgstr "Рисунок. Диаграмма сгорания"
 
 #: ../../source/analytics.rst:48
 msgid ""
-"The `burn down chart <http://en.wikipedia.org/wiki/Burn_down_chart>`__ is"
-" available for each project."
+"The `burn down chart <http://en.wikipedia.org/wiki/Burn_down_chart>`__ is "
+"available for each project."
 msgstr ""
+"`Диаграмма сгорания <https://ru.wikipedia.org/wiki/"
+"%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0_%D1%81%D0%B3%D0%BE"
+"%D1%80%D0%B0%D0%BD%D0%B8%D1%8F_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87>`__ доступна "
+"для каждого проекта."
 
 #: ../../source/analytics.rst:51
-msgid "This chart is a graphical representation of work left to do versus time."
-msgstr ""
+msgid ""
+"This chart is a graphical representation of work left to do versus time."
+msgstr "Эта диаграмма отображает время затраченное на выполнение работы."
 
 #: ../../source/analytics.rst:53
 msgid "Kanboard use the complexity or story point to generate this diagram."
-msgstr ""
+msgstr "Канборд использует историю задач для генерации этой диаграммы."
 
 #: ../../source/analytics.rst:54
 msgid "Everyday, the sum of the story points for each column is calculated."
-msgstr ""
+msgstr "Сумма историй задач для каждой колонки пересчитывается каждый день."
 
 #: ../../source/analytics.rst:57 ../../source/analytics.rst:62
 #: ../../source/analytics.rst:75
 msgid "Average time spent into each column"
-msgstr ""
+msgstr "Среднее время затраченное в каждой колонке"
 
 #: ../../source/analytics.rst:63
 msgid ""
-"This chart shows the average time spent into each column for the last "
-"1000 tasks."
+"This chart shows the average time spent into each column for the last 1000 "
+"tasks."
 msgstr ""
+"Этот график показывает среднее время затраченное в каждой колонке для "
+"последних 1000 задач."
 
 #: ../../source/analytics.rst:66
 msgid "Kanboard uses the task transitions to calculate the data."
-msgstr ""
+msgstr "Канборд использует для подсчета данных переходы задач между колонками."
 
 #: ../../source/analytics.rst:67
 msgid "The time spent is calculated until the task is closed."
-msgstr ""
+msgstr "Затраченное время подсчитывается до закрытия задачи."
 
 #: ../../source/analytics.rst:70
 msgid "Average Lead and Cycle time"
-msgstr ""
+msgstr "Среднее время выполнения и время цикла"
 
 #: ../../source/analytics.rst:76
 msgid ""
-"This chart show the average lead and cycle time for the last 1000 tasks "
-"over time."
+"This chart show the average lead and cycle time for the last 1000 tasks over "
+"time."
 msgstr ""
+"Эта диаграмма показывает Среднее время выполнения и цикла для последних 1000 "
+"задач."
 
 #: ../../source/analytics.rst:79
 msgid ""
 "The lead time is the time between the task creation and the date of "
 "completion."
-msgstr ""
+msgstr "Время выполнения - время между созданием задачи и датой завершения."
 
 #: ../../source/analytics.rst:81
 msgid ""
-"The cycle time is time between the specified start date of the task to "
-"the completion date."
+"The cycle time is time between the specified start date of the task to the "
+"completion date."
 msgstr ""
+"Время цикла - время между указанной датой начала выполнения задачи и датой "
+"завершения."
 
 #: ../../source/analytics.rst:83
 msgid ""
-"If the task is not closed, the current time is used instead of the date "
-"of completion."
+"If the task is not closed, the current time is used instead of the date of "
+"completion."
 msgstr ""
+"Если задача не закрыта, текущая дата будет использована вместо даты "
+"завершения."
 
 #: ../../source/analytics.rst:86
-msgid "Those metrics are calculated and recorded every day for the whole project."
+msgid ""
+"Those metrics are calculated and recorded every day for the whole project."
 msgstr ""
+"Эти данные подсчитываются и записываются каждый день на протяжении жизни "
+"проекта."
 
 #: ../../source/analytics.rst:89
 msgid ""
-"Note: Don't forget to run the `daily cronjob <cronjob.markdown>`__ to "
-"have accurate statistics."
+"Note: Don't forget to run the `daily cronjob <cronjob.markdown>`__ to have "
+"accurate statistics."
 msgstr ""
-
-#~ msgid "The burn down chart is available for each project."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note: Don't forget to run the "
-#~ "daily cronjob to have accurate "
-#~ "statistics."
-#~ msgstr ""
-
+"Заметка: Не забудьте выполнить `ежедневные cronjob <cronjob.html>`__ для "
+"того чтобы иметь точную статистику."

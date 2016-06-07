@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Analytics &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Аналитика &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,88 +41,87 @@
           <div class="body" role="main">
             
   <div class="section" id="analytics">
-<h1>Analytics<a class="headerlink" href="#analytics" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Each project have an analytics section. Depending on how you are using
-Kanboard, you can see those reports:</p>
+<h1>Аналитика<a class="headerlink" href="#analytics" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Каждый проект имеет анлитический раздел. В зависимости от того как вы используете Канборд, вы можете видеть подобные отчеты:</p>
 <div class="section" id="user-repartition">
-<h2>User repartition<a class="headerlink" href="#user-repartition" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Перераспределение(загрузка) пользователей<a class="headerlink" href="#user-repartition" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id1">
 <img alt="User repartition" src="https://kanboard.net/screenshots/documentation/user-repartition.png" />
-<p class="caption"><span class="caption-text">User repartition</span></p>
+<p class="caption"><span class="caption-text">Перераспределение(загрузка) пользователей</span></p>
 </div>
-<p>This pie chart show the number of open tasks assigned per user.</p>
+<p>Круговая диаграмма, представленная выше, показыает количество открытых задач назначенных определенным пользователям.</p>
 </div>
 <div class="section" id="task-distribution">
-<h2>Task distribution<a class="headerlink" href="#task-distribution" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Распределение задач<a class="headerlink" href="#task-distribution" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id2">
 <img alt="Task distribution" src="https://kanboard.net/screenshots/documentation/task-distribution.png" />
-<p class="caption"><span class="caption-text">Task distribution</span></p>
+<p class="caption"><span class="caption-text">Распределение задач</span></p>
 </div>
-<p>This pie chart gives an overview of the number of open tasks per column.</p>
+<p>На рисунке выше, представлена круговая диаграмма, которая показывает количество открытых задач в определенных колонках.</p>
 </div>
 <div class="section" id="cumulative-flow-diagram">
-<h2>Cumulative flow diagram<a class="headerlink" href="#cumulative-flow-diagram" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Накопительная диаграмма<a class="headerlink" href="#cumulative-flow-diagram" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id3">
 <img alt="Cumulative flow diagram" src="https://kanboard.net/screenshots/documentation/cfd.png" />
-<p class="caption"><span class="caption-text">Cumulative flow diagram</span></p>
+<p class="caption"><span class="caption-text">Накопительная диаграмма</span></p>
 </div>
 <ul class="simple">
-<li>This chart shows the number of tasks cumulatively for each column
-over the time.</li>
-<li>Every day, the total number of tasks is recorded for each column.</li>
-<li>If you would like to exclude closed tasks, change the <a class="reference external" href="project-configuration.markdown">global project
-settings</a>.</li>
+<li><p class="first">Эта диаграмма отображает количество задач выполненных в каждой колонке в определенный промежуток времени.</p>
+</li>
+<li><p class="first">Счетчик задач записывается для каждой колонки каждый день.</p>
+</li>
+<li><p class="first">Если вы хотите исключить закрытые задачи, измените <a class="reference external" href="project-configuration.html">глобальные настройки проекта</a>.</p>
+</li>
 </ul>
-<p>Note: You need to have at least two days of data to see the graph.</p>
+<p>Заметка: Для того чтобы увидеть этот график, вам нужно иметь, как минимум, данные за два дня.</p>
 </div>
 <div class="section" id="burn-down-chart">
-<h2>Burn down chart<a class="headerlink" href="#burn-down-chart" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Диаграмма сгорания<a class="headerlink" href="#burn-down-chart" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id4">
 <img alt="Burndown chart" src="https://kanboard.net/screenshots/documentation/burndown-chart.png" />
-<p class="caption"><span class="caption-text">Burndown chart</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Диаграмма сгорания</span></p>
 </div>
-<p>The <a class="reference external" href="http://en.wikipedia.org/wiki/Burn_down_chart">burn down chart</a>
-is available for each project.</p>
+<p><a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0_%D1%81%D0%B3%D0%BE%D1%80%D0%B0%D0%BD%D0%B8%D1%8F_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87">Диаграмма сгорания</a> доступна для каждого проекта.</p>
 <ul class="simple">
-<li>This chart is a graphical representation of work left to do versus
-time.</li>
-<li>Kanboard use the complexity or story point to generate this diagram.</li>
-<li>Everyday, the sum of the story points for each column is calculated.</li>
+<li><p class="first">Эта диаграмма отображает время затраченное на выполнение работы.</p>
+</li>
+<li><p class="first">Канборд использует историю задач для генерации этой диаграммы.</p>
+</li>
+<li><p class="first">Сумма историй задач для каждой колонки пересчитывается каждый день.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="average-time-spent-into-each-column">
-<h2>Average time spent into each column<a class="headerlink" href="#average-time-spent-into-each-column" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Среднее время затраченное в каждой колонке<a class="headerlink" href="#average-time-spent-into-each-column" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id5">
 <img alt="Average time spent into each column" src="https://kanboard.net/screenshots/documentation/average-time-spent-into-each-column.png" />
-<p class="caption"><span class="caption-text">Average time spent into each column</span></p>
+<p class="caption"><span class="caption-text">Среднее время затраченное в каждой колонке</span></p>
 </div>
-<p>This chart shows the average time spent into each column for the last
-1000 tasks.</p>
+<p>Этот график показывает среднее время затраченное в каждой колонке для последних 1000 задач.</p>
 <ul class="simple">
-<li>Kanboard uses the task transitions to calculate the data.</li>
-<li>The time spent is calculated until the task is closed.</li>
+<li><p class="first">Канборд использует для подсчета данных переходы задач между колонками.</p>
+</li>
+<li><p class="first">Затраченное время подсчитывается до закрытия задачи.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="average-lead-and-cycle-time">
-<h2>Average Lead and Cycle time<a class="headerlink" href="#average-lead-and-cycle-time" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Среднее время выполнения и время цикла<a class="headerlink" href="#average-lead-and-cycle-time" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id6">
 <img alt="Average time spent into each column" src="https://kanboard.net/screenshots/documentation/average-lead-cycle-time.png" />
-<p class="caption"><span class="caption-text">Average time spent into each column</span></p>
+<p class="caption"><span class="caption-text">Среднее время затраченное в каждой колонке</span></p>
 </div>
-<p>This chart show the average lead and cycle time for the last 1000 tasks
-over time.</p>
+<p>Эта диаграмма показывает Среднее время выполнения и цикла для последних 1000 задач.</p>
 <ul class="simple">
-<li>The lead time is the time between the task creation and the date of
-completion.</li>
-<li>The cycle time is time between the specified start date of the task
-to the completion date.</li>
-<li>If the task is not closed, the current time is used instead of the
-date of completion.</li>
+<li><p class="first">Время выполнения - время между созданием задачи и датой завершения.</p>
+</li>
+<li><p class="first">Время цикла - время между указанной датой начала выполнения задачи и датой завершения.</p>
+</li>
+<li><p class="first">Если задача не закрыта, текущая дата будет использована вместо даты завершения.</p>
+</li>
 </ul>
-<p>Those metrics are calculated and recorded every day for the whole
-project.</p>
-<p>Note: Don&#8217;t forget to run the <a class="reference external" href="cronjob.markdown">daily cronjob</a> to
-have accurate statistics.</p>
+<p>Эти данные подсчитываются и записываются каждый день на протяжении жизни проекта.</p>
+<p>Заметка: Не забудьте выполнить <a class="reference external" href="cronjob.html">ежедневные cronjob</a> для того чтобы иметь точную статистику.</p>
 </div>
 </div>
 
@@ -134,13 +133,13 @@ have accurate statistics.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Analytics</a><ul>
-<li><a class="reference internal" href="#user-repartition">User repartition</a></li>
-<li><a class="reference internal" href="#task-distribution">Task distribution</a></li>
-<li><a class="reference internal" href="#cumulative-flow-diagram">Cumulative flow diagram</a></li>
-<li><a class="reference internal" href="#burn-down-chart">Burn down chart</a></li>
-<li><a class="reference internal" href="#average-time-spent-into-each-column">Average time spent into each column</a></li>
-<li><a class="reference internal" href="#average-lead-and-cycle-time">Average Lead and Cycle time</a></li>
+<li><a class="reference internal" href="#">Аналитика</a><ul>
+<li><a class="reference internal" href="#user-repartition">Перераспределение(загрузка) пользователей</a></li>
+<li><a class="reference internal" href="#task-distribution">Распределение задач</a></li>
+<li><a class="reference internal" href="#cumulative-flow-diagram">Накопительная диаграмма</a></li>
+<li><a class="reference internal" href="#burn-down-chart">Диаграмма сгорания</a></li>
+<li><a class="reference internal" href="#average-time-spent-into-each-column">Среднее время затраченное в каждой колонке</a></li>
+<li><a class="reference internal" href="#average-lead-and-cycle-time">Среднее время выполнения и время цикла</a></li>
 </ul>
 </li>
 </ul>
