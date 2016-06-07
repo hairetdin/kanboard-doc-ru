@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: 2016-06-06 17:07+0500\n"
+"PO-Revision-Date: 2016-06-07 09:21+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -198,20 +198,20 @@ msgstr ""
 
 #: ../../source/automatic-actions.rst:67
 msgid "Choose action: **Close a task in a specific column**"
-msgstr "Выбирите действия: **Закрыть задачу в выбранной колонке**"
+msgstr "Выберите действия: **Закрыть задачу в выбранной колонке**"
 
 #: ../../source/automatic-actions.rst:68 ../../source/automatic-actions.rst:76
 #: ../../source/automatic-actions.rst:85
 #: ../../source/automatic-actions.rst:106
 #: ../../source/automatic-actions.rst:129
 msgid "Choose the event: **Move a task to another column**"
-msgstr "Выбирите событие: **Переместить задачу в другую колонку**"
+msgstr "Выберите событие: **Переместить задачу в другую колонку**"
 
 #: ../../source/automatic-actions.rst:69
 msgid ""
 "Define action parameter: **Column = Done** (this is the destination column)"
 msgstr ""
-"Установите парамер действия: **Колонка = Выполнено** (это колонка в которую "
+"Установите параметр действия: **Колонка = Выполнено** (это колонка в которую "
 "будет перемещена задача)"
 
 #: ../../source/automatic-actions.rst:73
@@ -219,123 +219,149 @@ msgid ""
 "When I move a task to the column \"To be validated\", assign this task to a "
 "specific user"
 msgstr ""
+"Когда я перемещаю задачу в колонку \"На утверждение\", назначить эту задачу "
+"определенному пользователю."
 
 #: ../../source/automatic-actions.rst:75
 msgid "Choose the action: **Assign the task to a specific user**"
-msgstr ""
+msgstr "Выберите действие: **Назначить задачу определенному пользователю**"
 
 #: ../../source/automatic-actions.rst:77
 msgid ""
 "Define the action parameters: **Column = To be validated** and **User = "
 "Bob** (Bob is our tester)"
 msgstr ""
+"Установите параметр действия: **Колонка = На утверждение** и **Пользователь "
+"= Петр** (Петр - наш тестировщик)"
 
 #: ../../source/automatic-actions.rst:81
 msgid ""
 "When I move a task to the column \"Work in progress\", assign this task to "
 "the current user"
 msgstr ""
+"Когда я перемещаю задачу в колонку \"В работе\", назначить эту задачу "
+"определенному пользователю"
 
 #: ../../source/automatic-actions.rst:83
 msgid ""
 "Choose action: **Assign the task to the person who does the action when the "
 "column is changed**"
 msgstr ""
+"Выберите действие: **Назначить задачу пользователю, который произвел "
+"изменение в колонке**"
 
 #: ../../source/automatic-actions.rst:86
 msgid "Define action parameter: **Column = Work in progress**"
-msgstr ""
+msgstr "Установите параметр действия: **Колонка = В работе**"
 
 #: ../../source/automatic-actions.rst:89
 msgid "When a task is completed, duplicate this task to another project"
-msgstr ""
+msgstr "Когда задача выполнена, скопировать эту задачу в другой проект"
 
 #: ../../source/automatic-actions.rst:91
 msgid ""
 "Let's say we have two projects \"Customer orders\" and \"Production\", once "
 "the order is validated, swap it to the \"Production\" project."
 msgstr ""
+"Предположим, мы имеем два проекта \"Заказы покупателей\" и \"Производство\". "
+"Когда заказ в проекте \"Заказы покупателей\" утвержден, копируем этот заказ "
+"в проект \"Производство\"."
 
 #: ../../source/automatic-actions.rst:94
 msgid "Choose action: **Duplicate the task to another project**"
-msgstr ""
+msgstr "Выбираем действие: **Создать дубликат задачи в другом проекте**"
 
 #: ../../source/automatic-actions.rst:95
 msgid "Choose the event: **Closing a task**"
-msgstr ""
+msgstr "Выбираем событие: **Завершение задачи**"
 
 #: ../../source/automatic-actions.rst:96
 msgid ""
 "Define action parameters: **Column = Validated** and **Project = Production**"
 msgstr ""
+"Установите параметр действия: **Колонка = Утвержден** и **Проект = "
+"Производство**"
 
 #: ../../source/automatic-actions.rst:100
 msgid ""
 "When a task is moved to the last column, move the exact same task to another "
 "project"
 msgstr ""
+"Когда задача перемещена в последнюю колонку, переместить эту задачу в другой "
+"проект"
 
 #: ../../source/automatic-actions.rst:102
 msgid ""
 "Let's say we have two projects \"Ideas\" and \"Development\", once the idea "
 "is validated, swap it to the \"Development\" project."
 msgstr ""
+"Предположим, мы имеем два проекта \"Идеи\" и \"Разработка\", когда идея "
+"утверждена, перемещаем эту задачу в проект \"Разработка\"."
 
 #: ../../source/automatic-actions.rst:105
 msgid "Choose action: **Move the task to another project**"
-msgstr ""
+msgstr "Выберите действие: **Переместить задачу в другой проект**"
 
 #: ../../source/automatic-actions.rst:107
 msgid ""
 "Define action parameters: **Column = Validated** and **Project = "
 "Development**"
 msgstr ""
+"Установите параметр действия: **Колонка = Утверждена** и **Проект = "
+"Разработка**"
 
 #: ../../source/automatic-actions.rst:111
 msgid "I want to assign automatically a color to the user Bob"
-msgstr ""
+msgstr "Я хочу назначать автоматически цвет для пользователя Петр"
 
 #: ../../source/automatic-actions.rst:113
 msgid "Choose action: **Assign a color to a specific user**"
-msgstr ""
+msgstr "Выберите действие: **Назначить определенный цвет пользователю**"
 
 #: ../../source/automatic-actions.rst:114
 msgid "Choose the event: **Task assignee change**"
-msgstr ""
+msgstr "Выберите событие: **Изменен назначенный**"
 
 #: ../../source/automatic-actions.rst:115
 msgid "Define action parameters: **Color = Green** and **Assignee = Bob**"
 msgstr ""
+"Установите параметр действия: **Цвет = Зеленый** и **Назначена = Петр**"
 
 #: ../../source/automatic-actions.rst:118
 msgid ""
 "I want to assign a color automatically to the defined category \"Feature "
 "Request\""
 msgstr ""
+"Я хочу назначить цвет автоматически для определенной категории \"Важные "
+"запросы\""
 
 #: ../../source/automatic-actions.rst:120
 msgid "Choose action: **Assign automatically a color based on a category**"
-msgstr ""
+msgstr "Выберите действие: **Автоматически назначать цвет по категории**"
 
 #: ../../source/automatic-actions.rst:121
 msgid "Choose the event: **Task creation or modification**"
-msgstr ""
+msgstr "Выберите событие: **Создание или изменение задачи**"
 
 #: ../../source/automatic-actions.rst:122
 msgid ""
 "Define action parameters: **Color = Blue** and **Category = Feature Request**"
 msgstr ""
+"Установите параметр действия: **Цвет = Голубой** и **Категория = Важные "
+"запросы**"
 
 #: ../../source/automatic-actions.rst:126
 msgid ""
 "I want to set the start date automatically when the task is moved to the "
 "column \"Work in progress\""
 msgstr ""
+"Я хочу устанавливать дату начала автоматически когда задача перемещена в "
+"колонку \"В работе\""
 
 #: ../../source/automatic-actions.rst:128
 msgid "Choose action: **Automatically update the start date**"
-msgstr ""
+msgstr "Выберите действие: **Автоматическое обновление даты начала**"
 
 #: ../../source/automatic-actions.rst:130
 msgid "Define action parameters: **Column = Work in progress**"
-msgstr ""
+msgstr "Установите параметр действия: **Колонка = В работе**"

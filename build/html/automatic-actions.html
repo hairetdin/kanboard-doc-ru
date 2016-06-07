@@ -128,81 +128,91 @@
 <div class="section" id="when-i-move-a-task-to-the-column-done-automatically-close-this-task">
 <h3>Когда я перемещаю задачу в колонку &#8220;Выполнено&#8221;, автоматически закрывать эту задачу<a class="headerlink" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li><p class="first">Выбирите действия: <strong>Закрыть задачу в выбранной колонке</strong></p>
+<li><p class="first">Выберите действия: <strong>Закрыть задачу в выбранной колонке</strong></p>
 </li>
-<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+<li><p class="first">Выберите событие: <strong>Переместить задачу в другую колонку</strong></p>
 </li>
-<li><p class="first">Установите парамер действия: <strong>Колонка = Выполнено</strong> (это колонка в которую будет перемещена задача)</p>
+<li><p class="first">Установите параметр действия: <strong>Колонка = Выполнено</strong> (это колонка в которую будет перемещена задача)</p>
 </li>
 </ul>
 </div>
 <div class="section" id="when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user">
-<h3>When I move a task to the column &#8220;To be validated&#8221;, assign this task to a specific user<a class="headerlink" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Когда я перемещаю задачу в колонку &#8220;На утверждение&#8221;, назначить эту задачу определенному пользователю.<a class="headerlink" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Choose the action: <strong>Assign the task to a specific user</strong></li>
-<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+<li><p class="first">Выберите действие: <strong>Назначить задачу определенному пользователю</strong></p>
 </li>
-<li>Define the action parameters: <strong>Column = To be validated</strong> and <strong>User
-= Bob</strong> (Bob is our tester)</li>
+<li><p class="first">Выберите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
+<li><p class="first">Установите параметр действия: <strong>Колонка = На утверждение</strong> и <strong>Пользователь = Петр</strong> (Петр - наш тестировщик)</p>
+</li>
 </ul>
 </div>
 <div class="section" id="when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user">
-<h3>When I move a task to the column &#8220;Work in progress&#8221;, assign this task to the current user<a class="headerlink" href="#when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Когда я перемещаю задачу в колонку &#8220;В работе&#8221;, назначить эту задачу определенному пользователю<a class="headerlink" href="#when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Choose action: <strong>Assign the task to the person who does the action
-when the column is changed</strong></li>
-<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+<li><p class="first">Выберите действие: <strong>Назначить задачу пользователю, который произвел изменение в колонке</strong></p>
 </li>
-<li>Define action parameter: <strong>Column = Work in progress</strong></li>
+<li><p class="first">Выберите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
+<li><p class="first">Установите параметр действия: <strong>Колонка = В работе</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="when-a-task-is-completed-duplicate-this-task-to-another-project">
-<h3>When a task is completed, duplicate this task to another project<a class="headerlink" href="#when-a-task-is-completed-duplicate-this-task-to-another-project" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Let&#8217;s say we have two projects &#8220;Customer orders&#8221; and &#8220;Production&#8221;, once
-the order is validated, swap it to the &#8220;Production&#8221; project.</p>
+<h3>Когда задача выполнена, скопировать эту задачу в другой проект<a class="headerlink" href="#when-a-task-is-completed-duplicate-this-task-to-another-project" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Предположим, мы имеем два проекта &#8220;Заказы покупателей&#8221; и &#8220;Производство&#8221;. Когда заказ в проекте &#8220;Заказы покупателей&#8221; утвержден, копируем этот заказ в проект &#8220;Производство&#8221;.</p>
 <ul class="simple">
-<li>Choose action: <strong>Duplicate the task to another project</strong></li>
-<li>Choose the event: <strong>Closing a task</strong></li>
-<li>Define action parameters: <strong>Column = Validated</strong> and <strong>Project =
-Production</strong></li>
+<li><p class="first">Выбираем действие: <strong>Создать дубликат задачи в другом проекте</strong></p>
+</li>
+<li><p class="first">Выбираем событие: <strong>Завершение задачи</strong></p>
+</li>
+<li><p class="first">Установите параметр действия: <strong>Колонка = Утвержден</strong> и <strong>Проект = Производство</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project">
-<h3>When a task is moved to the last column, move the exact same task to another project<a class="headerlink" href="#when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Let&#8217;s say we have two projects &#8220;Ideas&#8221; and &#8220;Development&#8221;, once the idea
-is validated, swap it to the &#8220;Development&#8221; project.</p>
+<h3>Когда задача перемещена в последнюю колонку, переместить эту задачу в другой проект<a class="headerlink" href="#when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Предположим, мы имеем два проекта &#8220;Идеи&#8221; и &#8220;Разработка&#8221;, когда идея утверждена, перемещаем эту задачу в проект &#8220;Разработка&#8221;.</p>
 <ul class="simple">
-<li>Choose action: <strong>Move the task to another project</strong></li>
-<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+<li><p class="first">Выберите действие: <strong>Переместить задачу в другой проект</strong></p>
 </li>
-<li>Define action parameters: <strong>Column = Validated</strong> and <strong>Project =
-Development</strong></li>
+<li><p class="first">Выберите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
+<li><p class="first">Установите параметр действия: <strong>Колонка = Утверждена</strong> и <strong>Проект = Разработка</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="i-want-to-assign-automatically-a-color-to-the-user-bob">
-<h3>I want to assign automatically a color to the user Bob<a class="headerlink" href="#i-want-to-assign-automatically-a-color-to-the-user-bob" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Я хочу назначать автоматически цвет для пользователя Петр<a class="headerlink" href="#i-want-to-assign-automatically-a-color-to-the-user-bob" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Choose action: <strong>Assign a color to a specific user</strong></li>
-<li>Choose the event: <strong>Task assignee change</strong></li>
-<li>Define action parameters: <strong>Color = Green</strong> and <strong>Assignee = Bob</strong></li>
+<li><p class="first">Выберите действие: <strong>Назначить определенный цвет пользователю</strong></p>
+</li>
+<li><p class="first">Выберите событие: <strong>Изменен назначенный</strong></p>
+</li>
+<li><p class="first">Установите параметр действия: <strong>Цвет = Зеленый</strong> и <strong>Назначена = Петр</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request">
-<h3>I want to assign a color automatically to the defined category &#8220;Feature Request&#8221;<a class="headerlink" href="#i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Я хочу назначить цвет автоматически для определенной категории &#8220;Важные запросы&#8221;<a class="headerlink" href="#i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Choose action: <strong>Assign automatically a color based on a category</strong></li>
-<li>Choose the event: <strong>Task creation or modification</strong></li>
-<li>Define action parameters: <strong>Color = Blue</strong> and <strong>Category = Feature
-Request</strong></li>
+<li><p class="first">Выберите действие: <strong>Автоматически назначать цвет по категории</strong></p>
+</li>
+<li><p class="first">Выберите событие: <strong>Создание или изменение задачи</strong></p>
+</li>
+<li><p class="first">Установите параметр действия: <strong>Цвет = Голубой</strong> и <strong>Категория = Важные запросы</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress">
-<h3>I want to set the start date automatically when the task is moved to the column &#8220;Work in progress&#8221;<a class="headerlink" href="#i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Я хочу устанавливать дату начала автоматически когда задача перемещена в колонку &#8220;В работе&#8221;<a class="headerlink" href="#i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Choose action: <strong>Automatically update the start date</strong></li>
-<li><p class="first">Выбирите событие: <strong>Переместить задачу в другую колонку</strong></p>
+<li><p class="first">Выберите действие: <strong>Автоматическое обновление даты начала</strong></p>
 </li>
-<li>Define action parameters: <strong>Column = Work in progress</strong></li>
+<li><p class="first">Выберите событие: <strong>Переместить задачу в другую колонку</strong></p>
+</li>
+<li><p class="first">Установите параметр действия: <strong>Колонка = В работе</strong></p>
+</li>
 </ul>
 </div>
 </div>
@@ -221,13 +231,13 @@ Request</strong></li>
 <li><a class="reference internal" href="#list-of-available-actions">Список доступных действий</a></li>
 <li><a class="reference internal" href="#examples">Примеры</a><ul>
 <li><a class="reference internal" href="#when-i-move-a-task-to-the-column-done-automatically-close-this-task">Когда я перемещаю задачу в колонку &#8220;Выполнено&#8221;, автоматически закрывать эту задачу</a></li>
-<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user">When I move a task to the column &#8220;To be validated&#8221;, assign this task to a specific user</a></li>
-<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user">When I move a task to the column &#8220;Work in progress&#8221;, assign this task to the current user</a></li>
-<li><a class="reference internal" href="#when-a-task-is-completed-duplicate-this-task-to-another-project">When a task is completed, duplicate this task to another project</a></li>
-<li><a class="reference internal" href="#when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project">When a task is moved to the last column, move the exact same task to another project</a></li>
-<li><a class="reference internal" href="#i-want-to-assign-automatically-a-color-to-the-user-bob">I want to assign automatically a color to the user Bob</a></li>
-<li><a class="reference internal" href="#i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request">I want to assign a color automatically to the defined category &#8220;Feature Request&#8221;</a></li>
-<li><a class="reference internal" href="#i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress">I want to set the start date automatically when the task is moved to the column &#8220;Work in progress&#8221;</a></li>
+<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-to-be-validated-assign-this-task-to-a-specific-user">Когда я перемещаю задачу в колонку &#8220;На утверждение&#8221;, назначить эту задачу определенному пользователю.</a></li>
+<li><a class="reference internal" href="#when-i-move-a-task-to-the-column-work-in-progress-assign-this-task-to-the-current-user">Когда я перемещаю задачу в колонку &#8220;В работе&#8221;, назначить эту задачу определенному пользователю</a></li>
+<li><a class="reference internal" href="#when-a-task-is-completed-duplicate-this-task-to-another-project">Когда задача выполнена, скопировать эту задачу в другой проект</a></li>
+<li><a class="reference internal" href="#when-a-task-is-moved-to-the-last-column-move-the-exact-same-task-to-another-project">Когда задача перемещена в последнюю колонку, переместить эту задачу в другой проект</a></li>
+<li><a class="reference internal" href="#i-want-to-assign-automatically-a-color-to-the-user-bob">Я хочу назначать автоматически цвет для пользователя Петр</a></li>
+<li><a class="reference internal" href="#i-want-to-assign-a-color-automatically-to-the-defined-category-feature-request">Я хочу назначить цвет автоматически для определенной категории &#8220;Важные запросы&#8221;</a></li>
+<li><a class="reference internal" href="#i-want-to-set-the-start-date-automatically-when-the-task-is-moved-to-the-column-work-in-progress">Я хочу устанавливать дату начала автоматически когда задача перемещена в колонку &#8220;В работе&#8221;</a></li>
 </ul>
 </li>
 </ul>
