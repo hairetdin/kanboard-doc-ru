@@ -3,65 +3,67 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-08 08:35+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/closing-tasks.rst:2
 msgid "Closing tasks"
-msgstr ""
+msgstr "Закрытие задач"
 
 #: ../../source/closing-tasks.rst:4
 msgid "When a task is closed, it is hidden from the board."
-msgstr ""
+msgstr "Когда задача закрыта, то она скрывается на Доске."
 
 #: ../../source/closing-tasks.rst:6
 msgid ""
 "However, you can always access to the list of closed tasks by using the "
-"query **status:closed** in any search form or simply choose **Closed "
-"tasks** from the filter drop-down."
+"query **status:closed** in any search form or simply choose **Closed tasks** "
+"from the filter drop-down."
 msgstr ""
+"Не смотря на это, вы можете в любой момент зайти в список закрытых задач "
+"используя запрос **status:closed** в любой форме поиска или просто выбрать "
+"фильтр \"Закрытые задачи\" в выпадающем меню."
 
 #: ../../source/closing-tasks.rst:10
 msgid ""
-"There are two different ways to close a task, from the task drop-down "
-"menu on the board:"
+"There are two different ways to close a task, from the task drop-down menu "
+"on the board:"
 msgstr ""
+"Имеется два пути для закрытия задачи: - На Доске выбрать задачу и выпадающем "
+"меню выбрать **Закрыть задачу**"
 
 #: ../../source/closing-tasks.rst:16
 msgid "Close a task from drop-down menu"
-msgstr ""
+msgstr "Рисунок. Закрытие задачи, используя выпадающее меню."
 
 #: ../../source/closing-tasks.rst:17
 msgid "Or from the task sidebar menu in the task detail view:"
 msgstr ""
+"или - Используя детальное представление задачи, выбрать **Закрыть задачу** в "
+"меню боковой панели (слева)"
 
 #: ../../source/closing-tasks.rst:22
 msgid "Close task"
-msgstr ""
+msgstr "Рисунок. Закрытие задачи."
 
 #: ../../source/closing-tasks.rst:23
 msgid ""
-"Note: When you close a task, all sub-tasks not completed will be changed "
-"to the status \"Done\"."
+"Note: When you close a task, all sub-tasks not completed will be changed to "
+"the status \"Done\"."
 msgstr ""
-
-#~ msgid ""
-#~ "However, you can always access to "
-#~ "the list of closed tasks by using"
-#~ " the query status:closed in any "
-#~ "search form or simply choose Closed "
-#~ "tasks from the filter drop-down."
-#~ msgstr ""
-
+"**Заметка**: Когда вы закрываете задачу, у всех не выполненных подзадач "
+"будет изменен статус на \"Выполнено\""
