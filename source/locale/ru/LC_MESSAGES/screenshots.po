@@ -3,96 +3,109 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-08 11:10+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
+# В программе Kanboard - adding screenshot - имеет перевод прикрепить картинку, но на самом деле в программе реализовано именно прикрепление снимка экрана и документация описывает именно снимок экрана (скриншот). Надо обязательно переделать в программе перевод screenshot как снимок экрана.
 #: ../../source/screenshots.rst:2
 msgid "Adding screenshots"
-msgstr ""
+msgstr "Добавление снимков экрана (скриншота)"
 
 #: ../../source/screenshots.rst:4
 msgid ""
 "You can copy and paste images directly in Kanboard to save time. These "
 "images are uploaded as attachments to the task."
 msgstr ""
+"Для экономии времени вы можете копировать и вставлять изображения прямо в "
+"Канборде. Загруженные изображения прикрепляются к задаче."
 
 #: ../../source/screenshots.rst:7
 msgid ""
-"This is especially useful for taking screenshots to describe an issue for"
-" example."
-msgstr ""
+"This is especially useful for taking screenshots to describe an issue for "
+"example."
+msgstr "Например, очень удобно для решения проблемы прикрепить снимок экрана."
 
 #: ../../source/screenshots.rst:10
 msgid ""
-"You can add screenshots directly from the board by clicking on the "
-"dropdown menu or in the task view page."
+"You can add screenshots directly from the board by clicking on the dropdown "
+"menu or in the task view page."
 msgstr ""
+"Вы можете добавить снимок экрана прямо из Доски нажав на выпадающее меню "
+"задачи и выбрав **Прикрепить картинку** или на странице детального просмотра "
+"задачи."
 
 #: ../../source/screenshots.rst:16
 msgid "Drop-down screenshot menu"
-msgstr ""
+msgstr "Рисунок. Выпадающее меню задачи - **Прикрепить картинку**."
 
 #: ../../source/screenshots.rst:17
 msgid ""
-"To add a new image, take your screenshot and paste with CTRL+V or "
-"Command+V:"
+"To add a new image, take your screenshot and paste with CTRL+V or Command+V:"
 msgstr ""
+"Для добавления нового снимка экрана (скриншота), сделайте снимок экрана "
+"(нажмите клавиши Ctrl+PrtScn) и вставьте его используя сочетания клавиш CTRL"
+"+V или Command+V"
 
 #: ../../source/screenshots.rst:23
 msgid "Screenshot page"
-msgstr ""
+msgstr "Рисунок. Прикрепить картинку."
 
 #: ../../source/screenshots.rst:24
 msgid "On Mac OS X, you can use those shortcuts to take screenshots:"
 msgstr ""
+"В Mac OS X вы можете использовать следующие горячие клавиши для создания "
+"снимка экрана:"
 
 #: ../../source/screenshots.rst:26
 msgid ""
-"Command-Control-Shift-3: Take a screenshot of the screen, and save it to "
-"the clipboard"
+"Command-Control-Shift-3: Take a screenshot of the screen, and save it to the "
+"clipboard"
 msgstr ""
+"Command-Control-Shift-3: Делает снимок экрана и сохраняет его в буфер обмена"
 
 #: ../../source/screenshots.rst:28
 msgid ""
-"Command-Control-Shift-4, then select an area: Take a screenshot of the "
-"area and save it to the clipboard"
+"Command-Control-Shift-4, then select an area: Take a screenshot of the area "
+"and save it to the clipboard"
 msgstr ""
+"Command-Control-Shift-4 и выделите необходимую область на экране: Делает "
+"снимок экрана для области экрана и сохраняет ее в буфер обмена"
 
 #: ../../source/screenshots.rst:30
 msgid ""
-"Command-Control-Shift-4, then space, then click a window: Take a "
-"screenshot of a window and save it to the clipboard"
+"Command-Control-Shift-4, then space, then click a window: Take a screenshot "
+"of a window and save it to the clipboard"
 msgstr ""
+"Command-Control-Shift-4, затем пробел, затем нажать на окно: Делает снимок "
+"окна и сохраняет его в буфер обмена"
 
 #: ../../source/screenshots.rst:33
 msgid ""
 "There are also several third-party applications that can be used to take "
 "screenshots with annotations and shapes."
 msgstr ""
+"Имеется много разных других программ для создания снимков с экрана с "
+"примечаниями и разными формами."
 
 #: ../../source/screenshots.rst:36
 msgid ""
-"**Note: This feature doesn't work with all browsers.** It doesn't work "
-"with Safari due to this bug: "
-"https://bugs.webkit.org/show\\_bug.cgi?id=49141"
+"**Note: This feature doesn't work with all browsers.** It doesn't work with "
+"Safari due to this bug: https://bugs.webkit.org/show\\_bug.cgi?id=49141"
 msgstr ""
-
-#~ msgid ""
-#~ "Note: This feature doesn't work with "
-#~ "all browsers. It doesn't work with "
-#~ "Safari due to this bug: "
-#~ "https://bugs.webkit.org/show_bug.cgi?id=49141"
-#~ msgstr ""
-
+"**Заметка**: Эта возможность работает не во всех браузерах. Например не "
+"работет в Safari из-за этой ошибки: https://bugs.webkit.org/show\\_bug.cgi?"
+"id=49141"
