@@ -3,176 +3,181 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-08 10:30+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/duplicate-move-tasks.rst:2
 msgid "Duplicate and move tasks"
-msgstr ""
+msgstr "Дублирование и перенос задач"
 
 #: ../../source/duplicate-move-tasks.rst:5
 msgid "Duplicate a task into the same project"
-msgstr ""
+msgstr "Создание копии задачи в том же проекте"
 
 #: ../../source/duplicate-move-tasks.rst:7
 msgid "Go to the task view and choose **Duplicate** on the left."
 msgstr ""
+"Перейдите в детальное представление задачи и выберите в боковой панели "
+"(слева) **Клонировать**."
 
 #: ../../source/duplicate-move-tasks.rst:12
 msgid "Task Duplication"
-msgstr ""
+msgstr "Рисунок. Создание копии задачи."
 
 #: ../../source/duplicate-move-tasks.rst:13
 msgid "A new task will be created with the same properties as the original."
 msgstr ""
+"Новая задача будет создана с теми же свойствами как и у оригинальной задачи."
 
 #: ../../source/duplicate-move-tasks.rst:16
 msgid "Duplicate a task to another project"
-msgstr ""
+msgstr "Создание копии задачи в другой проект"
 
 #: ../../source/duplicate-move-tasks.rst:18
 msgid "Go to the task view and choose **Duplicate to another project**."
 msgstr ""
+"Перейдите в детальное представление задачи и выберите в боковом меню (слева) "
+"**Клонировать в другой проект**."
 
 #: ../../source/duplicate-move-tasks.rst:23
 msgid "Task Duplication Another Project"
-msgstr ""
+msgstr "Рисунок. Создание копии задачи в другой проект."
 
 #: ../../source/duplicate-move-tasks.rst:24
 msgid "Only projects where you are members will be shown in the drop-down."
 msgstr ""
+"При выборе проекта в выпадающем списке, показываются только те проекты в "
+"которых вы являетесь участниками."
 
 #: ../../source/duplicate-move-tasks.rst:26
 msgid ""
-"Before to copy the tasks, Kanboard will ask you the destination "
-"properties that are not common between the source and destination "
-"project."
+"Before to copy the tasks, Kanboard will ask you the destination properties "
+"that are not common between the source and destination project."
 msgstr ""
+"Перед тем как скопировать задачу, Канборд просит вас указать свойства "
+"проекта (куда будет копироваться), потому что проекты могуг иметь разные "
+"столбцы, дорожки и т.д."
 
 #: ../../source/duplicate-move-tasks.rst:30
 msgid "Basically, you need to define:"
-msgstr ""
+msgstr "Вам нужно указать:"
 
 #: ../../source/duplicate-move-tasks.rst:32
 msgid "The destination swim lane"
-msgstr ""
+msgstr "Дорожку, в которую скопируется задача"
 
 #: ../../source/duplicate-move-tasks.rst:33
 msgid "The column"
-msgstr ""
+msgstr "Колонку"
 
 #: ../../source/duplicate-move-tasks.rst:34
 msgid "The category"
-msgstr ""
+msgstr "Категорию"
 
 #: ../../source/duplicate-move-tasks.rst:35
 msgid "The assignee"
-msgstr ""
+msgstr "Испольнителя"
 
 #: ../../source/duplicate-move-tasks.rst:38
 msgid "Move a task to another project"
-msgstr ""
+msgstr "Перемещение задачи в другой проект"
 
 #: ../../source/duplicate-move-tasks.rst:40
 msgid "Go to the task view and choose **Move to another project**."
 msgstr ""
+"Перейдите в детальное представление задачи и выберите в боковом меню "
+"**Переместить в другой проект**"
 
 #: ../../source/duplicate-move-tasks.rst:42
 msgid ""
-"Moving a task to another project work in the same way as the duplication,"
-" you have to choose the new properties of the task."
+"Moving a task to another project work in the same way as the duplication, "
+"you have to choose the new properties of the task."
 msgstr ""
+"Процедура перемещения задачи в другой проект такая же как и при копировании, "
+"вы должны указать новые свойства для задачи."
 
 #: ../../source/duplicate-move-tasks.rst:46
 msgid "List of fields duplicated"
-msgstr ""
+msgstr "Список копируемых полей"
 
 #: ../../source/duplicate-move-tasks.rst:48
 msgid "Here are the list of properties duplicated:"
-msgstr ""
+msgstr "Ниже приведен список полей (свойств), которые будут скопированы:"
 
 #: ../../source/duplicate-move-tasks.rst:50
 msgid "title"
-msgstr ""
+msgstr "заголовок"
 
 #: ../../source/duplicate-move-tasks.rst:51
 msgid "description"
-msgstr ""
+msgstr "описание"
 
 #: ../../source/duplicate-move-tasks.rst:52
 msgid "date\\_due"
-msgstr ""
+msgstr "дата\\_исполнение"
 
 #: ../../source/duplicate-move-tasks.rst:53
 msgid "color\\_id"
-msgstr ""
+msgstr "цвет\\_id"
 
 #: ../../source/duplicate-move-tasks.rst:54
 msgid "project\\_id"
-msgstr ""
+msgstr "проект\\_id"
 
 #: ../../source/duplicate-move-tasks.rst:55
 msgid "column\\_id"
-msgstr ""
+msgstr "колонка\\_id"
 
 #: ../../source/duplicate-move-tasks.rst:56
 msgid "owner\\_id"
-msgstr ""
+msgstr "владелец\\_id"
 
 #: ../../source/duplicate-move-tasks.rst:57
 msgid "score"
-msgstr ""
+msgstr "оценка"
 
 #: ../../source/duplicate-move-tasks.rst:58
 msgid "category\\_id"
-msgstr ""
+msgstr "категория\\_id"
 
 #: ../../source/duplicate-move-tasks.rst:59
 msgid "time\\_estimated"
-msgstr ""
+msgstr "время\\_запланировано"
 
 #: ../../source/duplicate-move-tasks.rst:60
 msgid "swimlane\\_id"
-msgstr ""
+msgstr "дорожка\\_id"
 
 #: ../../source/duplicate-move-tasks.rst:61
 msgid "recurrence\\_status"
-msgstr ""
+msgstr "повторение\\_статус"
 
 #: ../../source/duplicate-move-tasks.rst:62
 msgid "recurrence\\_trigger"
-msgstr ""
+msgstr "повторение\\_триггер"
 
 #: ../../source/duplicate-move-tasks.rst:63
 msgid "recurrence\\_factor"
-msgstr ""
+msgstr "повторение\\_фактор"
 
 #: ../../source/duplicate-move-tasks.rst:64
 msgid "recurrence\\_timeframe"
-msgstr ""
+msgstr "повторение\\_timeframe"
 
 #: ../../source/duplicate-move-tasks.rst:65
 msgid "recurrence\\_basedate"
-msgstr ""
-
-#~ msgid "Go to the task view and choose Duplicate on the left."
-#~ msgstr ""
-
-#~ msgid "Go to the task view and choose Duplicate to another project."
-#~ msgstr ""
-
-#~ msgid "Go to the task view and choose Move to another project."
-#~ msgstr ""
-
+msgstr "повторение\\_basedate"
