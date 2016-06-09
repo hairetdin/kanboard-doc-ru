@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Recurring tasks &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Повторяющиеся задачи &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,34 +41,33 @@
           <div class="body" role="main">
             
   <div class="section" id="recurring-tasks">
-<h1>Recurring tasks<a class="headerlink" href="#recurring-tasks" title="Ссылка на этот заголовок">¶</a></h1>
-<p>To fit with the Kanban methodology, the recurring tasks are not based on
-a date but on board events.</p>
+<h1>Повторяющиеся задачи<a class="headerlink" href="#recurring-tasks" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Для соответсвия методологии Канбан, повторяющиеся задачи не имеют в качестве основы дату, а запускаются при наступлении событий на Доске.</p>
 <ul class="simple">
-<li>Recurring tasks are duplicated to the first column of the board when
-the selected events occur</li>
-<li>The due date can be recalculated automatically</li>
+<li><p class="first">Повторяющиеся задачи копируются (появляются вновь) в первой колонке Доски когда наступает определенное событие</p>
+</li>
+<li><p class="first">Дата завершения (срок выполнения задачи) пересчитывается автоматически</p>
+</li>
 <li>Each task records the task id of the parent task that created it and
 the child task created</li>
 </ul>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Go to the task view page or use the drop-down menu on the board, then
-select <strong>Edit recurrence</strong>.</p>
+<h2>Настройка<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Перейдите на страницу детального представления задачи или используйте выпадающее меню на доске, выберите <strong>Редактировать повторы</strong>.</p>
 <div class="figure" id="id1">
 <img alt="Recurring task" src="https://kanboard.net/screenshots/documentation/recurring-tasks.png" />
-<p class="caption"><span class="caption-text">Recurring task</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Редактировать повторы.</span></p>
 </div>
-<p>There are 3 triggers that currently create a new recurring task:</p>
+<p>В редактировании повторов имеется выбор 3 триггеров для генерации периодической задачи:</p>
 <ul class="simple">
-<li>Moving a task from the first column</li>
-<li>Moving a task to the last column</li>
-<li>Closing the task</li>
+<li><p class="first">Когда задача перемещается из первой колонки</p>
+</li>
+<li><p class="first">Когда задача перемещается в последнюю колонку</p>
+</li>
+<li><p class="first">Когда задача закрывается</p>
+</li>
 </ul>
-<p>Due dates, if set on the current task, can be recalculated by a given
-factor of days, months or years. The base date for the calculation of
-the new due date can be either the existing due date, or the action
-date.</p>
+<p>Дата завершения, если установлена для текущей задачи, может быть пересчитана с учетом <strong>Коэффициента для расчета новой даты</strong> и <strong>Период для рассчета новой даты завершения</strong> (например, 7 дней, 6 месяцев, 1 год). Базовой датой вычисления новой даты завершения может быть и имеющаяся дата завершения, или дата действия.</p>
 </div>
 </div>
 
@@ -80,8 +79,8 @@ date.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Recurring tasks</a><ul>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#">Повторяющиеся задачи</a><ul>
+<li><a class="reference internal" href="#configuration">Настройка</a></li>
 </ul>
 </li>
 </ul>
