@@ -3,78 +3,79 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-09 08:34+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/task-links.rst:2 ../../source/task-links.rst:9
 msgid "Task Links"
-msgstr ""
+msgstr "Ссылки на задачи"
 
 #: ../../source/task-links.rst:4
 msgid "Tasks can be linked together with pre-defined relationships:"
-msgstr ""
+msgstr "Задачи могут быть созданы вместе с предопределенными связями:"
 
 #: ../../source/task-links.rst:10
 msgid "The default relationships are:"
-msgstr ""
+msgstr "Связи по умолчанию:"
 
 #: ../../source/task-links.rst:12
 msgid "**relates to**"
-msgstr ""
+msgstr "**относится к**"
 
 #: ../../source/task-links.rst:13
 msgid "**blocks** \\| is blocked by"
-msgstr ""
+msgstr "**блокирована**\\| блокирует"
 
 #: ../../source/task-links.rst:14
 msgid "**is blocked by** \\| blocks"
-msgstr ""
+msgstr "**блокирует** \\| блокирована"
 
 #: ../../source/task-links.rst:15
 msgid "**duplicates** \\| is duplicated by"
-msgstr ""
+msgstr "**дублирована** \\| дублирует"
 
 #: ../../source/task-links.rst:16
 msgid "**is duplicated by** \\| duplicates"
-msgstr ""
+msgstr "**дублирует** \\| дублирована"
 
 #: ../../source/task-links.rst:17
 msgid "**is a child of** \\| is a parent of"
-msgstr ""
+msgstr "**является продолжением** \\| является началом для"
 
 #: ../../source/task-links.rst:18
 msgid "**is a parent of** \\| is a child of"
-msgstr ""
+msgstr "**является началом для** \\| является продолжением"
 
 #: ../../source/task-links.rst:19
 msgid "**targets milestone** \\| is a milestone of"
-msgstr ""
+msgstr "**часть вехи** \\| является вехой для"
 
 #: ../../source/task-links.rst:20
 msgid "**is a milestone of** \\| targets milestone"
-msgstr ""
+msgstr "**является вехой для** \\| часть вехи"
 
 #: ../../source/task-links.rst:21
 msgid "**fixes** \\| is fixed by"
-msgstr ""
+msgstr "**исправлено** \\| исправляет"
 
 #: ../../source/task-links.rst:22
 msgid "**is fixed by** \\| fixes"
-msgstr ""
+msgstr "**исправляет** \\| исправлено"
 
 #: ../../source/task-links.rst:24
 msgid "Those labels can be changed in the application settings."
-msgstr ""
-
+msgstr "Эти названия могут быть быть изменены в настройках приложения."
