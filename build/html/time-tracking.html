@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Time Tracking &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Отслеживание времени &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,57 +41,57 @@
           <div class="body" role="main">
             
   <div class="section" id="time-tracking">
-<h1>Time Tracking<a class="headerlink" href="#time-tracking" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Time tracking information can be defined at the task level or at the
-subtask level.</p>
+<h1>Отслеживание времени<a class="headerlink" href="#time-tracking" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Отслеживание времени (контроль времени) может быть использовано для уровня задач или для уровня подзадач.</p>
 <div class="section" id="task-time-tracking">
-<h2>Task time tracking<a class="headerlink" href="#task-time-tracking" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Отслеживание времени испольнения задач<a class="headerlink" href="#task-time-tracking" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id1">
 <img alt="Task time tracking" src="https://kanboard.net/screenshots/documentation/task-time-tracking.png" />
-<p class="caption"><span class="caption-text">Task time tracking</span></p>
+<p class="caption"><span class="caption-text">Отслеживание времени испольнения задач</span></p>
 </div>
-<p>Tasks have two fields:</p>
+<p>Задачи имеют два поля:</p>
 <ul class="simple">
-<li>Time estimated</li>
-<li>Time spent</li>
+<li><p class="first">Запланировано времени</p>
+</li>
+<li><p class="first">Затрачено времени</p>
+</li>
 </ul>
-<p>These values represent hours of work and have to be set manually.</p>
+<p>Эти значения показывают время работы и могут быть установлены вручную</p>
 </div>
 <div class="section" id="subtask-time-tracking">
-<h2>Subtask time tracking<a class="headerlink" href="#subtask-time-tracking" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Отслеживание времени подзадач<a class="headerlink" href="#subtask-time-tracking" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id2">
 <img alt="Subtask time tracking" src="https://kanboard.net/screenshots/documentation/subtask-time-tracking.png" />
-<p class="caption"><span class="caption-text">Subtask time tracking</span></p>
+<p class="caption"><span class="caption-text">Отслеживание времени подзадач</span></p>
 </div>
-<p>Subtasks also have the fields &#8220;time spent&#8221; and &#8220;time estimated&#8221;.</p>
-<p>When you change the value of these fields, <strong>the task time tracking
-values are updated automatically and becomes the sum of all subtask
-values</strong>.</p>
-<p>Kanboard records the time between each subtask status change in a
-separate table.</p>
+<p>Подзадачи тоже имеют поля &#8220;Запланировано&#8221; и &#8220;Затрачено&#8221; время.</p>
+<p>Когда вы меняете значения в этих полях, <strong>отслеживание времени задачи обновляется автоматически и формируется суммарное время всех подзадач</strong></p>
+<p>Канборд записывает время между изменениями статуса каждой подзадачи в отдельную таблицу.</p>
 <ul class="simple">
-<li>Changing subtask status from <strong>todo</strong> to <strong>in pogress</strong> logs the
-start time</li>
-<li>Changing subtask status from <strong>in progress</strong> to <strong>done</strong> logs the end
-time but also update the time spent of the subtask and the task</li>
+<li><p class="first">При изменении статуса подзадачи с <strong>&#8220;Для испольнения&#8221;</strong> на <strong>&#8220;В работе&#8221;</strong>, записывается время начала</p>
+</li>
+<li><p class="first">При изменении статуса подзадачи с <strong>&#8220;В работе&#8221;</strong> на <strong>&#8220;Выполнено&#8221;</strong>, записывается как время окончания и, при этом, обновляется <strong>затраченное время</strong> в подзадаче и в задаче.</p>
+</li>
 </ul>
-<p>The breakdown of all records is visible in the task view page:</p>
+<p>Анализ всех записей можно увидеть на странице детального просмотра задачи:</p>
 <div class="figure" id="id3">
 <img alt="Task timesheet" src="https://kanboard.net/screenshots/documentation/task-timesheet.png" />
-<p class="caption"><span class="caption-text">Task timesheet</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Таблица учета времени.</span></p>
 </div>
-<p>For each subtask, the timer can be stopped/started at any time:</p>
+<p>Для каждой подзадачи, таймер может быть остановлен и запущен в любое время:</p>
 <div class="figure" id="id4">
 <img alt="Subtask timer" src="https://kanboard.net/screenshots/documentation/subtask-timer.png" />
-<p class="caption"><span class="caption-text">Subtask timer</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Таймер подзадач.</span></p>
 </div>
 <ul class="simple">
-<li>The timer doesn&#8217;t depend of the subtask status</li>
-<li>Each time you start the timer a new record is created in the time
-tracking table</li>
-<li>Each time you stop the clock the end date is recorded in the time
-tracking table</li>
-<li>The calculated time spent is rounded to the nearest quarter</li>
+<li><p class="first">Таймер не зависит от статуса подзадачи</p>
+</li>
+<li><p class="first">Вы можете запустить таймер для новой записи, созданной в таблице отслеживания задач, в любое время</p>
+</li>
+<li><p class="first">Вы можете остановить учет времени даты завершения в таблице отслеживания задач, в любое время</p>
+</li>
+<li><p class="first">Подсчет затраченного времени округляется до четверти часа</p>
+</li>
 </ul>
 </div>
 </div>
@@ -104,9 +104,9 @@ tracking table</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Time Tracking</a><ul>
-<li><a class="reference internal" href="#task-time-tracking">Task time tracking</a></li>
-<li><a class="reference internal" href="#subtask-time-tracking">Subtask time tracking</a></li>
+<li><a class="reference internal" href="#">Отслеживание времени</a><ul>
+<li><a class="reference internal" href="#task-time-tracking">Отслеживание времени испольнения задач</a></li>
+<li><a class="reference internal" href="#subtask-time-tracking">Отслеживание времени подзадач</a></li>
 </ul>
 </li>
 </ul>
