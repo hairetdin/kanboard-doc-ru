@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Create tasks by email &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Создание задач через email &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,54 +41,55 @@
           <div class="body" role="main">
             
   <div class="section" id="create-tasks-by-email">
-<h1>Create tasks by email<a class="headerlink" href="#create-tasks-by-email" title="Ссылка на этот заголовок">¶</a></h1>
-<p>You can create tasks directly by sending an email. This feature is
-available by using plugins.</p>
-<p>At the moment, Kanboard is integrated with 3 external services:</p>
+<h1>Создание задач через email<a class="headerlink" href="#create-tasks-by-email" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Вы можете создавать задачи отправляя email (сообщения через электронную почту). Эта возможность доступна при использовании плагинов.</p>
+<p>В настоящий момент, Канборд поддерживает три внешних плагина:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/kanboard/plugin-mailgun">Mailgun</a></li>
 <li><a class="reference external" href="https://github.com/kanboard/plugin-sendgrid">Sendgrid</a></li>
 <li><a class="reference external" href="https://github.com/kanboard/plugin-postmark">Postmark</a></li>
 </ul>
-<p>These services handle incoming emails without having to configure any
-SMTP server.</p>
-<p>When an email is received, Kanboard receive the message on a specific
-end-point. All complicated works are already handled by those services.</p>
+<p>Эти плагины позволяют обрабатывать входящие электронные сообщения (email) без дополнительной настройки SMTP сервера.</p>
+<p>При получении плагином email сообщения, плагин передает это сообщение в веб транслятор Канборда.</p>
 <div class="section" id="incoming-emails-workflow">
-<h2>Incoming emails workflow<a class="headerlink" href="#incoming-emails-workflow" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Обработка входящих email сообщений<a class="headerlink" href="#incoming-emails-workflow" title="Ссылка на этот заголовок">¶</a></h2>
 <ol class="arabic simple">
-<li>You send an email to a specific address, for example
-<strong>something+myproject&#64;inbound.mydomain.tld</strong></li>
-<li>Your email is forwarded to the third-party SMTP servers</li>
-<li>The SMTP provider call the Kanboard web hook with the email in JSON
-or multipart/form-data formats</li>
-<li>Kanboard parses the received email and create the task to the right
-project</li>
+<li><p class="first">Вы отправляете email сообщение на определенный адрес, например <strong>something+myproject&#64;inbound.mydomain.tld</strong></p>
+</li>
+<li><p class="first">Email сообщение перенаправляется на SMTP сервер</p>
+</li>
+<li><p class="first">SMTP провайдер передает в веб сервис Канборда email сообщение в JSON формате или в формате multipart/form-data</p>
+</li>
+<li><p class="first">Канборд обрабатывает полученное email сообщение и создает задачу в указанном проекте</p>
+</li>
 </ol>
-<p>Note: New tasks are automatically created in the first column.</p>
+<p><strong>Заметка</strong>: Новые задачи автоматически создаются в первой колонке.</p>
 </div>
 <div class="section" id="email-format">
-<h2>Email format<a class="headerlink" href="#email-format" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Формат email сообщения<a class="headerlink" href="#email-format" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>The local part of the email address must use the plus separator, for
-example <strong>kanboard+project123</strong></li>
-<li>The string defined after the plus sign must match a project
-identifier, for example <strong>project123</strong> is the identifier of the
-project <strong>Project 123</strong></li>
-<li>The email subject becomes the task title</li>
-<li>The email body becomes the task description (Markdown format)</li>
+<li><p class="first">Email адрес до знака <strong>&#64;</strong> должен содержать разделитель <strong>плюс</strong>, например <strong>kanboard+project123</strong></p>
+</li>
+<li><p class="first">Строка следующая после знака плюс означает <strong>Идентификатор проекта</strong>, например, проект <strong>Проект 123</strong> может иметь идентификатор проекта <strong>project123</strong>. Идентификатор проекта можно задать в свойствах проекта <strong>Меню</strong> -&gt; <strong>Настройки</strong> -&gt; <strong>Изменить проект</strong> -&gt; <strong>Идентификатор</strong>. <strong>Идентификатор</strong> должен быть из цифр и латинских букв.</p>
+</li>
+<li><p class="first">Тема из email сообщения становится названием задачи</p>
+</li>
+<li><p class="first">Текст email сообщения становится описанием задачи (в формате Markdown)</p>
+</li>
 </ul>
-<p>Incoming emails can be written in text or HTML formats. <strong>Kanboard is
-able to convert simple HTML emails to Markdown</strong>.</p>
+<p>Email сообщения могут быть написаны в текстовом или HTML формате. <strong>Канборд сам переконвертирует формат сообщения в Markdown</strong></p>
 </div>
 <div class="section" id="security-and-requirements">
-<h2>Security and requirements<a class="headerlink" href="#security-and-requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Безопастность и требования<a class="headerlink" href="#security-and-requirements" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>The Kanboard web hook is protected by a random token</li>
-<li>The sender email address must match a Kanboard user</li>
-<li>The Kanboard project must have a unique identifier, for example
-<strong>MYPROJECT</strong></li>
-<li>The Kanboard user must be a member of the project</li>
+<li><p class="first">Веб транслятор Канборд защищен случайным ключом</p>
+</li>
+<li><p class="first">Email адрес отправителя должен быть такой же как и у пользователя Канборд</p>
+</li>
+<li><p class="first">Проект в Канборде должен иметь уникальный идентификатор</p>
+</li>
+<li><p class="first">Отправитель email сообщения должен быть участником проекта</p>
+</li>
 </ul>
 </div>
 </div>
@@ -101,10 +102,10 @@ able to convert simple HTML emails to Markdown</strong>.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Create tasks by email</a><ul>
-<li><a class="reference internal" href="#incoming-emails-workflow">Incoming emails workflow</a></li>
-<li><a class="reference internal" href="#email-format">Email format</a></li>
-<li><a class="reference internal" href="#security-and-requirements">Security and requirements</a></li>
+<li><a class="reference internal" href="#">Создание задач через email</a><ul>
+<li><a class="reference internal" href="#incoming-emails-workflow">Обработка входящих email сообщений</a></li>
+<li><a class="reference internal" href="#email-format">Формат email сообщения</a></li>
+<li><a class="reference internal" href="#security-and-requirements">Безопастность и требования</a></li>
 </ul>
 </li>
 </ul>
