@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Management &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Управление пользователями &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,44 +41,45 @@
           <div class="body" role="main">
             
   <div class="section" id="user-management">
-<h1>User Management<a class="headerlink" href="#user-management" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Управление пользователями<a class="headerlink" href="#user-management" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="add-a-new-user">
-<h2>Add a new user<a class="headerlink" href="#add-a-new-user" title="Ссылка на этот заголовок">¶</a></h2>
-<p>To add a new user, you must be an administrator.</p>
+<h2>Создание нового пользователя<a class="headerlink" href="#add-a-new-user" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Только администратор может создавать нового пользователя.</p>
 <ol class="arabic simple">
-<li>From the dropdown menu in the top right corner, go to the menu
-<strong>Users Management</strong></li>
-<li>On the top, you have a link <strong>New local user</strong> or <strong>New remote user</strong></li>
-<li>Fill the form and save</li>
+<li><p class="first">В выпадающем меню, в правом верхнем углу, выберите <strong>Управление пользователями</strong></p>
+</li>
+<li><p class="first">Вверху имеются ссылки - <strong>Новый локальный пользователь</strong> и <strong>Новый удаленный пользователь</strong></p>
+</li>
+<li><p class="first">При создании пользователя нужно заполнить форму и сохранить</p>
+</li>
 </ol>
 <div class="figure" id="id1">
 <img alt="New user" src="_images/new-user.png" />
-<p class="caption"><span class="caption-text">New user</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Форма создания нового пользователя.</span></p>
 </div>
-<p>When you create a <strong>local user</strong>, you have to specify at least those
-values:</p>
+<p>При создании <strong>Локального пользователя</strong> вы должны, как минимум, заполнить следующие поля:</p>
 <ul class="simple">
-<li><strong>username</strong>: This is the unique identifier of your user (login)</li>
-<li><strong>password</strong>: The password of your user must have at least 6
-characters</li>
+<li><p class="first"><strong>Имя пользователя</strong>: это поле является уникальным идентификатором вашего пользователя (логин)</p>
+</li>
+<li><p class="first"><strong>Пароль</strong>: Пароль пользователя должен иметь минимум 6 символов</p>
+</li>
 </ul>
-<p>For <strong>remote users</strong>, only the username is mandatory.</p>
+<p>Для <strong>удаленных пользователей</strong> обязательно только <strong>Имя пользователя</strong>.</p>
 </div>
 <div class="section" id="edit-users">
-<h2>Edit users<a class="headerlink" href="#edit-users" title="Ссылка на этот заголовок">¶</a></h2>
-<p>When you go to the <strong>users</strong> menu, you have the list of users, to modify
-a user click on the <strong>edit link</strong>.</p>
+<h2>Редактирование пользователей<a class="headerlink" href="#edit-users" title="Ссылка на этот заголовок">¶</a></h2>
+<p>После перехода в <strong>Управление пользователями</strong>, вам будет доступен список пользователей. Кликните на пользователя в столбце <strong>Имя пользователя</strong>. Далее, вам будет доступно редактирование настроек и профиля пользователя.</p>
 <ul class="simple">
-<li>If you are a regular user, you can change only your own profile</li>
-<li>You have to be an administrator to be able to edit any users</li>
+<li><p class="first">Если вы имеете права пользователя, то вы сможете только изменить ваш профиль</p>
+</li>
+<li><p class="first">Для редактирования любого пользователя вам должны быть назначены права администратора</p>
+</li>
 </ul>
 </div>
 <div class="section" id="remove-users">
-<h2>Remove users<a class="headerlink" href="#remove-users" title="Ссылка на этот заголовок">¶</a></h2>
-<p>From the <strong>users</strong> menu, click on the link <strong>remove</strong>. This link is
-visible only if you are administrators.</p>
-<p>If you remove a specific user, <strong>tasks assigned to this person will be
-unassigned</strong> after the operation.</p>
+<h2>Удаеление пользователей<a class="headerlink" href="#remove-users" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В списке пользователей выберите в колонке <strong>Действия</strong> в выпадающем меню <strong>Удалить</strong>. Эта ссылка доступна только для администраторов.</p>
+<p>Если вы удалите пользователя, то все задачи назначенные пользователю перестанут быть назначенными.</p>
 </div>
 </div>
 
@@ -90,10 +91,10 @@ unassigned</strong> after the operation.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">User Management</a><ul>
-<li><a class="reference internal" href="#add-a-new-user">Add a new user</a></li>
-<li><a class="reference internal" href="#edit-users">Edit users</a></li>
-<li><a class="reference internal" href="#remove-users">Remove users</a></li>
+<li><a class="reference internal" href="#">Управление пользователями</a><ul>
+<li><a class="reference internal" href="#add-a-new-user">Создание нового пользователя</a></li>
+<li><a class="reference internal" href="#edit-users">Редактирование пользователей</a></li>
+<li><a class="reference internal" href="#remove-users">Удаеление пользователей</a></li>
 </ul>
 </li>
 </ul>
