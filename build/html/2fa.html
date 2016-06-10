@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Two-Factor Authentication &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Двух-уровневая аутентификация: &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,18 +41,11 @@
           <div class="body" role="main">
             
   <div class="section" id="two-factor-authentication">
-<h1>Two-Factor Authentication<a class="headerlink" href="#two-factor-authentication" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Each user can enable the <a class="reference external" href="http://en.wikipedia.org/wiki/Two_factor_authentication">two-factor
-authentication</a>.
-After a successful login, a one-time code (6 characters) is asked to the
-user to allow access to Kanboard.</p>
-<p>This code has to be provided by a compatible software generally
-installed on your smartphone.</p>
-<p>Kanboard use the <a class="reference external" href="http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">Time-based One-time Password
-Algorithm</a>
-defined in the <a class="reference external" href="http://tools.ietf.org/html/rfc6238">RFC 6238</a>.</p>
-<p>There are many software compatible with the standard TOTP system. For
-example, you can use these free and open source applications:</p>
+<h1>Двух-уровневая аутентификация:<a class="headerlink" href="#two-factor-authentication" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Любой пользователь может включить <a class="reference external" href="http://en.wikipedia.org/wiki/Two_factor_authentication">двух-уровневую аутентификацию</a>. После успешного входа, разовый код (6 знаков) запрашивается у пользователя для получения доступа в Канборд.</p>
+<p>Этот код присылается в программу на вашем смартфоне.</p>
+<p>Канборд использует <a class="reference external" href="http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">Time-based One-time Password Algorithm</a> основанный на <a class="reference external" href="http://tools.ietf.org/html/rfc6238">RFC 6238</a>.</p>
+<p>Имеется много программ совместимых со стандартной системой TOTP. Например, вы можете использовать эти приложения, бесплатные и с открытым исходным кодом:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/google/google-authenticator/">Google
 Authenticator</a>
@@ -61,27 +54,30 @@ Authenticator</a>
 <li><a class="reference external" href="http://www.nongnu.org/oath-toolkit/">OATH Toolkit</a> (Command line
 utility on Unix/Linux)</li>
 </ul>
-<p>This system can work offline and you don&#8217;t necessarily need to have a
-mobile phone.</p>
+<p>Эти системы могут работать офлайн и вам не нужно иметь мобильную связь.</p>
 <div class="section" id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройка<a class="headerlink" href="#setup" title="Ссылка на этот заголовок">¶</a></h2>
 <ol class="arabic simple">
-<li>Go to your user profile</li>
-<li>On the left, click on <strong>Two factor authentication</strong> and check the box</li>
-<li>A secret key is generated for you</li>
+<li><p class="first">Перейдите в пользовательский профиль</p>
+</li>
+<li><p class="first">Слева нажмите <strong>Двухфакторная авторизация</strong> и поставте галочку в чекбоке</p>
+</li>
+<li><p class="first">Секретный ключ сгенерируется для вас</p>
+</li>
 </ol>
 <div class="figure" id="id1">
 <img alt="2FA" src="https://kanboard.net/screenshots/documentation/2fa.png" />
-<p class="caption"><span class="caption-text">2FA</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Двухуровневая аутентификация.</span></p>
 </div>
 <ul class="simple">
-<li>You have to save the secret key in your TOTP software. If you use a
-smartphone, the easiest solution is to scan the QR code with FreeOTP
-or Google Authenticator.</li>
-<li>Each time you will open a new session, a new code will be asked</li>
-<li>Don&#8217;t forget to test your device before closing your session</li>
+<li><p class="first">Вы должны сохранить секретный ключ в вашей TOTP программе. Если вы используете сматрфон, то просто сосканируйте QR код с помощью FreeOTP или Google Authenticator.</p>
+</li>
+<li><p class="first">Каждый раз, когда вы будете входить в Канборд, будет запрашиваться новый код</p>
+</li>
+<li><p class="first">Не забудьте протестировать ваше устройство, перед тем как закрыть вашу сессию</p>
+</li>
 </ul>
-<p>A new secret key is generated each time you enable/disable this feature.</p>
+<p>Новый секретный ключ генерируется каждый раз при включении/выключении этой возможности.</p>
 </div>
 </div>
 
@@ -93,8 +89,8 @@ or Google Authenticator.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Two-Factor Authentication</a><ul>
-<li><a class="reference internal" href="#setup">Setup</a></li>
+<li><a class="reference internal" href="#">Двух-уровневая аутентификация:</a><ul>
+<li><a class="reference internal" href="#setup">Настройка</a></li>
 </ul>
 </li>
 </ul>
