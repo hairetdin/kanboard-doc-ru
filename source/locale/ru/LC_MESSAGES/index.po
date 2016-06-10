@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 12:28+0500\n"
-"PO-Revision-Date: 2016-06-08 10:52+0500\n"
+"PO-Revision-Date: 2016-06-10 10:04+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -180,7 +180,7 @@ msgstr "Работа с пользователями и группами"
 
 #: ../../source/index.rst:59
 msgid "`Roles <roles.markdown>`__"
-msgstr "`Роли <roles.markdown>`__"
+msgstr "`Роли <roles.html>`__"
 
 #: ../../source/index.rst:60
 msgid "`User Types <user-types.markdown>`__"

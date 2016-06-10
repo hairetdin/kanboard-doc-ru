@@ -3,123 +3,101 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-10 10:12+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/roles.rst:2
 msgid "User Roles"
-msgstr ""
+msgstr "Пользовательские роли"
 
 #: ../../source/roles.rst:5
 msgid "Application Roles"
-msgstr ""
+msgstr "Роли в приложениях"
 
 #: ../../source/roles.rst:7
 msgid "Each Kanboard user has one of these roles:"
-msgstr ""
+msgstr "Каждый пользователь системы Канборд имеет одну из этих ролей"
 
 #: ../../source/roles.rst:10 ../../source/roles.rst:26
 msgid "Role"
-msgstr ""
+msgstr "Роль"
 
 #: ../../source/roles.rst:10 ../../source/roles.rst:26
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: ../../source/roles.rst:12
 msgid "Administrator"
-msgstr ""
+msgstr "Администратор"
 
 #: ../../source/roles.rst:12
 msgid "Access to everything"
-msgstr ""
+msgstr "Имеет доступ ко всему"
 
 #: ../../source/roles.rst:14
 msgid "Manager"
-msgstr ""
+msgstr "Менеджер"
 
 #: ../../source/roles.rst:14
 msgid "Can create team projects but cannot change application settings"
 msgstr ""
+"Может создавать командные проекты, но не может изменять настройки приложения"
 
 #: ../../source/roles.rst:16
 msgid "User"
-msgstr ""
+msgstr "Пользователь"
 
 #: ../../source/roles.rst:16
 msgid "Can create private projects only"
-msgstr ""
+msgstr "Может создавать только приватные проекты"
 
 #: ../../source/roles.rst:20
 msgid "Project Roles"
-msgstr ""
+msgstr "Роли в проектах"
 
 #: ../../source/roles.rst:22
 msgid ""
-"Each individual team project can assign a different role to each user and"
-" group:"
+"Each individual team project can assign a different role to each user and "
+"group:"
 msgstr ""
+"В каждом командном проекте могут быть назначены разные роли для "
+"пользователей и групп:"
 
 #: ../../source/roles.rst:28
 msgid "Project Manager"
-msgstr ""
+msgstr "Менеджер проекта"
 
 #: ../../source/roles.rst:28
 msgid "Can change project settings, access to the Gantt chart and reports"
 msgstr ""
+"Может изменять настройки проекта, имеет доступ к диаграмме Ганта и отчетам"
 
 #: ../../source/roles.rst:30
 msgid "Project Member"
-msgstr ""
+msgstr "Участник проекта"
 
 #: ../../source/roles.rst:30
 msgid "Can create tasks and use the board"
-msgstr ""
+msgstr "Может создавать задачи и пользоваться доской"
 
 #: ../../source/roles.rst:32
 msgid "Project Viewer"
-msgstr ""
+msgstr "Наблюдатель проекта"
 
 #: ../../source/roles.rst:32
 msgid "Read-only access to the board and tasks"
-msgstr ""
-
-#~ msgid ""
-#~ "| Role          | Description"
-#~ "                                                     | "
-#~ "|---------------|-----------------------------------------------------------------|"
-#~ " | Administrator | Access to "
-#~ "everything                                            | |"
-#~ " Manager       | Can create team "
-#~ "projects but cannot change application "
-#~ "settings | | User          | Can "
-#~ "create private projects only"
-#~ "                                |"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "| Role            | Description"
-#~ "                                                          | "
-#~ "|-----------------|----------------------------------------------------------------------|"
-#~ " | Project Manager | Can change "
-#~ "project settings, access to the Gantt"
-#~ " chart and reports   | | Project "
-#~ "Member  | Can create tasks and use"
-#~ " the board                                   | |"
-#~ " Project Viewer  | Read-only access"
-#~ " to the board and tasks"
-#~ "                              |"
-#~ msgstr ""
-
+msgstr "Имеет доступ к доске и задачам только на просмотр (чтение)"
