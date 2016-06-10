@@ -3,74 +3,66 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-10 10:20+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/user-types.rst:2
 msgid "User Types"
-msgstr ""
+msgstr "Типы пользователей"
 
 #: ../../source/user-types.rst:4
 msgid "In Kanboard there are two types of users:"
-msgstr ""
+msgstr "В Канборде могут быть два типа пользователей:"
 
 #: ../../source/user-types.rst:7
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: ../../source/user-types.rst:7
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: ../../source/user-types.rst:9
 msgid "Local User"
-msgstr ""
+msgstr "Локальный пользователь"
 
 #: ../../source/user-types.rst:9
 msgid "User that stores his password in Kanboard's database"
-msgstr ""
+msgstr "Пароль пользователя хранится в базе данных Канборда"
 
 #: ../../source/user-types.rst:11
 msgid "Remote User"
-msgstr ""
+msgstr "Удаленный пользователь"
 
 #: ../../source/user-types.rst:11
 msgid "User credentials are managed by another system (Example: LDAP server)"
 msgstr ""
+"Учетные данные пользователя управляются (контролируются) другой системой "
+"(например, LDAP сервер). Другими словами, аутентификация пользователя "
+"происходит во внешней системе, не в Канборде."
 
 #: ../../source/user-types.rst:14
 msgid "Examples of remote users:"
-msgstr ""
+msgstr "Примеры удаленных пользователей:"
 
 #: ../../source/user-types.rst:16
 msgid "LDAP user"
-msgstr ""
+msgstr "LDAP пользователь"
 
 #: ../../source/user-types.rst:17
 msgid "Users authenticated by a reverse-proxy"
-msgstr ""
-
-#~ msgid ""
-#~ "| Type          | Description"
-#~ "                                                           | "
-#~ "|---------------|-----------------------------------------------------------------------|"
-#~ " | Local User    | User that "
-#~ "stores his password in Kanboard's "
-#~ "database                  | | Remote User"
-#~ "   | User credentials are managed by"
-#~ " another system (Example: LDAP server) "
-#~ "|"
-#~ msgstr ""
-
+msgstr "Аутентификация пользователя через реверс-прокси"
