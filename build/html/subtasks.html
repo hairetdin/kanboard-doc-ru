@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Subtasks &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Подзадачи &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,55 +41,57 @@
           <div class="body" role="main">
             
   <div class="section" id="subtasks">
-<h1>Subtasks<a class="headerlink" href="#subtasks" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Subtasks are useful to split the work of a task.</p>
-<p>Each subtask:</p>
+<h1>Подзадачи<a class="headerlink" href="#subtasks" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Подзадачи - это прекрасная возможность разделить основную задачу на части.</p>
+<p>Каждая подзадача:</p>
 <ul class="simple">
-<li>Can be assigned to a project member</li>
-<li>Have 3 different statuses: <strong>Todo</strong>, <strong>In progress</strong>, <strong>Done</strong></li>
-<li>Have time tracking information: <strong>time spent</strong> and <strong>time estimated</strong></li>
-<li>Be ordered by position</li>
+<li><p class="first">Может быть назначена участнику проекта</p>
+</li>
+<li><p class="first">Имеет 3 разных статуса: <strong>Для исполнения</strong>, <strong>В работе</strong>, <strong>Выполнено</strong></p>
+</li>
+<li><p class="first">Имеет информацию по отслеживанию времени: <strong>затраченное время</strong> и <strong>запланированное время</strong></p>
+</li>
+<li><p class="first">Может быть перемещена в списке, для изменения порядка выполнения</p>
+</li>
 </ul>
 <div class="section" id="creating-subtasks">
-<h2>Creating subtasks<a class="headerlink" href="#creating-subtasks" title="Ссылка на этот заголовок">¶</a></h2>
-<p>From the task view, on left sidebar click on <strong>Add a subtask</strong>:</p>
+<h2>Создание подзадачи<a class="headerlink" href="#creating-subtasks" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В детальном представлении задачи, в левой боковой панели нажмите <strong>Добавить подзадачу</strong>:</p>
 <div class="figure" id="id1">
 <img alt="Add a subtask" src="https://kanboard.net/screenshots/documentation/add-subtask.png" />
-<p class="caption"><span class="caption-text">Add a subtask</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Добавление подзадачи.</span></p>
 </div>
-<p>You can also add a subtask quickly by entering only the title:</p>
+<p>Вы, также, можете быстро добавить подзадачу нажав на заголовок:</p>
 <div class="figure" id="id2">
 <img alt="Add a subtask from the task view" src="https://kanboard.net/screenshots/documentation/add-subtask-shortcut.png" />
-<p class="caption"><span class="caption-text">Add a subtask from the task view</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Добавление подзадачи на странице детального просмотра задачи.</span></p>
 </div>
 </div>
 <div class="section" id="change-subtask-status">
-<h2>Change subtask status<a class="headerlink" href="#change-subtask-status" title="Ссылка на этот заголовок">¶</a></h2>
-<p>When you click on the subtask title the status change:</p>
+<h2>Изменение статуса подзадачи<a class="headerlink" href="#change-subtask-status" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Когда вы нажимаете на заголовок подзадачи стату меняется:</p>
 <div class="figure" id="id3">
 <img alt="Subtask in progress" src="https://kanboard.net/screenshots/documentation/subtask-status-inprogress.png" />
-<p class="caption"><span class="caption-text">Subtask in progress</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Выполнение подзадачи.</span></p>
 </div>
-<p>The icon before the title is updated according to the status.</p>
+<p>Иконка перед названием подзадачи обновляется в соответсвии со статусом.</p>
 <div class="figure" id="id4">
 <img alt="Subtask done" src="https://kanboard.net/screenshots/documentation/subtask-status-done.png" />
-<p class="caption"><span class="caption-text">Subtask done</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Подзадача выполнена.</span></p>
 </div>
-<p>Note: When the task is closed, all subtasks are changed to the status
-<strong>Done</strong>.</p>
+<p><strong>Заметка</strong>: Когда задача закрыта, то все подзадачи меняют статус на <strong>Выполнена</strong>.</p>
 </div>
 <div class="section" id="subtask-timer">
-<h2>Subtask timer<a class="headerlink" href="#subtask-timer" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Таймер подзадачи<a class="headerlink" href="#subtask-timer" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Each time a subtask is in progress, the timer is also started. The
-timer can be started and stopped at any time.</li>
-<li>The timer records the time spent on the subtask automatically. You
-can also change manually the value of the time spent field when you
-edit a subtask.</li>
-<li>The time calculated is rounded to the nearest quarter. This
-information is recorded in a separate table.</li>
-<li>The task time spent and time estimated is updated automatically
-according to the sum of all subtasks.</li>
+<li><p class="first">Когда подзадача выполняется, таймер должен быт запущен. Таймер можно запустить и остановить в любое время.</p>
+</li>
+<li><p class="first">Время таймера записывается автоматически в затраченное время. Так же, вы можете изменить вручную значение <strong>затраченного времени</strong> при редактировании подзадачи.</p>
+</li>
+<li><p class="first">Подсчитываемое время округляется до 15 минут. Эта информация записывается в отдельную таблицу.</p>
+</li>
+<li><p class="first">Время, затраченное на выполнение задачи, и запланированнное время обновляется автоматически, в соответсвии с суммой всех подзадач.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -102,10 +104,10 @@ according to the sum of all subtasks.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Subtasks</a><ul>
-<li><a class="reference internal" href="#creating-subtasks">Creating subtasks</a></li>
-<li><a class="reference internal" href="#change-subtask-status">Change subtask status</a></li>
-<li><a class="reference internal" href="#subtask-timer">Subtask timer</a></li>
+<li><a class="reference internal" href="#">Подзадачи</a><ul>
+<li><a class="reference internal" href="#creating-subtasks">Создание подзадачи</a></li>
+<li><a class="reference internal" href="#change-subtask-status">Изменение статуса подзадачи</a></li>
+<li><a class="reference internal" href="#subtask-timer">Таймер подзадачи</a></li>
 </ul>
 </li>
 </ul>
