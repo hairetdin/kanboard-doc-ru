@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Project Settings &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Настройки проекта &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,55 +41,50 @@
           <div class="body" role="main">
             
   <div class="section" id="project-settings">
-<h1>Project Settings<a class="headerlink" href="#project-settings" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Go to the menu <strong>Settings</strong>, then choose <strong>Project settings</strong> on the
-left.</p>
+<h1>Настройки проекта<a class="headerlink" href="#project-settings" title="Ссылка на этот заголовок">¶</a></h1>
+<p>В правом верхнем выпадающем меню выберите <strong>Настройки</strong>, затем выберите <strong>Настройки проекта</strong> слева.</p>
 <div class="figure" id="id1">
 <img alt="Project settings" src="https://kanboard.net/screenshots/documentation/project-settings.png" />
-<p class="caption"><span class="caption-text">Project settings</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Настройки проекта.</span></p>
 </div>
 <div class="section" id="default-columns-for-new-projects">
-<h2>Default columns for new projects<a class="headerlink" href="#default-columns-for-new-projects" title="Ссылка на этот заголовок">¶</a></h2>
-<p>You can change the default column names here. It&#8217;s useful if you always
-create projects with the same columns.</p>
-<p>Each column name must be separated by a comma.</p>
-<p>By default, Kanboard use those column names: Backlog, Ready, Work in
-progress and Done.</p>
+<h2>Колонки по умолчанию для новых проектов<a class="headerlink" href="#default-columns-for-new-projects" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Вы можете изменить колонки по умолчанию. Это удобно, когда вы создаете однотипные проекты с одними и теми же колонками.</p>
+<p>Название колонок должны быть разделены запятой.</p>
+<p>По умолчанию, в Канборде используются следующие колонки: Ожидающие, Готовые, В процессе, Выполнено</p>
 </div>
 <div class="section" id="default-categories-for-new-projects">
-<h2>Default categories for new projects<a class="headerlink" href="#default-categories-for-new-projects" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Categories are not global to the application but attached to a project.
-Each project can have different categories.</p>
-<p>However, if you always create the same categories for all your projects,
-you can define here the list of categories to create automatically.</p>
+<h2>Стандартные категории для новых проектов<a class="headerlink" href="#default-categories-for-new-projects" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Категории не являются общими для приложения, но могут использоваться в проектах. Каждый проект может иметь разные категории.</p>
+<p>Однако, если вы постоянно создаете одни и теже категории для разных проектов, то вы можете задать список категорий, которые будут автоматически создаваться при создании проекта.</p>
 </div>
 <div class="section" id="allow-only-one-subtask-in-progress-at-the-same-time-for-a-user">
-<h2>Allow only one subtask in progress at the same time for a user<a class="headerlink" href="#allow-only-one-subtask-in-progress-at-the-same-time-for-a-user" title="Ссылка на этот заголовок">¶</a></h2>
-<p>When this option is enabled, a user can work with only one subtask at
-the time.</p>
-<p>If another subtask have the status &#8220;in progress&#8221;, the user will see this
-dialog box:</p>
+<h2>Разрешена только одна подзадача в разработке одновременно для одного пользователя<a class="headerlink" href="#allow-only-one-subtask-in-progress-at-the-same-time-for-a-user" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Когда эта опция включена, пользователь может работать только с одной подзадачей одновременно.</p>
+<p>Если другая подзадача перейдет статус &#8220;В процессе&#8221;, то пользователь увидит следующее диалоговое окно:</p>
 <div class="figure" id="id2">
 <img alt="Subtask user restriction" src="https://kanboard.net/screenshots/documentation/subtask-user-restriction.png" />
-<p class="caption"><span class="caption-text">Subtask user restriction</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Ограничение пользовательских подзадач.</span></p>
 </div>
 </div>
 <div class="section" id="trigger-automatically-subtask-time-tracking">
-<h2>Trigger automatically subtask time tracking<a class="headerlink" href="#trigger-automatically-subtask-time-tracking" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Триггер автоматического отслеживания времени подзадач<a class="headerlink" href="#trigger-automatically-subtask-time-tracking" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>If enabled, when a subtask status is changed to &#8220;in progress&#8221;, the
-timer will start automatically.</li>
-<li>Disable this option if you don&#8217;t use time tracking.</li>
+<li><p class="first">Если этот триггер включен когда статус подзадачи меняется на &#8220;В процессе&#8221;, то таймер автоматически запускается.</p>
+</li>
+<li><p class="first">Выключите эту опцию, если вы не хотите отслеживать время.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="include-closed-tasks-in-the-cumulative-flow-diagram">
-<h2>Include closed tasks in the cumulative flow diagram<a class="headerlink" href="#include-closed-tasks-in-the-cumulative-flow-diagram" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Включить в диаграмму закрытые задачи<a class="headerlink" href="#include-closed-tasks-in-the-cumulative-flow-diagram" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>If enabled, closed tasks will be included in the cumulative flow
-diagram.</li>
-<li>If disabled, only open tasks will be included.</li>
-<li>This option affects the column &#8220;total&#8221; of the table
-&#8220;project_daily_column_stats&#8221;</li>
+<li><p class="first">Если эта опция включена, закрытые задачи будут добавлены в накопительную диаграмму.</p>
+</li>
+<li><p class="first">Если выключена, то только открытые задачи будут подсчитаны.</p>
+</li>
+<li><p class="first">Эта опция влияет на колонку &#8220;total&#8221; (всего) в таблице &#8220;project_daily_column_stats&#8221; (проект_ежедневно_колонка_статистика)</p>
+</li>
 </ul>
 </div>
 </div>
@@ -102,12 +97,12 @@ diagram.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Project Settings</a><ul>
-<li><a class="reference internal" href="#default-columns-for-new-projects">Default columns for new projects</a></li>
-<li><a class="reference internal" href="#default-categories-for-new-projects">Default categories for new projects</a></li>
-<li><a class="reference internal" href="#allow-only-one-subtask-in-progress-at-the-same-time-for-a-user">Allow only one subtask in progress at the same time for a user</a></li>
-<li><a class="reference internal" href="#trigger-automatically-subtask-time-tracking">Trigger automatically subtask time tracking</a></li>
-<li><a class="reference internal" href="#include-closed-tasks-in-the-cumulative-flow-diagram">Include closed tasks in the cumulative flow diagram</a></li>
+<li><a class="reference internal" href="#">Настройки проекта</a><ul>
+<li><a class="reference internal" href="#default-columns-for-new-projects">Колонки по умолчанию для новых проектов</a></li>
+<li><a class="reference internal" href="#default-categories-for-new-projects">Стандартные категории для новых проектов</a></li>
+<li><a class="reference internal" href="#allow-only-one-subtask-in-progress-at-the-same-time-for-a-user">Разрешена только одна подзадача в разработке одновременно для одного пользователя</a></li>
+<li><a class="reference internal" href="#trigger-automatically-subtask-time-tracking">Триггер автоматического отслеживания времени подзадач</a></li>
+<li><a class="reference internal" href="#include-closed-tasks-in-the-cumulative-flow-diagram">Включить в диаграмму закрытые задачи</a></li>
 </ul>
 </li>
 </ul>
