@@ -3,48 +3,47 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-14 12:07+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/link-labels.rst:2
 msgid "Link settings"
-msgstr ""
+msgstr "Настройки ссылки"
 
 #: ../../source/link-labels.rst:4
 msgid ""
-"Task relations can be changed from the application settings (**Settings >"
-" Link settings**)"
+"Task relations can be changed from the application settings (**Settings > "
+"Link settings**)"
 msgstr ""
+"Связи в задачах могут быть изменены в настройках приложения (**Настройки** -"
+"> **Настройки ссылки**)"
 
 #: ../../source/link-labels.rst:10
 msgid "Link Labels"
-msgstr ""
+msgstr "Рисунок. Метки для ссылок."
 
 #: ../../source/link-labels.rst:11
 msgid ""
-"Each label may have an opposite label defined. If there is no opposite, "
-"the label is considered bidirectionnal."
+"Each label may have an opposite label defined. If there is no opposite, the "
+"label is considered bidirectionnal."
 msgstr ""
+"Каждая метка может иметь противоположное опеределение. Если нет "
+"противоположного значения, метка считается двунаправленная."
 
 #: ../../source/link-labels.rst:17
 msgid "Link Label Creation"
-msgstr ""
-
-#~ msgid ""
-#~ "Task relations can be changed from "
-#~ "the application settings (Settings > "
-#~ "Link settings)"
-#~ msgstr ""
-
+msgstr "Рисунок. Создание ссылки."
