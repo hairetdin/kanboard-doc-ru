@@ -3,74 +3,74 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-15 10:44+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/rss.rst:2
 msgid "RSS/Atom subscriptions"
-msgstr ""
+msgstr "RSS/Atom подписки"
 
 #: ../../source/rss.rst:4
 msgid "Kanboard supports RSS feeds for projects and users."
-msgstr ""
+msgstr "Канборд поддерживает RSS ленты для проектов и пользователей."
 
 #: ../../source/rss.rst:6
 msgid "Project feeds contains only the activity the project"
-msgstr ""
+msgstr "RSS/Atom лента для проекта - содержит только активность в проекте"
 
 #: ../../source/rss.rst:7
 msgid ""
-"User feeds contains the activity stream of all projects the user is a "
-"member"
+"User feeds contains the activity stream of all projects the user is a member"
 msgstr ""
+"RSS/Atom лента пользователя - содержит поток активности пользователя во всех "
+"проектах, в которых пользователь является участником"
 
 #: ../../source/rss.rst:10
 msgid ""
-"Those subscriptions are only activated when the public access is enabled "
-"in the user profile or in the project settings."
+"Those subscriptions are only activated when the public access is enabled in "
+"the user profile or in the project settings."
 msgstr ""
+"Эти подписки доступны только при включенном общем доступе в пользовательском "
+"профиле или в настройках проекта."
 
 #: ../../source/rss.rst:14
 msgid "Enable/disable project RSS feeds"
-msgstr ""
+msgstr "Включение/выключение RSS ленты проекта"
 
 #: ../../source/rss.rst:16
 msgid "Go to **Project settings > Public access**."
-msgstr ""
+msgstr "Перейдите в **Настройки проекта** -> **Общий доступ**"
 
 #: ../../source/rss.rst:21
 msgid "Disable public access"
-msgstr ""
+msgstr "Рисунок. Выключение общего доступа."
 
 #: ../../source/rss.rst:23
 msgid "Enable/disable user RSS feeds"
-msgstr ""
+msgstr "Включение/выключение RSS ленты пользователя"
 
 #: ../../source/rss.rst:25
 msgid "Go to **User profile > Public access**."
-msgstr ""
+msgstr "Перейдите в **Мой профиль** -> **Общий доступ**"
 
 #: ../../source/rss.rst:27
 msgid ""
-"The RSS link is protected by a random token, only people who know the URL"
-" can access to the feed."
+"The RSS link is protected by a random token, only people who know the URL "
+"can access to the feed."
 msgstr ""
-
-#~ msgid "Go to Project settings > Public access."
-#~ msgstr ""
-
-#~ msgid "Go to User profile > Public access."
-#~ msgstr ""
-
+"Ссылка на RSS ленту защищена случайным ключом, только пользователи, которые "
+"знают URL ссылку, могут иметь доступ к ленте."
