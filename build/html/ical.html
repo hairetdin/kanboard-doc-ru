@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Syncing your calendars &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Синхронизация вашего календаря &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,113 +41,121 @@
           <div class="body" role="main">
             
   <div class="section" id="syncing-your-calendars">
-<h1>Syncing your calendars<a class="headerlink" href="#syncing-your-calendars" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Kanboard supports iCal feeds for projects and users. This feature allows
-you to import Kanboard tasks in almost any calendar program (by example
-Microsoft Outlook, Apple Calendar, Mozilla Thunderbird and Google
-Calendar).</p>
-<p>Calendar subscriptions are <strong>read-only</strong> access, you cannot create tasks
-from external calendar software. The Calendar feed export follows the
-iCal standard.</p>
-<p>Note: Only tasks within the date range of -2 months to +6 months are
-exported to the iCalendar feed.</p>
+<h1>Синхронизация вашего календаря<a class="headerlink" href="#syncing-your-calendars" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Канборд поддерживает iCal транслятор для проектов и пользователей. Эта возможность позволяет вам импортировать задачи из Канборд в любую программу календарь (например, Microsoft Outlook, Apple Calendar, Mozilla Thunderbird и Google Calendar).</p>
+<p>Подписки на календарь возможны только на <strong>чтение</strong>, т.е. вы не можете создавать задачи во внешнем календаре. Данные из Календаря экспортируются в стандарте iCal.</p>
+<p>Заметка: Только задачи в промежутке от -2 месяцев до +6 месяцев (прошедшие два месяца и предстоящие 6 месяцев) экспортируются в iCalendar транслятор.</p>
 <div class="section" id="project-calendars">
-<h2>Project calendars<a class="headerlink" href="#project-calendars" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Календарь проекта<a class="headerlink" href="#project-calendars" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Each project has its own calendar.</li>
-<li>The subscription link is unique per project, the link is activated
-when you enable the public access of your project: <strong>Project settings
-&gt; Public access</strong>.</li>
-<li>This calendar shows only tasks for the selected project.</li>
+<li><p class="first">Каждый проект имеет свой календарь.</p>
+</li>
+<li><p class="first">Ссылка на подписку уникальна для каждого проекта. Ссылка становится активной, когда вы включаете общий доступ к вашему проекту: <strong>Меню</strong> -&gt; <strong>Настройки</strong> -&gt; <strong>Общий доступ</strong></p>
+</li>
+<li><p class="first">Этот календарь показывает только задачи для выбранного проекта.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="user-calendars">
-<h2>User calendars<a class="headerlink" href="#user-calendars" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Календарь пользователя<a class="headerlink" href="#user-calendars" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Each user has its own calendar.</li>
-<li>The subscription link is unique per user, the link is activated when
-you enable the public access of your user: <strong>User profile &gt; Public
-access</strong>.</li>
-<li>This calendar show tasks assigned to the user for all projects.</li>
+<li><p class="first">Каждый пользователь имеет свой собственный календарь.</p>
+</li>
+<li><p class="first">Ссылка на подписку уникальная для каждого пользователя. Ссылка становится активной, когда вы включите общий доступ для пользователя: в правом верхнем выпадающем меню - <strong>Мой профиль</strong> -&gt; в левом меню - <strong>Общий доступ</strong>.</p>
+</li>
+<li><p class="first">Этот календарь показывает задачи назначенные пользователю во всех проектах.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="adding-your-kanboard-calendar-to-apple-calendar">
-<h2>Adding your Kanboard calendar to Apple Calendar<a class="headerlink" href="#adding-your-kanboard-calendar-to-apple-calendar" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Добавление Канборд календаря в календарь Apple<a class="headerlink" href="#adding-your-kanboard-calendar-to-apple-calendar" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Open Calendar</li>
-<li>Select <strong>File &gt; New Calendar Subscription</strong></li>
-<li>Copy and paste the iCal feed URL from Kanboard</li>
+<li><p class="first">Откройте календарь</p>
+</li>
+<li><p class="first">Выберите <strong>Файл</strong> -&gt; <strong>Новая подписка на календарь</strong></p>
+</li>
+<li><p class="first">Скопируйте в Канборд URL ссылку на iCal транслятор и вставьте</p>
+</li>
 </ul>
 <div class="figure" id="id1">
 <img alt="Add iCal subscription" src="https://kanboard.net/screenshots/documentation/apple-calendar-add-subscription.png" />
-<p class="caption"><span class="caption-text">Add iCal subscription</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Добавление подписки на календарь.</span></p>
 </div>
 <ul class="simple">
-<li>You can choose to synchronize the calendar with iCloud to be
-available across all your devices</li>
-<li>Don&#8217;t forget to select the refresh frequency</li>
+<li><p class="first">Вы можете выбрать синхронизацию календаря с iCloud, чтобы иметь доступ к календарю с любых ваших устройств</p>
+</li>
+<li><p class="first">Не забудьте указать частоту синхронизации</p>
+</li>
 </ul>
 <div class="figure" id="id2">
 <img alt="Edit iCal subscription" src="https://kanboard.net/screenshots/documentation/apple-calendar-edit-subscription.png" />
-<p class="caption"><span class="caption-text">Edit iCal subscription</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Редактирование подписки на календарь.</span></p>
 </div>
 </div>
 <div class="section" id="adding-your-kanboard-calendar-to-microsoft-outlook">
-<h2>Adding your Kanboard calendar to Microsoft Outlook<a class="headerlink" href="#adding-your-kanboard-calendar-to-microsoft-outlook" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Добавление вашего календаря из Канборд в Microsoft Outlook<a class="headerlink" href="#adding-your-kanboard-calendar-to-microsoft-outlook" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="figure" id="id3">
 <img alt="Outlook Add Internet Calendar" src="https://kanboard.net/screenshots/documentation/outlook-add-subscription.png" />
-<p class="caption"><span class="caption-text">Outlook Add Internet Calendar</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Добавление в Outlook календаря из интернет</span></p>
 </div>
 <ul class="simple">
-<li>Open Outlook</li>
-<li>Select <strong>Open Calendar &gt; From Internet</strong></li>
-<li>Copy and paste the iCal feed URL from Kanboard</li>
+<li><p class="first">Откройте Outlook</p>
+</li>
+<li><p class="first">Выберите <strong>Открыть календарь</strong> -&gt; <strong>Из интернета</strong></p>
+</li>
+<li><p class="first">Скопируйте в Канборд URL ссылку на iCal транслятор и вставьте</p>
+</li>
 </ul>
 <div class="figure" id="id4">
 <img alt="Outlook Edit Internet Calendar" src="https://kanboard.net/screenshots/documentation/outlook-edit-subscription.png" />
-<p class="caption"><span class="caption-text">Outlook Edit Internet Calendar</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Настройка интернет календаря в Outlook.</span></p>
 </div>
 </div>
 <div class="section" id="adding-your-kanboard-calendar-to-mozilla-thunderbird">
-<h2>Adding your Kanboard calendar to Mozilla Thunderbird<a class="headerlink" href="#adding-your-kanboard-calendar-to-mozilla-thunderbird" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Добавление вашего календаря из Канборд в Mozilla Thunderbird<a class="headerlink" href="#adding-your-kanboard-calendar-to-mozilla-thunderbird" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Install the Add-on <strong>Lightning</strong> to add calendar support to
-Thunderbird</li>
-<li>Click on <strong>File &gt; New Calendar</strong></li>
-<li>In the dialog box, choose <strong>On the Network</strong></li>
+<li><p class="first">Установите в Thunderbird Дополнение <strong>Lightning</strong></p>
+</li>
+<li><p class="first">Выберите <strong>Файл</strong> -&gt; <strong>Новый календарь</strong></p>
+</li>
+<li><p class="first">В диалоговом окне, выберите <strong>Из сети</strong></p>
+</li>
 </ul>
 <div class="figure" id="id5">
 <img alt="Thunderbird Step 1" src="https://kanboard.net/screenshots/documentation/thunderbird-new-calendar-step1.png" />
-<p class="caption"><span class="caption-text">Thunderbird Step 1</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Создание календаря в Thunderbird, шаг 1.</span></p>
 </div>
 <ul class="simple">
-<li>Choose the format iCalendar</li>
-<li>Copy and paste the iCal feed URL from Kanboard</li>
+<li><p class="first">Выберите формат iCalendar</p>
+</li>
+<li><p class="first">Скопируйте в Канборд URL ссылку на iCal транслятор и вставьте</p>
+</li>
 </ul>
 <div class="figure" id="id6">
 <img alt="Thunderbird Step 2" src="https://kanboard.net/screenshots/documentation/thunderbird-new-calendar-step2.png" />
-<p class="caption"><span class="caption-text">Thunderbird Step 2</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Создание календаря в Thunderbird, шаг 2.</span></p>
 </div>
 <ul class="simple">
-<li>Choose the colors and other settings and finally save</li>
+<li><p class="first">Выберите цвета и другие настройки и в завершении нажмите <strong>Сохранить</strong>.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="adding-your-kanboard-calendar-to-google-calendar">
-<h2>Adding your Kanboard calendar to Google Calendar<a class="headerlink" href="#adding-your-kanboard-calendar-to-google-calendar" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Добавление вашего календаря Канборд в календарь Google<a class="headerlink" href="#adding-your-kanboard-calendar-to-google-calendar" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Click the down-arrow next to <strong>Other calendars</strong>.</li>
-<li>Select <strong>Add by URL</strong> from the menu.</li>
-<li>Copy and paste the iCal feed URL from Kanboard</li>
+<li><p class="first">Нажмите иконку &#8220;треугольник&#8221; рядом с <strong>Другие календари</strong> (слева).</p>
+</li>
+<li><p class="first">Вставьте ссылку на календарь из Канборд в поле &#8220;Добавить календарь друга&#8221;</p>
+</li>
+<li><p class="first">Скопируйте в Канборд URL ссылку на iCal транслятор и вставьте</p>
+</li>
 </ul>
 <div class="figure" id="id7">
 <img alt="Google Calendar" src="https://kanboard.net/screenshots/documentation/google-calendar-add-subscription.png" />
-<p class="caption"><span class="caption-text">Google Calendar</span></p>
+<p class="caption"><span class="caption-text">Рисунок. Календарь Google.</span></p>
 </div>
-<p>Your Kanboard calendar can also be available from your Android device if
-you enable the synchronization.</p>
-<p>Note: According to the Google Support, external calendars are not
-refreshed very often, <a class="reference external" href="https://support.google.com/calendar/answer/37100?hl=en&amp;ref_topic=1672445">read the
-documentation</a>.</p>
+<p>Ваш календарь из Канборд будет доступен на планшетах и смартфонах, нужно только сделать синхронизацию.</p>
+<p><a class="reference external" href="https://support.google.com/calendar/?hl=ru#topic=3417969">Справка по настройке календаря Google</a>.</p>
 </div>
 </div>
 
@@ -159,13 +167,13 @@ documentation</a>.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Syncing your calendars</a><ul>
-<li><a class="reference internal" href="#project-calendars">Project calendars</a></li>
-<li><a class="reference internal" href="#user-calendars">User calendars</a></li>
-<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-apple-calendar">Adding your Kanboard calendar to Apple Calendar</a></li>
-<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-microsoft-outlook">Adding your Kanboard calendar to Microsoft Outlook</a></li>
-<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-mozilla-thunderbird">Adding your Kanboard calendar to Mozilla Thunderbird</a></li>
-<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-google-calendar">Adding your Kanboard calendar to Google Calendar</a></li>
+<li><a class="reference internal" href="#">Синхронизация вашего календаря</a><ul>
+<li><a class="reference internal" href="#project-calendars">Календарь проекта</a></li>
+<li><a class="reference internal" href="#user-calendars">Календарь пользователя</a></li>
+<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-apple-calendar">Добавление Канборд календаря в календарь Apple</a></li>
+<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-microsoft-outlook">Добавление вашего календаря из Канборд в Microsoft Outlook</a></li>
+<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-mozilla-thunderbird">Добавление вашего календаря из Канборд в Mozilla Thunderbird</a></li>
+<li><a class="reference internal" href="#adding-your-kanboard-calendar-to-google-calendar">Добавление вашего календаря Канборд в календарь Google</a></li>
 </ul>
 </li>
 </ul>
