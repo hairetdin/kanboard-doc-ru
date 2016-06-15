@@ -43,77 +43,100 @@
   <div class="section" id="json-rpc-api">
 <h1>Json-RPC API<a class="headerlink" href="#json-rpc-api" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="user-and-application-api">
-<h2>User and application API<a class="headerlink" href="#user-and-application-api" title="Ссылка на этот заголовок">¶</a></h2>
-<p>There are two types of API access:</p>
+<h2>API пользователя и приложения<a class="headerlink" href="#user-and-application-api" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Имеется два типа доступа к API:</p>
 <div class="section" id="application-api">
-<h3>Application API<a class="headerlink" href="#application-api" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>API приложения<a class="headerlink" href="#application-api" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Access to the API with the user &#8220;jsonrpc&#8221; and the token available in
-settings</li>
-<li>Access to all procedures</li>
-<li>No permission checked</li>
-<li>There is no user session on the server</li>
-<li>Example of possible clients: tools to migrate/import data, create
-tasks from another system, etc...</li>
+<li><p class="first">Доступ к API осуществляется с использованием пользователя &#8220;jsonrpc&#8221; и ключа, доступного в настройках</p>
+</li>
+<li><p class="first">Доступ ко всем процедурам</p>
+</li>
+<li><p class="first">Не проверяются права доступа</p>
+</li>
+<li><p class="first">Нет пользовательской сессии на сервере</p>
+</li>
+<li><p class="first">Этот доступ можно использовать для: утилит миграции/импорта данных, создания задач из других систем и т.д.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="user-api">
-<h3>User API<a class="headerlink" href="#user-api" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>API пользователя<a class="headerlink" href="#user-api" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Access to the API with the user credentials (username and password)</li>
-<li>Access to a restricted set of procedures</li>
-<li>The project permissions are checked</li>
-<li>A user session is created on the server</li>
-<li>Example of possible clients: mobile/desktop application, command line
-utility, etc...</li>
+<li><p class="first">Доступ к API под пользовательскими учетными данными (имя пользователя и пароль)</p>
+</li>
+<li><p class="first">Доступ к ограниченному набору процедур</p>
+</li>
+<li><p class="first">Проверка прав доступа к проекту</p>
+</li>
+<li><p class="first">На сервере создается пользовательская сессия</p>
+</li>
+<li><p class="first">Этот доступ можно использовать для клиентов: мобильных/десктопных приложений, утилит коммандной строки и т.д.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="security">
-<h2>Security<a class="headerlink" href="#security" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Безопасность<a class="headerlink" href="#security" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Always use HTTPS with a valid certificate</li>
-<li>If you make a mobile application, it&#8217;s your job to store securely the
-user credentials on the device</li>
-<li>After 3 authentication failure on the user api, the end-user have to
-unlock his account by using the login form</li>
-<li>Two factor authentication is not yet available through the API</li>
+<li><p class="first">Всегда используйте протокол HTTPS с действительным сертификатом</p>
+</li>
+<li><p class="first">Если вы делаете мобильное приложение, позаботьтесь о безопасном хранении учетных данных пользователя на мобильном устройстве</p>
+</li>
+<li><p class="first">После 3 неправильных подключений к пользовательскому api, пользователь может разблокировать свою учетную запись только с использованием формы входа</p>
+</li>
+<li><p class="first">Двухуровневая аутентификация пока не доступна через API</p>
+</li>
 </ul>
 </div>
 <div class="section" id="protocol">
-<h2>Protocol<a class="headerlink" href="#protocol" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Kanboard use the protocol Json-RPC to interact with external programs.</p>
-<p>JSON-RPC is a remote procedure call protocol encoded in JSON. Almost the
-same thing as XML-RPC but with the JSON format.</p>
-<p>We use the <a class="reference external" href="http://www.jsonrpc.org/specification">version 2 of the
-protocol</a>. You must call the
-API with a <code class="docutils literal"><span class="pre">POST</span></code> HTTP request.</p>
-<p>Kanboard support batch requests, so you can make multiple API calls in a
-single HTTP request. It&#8217;s particularly useful for mobile clients with
-higher network latency.</p>
+<h2>Протокол<a class="headerlink" href="#protocol" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Канборд использует протокол Json-RPC для взаимодействия с внешними программами.</p>
+<p>JSON-RPC - протокол удаленного вызова процедур в формате JSON. По сути своей, тот же XML-RPC, но использующий формат JSON.</p>
+<p>Мы используем <a class="reference external" href="http://www.jsonrpc.org/specification">протокол версии 2</a>. Вы можете вызывать API используя <code class="docutils literal"><span class="pre">POST</span></code> HTTP запрос.</p>
+<p>Канборд поддерживает пакетные запросы, поэтому вы можете делать многократные API вызовы в одном HTTP запросе. Это, в частности, удобно для мобильных клиентов с высокой сетевой задержкой.</p>
 </div>
 <div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Использование<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="api-authentication.markdown">Authentication</a></li>
-<li><a class="reference external" href="api-examples.markdown">Examples</a></li>
-<li><a class="reference external" href="api-application-procedures.markdown">Application</a></li>
-<li><a class="reference external" href="api-project-procedures.markdown">Projects</a></li>
-<li><a class="reference external" href="api-project-permission-procedures.markdown">Project Permissions</a></li>
-<li><a class="reference external" href="api-board-procedures.markdown">Boards</a></li>
-<li><a class="reference external" href="api-column-procedures.markdown">Columns</a></li>
-<li><a class="reference external" href="api-swimlane-procedures.markdown">Swimlanes</a></li>
-<li><a class="reference external" href="api-category-procedures.markdown">Categories</a></li>
-<li><a class="reference external" href="api-action-procedures.markdown">Automatic Actions</a></li>
-<li><a class="reference external" href="api-task-procedures.markdown">Tasks</a></li>
-<li><a class="reference external" href="api-subtask-procedures.markdown">Subtasks</a></li>
-<li><a class="reference external" href="api-file-procedures.markdown">Files</a></li>
-<li><a class="reference external" href="api-link-procedures.markdown">Links</a></li>
-<li><a class="reference external" href="api-comment-procedures.markdown">Comments</a></li>
-<li><a class="reference external" href="api-user-procedures.markdown">Users</a></li>
-<li><a class="reference external" href="api-group-procedures.markdown">Groups</a></li>
-<li><a class="reference external" href="api-group-member-procedures.markdown">Group Members</a></li>
-<li><a class="reference external" href="api-me-procedures.markdown">Me</a></li>
+<li><p class="first"><a class="reference external" href="api-authentication.html">Аутентификация</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-examples.html">Примеры</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-application-procedures.html">Приложение</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-project-procedures.html">Проекты</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-project-permission-procedures.html">Права доступа к проекту</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-board-procedures.html">Доски</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-column-procedures.html">Колонки</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-swimlane-procedures.html">Дорожки</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-category-procedures.html">Категории</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-action-procedures.html">Автоматические дейсвия</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-task-procedures.html">Задачи</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-subtask-procedures.html">Подзадачи</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-file-procedures.html">Файлы</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-link-procedures.html">Ссылки</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-comment-procedures.html">Комментарии</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-user-procedures.html">Пользователи</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-group-procedures.html">Группы</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-group-member-procedures.html">Члены группы</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="api-me-procedures.html">Специфичные запросы пользователя</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -127,14 +150,14 @@ higher network latency.</p>
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Json-RPC API</a><ul>
-<li><a class="reference internal" href="#user-and-application-api">User and application API</a><ul>
-<li><a class="reference internal" href="#application-api">Application API</a></li>
-<li><a class="reference internal" href="#user-api">User API</a></li>
+<li><a class="reference internal" href="#user-and-application-api">API пользователя и приложения</a><ul>
+<li><a class="reference internal" href="#application-api">API приложения</a></li>
+<li><a class="reference internal" href="#user-api">API пользователя</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#security">Security</a></li>
-<li><a class="reference internal" href="#protocol">Protocol</a></li>
-<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#security">Безопасность</a></li>
+<li><a class="reference internal" href="#protocol">Протокол</a></li>
+<li><a class="reference internal" href="#usage">Использование</a></li>
 </ul>
 </li>
 </ul>
