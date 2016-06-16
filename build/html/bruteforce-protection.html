@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Brute Force Protection &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Защита от Brute Force &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,22 +40,18 @@
           <div class="body" role="main">
             
   <div class="section" id="brute-force-protection">
-<h1>Brute Force Protection<a class="headerlink" href="#brute-force-protection" title="Ссылка на этот заголовок">¶</a></h1>
-<p>The brute force protection of Kanboard works at the user account level:</p>
+<h1>Защита от Brute Force<a class="headerlink" href="#brute-force-protection" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Защита от Brute Force (подбор пароля методом перебора) в Канборде работает на уровне учетной записи пользователя:</p>
 <ul class="simple">
-<li>After 3 authentication failure for the same username, the login form
-shows a captcha image to prevent automated bot tentatives.</li>
-<li>After 6 authentication failure, the user account is locked down for a
-period of 15 minutes.</li>
+<li><p class="first">После 3 неправильных вводов пароля для одного и того же пользователя, на форме входа появляется капча для предотвращения дальнейшего подбора программой-роботом.</p>
+</li>
+<li><p class="first">После 6 неудачных вводов пароля, учетная запись пользователя блокируется на 15 минут.</p>
+</li>
 </ul>
-<p>This feature works only for authentication methods that use the login
-form.</p>
-<p>However, <strong>after three authentication failure through the user API</strong>,
-the account has to be unlocked by using the login form.</p>
-<p>Kanboard doesn&#8217;t block any IP addresses since bots can use several
-anonymous proxies. However, you can use external tools like
-<a class="reference external" href="http://www.fail2ban.org">fail2ban</a> to avoid massive scans.</p>
-<p>Default settings can be changed with these configuration variables:</p>
+<p>Эта возможность работает только для метода аутентификации с использованием формы входа на веб странице.</p>
+<p>Однако, <strong>после трех ошибочных аутентификаций через пользовательский API, учетная запись может быть разблокирована с использованием формы входа на веб странице</strong></p>
+<p>В Канборде нет блокировок по IP адресу, потому что программы-роботы используют множество анонимных прокси. Однако, вы можете использовать внешнюю утилиту, например <a class="reference external" href="http://www.fail2ban.org">fail2ban</a> , чтобы избежать массового сканирования.</p>
+<p>Настройки защиты от Brute Force могут быть изменены в следующих переменных:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable captcha after 3 authentication failure
 define(&#39;BRUTEFORCE_CAPTCHA&#39;, 3);
 
