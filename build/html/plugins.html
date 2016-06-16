@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Plugin Development &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Разработка плагина &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,65 +41,81 @@
           <div class="body" role="main">
             
   <div class="section" id="plugin-development">
-<h1>Plugin Development<a class="headerlink" href="#plugin-development" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Note: The plugin API is <strong>considered alpha</strong> at the moment.</p>
-<p>Plugins are useful to extend the core functionalities of Kanboard,
-adding features, creating themes or changing the default behavior.</p>
-<p>Plugin creators should specify explicitly the compatible versions of
-Kanboard. Internal code of Kanboard may change over time and your plugin
-must be tested with new versions. Always check the
-<a class="reference external" href="https://github.com/fguillot/kanboard/blob/master/ChangeLog">ChangeLog</a>
-for breaking changes.</p>
+<h1>Разработка плагина<a class="headerlink" href="#plugin-development" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>Внимание: API плагинов на данный момент в состоянии альфа.</strong></p>
+<p>Плагины удобны для расширения базового функционала Канборда: добавление возможностей, создание тем или изменения базового поведения.</p>
+<p>Создатели плагина должны указать точную версию Канборда, под которую написан плагин. Внутренний код Канборда может изменяться и ваш плагин должен тестироваться на совместимость с новой версией. Всегда следите за <a class="reference external" href="https://github.com/fguillot/kanboard/blob/master/ChangeLog">ChangeLog</a> для внесения изменений.</p>
 <ul class="simple">
-<li><a class="reference external" href="plugin-registration.markdown">Creating your plugin</a></li>
-<li><a class="reference external" href="plugin-hooks.markdown">Using plugin hooks</a></li>
-<li><a class="reference external" href="plugin-events.markdown">Events</a></li>
-<li><a class="reference external" href="plugin-overrides.markdown">Override default application
-behaviors</a></li>
-<li><a class="reference external" href="plugin-schema-migrations.markdown">Add schema migrations for
-plugins</a></li>
-<li><a class="reference external" href="plugin-routes.markdown">Custom routes</a></li>
-<li><a class="reference external" href="plugin-helpers.markdown">Add helpers</a></li>
-<li><a class="reference external" href="plugin-mail-transports.markdown">Add mail transports</a></li>
-<li><a class="reference external" href="plugin-notifications.markdown">Add notification types</a></li>
-<li><a class="reference external" href="plugin-automatic-actions.markdown">Add automatic actions</a></li>
-<li><a class="reference external" href="plugin-metadata.markdown">Attach metadata to users, tasks and
-projects</a></li>
-<li><a class="reference external" href="plugin-authentication-architecture.markdown">Authentication
-architecture</a></li>
-<li><a class="reference external" href="plugin-authentication.markdown">Authentication plugin
-registration</a></li>
-<li><a class="reference external" href="plugin-authorization-architecture.markdown">Authorization
-architecture</a></li>
-<li><a class="reference external" href="plugin-group-provider.markdown">Custom group providers</a></li>
-<li><a class="reference external" href="plugin-external-link.markdown">External link providers</a></li>
-<li><a class="reference external" href="plugin-avatar-provider.markdown">Add avatar providers</a></li>
-<li><a class="reference external" href="plugin-ldap-client.markdown">LDAP client</a></li>
+<li><p class="first"><a class="reference external" href="plugin-registration.html">Создание вашего плагина</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-hooks.html">Использование plugin hooks</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-events.html">События</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-overrides.html">Изменение базового поведения приложений</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-schema-migrations.html">Добавление миграции схемы для плагинов</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-routes.html">Пользовательские маршруты</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-helpers.html">Добавление обработчиков</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-mail-transports.html">Добавление почтовых трансляторов</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-notifications.html">Добавление типов оповещений</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-automatic-actions.html">Добавление автоматических действий</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-metadata.html">Расширение данных пользователей, задач и проектов</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-authentication-architecture.html">Архитектура аутентификации</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-authentication.html">Регистрация плагина аутентификации</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-authorization-architecture.html">Архитектура авторизации</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-group-provider.html">Провайдер пользовательской группы</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-external-link.html">Провайдер внешней ссылки</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-avatar-provider.html">Добавление провайдера аватара</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="plugin-ldap-client.html">Клиент LDAP</a></p>
+</li>
 </ul>
 <div class="section" id="examples-of-plugins">
-<h2>Examples of plugins<a class="headerlink" href="#examples-of-plugins" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Примеры плагинов<a class="headerlink" href="#examples-of-plugins" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/kanboard/plugin-sms-2fa">SMS Two-Factor
-Authentication</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-reverse-proxy-ldap">Reverse-Proxy Authentication with LDAP
-support</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-slack">Slack</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-hipchat">Hipchat</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-jabber">Jabber</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-sendgrid">Sendgrid</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-mailgun">Mailgun</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-postmark">Postmark</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-s3">Amazon S3</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-budget">Budget planning</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-timetable">User timetables</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-subtask-forecast">Subtask
-Forecast</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-example-automatic-action">Automatic Action
-example</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-example-theme">Theme plugin
-example</a></li>
-<li><a class="reference external" href="https://github.com/kanboard/plugin-example-css">CSS plugin
-example</a></li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-sms-2fa">Двухуровневая аутентификация SMS</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-reverse-proxy-ldap">Аутентификация Reverse-Proxy с поддержкой LDAP</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-slack">Slack</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-hipchat">Hipchat</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-jabber">Jabber</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-sendgrid">Sendgrid</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-mailgun">Mailgun</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-postmark">Postmark</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-s3">Amazon S3</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-budget">Планирование бюджета</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-timetable">Расписание пользователя</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-subtask-forecast">Прогнозирование подзадач</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-example-automatic-action">Пример автоматических действий</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-example-theme">Пример плагина темы</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/kanboard/plugin-example-css">Пример плагина CSS</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -112,8 +128,8 @@ example</a></li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Plugin Development</a><ul>
-<li><a class="reference internal" href="#examples-of-plugins">Examples of plugins</a></li>
+<li><a class="reference internal" href="#">Разработка плагина</a><ul>
+<li><a class="reference internal" href="#examples-of-plugins">Примеры плагинов</a></li>
 </ul>
 </li>
 </ul>
