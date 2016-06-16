@@ -3,55 +3,59 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-16 17:51+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/syntax-guide.rst:2
 msgid "Syntax Guide"
-msgstr ""
+msgstr "Руководство по синтаксису"
 
 #: ../../source/syntax-guide.rst:4
 msgid ""
-"Kanboard use the `Markdown syntax "
-"<http://en.wikipedia.org/wiki/Markdown>`__ for comments or task "
-"descriptions. Here are some examples:"
+"Kanboard use the `Markdown syntax <http://en.wikipedia.org/wiki/Markdown>`__ "
+"for comments or task descriptions. Here are some examples:"
 msgstr ""
+"Канборд использует `Markdown синтаксис <https://ru.wikipedia.org/wiki/"
+"Markdown>`__ для комментариев или описания задач. Далее приведены примеры:"
 
 #: ../../source/syntax-guide.rst:9
 msgid "Bold and italic"
-msgstr ""
+msgstr "Жирный и курсив"
 
 #: ../../source/syntax-guide.rst:11
 msgid "Bold text: Use 2 asterisks or 2 underscores"
 msgstr ""
+"Жирный текст: Используйте 2 звездочки или 2 подчеркивания вокруг слов(а)"
 
 #: ../../source/syntax-guide.rst:12
 msgid "Italic text: Use 1 asterisk or 1 underscore"
-msgstr ""
+msgstr "Курсив: Используйте 1 звездочку или 1 подчеркивание вокруг слов(а)"
 
 #: ../../source/syntax-guide.rst:15 ../../source/syntax-guide.rst:36
 #: ../../source/syntax-guide.rst:63 ../../source/syntax-guide.rst:82
 #: ../../source/syntax-guide.rst:147
 msgid "Source"
-msgstr ""
+msgstr "Пример написания (источник)"
 
 #: ../../source/syntax-guide.rst:24 ../../source/syntax-guide.rst:51
 #: ../../source/syntax-guide.rst:72 ../../source/syntax-guide.rst:91
 #: ../../source/syntax-guide.rst:110 ../../source/syntax-guide.rst:133
 msgid "Result"
-msgstr ""
+msgstr "Результат"
 
 #: ../../source/syntax-guide.rst:26
 msgid "This **word** is very **important**."
@@ -63,11 +67,12 @@ msgstr ""
 
 #: ../../source/syntax-guide.rst:31
 msgid "Unordered Lists"
-msgstr ""
+msgstr "Неупорядоченные списки"
 
 #: ../../source/syntax-guide.rst:33
 msgid "Unordered list can use asterisks, minuses or pluses."
 msgstr ""
+"Неупорядоченный список использует звездочки, минусы или плюсы вначале абзаца"
 
 #: ../../source/syntax-guide.rst:53
 msgid "Item 1"
@@ -83,11 +88,11 @@ msgstr ""
 
 #: ../../source/syntax-guide.rst:58
 msgid "Ordered lists"
-msgstr ""
+msgstr "Упорядоченные списки"
 
 #: ../../source/syntax-guide.rst:60
 msgid "Ordered lists are prefixed by a number like that:"
-msgstr ""
+msgstr "Упорядоченные списки префиксом имеют цифру:"
 
 #: ../../source/syntax-guide.rst:74
 msgid "Do that first"
@@ -103,7 +108,7 @@ msgstr ""
 
 #: ../../source/syntax-guide.rst:79
 msgid "Links"
-msgstr ""
+msgstr "Ссылки"
 
 #: ../../source/syntax-guide.rst:93
 msgid "`My link title <https://kanboard.net/>`__"
@@ -115,15 +120,17 @@ msgstr ""
 
 #: ../../source/syntax-guide.rst:98
 msgid "Source code"
-msgstr ""
+msgstr "Исходный код"
 
 #: ../../source/syntax-guide.rst:101
 msgid "Inline code"
-msgstr ""
+msgstr "Код встраиваемый в текст"
 
 #: ../../source/syntax-guide.rst:103
 msgid "Use a backtick."
 msgstr ""
+"Используйте обратные кавычки (переключитесь на анлийскую раскладку и нажмите "
+"`ё`)"
 
 #: ../../source/syntax-guide.rst:112
 msgid "Execute this command: ``tail -f /var/log/messages``."
@@ -131,49 +138,12 @@ msgstr ""
 
 #: ../../source/syntax-guide.rst:115
 msgid "Code blocks"
-msgstr ""
+msgstr "Блоки кода"
 
 #: ../../source/syntax-guide.rst:117
 msgid "Use 3 backticks with eventually the language name."
-msgstr ""
+msgstr "Используйте 3 обратных кавычки с указанием языка программирования"
 
 #: ../../source/syntax-guide.rst:144
 msgid "Titles"
-msgstr ""
-
-#~ msgid ""
-#~ "Kanboard use the Markdown syntax for "
-#~ "comments or task descriptions. Here are"
-#~ " some examples:"
-#~ msgstr ""
-
-#~ msgid "This word is very important."
-#~ msgstr ""
-
-#~ msgid "And here, an italic word with one underscore."
-#~ msgstr ""
-
-#~ msgid "My link title"
-#~ msgstr ""
-
-#~ msgid "Execute this command: tail -f /var/log/messages."
-#~ msgstr ""
-
-#~ msgid "phpinfo();"
-#~ msgstr ""
-
-#~ msgid "?&gt;"
-#~ msgstr ""
-
-#~ msgid "?>"
-#~ msgstr ""
-
-#~ msgid "Title level 1"
-#~ msgstr ""
-
-#~ msgid "Title level 2"
-#~ msgstr ""
-
-#~ msgid "Title level 3"
-#~ msgstr ""
-
+msgstr "Заголовки"

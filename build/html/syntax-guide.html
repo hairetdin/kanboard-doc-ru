@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Syntax Guide &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Руководство по синтаксису &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,18 +40,18 @@
           <div class="body" role="main">
             
   <div class="section" id="syntax-guide">
-<h1>Syntax Guide<a class="headerlink" href="#syntax-guide" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Kanboard use the <a class="reference external" href="http://en.wikipedia.org/wiki/Markdown">Markdown
-syntax</a> for comments or task
-descriptions. Here are some examples:</p>
+<h1>Руководство по синтаксису<a class="headerlink" href="#syntax-guide" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Канборд использует <a class="reference external" href="https://ru.wikipedia.org/wiki/Markdown">Markdown синтаксис</a> для комментариев или описания задач. Далее приведены примеры:</p>
 <div class="section" id="bold-and-italic">
-<h2>Bold and italic<a class="headerlink" href="#bold-and-italic" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Жирный и курсив<a class="headerlink" href="#bold-and-italic" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Bold text: Use 2 asterisks or 2 underscores</li>
-<li>Italic text: Use 1 asterisk or 1 underscore</li>
+<li><p class="first">Жирный текст: Используйте 2 звездочки или 2 подчеркивания вокруг слов(а)</p>
+</li>
+<li><p class="first">Курсив: Используйте 1 звездочку или 1 подчеркивание вокруг слов(а)</p>
+</li>
 </ul>
 <div class="section" id="source">
-<h3>Source<a class="headerlink" href="#source" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пример написания (источник)<a class="headerlink" href="#source" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>This **word** is very __important__.
 
 And here, an *italic* word with one _underscore_.
@@ -60,16 +59,16 @@ And here, an *italic* word with one _underscore_.
 </div>
 </div>
 <div class="section" id="result">
-<h3>Result<a class="headerlink" href="#result" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Результат<a class="headerlink" href="#result" title="Ссылка на этот заголовок">¶</a></h3>
 <p>This <strong>word</strong> is very <strong>important</strong>.</p>
 <p>And here, an <em>italic</em> word with one <em>underscore</em>.</p>
 </div>
 </div>
 <div class="section" id="unordered-lists">
-<h2>Unordered Lists<a class="headerlink" href="#unordered-lists" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Unordered list can use asterisks, minuses or pluses.</p>
+<h2>Неупорядоченные списки<a class="headerlink" href="#unordered-lists" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Неупорядоченный список использует звездочки, минусы или плюсы вначале абзаца</p>
 <div class="section" id="id1">
-<h3>Source<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пример написания (источник)<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>- Item 1
 - Item 2
 - Item 3
@@ -83,7 +82,7 @@ or
 </div>
 </div>
 <div class="section" id="id2">
-<h3>Result<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Результат<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
 <li>Item 1</li>
 <li>Item 2</li>
@@ -92,10 +91,10 @@ or
 </div>
 </div>
 <div class="section" id="ordered-lists">
-<h2>Ordered lists<a class="headerlink" href="#ordered-lists" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Ordered lists are prefixed by a number like that:</p>
+<h2>Упорядоченные списки<a class="headerlink" href="#ordered-lists" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Упорядоченные списки префиксом имеют цифру:</p>
 <div class="section" id="id3">
-<h3>Source<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пример написания (источник)<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>1. Do that first
 2. Do this
 3. And that
@@ -103,7 +102,7 @@ or
 </div>
 </div>
 <div class="section" id="id4">
-<h3>Result<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Результат<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
 <ol class="arabic simple">
 <li>Do that first</li>
 <li>Do this</li>
@@ -112,9 +111,9 @@ or
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Ссылки<a class="headerlink" href="#links" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="id5">
-<h3>Source<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пример написания (источник)<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>[My link title](https://kanboard.net/)
 
 &lt;https://kanboard.net&gt;
@@ -122,27 +121,27 @@ or
 </div>
 </div>
 <div class="section" id="id6">
-<h3>Result<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Результат<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
 <p><a class="reference external" href="https://kanboard.net/">My link title</a></p>
 <p><a class="reference external" href="https://kanboard.net">https://kanboard.net</a></p>
 </div>
 </div>
 <div class="section" id="source-code">
-<h2>Source code<a class="headerlink" href="#source-code" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Исходный код<a class="headerlink" href="#source-code" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="inline-code">
-<h3>Inline code<a class="headerlink" href="#inline-code" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Use a backtick.</p>
+<h3>Код встраиваемый в текст<a class="headerlink" href="#inline-code" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Используйте обратные кавычки (переключитесь на анлийскую раскладку и нажмите <cite>ё</cite>)</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>Execute this command: `tail -f /var/log/messages`.
 </pre></div>
 </div>
 </div>
 <div class="section" id="id7">
-<h3>Result<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Результат<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Execute this command: <code class="docutils literal"><span class="pre">tail</span> <span class="pre">-f</span> <span class="pre">/var/log/messages</span></code>.</p>
 </div>
 <div class="section" id="code-blocks">
-<h3>Code blocks<a class="headerlink" href="#code-blocks" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Use 3 backticks with eventually the language name.</p>
+<h3>Блоки кода<a class="headerlink" href="#code-blocks" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Используйте 3 обратных кавычки с указанием языка программирования</p>
 <pre>
 <code class="language-markdown">```php
 &lt;?php
@@ -154,7 +153,7 @@ phpinfo();
 </code>
 </pre></div>
 <div class="section" id="id8">
-<h3>Result<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Результат<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 phpinfo();
@@ -165,9 +164,9 @@ phpinfo();
 </div>
 </div>
 <div class="section" id="titles">
-<h2>Titles<a class="headerlink" href="#titles" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Заголовки<a class="headerlink" href="#titles" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="id9">
-<h3>Source<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пример написания (источник)<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Title level 1</span>
 
 <span class="c1">## Title level 2</span>
@@ -187,36 +186,36 @@ phpinfo();
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Syntax Guide</a><ul>
-<li><a class="reference internal" href="#bold-and-italic">Bold and italic</a><ul>
-<li><a class="reference internal" href="#source">Source</a></li>
-<li><a class="reference internal" href="#result">Result</a></li>
+<li><a class="reference internal" href="#">Руководство по синтаксису</a><ul>
+<li><a class="reference internal" href="#bold-and-italic">Жирный и курсив</a><ul>
+<li><a class="reference internal" href="#source">Пример написания (источник)</a></li>
+<li><a class="reference internal" href="#result">Результат</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#unordered-lists">Unordered Lists</a><ul>
-<li><a class="reference internal" href="#id1">Source</a></li>
-<li><a class="reference internal" href="#id2">Result</a></li>
+<li><a class="reference internal" href="#unordered-lists">Неупорядоченные списки</a><ul>
+<li><a class="reference internal" href="#id1">Пример написания (источник)</a></li>
+<li><a class="reference internal" href="#id2">Результат</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ordered-lists">Ordered lists</a><ul>
-<li><a class="reference internal" href="#id3">Source</a></li>
-<li><a class="reference internal" href="#id4">Result</a></li>
+<li><a class="reference internal" href="#ordered-lists">Упорядоченные списки</a><ul>
+<li><a class="reference internal" href="#id3">Пример написания (источник)</a></li>
+<li><a class="reference internal" href="#id4">Результат</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#links">Links</a><ul>
-<li><a class="reference internal" href="#id5">Source</a></li>
-<li><a class="reference internal" href="#id6">Result</a></li>
+<li><a class="reference internal" href="#links">Ссылки</a><ul>
+<li><a class="reference internal" href="#id5">Пример написания (источник)</a></li>
+<li><a class="reference internal" href="#id6">Результат</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#source-code">Source code</a><ul>
-<li><a class="reference internal" href="#inline-code">Inline code</a></li>
-<li><a class="reference internal" href="#id7">Result</a></li>
-<li><a class="reference internal" href="#code-blocks">Code blocks</a></li>
-<li><a class="reference internal" href="#id8">Result</a></li>
+<li><a class="reference internal" href="#source-code">Исходный код</a><ul>
+<li><a class="reference internal" href="#inline-code">Код встраиваемый в текст</a></li>
+<li><a class="reference internal" href="#id7">Результат</a></li>
+<li><a class="reference internal" href="#code-blocks">Блоки кода</a></li>
+<li><a class="reference internal" href="#id8">Результат</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#titles">Titles</a><ul>
-<li><a class="reference internal" href="#id9">Source</a></li>
+<li><a class="reference internal" href="#titles">Заголовки</a><ul>
+<li><a class="reference internal" href="#id9">Пример написания (источник)</a></li>
 </ul>
 </li>
 </ul>
