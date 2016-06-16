@@ -42,49 +42,63 @@
             
   <div class="section" id="web-hooks">
 <h1>Web Hooks<a class="headerlink" href="#web-hooks" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Webhooks are useful to perform actions with external applications.</p>
+<p>Webhooks служат для взаимодействия с внешними приложениями. Webhook посылает уведомление стороннему приложению о событиях, которые произошли в Канборд.</p>
 <ul class="simple">
-<li>Webhooks can be used to create a task by calling a simple URL (You
-can also do that with the API)</li>
-<li>An external URL can be called automatically when an event occurs in
-Kanboard (task creation, comment updated, etc)</li>
+<li><p class="first">Webhooks могут быть использованы для создания задач вызовом простого URL (Вы можете сделать это и при помощи API)</p>
+</li>
+<li><p class="first">Обращение к внешнему приложению может происходить автоматически, когда наступает какое-либо событие в Канборд (создана задача, обновлен комментарий и т.д.)</p>
+</li>
 </ul>
 <div class="section" id="how-to-write-a-web-hook-receiver">
-<h2>How to write a web hook receiver?<a class="headerlink" href="#how-to-write-a-web-hook-receiver" title="Ссылка на этот заголовок">¶</a></h2>
-<p>All internal events of Kanboard can be sent to an external URL.</p>
+<h2>Как написать webhook приемник во внешнем приложении?<a class="headerlink" href="#how-to-write-a-web-hook-receiver" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Все внутренние события в Канборде могут быть посланы во внешний URL.</p>
 <ul class="simple">
-<li>The web hook URL has to be defined in <strong>Settings &gt; Webhooks &gt; Webhook
-URL</strong>.</li>
-<li>When an event is triggered Kanboard calls the pre-defined URL
-automatically</li>
-<li>The data are encoded in JSON format and sent with a POST HTTP request</li>
-<li>The web hook token is also sent as a query string parameter, so you
-can check if the request really comes from Kanboard.</li>
-<li><strong>Your custom URL must answer in less than 1 second</strong>, those requests
-are synchronous (PHP limitation) and that can slow down the user
-interface if your script is too slow!</li>
+<li><p class="first">Webhook URL (url приемник внешнего приложения) может быть задан в <strong>Настройки</strong> -&gt; <strong>Webhooks</strong> -&gt; <strong>Webhook URL</strong></p>
+</li>
+<li><p class="first">Когда в Канборде происходит событие, Канборд обращается к указанному URL автоматически</p>
+</li>
+<li><p class="first">Данные конвертируются в формат JSON и передаются с помощью POST HTTP запроса</p>
+</li>
+<li><p class="first">Webhook ключ передается в составе запроса в виде строкового параметра. Таким образом, вы можете проверить, что запрос на самом деле пришел из Канборда.</p>
+</li>
+<li><p class="first"><strong>Созданный вами URL должен среагировать в течении 1 секунды</strong>. Это желательно сделать потому, что запросы являются синхронными (ограничения языка PHP) и возможны тормоза в пользовательском интерфейсе, если скрипт будет слишком медленный!</p>
+</li>
 </ul>
 <div class="section" id="list-of-supported-events">
-<h3>List of supported events<a class="headerlink" href="#list-of-supported-events" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Список поддерживаемых событий<a class="headerlink" href="#list-of-supported-events" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>comment.create</li>
-<li>comment.update</li>
-<li>file.create</li>
-<li>task.move.project</li>
-<li>task.move.column</li>
-<li>task.move.position</li>
-<li>task.move.swimlane</li>
-<li>task.update</li>
-<li>task.create</li>
-<li>task.close</li>
-<li>task.open</li>
-<li>task.assignee_change</li>
-<li>subtask.update</li>
-<li>subtask.create</li>
+<li><p class="first">comment.create (комментарий.создать)</p>
+</li>
+<li><p class="first">comment.update (комментарий.обновить)</p>
+</li>
+<li><p class="first">file.create (файл.создать)</p>
+</li>
+<li><p class="first">task.move.project (задача.переместить.проект)</p>
+</li>
+<li><p class="first">task.move.column (задача.переместить.колонка)</p>
+</li>
+<li><p class="first">task.move.position (задача.переместить.место)</p>
+</li>
+<li><p class="first">task.move.swimlane (задача.переместить.дорожка)</p>
+</li>
+<li><p class="first">task.update (задача.обновить)</p>
+</li>
+<li><p class="first">task.create (задача.создать)</p>
+</li>
+<li><p class="first">task.close (задача.закрыть)</p>
+</li>
+<li><p class="first">task.open (задача.открыть)</p>
+</li>
+<li><p class="first">task.assignee_change (задача.назначить_изменить)</p>
+</li>
+<li><p class="first">subtask.update (подзадача.обновить)</p>
+</li>
+<li><p class="first">subtask.create (подзадача.создать)</p>
+</li>
 </ul>
 </div>
 <div class="section" id="example-of-http-request">
-<h3>Example of HTTP request<a class="headerlink" href="#example-of-http-request" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пример HTTP запроса<a class="headerlink" href="#example-of-http-request" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>POST https://your_webhook_url/?token=WEBHOOK_TOKEN_HERE
 User-Agent: Kanboard Webhook
 Content-Type: application/json
@@ -107,7 +121,7 @@ Connection: close
 }
 </pre></div>
 </div>
-<p>All event payloads are in the following format:</p>
+<p>Функциональная часть всех событий имеет следующий формат:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span>{
   &quot;event_name&quot;: &quot;model.event_name&quot;,
   &quot;event_data&quot;: {
@@ -118,11 +132,11 @@ Connection: close
 }
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">event_data</span></code> values are not necessary normalized across events.</p>
+<p>Значения <code class="docutils literal"><span class="pre">event_data</span></code> могут быть неупорядочены в событиях.</p>
 </div>
 <div class="section" id="examples-of-event-payloads">
-<h3>Examples of event payloads<a class="headerlink" href="#examples-of-event-payloads" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Task creation:</p>
+<h3>Пример функциональной части события<a class="headerlink" href="#examples-of-event-payloads" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Создание задачи:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;task.create&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -147,7 +161,7 @@ Connection: close
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Task modification:</p>
+<p>Изменение задачи:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;task.update&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -188,9 +202,8 @@ Connection: close
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Task update events have a field called <code class="docutils literal"><span class="pre">changes</span></code> that contains updated
-values.</p>
-<p>Move a task to another column:</p>
+<p>События изменеия задачи имеют поле <code class="docutils literal"><span class="pre">changes</span></code>, которое содержит обновленные значения.</p>
+<p>Перемещение задачи в другую колонку:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;task.move.column&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -208,7 +221,7 @@ values.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Move a task to another position:</p>
+<p>Перемещение задачи в другое место:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;task.move.position&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -226,7 +239,7 @@ values.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Comment creation:</p>
+<p>Создание комментария:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;comment.create&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -239,7 +252,7 @@ values.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Comment modification:</p>
+<p>Изменение комментария:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;comment.update&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -251,7 +264,7 @@ values.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Subtask creation:</p>
+<p>Создание подзадачи:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;subtask.create&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -265,7 +278,7 @@ values.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Subtask modification:</p>
+<p>Изменение подзадачи:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;subtask.update&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -276,7 +289,7 @@ values.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>File upload:</p>
+<p>Загрузка файла:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;file.create&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -286,7 +299,7 @@ values.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Screenshot created:</p>
+<p>Создан снимок экрана:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;event_name&quot;</span><span class="p">:</span> <span class="s2">&quot;file.create&quot;</span><span class="p">,</span>
   <span class="s2">&quot;event_data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -309,10 +322,10 @@ values.</p>
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Web Hooks</a><ul>
-<li><a class="reference internal" href="#how-to-write-a-web-hook-receiver">How to write a web hook receiver?</a><ul>
-<li><a class="reference internal" href="#list-of-supported-events">List of supported events</a></li>
-<li><a class="reference internal" href="#example-of-http-request">Example of HTTP request</a></li>
-<li><a class="reference internal" href="#examples-of-event-payloads">Examples of event payloads</a></li>
+<li><a class="reference internal" href="#how-to-write-a-web-hook-receiver">Как написать webhook приемник во внешнем приложении?</a><ul>
+<li><a class="reference internal" href="#list-of-supported-events">Список поддерживаемых событий</a></li>
+<li><a class="reference internal" href="#example-of-http-request">Пример HTTP запроса</a></li>
+<li><a class="reference internal" href="#examples-of-event-payloads">Пример функциональной части события</a></li>
 </ul>
 </li>
 </ul>

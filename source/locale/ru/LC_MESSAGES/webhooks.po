@@ -3,20 +3,22 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-16 09:46+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/webhooks.rst:2
 msgid "Web Hooks"
@@ -25,184 +27,192 @@ msgstr ""
 #: ../../source/webhooks.rst:4
 msgid "Webhooks are useful to perform actions with external applications."
 msgstr ""
+"Webhooks служат для взаимодействия с внешними приложениями. Webhook посылает "
+"уведомление стороннему приложению о событиях, которые произошли в Канборд."
 
 #: ../../source/webhooks.rst:6
 msgid ""
-"Webhooks can be used to create a task by calling a simple URL (You can "
-"also do that with the API)"
+"Webhooks can be used to create a task by calling a simple URL (You can also "
+"do that with the API)"
 msgstr ""
+"Webhooks могут быть использованы для создания задач вызовом простого URL (Вы "
+"можете сделать это и при помощи API)"
 
 #: ../../source/webhooks.rst:8
 msgid ""
-"An external URL can be called automatically when an event occurs in "
-"Kanboard (task creation, comment updated, etc)"
+"An external URL can be called automatically when an event occurs in Kanboard "
+"(task creation, comment updated, etc)"
 msgstr ""
+"Обращение к внешнему приложению может происходить автоматически, когда "
+"наступает какое-либо событие в Канборд (создана задача, обновлен комментарий "
+"и т.д.)"
 
 #: ../../source/webhooks.rst:12
 msgid "How to write a web hook receiver?"
-msgstr ""
+msgstr "Как написать webhook приемник во внешнем приложении?"
 
 #: ../../source/webhooks.rst:14
 msgid "All internal events of Kanboard can be sent to an external URL."
-msgstr ""
+msgstr "Все внутренние события в Канборде могут быть посланы во внешний URL."
 
 #: ../../source/webhooks.rst:16
 msgid ""
-"The web hook URL has to be defined in **Settings > Webhooks > Webhook "
-"URL**."
+"The web hook URL has to be defined in **Settings > Webhooks > Webhook URL**."
 msgstr ""
+"Webhook URL (url приемник внешнего приложения) может быть задан в "
+"**Настройки** -> **Webhooks** -> **Webhook URL**"
 
 #: ../../source/webhooks.rst:18
 msgid ""
-"When an event is triggered Kanboard calls the pre-defined URL "
-"automatically"
+"When an event is triggered Kanboard calls the pre-defined URL automatically"
 msgstr ""
+"Когда в Канборде происходит событие, Канборд обращается к указанному URL "
+"автоматически"
 
 #: ../../source/webhooks.rst:20
 msgid "The data are encoded in JSON format and sent with a POST HTTP request"
 msgstr ""
+"Данные конвертируются в формат JSON и передаются с помощью POST HTTP запроса"
 
 #: ../../source/webhooks.rst:21
 msgid ""
 "The web hook token is also sent as a query string parameter, so you can "
 "check if the request really comes from Kanboard."
 msgstr ""
+"Webhook ключ передается в составе запроса в виде строкового параметра. Таким "
+"образом, вы можете проверить, что запрос на самом деле пришел из Канборда."
 
 #: ../../source/webhooks.rst:23
 msgid ""
-"**Your custom URL must answer in less than 1 second**, those requests are"
-" synchronous (PHP limitation) and that can slow down the user interface "
-"if your script is too slow!"
+"**Your custom URL must answer in less than 1 second**, those requests are "
+"synchronous (PHP limitation) and that can slow down the user interface if "
+"your script is too slow!"
 msgstr ""
+"**Созданный вами URL должен среагировать в течении 1 секунды**. Это "
+"желательно сделать потому, что запросы являются синхронными (ограничения "
+"языка PHP) и возможны тормоза в пользовательском интерфейсе, если скрипт "
+"будет слишком медленный!"
 
 #: ../../source/webhooks.rst:28
 msgid "List of supported events"
-msgstr ""
+msgstr "Список поддерживаемых событий"
 
 #: ../../source/webhooks.rst:30
 msgid "comment.create"
-msgstr ""
+msgstr "comment.create (комментарий.создать)"
 
 #: ../../source/webhooks.rst:31
 msgid "comment.update"
-msgstr ""
+msgstr "comment.update (комментарий.обновить)"
 
 #: ../../source/webhooks.rst:32
 msgid "file.create"
-msgstr ""
+msgstr "file.create (файл.создать)"
 
 #: ../../source/webhooks.rst:33
 msgid "task.move.project"
-msgstr ""
+msgstr "task.move.project (задача.переместить.проект)"
 
 #: ../../source/webhooks.rst:34
 msgid "task.move.column"
-msgstr ""
+msgstr "task.move.column (задача.переместить.колонка)"
 
 #: ../../source/webhooks.rst:35
 msgid "task.move.position"
-msgstr ""
+msgstr "task.move.position (задача.переместить.место)"
 
 #: ../../source/webhooks.rst:36
 msgid "task.move.swimlane"
-msgstr ""
+msgstr "task.move.swimlane (задача.переместить.дорожка)"
 
 #: ../../source/webhooks.rst:37
 msgid "task.update"
-msgstr ""
+msgstr "task.update (задача.обновить)"
 
 #: ../../source/webhooks.rst:38
 msgid "task.create"
-msgstr ""
+msgstr "task.create (задача.создать)"
 
 #: ../../source/webhooks.rst:39
 msgid "task.close"
-msgstr ""
+msgstr "task.close (задача.закрыть)"
 
 #: ../../source/webhooks.rst:40
 msgid "task.open"
-msgstr ""
+msgstr "task.open (задача.открыть)"
 
 #: ../../source/webhooks.rst:41
 msgid "task.assignee\\_change"
-msgstr ""
+msgstr "task.assignee\\_change (задача.назначить\\_изменить)"
 
 #: ../../source/webhooks.rst:42
 msgid "subtask.update"
-msgstr ""
+msgstr "subtask.update (подзадача.обновить)"
 
 #: ../../source/webhooks.rst:43
 msgid "subtask.create"
-msgstr ""
+msgstr "subtask.create (подзадача.создать)"
 
 #: ../../source/webhooks.rst:46
 msgid "Example of HTTP request"
-msgstr ""
+msgstr "Пример HTTP запроса"
 
 #: ../../source/webhooks.rst:71
 msgid "All event payloads are in the following format:"
-msgstr ""
+msgstr "Функциональная часть всех событий имеет следующий формат:"
 
 #: ../../source/webhooks.rst:84
 msgid "The ``event_data`` values are not necessary normalized across events."
-msgstr ""
+msgstr "Значения ``event_data`` могут быть неупорядочены в событиях."
 
 #: ../../source/webhooks.rst:87
 msgid "Examples of event payloads"
-msgstr ""
+msgstr "Пример функциональной части события"
 
 #: ../../source/webhooks.rst:89
 msgid "Task creation:"
-msgstr ""
+msgstr "Создание задачи:"
 
 #: ../../source/webhooks.rst:116
 msgid "Task modification:"
-msgstr ""
+msgstr "Изменение задачи:"
 
 #: ../../source/webhooks.rst:159
 msgid ""
 "Task update events have a field called ``changes`` that contains updated "
 "values."
 msgstr ""
+"События изменеия задачи имеют поле ``changes``, которое содержит обновленные "
+"значения."
 
 #: ../../source/webhooks.rst:162
 msgid "Move a task to another column:"
-msgstr ""
+msgstr "Перемещение задачи в другую колонку:"
 
 #: ../../source/webhooks.rst:182
 msgid "Move a task to another position:"
-msgstr ""
+msgstr "Перемещение задачи в другое место:"
 
 #: ../../source/webhooks.rst:202
 msgid "Comment creation:"
-msgstr ""
+msgstr "Создание комментария:"
 
 #: ../../source/webhooks.rst:217
 msgid "Comment modification:"
-msgstr ""
+msgstr "Изменение комментария:"
 
 #: ../../source/webhooks.rst:231
 msgid "Subtask creation:"
-msgstr ""
+msgstr "Создание подзадачи:"
 
 #: ../../source/webhooks.rst:247
 msgid "Subtask modification:"
-msgstr ""
+msgstr "Изменение подзадачи:"
 
 #: ../../source/webhooks.rst:260
 msgid "File upload:"
-msgstr ""
+msgstr "Загрузка файла:"
 
 #: ../../source/webhooks.rst:272
 msgid "Screenshot created:"
-msgstr ""
-
-#~ msgid "The event_data values are not necessary normalized across events."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Task update events have a field "
-#~ "called changes that contains updated "
-#~ "values."
-#~ msgstr ""
-
+msgstr "Создан снимок экрана:"
