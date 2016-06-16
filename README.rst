@@ -3,6 +3,7 @@
 
 Kanboard documentation translation to Russian.
 
+Готовая `Русская документация Kanboard <http://kanboard.ru/doc/>`__
 
 Перевод документации Kanbord на русский язык.
 
