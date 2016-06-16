@@ -1,0 +1,439 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, hairetdin
+# This file is distributed under the same license as the Kanboard russian
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Kanboard russian 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-16 11:01+0500\n"
+"PO-Revision-Date: 2016-06-16 12:46+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
+
+#: ../../source/ext-search.rst:2
+msgid "Advanced Search Syntax"
+msgstr "Синтаксис расширенного поиска"
+
+#: ../../source/ext-search.rst:4
+msgid ""
+"Kanboard uses a simple query language for advanced search. You can search in "
+"tasks, comments, subtasks, links but also in the activity stream."
+msgstr ""
+"В Канборде используется простой язык запросов для расширенного поиска. Вы "
+"можете искать задачи, комментарии, подзадачи, ссылки, но только активные."
+
+#: ../../source/ext-search.rst:9
+msgid "Example of query"
+msgstr "Пример запроса"
+
+#: ../../source/ext-search.rst:11
+msgid ""
+"This example will return all tasks assigned to me with a due date for "
+"tomorrow and a title that contains \"my title\":"
+msgstr ""
+"В этом примере показываются как отобразить задачи  назначенные мне с датой "
+"окончания завтра и название содержит \"my title\":"
+
+#: ../../source/ext-search.rst:19
+msgid "Global search"
+msgstr "Глобальный поиск"
+
+#: ../../source/ext-search.rst:22
+msgid "Search by task id or title"
+msgstr "Поиск по id задачи или названию задачи"
+
+#: ../../source/ext-search.rst:24 ../../source/ext-search.rst:195
+msgid "Search by task id: ``#123``"
+msgstr "Поиск задачи по id: ``#123``"
+
+#: ../../source/ext-search.rst:25
+msgid "Search by task id and task title: ``123``"
+msgstr "Поиск по id задачи и названию задачи: ``123``"
+
+#: ../../source/ext-search.rst:26
+msgid "Search by task title: anything that doesn't match any search attributes"
+msgstr ""
+"Поиск по названию задачи: ``любые слова и цифры``, но не должны содержать "
+"атрибуты поиска"
+
+#: ../../source/ext-search.rst:30
+msgid "Search by status"
+msgstr "Поиск по статусу"
+
+#: ../../source/ext-search.rst:32 ../../source/ext-search.rst:200
+msgid "Attribute: **status**"
+msgstr "Атрибут: **status**"
+
+#: ../../source/ext-search.rst:34
+msgid "Query to find open tasks: ``status:open``"
+msgstr "Запрос на поиск открытых задач: ``status:open``"
+
+#: ../../source/ext-search.rst:35
+msgid "Query to find closed tasks: ``status:closed``"
+msgstr "Запрос на поиск закрытых задач: ``status:closed``"
+
+#: ../../source/ext-search.rst:38
+msgid "Search by assignee"
+msgstr "Поиск по испольнителю"
+
+#: ../../source/ext-search.rst:40
+msgid "Attribute: **assignee**"
+msgstr "Атрибут: **assignee**"
+
+#: ../../source/ext-search.rst:42
+msgid "Query with the full name: ``assignee:\"Frederic Guillot\"``"
+msgstr "Поиск по полному имени испольнителя: ``assignee:\"Петр Иванов\"``"
+
+#: ../../source/ext-search.rst:43
+msgid "Query with the username: ``assignee:fguillot``"
+msgstr "Поиск исполнителя по имени пользователя: ``assignee:pivanov``"
+
+#: ../../source/ext-search.rst:44
+msgid "Multiple assignee lookup: ``assignee:user1 assignee:\"John Doe\"``"
+msgstr ""
+"Отбор нескольких испольнителей: ``assignee:tsemenov assignee:\"Петр Иванов"
+"\"``"
+
+#: ../../source/ext-search.rst:45
+msgid "Query for unassigned tasks: ``assignee:nobody``"
+msgstr "Поиск задач без исполнителя: ``assignee:nobody``"
+
+#: ../../source/ext-search.rst:46
+msgid "Query for my assigned tasks: ``assignee:me``"
+msgstr "Поиск задач назначенных мне: ``assignee:me``"
+
+#: ../../source/ext-search.rst:49
+msgid "Search by task creator"
+msgstr "Поиск по создателю задач"
+
+#: ../../source/ext-search.rst:51 ../../source/ext-search.rst:205
+msgid "Attribute: **creator**"
+msgstr "Атрибут: **creator**"
+
+#: ../../source/ext-search.rst:53
+msgid "Tasks created by myself: ``creator:me``"
+msgstr "Отбор задач созданных мной:  ``creator:me``"
+
+#: ../../source/ext-search.rst:54
+msgid "Tasks created by John Doe: ``creator:\"John Doe\"``"
+msgstr "Отбор задач которые создал Петр Иванов: ``creator:\"Петр Иванов\"``"
+
+#: ../../source/ext-search.rst:55
+msgid "Tasks created by the user id #1: ``creator:1``"
+msgstr "Отбор задач созданных пользователем с id #1: ``creator:1``"
+
+#: ../../source/ext-search.rst:58
+msgid "Search by subtask assignee"
+msgstr "Поиск по исполнителю подзадач"
+
+#: ../../source/ext-search.rst:60
+msgid "Attribute: **subtask:assignee**"
+msgstr "Атрибут: **subtask:assignee**"
+
+#: ../../source/ext-search.rst:62
+msgid "Example: ``subtask:assignee:\"John Doe\"``"
+msgstr "Например: ``subtask:assignee:\"Петр Иванов\"``"
+
+#: ../../source/ext-search.rst:65
+msgid "Search by color"
+msgstr "Поиск по цвету"
+
+#: ../../source/ext-search.rst:67
+msgid "Attribute: **color**"
+msgstr "Атрибут: **color**"
+
+#: ../../source/ext-search.rst:69
+msgid "Query to search by color id: ``color:blue``"
+msgstr "Отбор по цвету с id blue: ``color:blue``"
+
+#: ../../source/ext-search.rst:70
+msgid "Query to search by color name: ``color:\"Deep Orange\"``"
+msgstr "Отбор по названию цвета: ``color:\"Deep Orange\"``"
+
+#: ../../source/ext-search.rst:73
+msgid "Search by the due date"
+msgstr "Отбор по \"Сделать до\""
+
+#: ../../source/ext-search.rst:75
+msgid "Attribute: **due**"
+msgstr "Атрибут: **due**"
+
+#: ../../source/ext-search.rst:77
+msgid "Search tasks due today: ``due:today``"
+msgstr "Поиск задач со сроком испольнения до сегодня: ``due:today``"
+
+#: ../../source/ext-search.rst:78
+msgid "Search tasks due tomorrow: ``due:tomorrow``"
+msgstr "Поиск задач со сроком исполнения завтра: ``due:tomorrow``"
+
+#: ../../source/ext-search.rst:79
+msgid "Search tasks due yesterday: ``due:yesterday``"
+msgstr "Поиск задач со сроком исполнения вчера: ``due:yesterday``"
+
+#: ../../source/ext-search.rst:80
+msgid "Search tasks due with the exact date: ``due:2015-06-29``"
+msgstr "Поиск задач с конкретной датой исполнения: ``due:2016-06-29``"
+
+#: ../../source/ext-search.rst:82
+msgid "The date must use the ISO 8601 format: **YYYY-MM-DD**."
+msgstr "Дата должна быть в формате ISO 8601: **YYYY-MM-DD**."
+
+#: ../../source/ext-search.rst:84
+msgid ""
+"All string formats supported by the ``strtotime()`` function are supported, "
+"for example ``next Thursday``, ``-2 days``, ``+2 months``, ``tomorrow``, etc."
+msgstr ""
+"Все строковые форматы поддерживаемые функцией ``strtotime()`` допустимы. "
+"Например, ``next Thursday``, ``-2 days``, ``+2 months``, ``tomorrow`` и т.д."
+
+#: ../../source/ext-search.rst:88
+msgid "Operators supported with a date:"
+msgstr "Операторы сравнения с датой:"
+
+#: ../../source/ext-search.rst:90
+msgid "Greater than: **due:>2015-06-29**"
+msgstr "Старше чем: **due:>2015-06-29**"
+
+#: ../../source/ext-search.rst:91
+msgid "Lower than: **due:<2015-06-29**"
+msgstr "Моложе чем: **due:<2015-06-29**"
+
+#: ../../source/ext-search.rst:92
+msgid "Greater than or equal: **due:>=2015-06-29**"
+msgstr "Старше чем или равно: **due:>=2015-06-29**"
+
+#: ../../source/ext-search.rst:93
+msgid "Lower than or equal: **due:<=2015-06-29**"
+msgstr "Моложе чем или равно: **due:<=2015-06-29**"
+
+#: ../../source/ext-search.rst:96
+msgid "Search by modification date"
+msgstr "Поиск по дате изменения"
+
+#: ../../source/ext-search.rst:98
+msgid "Attribute: **modified** or **updated**"
+msgstr "Атрибут: **modified** или **updated**"
+
+#: ../../source/ext-search.rst:100
+msgid "The date formats are the same as the due date."
+msgstr "Формат даты такой же как и у \"Сделать до\""
+
+#: ../../source/ext-search.rst:102
+msgid ""
+"There is also a filter by recently modified tasks: ``modified:recently``."
+msgstr "Отфильтровать недавно измененные задачи: ``modified:recently``."
+
+#: ../../source/ext-search.rst:105
+msgid ""
+"This query will use the same value as the board highlight period configured "
+"in settings."
+msgstr ""
+"Этот запрос использует тоже значение что и в настройках Доски - \"Время "
+"подсвечивания задачи\"."
+
+#: ../../source/ext-search.rst:109
+msgid "Search by creation date"
+msgstr "Поиск по дате создания"
+
+#: ../../source/ext-search.rst:111 ../../source/ext-search.rst:210
+msgid "Attribute: **created**"
+msgstr "Атрибут: **created**"
+
+#: ../../source/ext-search.rst:113
+msgid "Works in the same way as the modification date queries."
+msgstr "Работает также как и поиск по дате изменения."
+
+#: ../../source/ext-search.rst:116
+msgid "Search by description"
+msgstr "Поиск по описанию"
+
+#: ../../source/ext-search.rst:118
+msgid "Attribute: **description** or **desc**"
+msgstr "Атрибут: **description** or **desc**"
+
+#: ../../source/ext-search.rst:120
+msgid "Example: ``description:\"text search\"``"
+msgstr "Например: ``description:\"здесь пишем тескт для поиска\"``"
+
+#: ../../source/ext-search.rst:123
+msgid "Search by external reference"
+msgstr "Поиск по внешним ссылкам"
+
+#: ../../source/ext-search.rst:125
+msgid ""
+"The task reference is an external id of your task, by example a ticket "
+"number from another software."
+msgstr ""
+"Например: нужно найти задачу, которая содержит ссылку на id или название "
+"другой задачи."
+
+#: ../../source/ext-search.rst:128
+msgid "Find tasks with a reference: ``ref:1234`` or ``reference:TICKET-1234``"
+msgstr "``ref:1234`` или ``reference:TICKET-1234``"
+
+#: ../../source/ext-search.rst:132
+msgid "Search by category"
+msgstr "Поиск по категории"
+
+#: ../../source/ext-search.rst:134
+msgid "Attribute: **category**"
+msgstr "Атрибут: **category**"
+
+#: ../../source/ext-search.rst:136
+msgid "Find tasks with a specific category: ``category:\"Feature Request\"``"
+msgstr "Найти задачи с указанной категорией: ``category:\"Важные запросы\"``"
+
+#: ../../source/ext-search.rst:137
+msgid ""
+"Find all tasks that have those categories: ``category:\"Bug\" category:"
+"\"Improvements\"``"
+msgstr ""
+"Найти задачи, которые содержать указанные категории: ``category:\"Ошибки\" "
+"category:\"Изменения\"``"
+
+#: ../../source/ext-search.rst:139
+msgid "Find tasks with no category assigned: ``category:none``"
+msgstr "Найти задачи без категорий: ``category:none``"
+
+#: ../../source/ext-search.rst:142
+msgid "Search by project"
+msgstr "Поиск проектов"
+
+#: ../../source/ext-search.rst:144 ../../source/ext-search.rst:215
+msgid "Attribute: **project**"
+msgstr "Атрибут: **project**"
+
+#: ../../source/ext-search.rst:146
+msgid "Find tasks by project name: ``project:\"My project name\"``"
+msgstr "Поиск задач по имени проекта: ``project:\"Какой-то проект\"``"
+
+#: ../../source/ext-search.rst:147
+msgid "Find tasks by project id: ``project:23``"
+msgstr "Поиск задач по id проекта: ``project:23``"
+
+#: ../../source/ext-search.rst:148
+msgid ""
+"Find tasks for several projects: ``project:\"My project A\" project:\"My "
+"project B\"``"
+msgstr ""
+"Поиск задач в нескольких проектах: ``project:\"Проект A\" project:\"Проект B"
+"\"``"
+
+#: ../../source/ext-search.rst:152
+msgid "Search by columns"
+msgstr "Поиск в колонках"
+
+#: ../../source/ext-search.rst:154
+msgid "Attribute: **column**"
+msgstr "Атрибут: **column**"
+
+#: ../../source/ext-search.rst:156
+msgid "Find tasks by column name: ``column:\"Work in progress\"``"
+msgstr "Поиск задач в указанной колонке: ``column:\"В работе\"``"
+
+#: ../../source/ext-search.rst:157
+msgid "Find tasks for several columns: ``column:\"Backlog\" column:ready``"
+msgstr ""
+"Поиск задач в нескольких колонках: ``column:\"Невыполненные заказы\" column:"
+"ready``"
+
+#: ../../source/ext-search.rst:160
+msgid "Search by swim-lane"
+msgstr "Поиск в Дорожках"
+
+#: ../../source/ext-search.rst:162
+msgid "Attribute: **swimlane**"
+msgstr "Атрибут: **swimlane**"
+
+#: ../../source/ext-search.rst:164
+msgid "Find tasks by swim-lane: ``swimlane:\"Version 42\"``"
+msgstr "Поиск задач в указанной Дорожке: ``swimlane:\"Версия 42\"``"
+
+#: ../../source/ext-search.rst:165
+msgid "Find tasks in the default swim-lane: ``swimlane:default``"
+msgstr "Поиск задач в базовой Дорожке: ``swimlane:default``"
+
+#: ../../source/ext-search.rst:166
+msgid ""
+"Find tasks into several swim-lanes: ``swimlane:\"Version 1.2\" swimlane:"
+"\"Version 1.3\"``"
+msgstr ""
+"Поиск задач в нескольких Дорожках: ``swimlane:\"Версия 1.2\" swimlane:"
+"\"Версия 1.3\"``"
+
+#: ../../source/ext-search.rst:170
+msgid "Search by task link"
+msgstr "Поиск ссылки на задачу"
+
+#: ../../source/ext-search.rst:172
+msgid "Attribute: **link**"
+msgstr "Атрибут: **link**"
+
+#: ../../source/ext-search.rst:174
+msgid "Find tasks by link name: ``link:\"is a milestone of\"``"
+msgstr "Поиск задач содержащих ссылку: ``link:\"это веха задачи \"``"
+
+#: ../../source/ext-search.rst:175
+msgid ""
+"Find tasks into several links: ``link:\"is a milestone of\" link:\"relates to"
+"\"``"
+msgstr ""
+"Поиск задач по нескольким ссылкам: ``link:\"веха задачи \" link:\"относится к"
+"\"``"
+
+#: ../../source/ext-search.rst:179
+msgid "Search by comment"
+msgstr "Поиск по комментарию"
+
+#: ../../source/ext-search.rst:181
+msgid "Attribute: **comment**"
+msgstr "Атрибут: **comment**"
+
+#: ../../source/ext-search.rst:183
+msgid ""
+"Find comments that contains this title: ``comment:\"My comment message\"``"
+msgstr ""
+"Найти комментарии, которые содержат указанное название: ``comment:\"Какое-то "
+"название\"``"
+
+#: ../../source/ext-search.rst:187
+msgid "Activity stream search"
+msgstr "Поиск активности задач"
+
+#: ../../source/ext-search.rst:190
+msgid "Search events by task title"
+msgstr "Поиск событий по названию задачи"
+
+#: ../../source/ext-search.rst:192
+msgid "Attribute: **title** or none (default)"
+msgstr "Атрибут: **title** или без ничего (по умолчанию)"
+
+#: ../../source/ext-search.rst:194
+msgid "Example: ``title:\"My task\"``"
+msgstr "Например: ``title:\"My task\"``"
+
+#: ../../source/ext-search.rst:198
+msgid "Search events by task status"
+msgstr "Поиск событий по статусу задачи"
+
+#: ../../source/ext-search.rst:203
+msgid "Search by event creator"
+msgstr "Поиск событий по создателю"
+
+#: ../../source/ext-search.rst:208
+msgid "Search by event creation date"
+msgstr "Поиск событий по дате создания"
+
+#: ../../source/ext-search.rst:213
+msgid "Search events by project"
+msgstr "Поиск событий по проекту"

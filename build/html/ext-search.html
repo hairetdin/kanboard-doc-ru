@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Синтаксис расширенного поиска &mdash; Документация Kanboard russian 0.0.1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="advanced-search-syntax">
+<h1>Синтаксис расширенного поиска<a class="headerlink" href="#advanced-search-syntax" title="Ссылка на этот заголовок">¶</a></h1>
+<p>В Канборде используется простой язык запросов для расширенного поиска. Вы можете искать задачи, комментарии, подзадачи, ссылки, но только активные.</p>
+<div class="section" id="example-of-query">
+<h2>Пример запроса<a class="headerlink" href="#example-of-query" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В этом примере показываются как отобразить задачи  назначенные мне с датой окончания завтра и название содержит &#8220;my title&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>assigne:me due:tomorrow my title
+</pre></div>
+</div>
+</div>
+<div class="section" id="global-search">
+<h2>Глобальный поиск<a class="headerlink" href="#global-search" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="search-by-task-id-or-title">
+<h3>Поиск по id задачи или названию задачи<a class="headerlink" href="#search-by-task-id-or-title" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><p class="first">Поиск задачи по id: <code class="docutils literal"><span class="pre">#123</span></code></p>
+</li>
+<li><p class="first">Поиск по id задачи и названию задачи: <code class="docutils literal"><span class="pre">123</span></code></p>
+</li>
+<li><p class="first">Поиск по названию задачи: <code class="docutils literal"><span class="pre">любые</span> <span class="pre">слова</span> <span class="pre">и</span> <span class="pre">цифры</span></code>, но не должны содержать атрибуты поиска</p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-status">
+<h3>Поиск по статусу<a class="headerlink" href="#search-by-status" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>status</strong></p>
+<ul class="simple">
+<li><p class="first">Запрос на поиск открытых задач: <code class="docutils literal"><span class="pre">status:open</span></code></p>
+</li>
+<li><p class="first">Запрос на поиск закрытых задач: <code class="docutils literal"><span class="pre">status:closed</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-assignee">
+<h3>Поиск по испольнителю<a class="headerlink" href="#search-by-assignee" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>assignee</strong></p>
+<ul class="simple">
+<li><p class="first">Поиск по полному имени испольнителя: <code class="docutils literal"><span class="pre">assignee:&quot;Петр</span> <span class="pre">Иванов&quot;</span></code></p>
+</li>
+<li><p class="first">Поиск исполнителя по имени пользователя: <code class="docutils literal"><span class="pre">assignee:pivanov</span></code></p>
+</li>
+<li><p class="first">Отбор нескольких испольнителей: <code class="docutils literal"><span class="pre">assignee:tsemenov</span> <span class="pre">assignee:&quot;Петр</span> <span class="pre">Иванов&quot;</span></code></p>
+</li>
+<li><p class="first">Поиск задач без исполнителя: <code class="docutils literal"><span class="pre">assignee:nobody</span></code></p>
+</li>
+<li><p class="first">Поиск задач назначенных мне: <code class="docutils literal"><span class="pre">assignee:me</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-task-creator">
+<h3>Поиск по создателю задач<a class="headerlink" href="#search-by-task-creator" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>creator</strong></p>
+<ul class="simple">
+<li><p class="first">Отбор задач созданных мной:  <code class="docutils literal"><span class="pre">creator:me</span></code></p>
+</li>
+<li><p class="first">Отбор задач которые создал Петр Иванов: <code class="docutils literal"><span class="pre">creator:&quot;Петр</span> <span class="pre">Иванов&quot;</span></code></p>
+</li>
+<li><p class="first">Отбор задач созданных пользователем с id #1: <code class="docutils literal"><span class="pre">creator:1</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-subtask-assignee">
+<h3>Поиск по исполнителю подзадач<a class="headerlink" href="#search-by-subtask-assignee" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>subtask:assignee</strong></p>
+<ul class="simple">
+<li><p class="first">Например: <code class="docutils literal"><span class="pre">subtask:assignee:&quot;Петр</span> <span class="pre">Иванов&quot;</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-color">
+<h3>Поиск по цвету<a class="headerlink" href="#search-by-color" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>color</strong></p>
+<ul class="simple">
+<li><p class="first">Отбор по цвету с id blue: <code class="docutils literal"><span class="pre">color:blue</span></code></p>
+</li>
+<li><p class="first">Отбор по названию цвета: <code class="docutils literal"><span class="pre">color:&quot;Deep</span> <span class="pre">Orange&quot;</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-the-due-date">
+<h3>Отбор по &#8220;Сделать до&#8221;<a class="headerlink" href="#search-by-the-due-date" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>due</strong></p>
+<ul class="simple">
+<li><p class="first">Поиск задач со сроком испольнения до сегодня: <code class="docutils literal"><span class="pre">due:today</span></code></p>
+</li>
+<li><p class="first">Поиск задач со сроком исполнения завтра: <code class="docutils literal"><span class="pre">due:tomorrow</span></code></p>
+</li>
+<li><p class="first">Поиск задач со сроком исполнения вчера: <code class="docutils literal"><span class="pre">due:yesterday</span></code></p>
+</li>
+<li><p class="first">Поиск задач с конкретной датой исполнения: <code class="docutils literal"><span class="pre">due:2016-06-29</span></code></p>
+</li>
+</ul>
+<p>Дата должна быть в формате ISO 8601: <strong>YYYY-MM-DD</strong>.</p>
+<p>Все строковые форматы поддерживаемые функцией <code class="docutils literal"><span class="pre">strtotime()</span></code> допустимы. Например, <code class="docutils literal"><span class="pre">next</span> <span class="pre">Thursday</span></code>, <code class="docutils literal"><span class="pre">-2</span> <span class="pre">days</span></code>, <code class="docutils literal"><span class="pre">+2</span> <span class="pre">months</span></code>, <code class="docutils literal"><span class="pre">tomorrow</span></code> и т.д.</p>
+<p>Операторы сравнения с датой:</p>
+<ul class="simple">
+<li><p class="first">Старше чем: <strong>due:&gt;2015-06-29</strong></p>
+</li>
+<li><p class="first">Моложе чем: <strong>due:&lt;2015-06-29</strong></p>
+</li>
+<li><p class="first">Старше чем или равно: <strong>due:&gt;=2015-06-29</strong></p>
+</li>
+<li><p class="first">Моложе чем или равно: <strong>due:&lt;=2015-06-29</strong></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-modification-date">
+<h3>Поиск по дате изменения<a class="headerlink" href="#search-by-modification-date" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>modified</strong> или <strong>updated</strong></p>
+<p>Формат даты такой же как и у &#8220;Сделать до&#8221;</p>
+<p>Отфильтровать недавно измененные задачи: <code class="docutils literal"><span class="pre">modified:recently</span></code>.</p>
+<p>Этот запрос использует тоже значение что и в настройках Доски - &#8220;Время подсвечивания задачи&#8221;.</p>
+</div>
+<div class="section" id="search-by-creation-date">
+<h3>Поиск по дате создания<a class="headerlink" href="#search-by-creation-date" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>created</strong></p>
+<p>Работает также как и поиск по дате изменения.</p>
+</div>
+<div class="section" id="search-by-description">
+<h3>Поиск по описанию<a class="headerlink" href="#search-by-description" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>description</strong> or <strong>desc</strong></p>
+<p>Например: <code class="docutils literal"><span class="pre">description:&quot;здесь</span> <span class="pre">пишем</span> <span class="pre">тескт</span> <span class="pre">для</span> <span class="pre">поиска&quot;</span></code></p>
+</div>
+<div class="section" id="search-by-external-reference">
+<h3>Поиск по внешним ссылкам<a class="headerlink" href="#search-by-external-reference" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Например: нужно найти задачу, которая содержит ссылку на id или название другой задачи.</p>
+<ul class="simple">
+<li><p class="first"><code class="docutils literal"><span class="pre">ref:1234</span></code> или <code class="docutils literal"><span class="pre">reference:TICKET-1234</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-category">
+<h3>Поиск по категории<a class="headerlink" href="#search-by-category" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>category</strong></p>
+<ul class="simple">
+<li><p class="first">Найти задачи с указанной категорией: <code class="docutils literal"><span class="pre">category:&quot;Важные</span> <span class="pre">запросы&quot;</span></code></p>
+</li>
+<li><p class="first">Найти задачи, которые содержать указанные категории: <code class="docutils literal"><span class="pre">category:&quot;Ошибки&quot;</span> <span class="pre">category:&quot;Изменения&quot;</span></code></p>
+</li>
+<li><p class="first">Найти задачи без категорий: <code class="docutils literal"><span class="pre">category:none</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-project">
+<h3>Поиск проектов<a class="headerlink" href="#search-by-project" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>project</strong></p>
+<ul class="simple">
+<li><p class="first">Поиск задач по имени проекта: <code class="docutils literal"><span class="pre">project:&quot;Какой-то</span> <span class="pre">проект&quot;</span></code></p>
+</li>
+<li><p class="first">Поиск задач по id проекта: <code class="docutils literal"><span class="pre">project:23</span></code></p>
+</li>
+<li><p class="first">Поиск задач в нескольких проектах: <code class="docutils literal"><span class="pre">project:&quot;Проект</span> <span class="pre">A&quot;</span> <span class="pre">project:&quot;Проект</span> <span class="pre">B&quot;</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-columns">
+<h3>Поиск в колонках<a class="headerlink" href="#search-by-columns" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>column</strong></p>
+<ul class="simple">
+<li><p class="first">Поиск задач в указанной колонке: <code class="docutils literal"><span class="pre">column:&quot;В</span> <span class="pre">работе&quot;</span></code></p>
+</li>
+<li><p class="first">Поиск задач в нескольких колонках: <code class="docutils literal"><span class="pre">column:&quot;Невыполненные</span> <span class="pre">заказы&quot;</span> <span class="pre">column:ready</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-swim-lane">
+<h3>Поиск в Дорожках<a class="headerlink" href="#search-by-swim-lane" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>swimlane</strong></p>
+<ul class="simple">
+<li><p class="first">Поиск задач в указанной Дорожке: <code class="docutils literal"><span class="pre">swimlane:&quot;Версия</span> <span class="pre">42&quot;</span></code></p>
+</li>
+<li><p class="first">Поиск задач в базовой Дорожке: <code class="docutils literal"><span class="pre">swimlane:default</span></code></p>
+</li>
+<li><p class="first">Поиск задач в нескольких Дорожках: <code class="docutils literal"><span class="pre">swimlane:&quot;Версия</span> <span class="pre">1.2&quot;</span> <span class="pre">swimlane:&quot;Версия</span> <span class="pre">1.3&quot;</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-task-link">
+<h3>Поиск ссылки на задачу<a class="headerlink" href="#search-by-task-link" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>link</strong></p>
+<ul class="simple">
+<li><p class="first">Поиск задач содержащих ссылку: <code class="docutils literal"><span class="pre">link:&quot;это</span> <span class="pre">веха</span> <span class="pre">задачи</span> <span class="pre">&quot;</span></code></p>
+</li>
+<li><p class="first">Поиск задач по нескольким ссылкам: <code class="docutils literal"><span class="pre">link:&quot;веха</span> <span class="pre">задачи</span> <span class="pre">&quot;</span> <span class="pre">link:&quot;относится</span> <span class="pre">к&quot;</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-by-comment">
+<h3>Поиск по комментарию<a class="headerlink" href="#search-by-comment" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>comment</strong></p>
+<ul class="simple">
+<li><p class="first">Найти комментарии, которые содержат указанное название: <code class="docutils literal"><span class="pre">comment:&quot;Какое-то</span> <span class="pre">название&quot;</span></code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="activity-stream-search">
+<h2>Поиск активности задач<a class="headerlink" href="#activity-stream-search" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="search-events-by-task-title">
+<h3>Поиск событий по названию задачи<a class="headerlink" href="#search-events-by-task-title" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>title</strong> или без ничего (по умолчанию)</p>
+<ul class="simple">
+<li><p class="first">Например: <code class="docutils literal"><span class="pre">title:&quot;My</span> <span class="pre">task&quot;</span></code></p>
+</li>
+<li><p class="first">Поиск задачи по id: <code class="docutils literal"><span class="pre">#123</span></code></p>
+</li>
+</ul>
+</div>
+<div class="section" id="search-events-by-task-status">
+<h3>Поиск событий по статусу задачи<a class="headerlink" href="#search-events-by-task-status" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>status</strong></p>
+</div>
+<div class="section" id="search-by-event-creator">
+<h3>Поиск событий по создателю<a class="headerlink" href="#search-by-event-creator" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>creator</strong></p>
+</div>
+<div class="section" id="search-by-event-creation-date">
+<h3>Поиск событий по дате создания<a class="headerlink" href="#search-by-event-creation-date" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>created</strong></p>
+</div>
+<div class="section" id="search-events-by-project">
+<h3>Поиск событий по проекту<a class="headerlink" href="#search-events-by-project" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Атрибут: <strong>project</strong></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Синтаксис расширенного поиска</a><ul>
+<li><a class="reference internal" href="#example-of-query">Пример запроса</a></li>
+<li><a class="reference internal" href="#global-search">Глобальный поиск</a><ul>
+<li><a class="reference internal" href="#search-by-task-id-or-title">Поиск по id задачи или названию задачи</a></li>
+<li><a class="reference internal" href="#search-by-status">Поиск по статусу</a></li>
+<li><a class="reference internal" href="#search-by-assignee">Поиск по испольнителю</a></li>
+<li><a class="reference internal" href="#search-by-task-creator">Поиск по создателю задач</a></li>
+<li><a class="reference internal" href="#search-by-subtask-assignee">Поиск по исполнителю подзадач</a></li>
+<li><a class="reference internal" href="#search-by-color">Поиск по цвету</a></li>
+<li><a class="reference internal" href="#search-by-the-due-date">Отбор по &#8220;Сделать до&#8221;</a></li>
+<li><a class="reference internal" href="#search-by-modification-date">Поиск по дате изменения</a></li>
+<li><a class="reference internal" href="#search-by-creation-date">Поиск по дате создания</a></li>
+<li><a class="reference internal" href="#search-by-description">Поиск по описанию</a></li>
+<li><a class="reference internal" href="#search-by-external-reference">Поиск по внешним ссылкам</a></li>
+<li><a class="reference internal" href="#search-by-category">Поиск по категории</a></li>
+<li><a class="reference internal" href="#search-by-project">Поиск проектов</a></li>
+<li><a class="reference internal" href="#search-by-columns">Поиск в колонках</a></li>
+<li><a class="reference internal" href="#search-by-swim-lane">Поиск в Дорожках</a></li>
+<li><a class="reference internal" href="#search-by-task-link">Поиск ссылки на задачу</a></li>
+<li><a class="reference internal" href="#search-by-comment">Поиск по комментарию</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#activity-stream-search">Поиск активности задач</a><ul>
+<li><a class="reference internal" href="#search-events-by-task-title">Поиск событий по названию задачи</a></li>
+<li><a class="reference internal" href="#search-events-by-task-status">Поиск событий по статусу задачи</a></li>
+<li><a class="reference internal" href="#search-by-event-creator">Поиск событий по создателю</a></li>
+<li><a class="reference internal" href="#search-by-event-creation-date">Поиск событий по дате создания</a></li>
+<li><a class="reference internal" href="#search-events-by-project">Поиск событий по проекту</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ext-search.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Введите слова для поиска или имя модуля, класса или функции.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, hairetdin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ext-search.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

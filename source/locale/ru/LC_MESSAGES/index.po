@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 12:28+0500\n"
-"PO-Revision-Date: 2016-06-14 12:20+0500\n"
+"PO-Revision-Date: 2016-06-16 10:58+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -264,7 +264,7 @@ msgstr "Дополнительно"
 
 #: ../../source/index.rst:89
 msgid "`Advanced Search Syntax <search.markdown>`__"
-msgstr "`Синтаксис расширенного поиска <search.html>`__"
+msgstr "`Синтаксис расширенного поиска <ext-search.html>`__"
 
 #: ../../source/index.rst:90
 msgid "`Command line interface <cli.markdown>`__"
