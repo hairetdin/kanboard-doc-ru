@@ -3,169 +3,184 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-16 17:30+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/cli.rst:2
 msgid "Command Line Interface"
-msgstr ""
+msgstr "Интерфейс командной строки"
 
 #: ../../source/cli.rst:4
 msgid ""
-"Kanboard provides a simple command line interface that can be used from "
-"any Unix terminal. This tool can be used only on the local machine."
+"Kanboard provides a simple command line interface that can be used from any "
+"Unix terminal. This tool can be used only on the local machine."
 msgstr ""
+"Канборд обеспечивает простой интерфейс командной строки, которым можно "
+"воспользоваться только из Unix терминала. Эта возможность доступна только с "
+"локальной машины."
 
 #: ../../source/cli.rst:7
 msgid ""
-"This feature is useful to run commands outside of the web server "
-"processes."
+"This feature is useful to run commands outside of the web server processes."
 msgstr ""
+"Интерфейс командной строки полезен для выполнения команд вне процессов веб "
+"сервера."
 
 #: ../../source/cli.rst:11
 msgid "Usage"
-msgstr ""
+msgstr "Использование"
 
 #: ../../source/cli.rst:13
 msgid ""
-"Open a terminal and go to your Kanboard directory (example: ``cd "
-"/var/www/kanboard``)"
+"Open a terminal and go to your Kanboard directory (example: ``cd /var/www/"
+"kanboard``)"
 msgstr ""
+"Откройте терминал и перейдите в директорию Канборд (например: ``cd /var/www/"
+"kanboard``)"
 
 #: ../../source/cli.rst:15
 msgid "Run the command ``./kanboard``"
-msgstr ""
+msgstr "Выполните команду ``./kanboard``"
 
 #: ../../source/cli.rst:60
 msgid "Available commands"
-msgstr ""
+msgstr "Доступные команды"
 
 #: ../../source/cli.rst:63
 msgid "Tasks CSV export"
-msgstr ""
+msgstr "Экспорт задач в формате CSV"
 
 #: ../../source/cli.rst:65 ../../source/cli.rst:82 ../../source/cli.rst:97
 msgid "Usage:"
-msgstr ""
+msgstr "Применение:"
 
 #: ../../source/cli.rst:71 ../../source/cli.rst:88 ../../source/cli.rst:103
 #: ../../source/cli.rst:118
 msgid "Example:"
-msgstr ""
+msgstr "Пример:"
 
 #: ../../source/cli.rst:77
 msgid "CSV data are sent to ``stdout``."
-msgstr ""
+msgstr "Данные CSV передаются в ``stdout``."
 
 #: ../../source/cli.rst:80
 msgid "Subtasks CSV export"
-msgstr ""
+msgstr "Экспорт подзадач в формате CSV"
 
 #: ../../source/cli.rst:95
 msgid "Task transitions CSV export"
-msgstr ""
+msgstr "Экспорт перемещения задач в формате CSV"
 
 #: ../../source/cli.rst:110
 msgid "Export daily summaries data in CSV"
-msgstr ""
+msgstr "Экспорт ежедневных сведений в формате CSV"
 
 #: ../../source/cli.rst:112
 msgid "The exported data will be printed on the standard output:"
-msgstr ""
+msgstr "Экспортированные данные будут выведены в стандартный вывод:"
 
 #: ../../source/cli.rst:125
 msgid "Send notifications for overdue tasks"
-msgstr ""
+msgstr "Отправка уведомлений для просроченных задач"
 
 #: ../../source/cli.rst:127
 msgid "Emails will be sent to all users with notifications enabled."
 msgstr ""
+"Email сообщения будут отправлены всем пользователям, у которых включено "
+"оповещение."
 
 #: ../../source/cli.rst:133
 msgid "Optional parameters:"
-msgstr ""
+msgstr "Необязательные параметры:"
 
 #: ../../source/cli.rst:135
 msgid "``--show``: Display notifications sent"
-msgstr ""
+msgstr "``--show``: Показывать отправку уведомлений"
 
 #: ../../source/cli.rst:136
 msgid ""
-"``--group``: Group all overdue tasks for one user (from all projects) in "
-"one email"
+"``--group``: Group all overdue tasks for one user (from all projects) in one "
+"email"
 msgstr ""
+"``--group``: Группировать все просроченные задачи для одного пользователя "
+"(со всех проектов) на один email"
 
 #: ../../source/cli.rst:138
-msgid "``--manager``: Send all overdue tasks to project manager(s) in one email"
+msgid ""
+"``--manager``: Send all overdue tasks to project manager(s) in one email"
 msgstr ""
+"``--manager``: Посылать все просроченные задачи менеджеру (менеджерам) "
+"проекта в одном email сообщении"
 
 #: ../../source/cli.rst:141
 msgid "You can also display the overdue tasks with the flag ``--show``:"
 msgstr ""
+"Вы можете просмотреть просроченные задачи с помощью параметра ``--show``:"
 
 #: ../../source/cli.rst:154
 msgid "Run daily project stats calculation"
-msgstr ""
+msgstr "Запуск ежедневной калькуляции статистики"
 
 #: ../../source/cli.rst:156
 msgid "This command calculate the statistics of each project:"
-msgstr ""
+msgstr "Эта команда считает статистику для каждого проекта:"
 
 #: ../../source/cli.rst:166
 msgid "Trigger for tasks"
-msgstr ""
+msgstr "Триггеры для задач"
 
 #: ../../source/cli.rst:168
 msgid ""
 "This command send a \"daily cronjob event\" to all open tasks of each "
 "project."
 msgstr ""
+"Эта команда посылает \"событие для ежедневных фоновых заданий\" для всех "
+"открытых задач в каждом проекте."
 
 #: ../../source/cli.rst:177
 msgid "Reset user password"
-msgstr ""
+msgstr "Сброс пароля пользователя"
 
 #: ../../source/cli.rst:183
 msgid ""
 "You will be prompted for a password and confirmation. Characters are not "
 "printed to the screen."
 msgstr ""
+"Будет запрошен пароль и подтверждение. Символы не отображаются на экране."
 
 #: ../../source/cli.rst:187
 msgid "Remove two-factor authentication for a user"
-msgstr ""
+msgstr "Удаление двухуровневой аутентификации для пользователя"
 
 #: ../../source/cli.rst:194
 msgid "Install a plugin"
-msgstr ""
+msgstr "Установка плагина"
 
 #: ../../source/cli.rst:200
-msgid "Note: Installed files will have the same permissions as the current user"
+msgid ""
+"Note: Installed files will have the same permissions as the current user"
 msgstr ""
+"Заметка: Установленные файлы будут иметь теже права, что и у текущего "
+"пользователя"
 
 #: ../../source/cli.rst:203
 msgid "Remove a plugin"
-msgstr ""
+msgstr "Удаление плагина"
 
 #: ../../source/cli.rst:210
 msgid "Upgrade all plugins"
-msgstr ""
-
-#~ msgid "CSV data are sent to stdout."
-#~ msgstr ""
-
-#~ msgid "You can also display the overdue tasks with the flag --show:"
-#~ msgstr ""
-
+msgstr "Обновление всех плагинов"

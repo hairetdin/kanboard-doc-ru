@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Command Line Interface &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Интерфейс командной строки &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,17 +40,16 @@
           <div class="body" role="main">
             
   <div class="section" id="command-line-interface">
-<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Kanboard provides a simple command line interface that can be used from
-any Unix terminal. This tool can be used only on the local machine.</p>
-<p>This feature is useful to run commands outside of the web server
-processes.</p>
+<h1>Интерфейс командной строки<a class="headerlink" href="#command-line-interface" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Канборд обеспечивает простой интерфейс командной строки, которым можно воспользоваться только из Unix терминала. Эта возможность доступна только с локальной машины.</p>
+<p>Интерфейс командной строки полезен для выполнения команд вне процессов веб сервера.</p>
 <div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Использование<a class="headerlink" href="#usage" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Open a terminal and go to your Kanboard directory (example:
-<code class="docutils literal"><span class="pre">cd</span> <span class="pre">/var/www/kanboard</span></code>)</li>
-<li>Run the command <code class="docutils literal"><span class="pre">./kanboard</span></code></li>
+<li><p class="first">Откройте терминал и перейдите в директорию Канборд (например: <code class="docutils literal"><span class="pre">cd</span> <span class="pre">/var/www/kanboard</span></code>)</p>
+</li>
+<li><p class="first">Выполните команду <code class="docutils literal"><span class="pre">./kanboard</span></code></p>
+</li>
 </ul>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>Kanboard version master
 
@@ -96,67 +94,68 @@ Available commands:
 </div>
 </div>
 <div class="section" id="available-commands">
-<h2>Available commands<a class="headerlink" href="#available-commands" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Доступные команды<a class="headerlink" href="#available-commands" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="tasks-csv-export">
-<h3>Tasks CSV export<a class="headerlink" href="#tasks-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Usage:</p>
+<h3>Экспорт задач в формате CSV<a class="headerlink" href="#tasks-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Применение:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:tasks &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
 </pre></div>
 </div>
-<p>Example:</p>
+<p>Пример:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:tasks 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
 </pre></div>
 </div>
-<p>CSV data are sent to <code class="docutils literal"><span class="pre">stdout</span></code>.</p>
+<p>Данные CSV передаются в <code class="docutils literal"><span class="pre">stdout</span></code>.</p>
 </div>
 <div class="section" id="subtasks-csv-export">
-<h3>Subtasks CSV export<a class="headerlink" href="#subtasks-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Usage:</p>
+<h3>Экспорт подзадач в формате CSV<a class="headerlink" href="#subtasks-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Применение:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:subtasks &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
 </pre></div>
 </div>
-<p>Example:</p>
+<p>Пример:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:subtasks 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
 </pre></div>
 </div>
 </div>
 <div class="section" id="task-transitions-csv-export">
-<h3>Task transitions CSV export<a class="headerlink" href="#task-transitions-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Usage:</p>
+<h3>Экспорт перемещения задач в формате CSV<a class="headerlink" href="#task-transitions-csv-export" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Применение:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:transitions &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
 </pre></div>
 </div>
-<p>Example:</p>
+<p>Пример:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:transitions 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
 </pre></div>
 </div>
 </div>
 <div class="section" id="export-daily-summaries-data-in-csv">
-<h3>Export daily summaries data in CSV<a class="headerlink" href="#export-daily-summaries-data-in-csv" title="Ссылка на этот заголовок">¶</a></h3>
-<p>The exported data will be printed on the standard output:</p>
+<h3>Экспорт ежедневных сведений в формате CSV<a class="headerlink" href="#export-daily-summaries-data-in-csv" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Экспортированные данные будут выведены в стандартный вывод:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:daily-project-column-stats &lt;project_id&gt; &lt;start_date&gt; &lt;end_date&gt;
 </pre></div>
 </div>
-<p>Example:</p>
+<p>Пример:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard export:daily-project-column-stats 1 2014-10-01 2014-11-30 &gt; /tmp/my_custom_export.csv
 </pre></div>
 </div>
 </div>
 <div class="section" id="send-notifications-for-overdue-tasks">
-<h3>Send notifications for overdue tasks<a class="headerlink" href="#send-notifications-for-overdue-tasks" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Emails will be sent to all users with notifications enabled.</p>
+<h3>Отправка уведомлений для просроченных задач<a class="headerlink" href="#send-notifications-for-overdue-tasks" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Email сообщения будут отправлены всем пользователям, у которых включено оповещение.</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard notification:overdue-tasks
 </pre></div>
 </div>
-<p>Optional parameters:</p>
+<p>Необязательные параметры:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">--show</span></code>: Display notifications sent</li>
-<li><code class="docutils literal"><span class="pre">--group</span></code>: Group all overdue tasks for one user (from all projects)
-in one email</li>
-<li><code class="docutils literal"><span class="pre">--manager</span></code>: Send all overdue tasks to project manager(s) in one
-email</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">--show</span></code>: Показывать отправку уведомлений</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">--group</span></code>: Группировать все просроченные задачи для одного пользователя (со всех проектов) на один email</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">--manager</span></code>: Посылать все просроченные задачи менеджеру (менеджерам) проекта в одном email сообщении</p>
+</li>
 </ul>
-<p>You can also display the overdue tasks with the flag <code class="docutils literal"><span class="pre">--show</span></code>:</p>
+<p>Вы можете просмотреть просроченные задачи с помощью параметра <code class="docutils literal"><span class="pre">--show</span></code>:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard notification:overdue-tasks --show
 +-----+---------+------------+------------+--------------+----------+
 | Id  | Title   | Due date   | Project Id | Project name | Assignee |
@@ -168,8 +167,8 @@ email</li>
 </div>
 </div>
 <div class="section" id="run-daily-project-stats-calculation">
-<h3>Run daily project stats calculation<a class="headerlink" href="#run-daily-project-stats-calculation" title="Ссылка на этот заголовок">¶</a></h3>
-<p>This command calculate the statistics of each project:</p>
+<h3>Запуск ежедневной калькуляции статистики<a class="headerlink" href="#run-daily-project-stats-calculation" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Эта команда считает статистику для каждого проекта:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard projects:daily-stats
 Run calculation for Project #0
 Run calculation for Project #1
@@ -178,43 +177,41 @@ Run calculation for Project #10
 </div>
 </div>
 <div class="section" id="trigger-for-tasks">
-<h3>Trigger for tasks<a class="headerlink" href="#trigger-for-tasks" title="Ссылка на этот заголовок">¶</a></h3>
-<p>This command send a &#8220;daily cronjob event&#8221; to all open tasks of each
-project.</p>
+<h3>Триггеры для задач<a class="headerlink" href="#trigger-for-tasks" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Эта команда посылает &#8220;событие для ежедневных фоновых заданий&#8221; для всех открытых задач в каждом проекте.</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard trigger:tasks
 Trigger task event: project_id=2, nb_tasks=1
 </pre></div>
 </div>
 </div>
 <div class="section" id="reset-user-password">
-<h3>Reset user password<a class="headerlink" href="#reset-user-password" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Сброс пароля пользователя<a class="headerlink" href="#reset-user-password" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard user:reset-password my_user
 </pre></div>
 </div>
-<p>You will be prompted for a password and confirmation. Characters are not
-printed to the screen.</p>
+<p>Будет запрошен пароль и подтверждение. Символы не отображаются на экране.</p>
 </div>
 <div class="section" id="remove-two-factor-authentication-for-a-user">
-<h3>Remove two-factor authentication for a user<a class="headerlink" href="#remove-two-factor-authentication-for-a-user" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Удаление двухуровневой аутентификации для пользователя<a class="headerlink" href="#remove-two-factor-authentication-for-a-user" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard user:reset-2fa my_user
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-a-plugin">
-<h3>Install a plugin<a class="headerlink" href="#install-a-plugin" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Установка плагина<a class="headerlink" href="#install-a-plugin" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard plugin:install https://github.com/kanboard/plugin-github-auth/releases/download/v1.0.1/GithubAuth-1.0.1.zip
 </pre></div>
 </div>
-<p>Note: Installed files will have the same permissions as the current user</p>
+<p>Заметка: Установленные файлы будут иметь теже права, что и у текущего пользователя</p>
 </div>
 <div class="section" id="remove-a-plugin">
-<h3>Remove a plugin<a class="headerlink" href="#remove-a-plugin" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Удаление плагина<a class="headerlink" href="#remove-a-plugin" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard plugin:uninstall Budget
 </pre></div>
 </div>
 </div>
 <div class="section" id="upgrade-all-plugins">
-<h3>Upgrade all plugins<a class="headerlink" href="#upgrade-all-plugins" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Обновление всех плагинов<a class="headerlink" href="#upgrade-all-plugins" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>./kanboard plugin:upgrade
 * Updating plugin: Budget Planning
 * Plugin up to date: Github Authentication
@@ -232,21 +229,21 @@ printed to the screen.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Command Line Interface</a><ul>
-<li><a class="reference internal" href="#usage">Usage</a></li>
-<li><a class="reference internal" href="#available-commands">Available commands</a><ul>
-<li><a class="reference internal" href="#tasks-csv-export">Tasks CSV export</a></li>
-<li><a class="reference internal" href="#subtasks-csv-export">Subtasks CSV export</a></li>
-<li><a class="reference internal" href="#task-transitions-csv-export">Task transitions CSV export</a></li>
-<li><a class="reference internal" href="#export-daily-summaries-data-in-csv">Export daily summaries data in CSV</a></li>
-<li><a class="reference internal" href="#send-notifications-for-overdue-tasks">Send notifications for overdue tasks</a></li>
-<li><a class="reference internal" href="#run-daily-project-stats-calculation">Run daily project stats calculation</a></li>
-<li><a class="reference internal" href="#trigger-for-tasks">Trigger for tasks</a></li>
-<li><a class="reference internal" href="#reset-user-password">Reset user password</a></li>
-<li><a class="reference internal" href="#remove-two-factor-authentication-for-a-user">Remove two-factor authentication for a user</a></li>
-<li><a class="reference internal" href="#install-a-plugin">Install a plugin</a></li>
-<li><a class="reference internal" href="#remove-a-plugin">Remove a plugin</a></li>
-<li><a class="reference internal" href="#upgrade-all-plugins">Upgrade all plugins</a></li>
+<li><a class="reference internal" href="#">Интерфейс командной строки</a><ul>
+<li><a class="reference internal" href="#usage">Использование</a></li>
+<li><a class="reference internal" href="#available-commands">Доступные команды</a><ul>
+<li><a class="reference internal" href="#tasks-csv-export">Экспорт задач в формате CSV</a></li>
+<li><a class="reference internal" href="#subtasks-csv-export">Экспорт подзадач в формате CSV</a></li>
+<li><a class="reference internal" href="#task-transitions-csv-export">Экспорт перемещения задач в формате CSV</a></li>
+<li><a class="reference internal" href="#export-daily-summaries-data-in-csv">Экспорт ежедневных сведений в формате CSV</a></li>
+<li><a class="reference internal" href="#send-notifications-for-overdue-tasks">Отправка уведомлений для просроченных задач</a></li>
+<li><a class="reference internal" href="#run-daily-project-stats-calculation">Запуск ежедневной калькуляции статистики</a></li>
+<li><a class="reference internal" href="#trigger-for-tasks">Триггеры для задач</a></li>
+<li><a class="reference internal" href="#reset-user-password">Сброс пароля пользователя</a></li>
+<li><a class="reference internal" href="#remove-two-factor-authentication-for-a-user">Удаление двухуровневой аутентификации для пользователя</a></li>
+<li><a class="reference internal" href="#install-a-plugin">Установка плагина</a></li>
+<li><a class="reference internal" href="#remove-a-plugin">Удаление плагина</a></li>
+<li><a class="reference internal" href="#upgrade-all-plugins">Обновление всех плагинов</a></li>
 </ul>
 </li>
 </ul>
