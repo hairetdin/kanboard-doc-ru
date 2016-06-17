@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Requirements &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Системные требования &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,76 +40,77 @@
           <div class="body" role="main">
             
   <div class="section" id="requirements">
-<h1>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Системные требования<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="server-side">
-<h2>Server side<a class="headerlink" href="#server-side" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>На сервере<a class="headerlink" href="#server-side" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="compatible-operating-systems">
-<h3>Compatible Operating Systems<a class="headerlink" href="#compatible-operating-systems" title="Ссылка на этот заголовок">¶</a></h3>
-<p>| Operating System | |&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;| |
-Linux Ubuntu Xenial Xerus 16.04 LTS | | Linux Ubuntu Trusty 14.04 LTS
-| | Linux Centos 6.x | | Linux Centos 7.x | | Linux Redhat 6.x |
-| Linux Redhat 7.x | | Linux Debian 8 | | FreeBSD 10.x | |
-Microsoft Windows 2012 R2 | | Microsoft Windows 2008 |</p>
+<h3>Поддерживаемые операционные системы<a class="headerlink" href="#compatible-operating-systems" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Linux Ubuntu Xenial Xerus 16.04 LTS, Linux Ubuntu Trusty 14.04 LTS, Linux Centos 6.x, Linux Centos 7.x, Linux Redhat 6.x, Linux Redhat 7.x, Linux Debian 8, FreeBSD 10.x, Microsoft Windows 2012 R2, Microsoft Windows 2008</p>
 </div>
 <div class="section" id="compatible-databases">
-<h3>Compatible Databases<a class="headerlink" href="#compatible-databases" title="Ссылка на этот заголовок">¶</a></h3>
-<p>| Database | |&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;| | Sqlite 3.x | | Mysql &gt;= 5.5
-| | MariaDB &gt;= 10 | | Postgresql &gt;= 9.3 |</p>
-<p>Which database to choose?</p>
+<h3>Поддерживаемые базы данных<a class="headerlink" href="#compatible-databases" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Sqlite 3.x, Mysql &gt;= 5.5, MariaDB &gt;= 10, Postgresql &gt;= 9.3</p>
+<p>Какую базу данных выбрать?</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="25%" />
 <col width="75%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Usage</th>
+<tr class="row-odd"><th class="head"><p class="first last">Тип</p>
+</th>
+<th class="head"><p class="first last">Когда использовать</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Sqlite</td>
-<td>Single user or small team (almost no concurrency)</td>
+<td><p class="first last">Один пользователь или небольшая команда</p>
+</td>
 </tr>
 <tr class="row-odd"><td>Mysql/Postgres</td>
-<td>Larger team, high-availability configuration</td>
+<td><p class="first last">Большая команда, конфигурация высокой доступности</p>
+</td>
 </tr>
 </tbody>
 </table>
-<p>Do not use Sqlite on NFS mounts, use Sqlite only when you have a disk
-with fast I/O</p>
+<p>Не используйте Sqlite на смонтированном NFS. Используйте Sqlite только на дисках с высокой скоростью чтение/запись.</p>
 </div>
 <div class="section" id="compatible-web-servers">
-<h3>Compatible Web Servers<a class="headerlink" href="#compatible-web-servers" title="Ссылка на этот заголовок">¶</a></h3>
-<p>| Web Server | |&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;| | Apache HTTP Server | |
-Nginx | | Microsoft IIS |</p>
-<p>Kanboard is pre-configured to work with Apache (URL rewriting).</p>
+<h3>Совместимые веб сервера<a class="headerlink" href="#compatible-web-servers" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Apache HTTP Server, Nginx , Microsoft IIS</p>
+<p>Канборд изначально сконфигурирован для работы с Apache (URL rewriting).</p>
 </div>
 <div class="section" id="php-versions">
-<h3>PHP Versions<a class="headerlink" href="#php-versions" title="Ссылка на этот заголовок">¶</a></h3>
-<p>| PHP Version | |&#8212;&#8212;&#8212;&#8212;&#8212;-| | PHP &gt;= 5.3.3 | | PHP 5.4 |
-| PHP 5.5 | | PHP 5.6 | | PHP 7.x |</p>
+<h3>Версии PHP<a class="headerlink" href="#php-versions" title="Ссылка на этот заголовок">¶</a></h3>
+<p>PHP &gt;= 5.3.3, PHP 5.4, PHP 5.5, PHP 5.6, PHP 7.x</p>
 </div>
 <div class="section" id="php-extensions-required">
-<h3>PHP Extensions Required<a class="headerlink" href="#php-extensions-required" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Требуемые расширения для PHP<a class="headerlink" href="#php-extensions-required" title="Ссылка на этот заголовок">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="45%" />
 <col width="55%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">PHP Extensions required</th>
-<th class="head">Note</th>
+<tr class="row-odd"><th class="head"><p class="first last">Требуемые расширения для PHP</p>
+</th>
+<th class="head"><p class="first last">Примечание</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>pdo_sqlite</td>
-<td>Only if you use Sqlite</td>
+<td><p class="first last">Только при использовании Sqlite</p>
+</td>
 </tr>
 <tr class="row-odd"><td>pdo_mysql</td>
-<td>Only if you use Mysql/MariaDB</td>
+<td><p class="first last">Только при использоании Mysql/MariaDB</p>
+</td>
 </tr>
 <tr class="row-even"><td>pdo_pgsql</td>
-<td>Only if you use Postgres</td>
+<td><p class="first last">Только при использовании Postgres</p>
+</td>
 </tr>
 <tr class="row-odd"><td>gd</td>
 <td>&nbsp;</td>
@@ -134,55 +134,59 @@ Nginx | | Microsoft IIS |</p>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>ldap</td>
-<td>Only for LDAP authentication</td>
+<td><p class="first last">Только для аутентификации LDAP</p>
+</td>
 </tr>
 <tr class="row-odd"><td>Zend OPcache</td>
-<td>Recommended</td>
+<td><p class="first last">Рекомендуется</p>
+</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="recommendations">
-<h3>Recommendations<a class="headerlink" href="#recommendations" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Рекомендуется<a class="headerlink" href="#recommendations" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Modern Linux or Unix operating system.</li>
-<li>Best performances are obtained with the latest version of PHP with
-OPcode caching activated.</li>
+<li><p class="first">Современная Linux или Unix операционная система.</p>
+</li>
+<li><p class="first">Высокая производительность достигается с последней версией PHP со включенным кешированием OPcode.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="client-side">
-<h2>Client side<a class="headerlink" href="#client-side" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>На клиенте<a class="headerlink" href="#client-side" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="browsers">
-<h3>Browsers<a class="headerlink" href="#browsers" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Always use a modern browser with the latest version if possible:</p>
-<p>| Browser | |&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;| | Safari |
-| Google Chrome | | Mozilla Firefox | | Microsoft Internet Explorer
-&gt;= 11 | | Microsoft Edge |</p>
+<h3>Браузеры<a class="headerlink" href="#browsers" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Используйте современные браузеры, обновленные до последней версии:</p>
+<p>Safari, Google Chrome, Mozilla Firefox, Microsoft Internet Explorer &gt;= 11, Microsoft Edge</p>
 </div>
 <div class="section" id="devices">
-<h3>Devices<a class="headerlink" href="#devices" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Устройства<a class="headerlink" href="#devices" title="Ссылка на этот заголовок">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
 <col width="50%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Device</th>
-<th class="head">Screen resolution</th>
+<tr class="row-odd"><th class="head"><p class="first last">Устройство</p>
+</th>
+<th class="head"><p class="first last">Разрешение экрана</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Laptop or desktop</td>
+<tr class="row-even"><td><p class="first last">Персональный компьютер или ноутбук</p>
+</td>
 <td>&gt;= 1366 x 768</td>
 </tr>
-<tr class="row-odd"><td>Tablet</td>
+<tr class="row-odd"><td><p class="first last">Планшет</p>
+</td>
 <td>&gt;= 1024 x 768</td>
 </tr>
 </tbody>
 </table>
-<p>Kanboard is not yet optimized for smartphones. It&#8217;s working but the user
-interface is not really convenient to use.</p>
+<p>Канборд, пока, не оптимизирован для работы на смартфонах. Конечно, он работает, но пользовательский интерфейс не совсем удобный для использования.</p>
 </div>
 </div>
 </div>
@@ -195,19 +199,19 @@ interface is not really convenient to use.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Requirements</a><ul>
-<li><a class="reference internal" href="#server-side">Server side</a><ul>
-<li><a class="reference internal" href="#compatible-operating-systems">Compatible Operating Systems</a></li>
-<li><a class="reference internal" href="#compatible-databases">Compatible Databases</a></li>
-<li><a class="reference internal" href="#compatible-web-servers">Compatible Web Servers</a></li>
-<li><a class="reference internal" href="#php-versions">PHP Versions</a></li>
-<li><a class="reference internal" href="#php-extensions-required">PHP Extensions Required</a></li>
-<li><a class="reference internal" href="#recommendations">Recommendations</a></li>
+<li><a class="reference internal" href="#">Системные требования</a><ul>
+<li><a class="reference internal" href="#server-side">На сервере</a><ul>
+<li><a class="reference internal" href="#compatible-operating-systems">Поддерживаемые операционные системы</a></li>
+<li><a class="reference internal" href="#compatible-databases">Поддерживаемые базы данных</a></li>
+<li><a class="reference internal" href="#compatible-web-servers">Совместимые веб сервера</a></li>
+<li><a class="reference internal" href="#php-versions">Версии PHP</a></li>
+<li><a class="reference internal" href="#php-extensions-required">Требуемые расширения для PHP</a></li>
+<li><a class="reference internal" href="#recommendations">Рекомендуется</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#client-side">Client side</a><ul>
-<li><a class="reference internal" href="#browsers">Browsers</a></li>
-<li><a class="reference internal" href="#devices">Devices</a></li>
+<li><a class="reference internal" href="#client-side">На клиенте</a><ul>
+<li><a class="reference internal" href="#browsers">Браузеры</a></li>
+<li><a class="reference internal" href="#devices">Устройства</a></li>
 </ul>
 </li>
 </ul>
