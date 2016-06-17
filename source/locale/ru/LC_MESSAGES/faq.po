@@ -3,130 +3,157 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-17 10:59+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/faq.rst:2
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Часто задаваемые вопросы"
 
 #: ../../source/faq.rst:5
 msgid "Can you recommend a web hosting provider for Kanboard?"
-msgstr ""
+msgstr "Вы можете порекомендовать веб хостинг провайдера для Канборд?"
 
 #: ../../source/faq.rst:7
 msgid ""
 "Kanboard works well with any great VPS hosting provider such as `Digital "
 "Ocean <https://www.digitalocean.com/?refcode=4b541f47aae4>`__, `Linode "
-"<https://www.linode.com/?r=4e381ac8a61116f40c60dc7438acc719610d8b11>`__ "
-"or `Gandi <https://www.gandi.net/>`__."
+"<https://www.linode.com/?r=4e381ac8a61116f40c60dc7438acc719610d8b11>`__ or "
+"`Gandi <https://www.gandi.net/>`__."
 msgstr ""
+"Работу Канборд поддерживают несколько крупных провайдеров VPS, такие как "
+"`Digital Ocean <https://www.digitalocean.com/?refcode=4b541f47aae4>`__, "
+"`Linode <https://www.linode.com/?"
+"r=4e381ac8a61116f40c60dc7438acc719610d8b11>`__ или `Gandi <https://www.gandi."
+"net/>`__."
 
 #: ../../source/faq.rst:12
 msgid ""
-"To have the best performances, choose a provider with fast disk I/O "
-"because Kanboard use Sqlite by default. Avoid hosting providers that use "
-"a shared NFS mount point."
+"To have the best performances, choose a provider with fast disk I/O because "
+"Kanboard use Sqlite by default. Avoid hosting providers that use a shared "
+"NFS mount point."
 msgstr ""
+"Для получения большей производительности, выбирайте провайдера с быстрыми "
+"дисками чтения/записи, потому что Канборд использует по умолчанию Sqlite. "
+"Избегайте провайдеров которые используют подключения NFS."
 
 #: ../../source/faq.rst:17
 msgid "I get a blank page after installing or upgrading Kanboard"
 msgstr ""
+"У меня выводится пустая страница после установки или обновления Канборд"
 
 #: ../../source/faq.rst:19
 msgid "Check if you have installed all requirements on your server"
 msgstr ""
+"Проверьте, установили ли вы всё на сервер, что было указано в требованиях"
 
 #: ../../source/faq.rst:20
 msgid "Check the PHP and Apache error logs"
-msgstr ""
+msgstr "Посмотрите ошибки в PHP и Apache логах"
 
 #: ../../source/faq.rst:21
 msgid "Check if the files have the correct permission"
-msgstr ""
+msgstr "Проверьте права доступа к файлам"
 
 #: ../../source/faq.rst:22
-msgid "If you use an aggressive OPcode caching, reload your web-server or php-fpm"
+msgid ""
+"If you use an aggressive OPcode caching, reload your web-server or php-fpm"
 msgstr ""
+"Если вы используете кеширование OPcode, перезапустите ваш веб сервер или php-"
+"fpm"
 
 #: ../../source/faq.rst:26
-msgid "I have the error \"There is no suitable CSPRNG installed on your system\""
+msgid ""
+"I have the error \"There is no suitable CSPRNG installed on your system\""
 msgstr ""
+"У меня выводится ошибка \"There is no suitable CSPRNG installed on your "
+"system\""
 
 #: ../../source/faq.rst:28
 msgid ""
-"If you use PHP < 7.0, you need to have the openssl extension enabled or "
-"``/dev/urandom`` accessible from the application if restricted by an "
+"If you use PHP < 7.0, you need to have the openssl extension enabled or ``/"
+"dev/urandom`` accessible from the application if restricted by an "
 "``open_basedir`` restriction."
 msgstr ""
+"Если вы используете PHP < 7.0, то вам нужно включить расширение openssl или "
+"доступ из приложения к ``/dev/urandom``, если имеются ограничения от "
+"``open_basedir``."
 
 #: ../../source/faq.rst:33
 msgid "Page not found and the URL seems wrong (&amp;)"
-msgstr ""
+msgstr "Страница не найдена и URL выглядит криво (&amp;)"
 
 #: ../../source/faq.rst:35
 msgid ""
-"The URL looks like "
-"``/?controller=auth&amp;action=login&amp;redirect_query=`` instead of "
-"``?controller=auth&action=login&redirect_query=``"
+"The URL looks like ``/?controller=auth&amp;action=login&amp;"
+"redirect_query=`` instead of ``?"
+"controller=auth&action=login&redirect_query=``"
 msgstr ""
+"UTL выглядит как ``/?controller=auth&amp;action=login&amp;redirect_query=`` "
+"вместо ``?controller=auth&action=login&redirect_query=``"
 
 #: ../../source/faq.rst:38
 msgid "Kanboard returns a \"Page not found\" error"
-msgstr ""
+msgstr "Канборд выдает ошибку \"Страница не найдена\""
 
 #: ../../source/faq.rst:40
 msgid ""
-"This issue comes from your PHP configuration, the value of "
-"``arg_separator.output`` is not the PHP's default, there is different "
-"ways to fix that:"
+"This issue comes from your PHP configuration, the value of ``arg_separator."
+"output`` is not the PHP's default, there is different ways to fix that:"
 msgstr ""
+"Эта ошибка исходит из настроек конфигурации вашего PHP, значение "
+"``arg_separator.output`` отсутствует в базовой настройке. Есть разные пути "
+"решения этой проблемы:"
 
 #: ../../source/faq.rst:44
 msgid "Change the value directly in your ``php.ini`` if you can:"
-msgstr ""
+msgstr "Измените значение прямо в вашем ``php.ini``:"
 
 #: ../../source/faq.rst:50
 msgid "Override the value with a ``.htaccess``:"
-msgstr ""
+msgstr "Переделайте значение с помощью ``.htaccess``:"
 
 #: ../../source/faq.rst:56
 msgid "Otherwise Kanboard will try to override the value directly in PHP."
-msgstr ""
+msgstr "Иначе Канборд будет брать значение напрямую из PHP."
 
 #: ../../source/faq.rst:59
 msgid "Authentication failure with the API and Apache + PHP-FPM"
-msgstr ""
+msgstr "Ошибка аутентификации в API и Apache + PHP-FPM"
 
 #: ../../source/faq.rst:61
 msgid ""
-"php-cgi under Apache does not pass HTTP Basic user/pass to PHP by "
-"default. For this workaround to work, add these lines to your "
-"``.htaccess`` file:"
+"php-cgi under Apache does not pass HTTP Basic user/pass to PHP by default. "
+"For this workaround to work, add these lines to your ``.htaccess`` file:"
 msgstr ""
+"По умолчанию, php-cgi под Apache не передает HTTP Basic user/pass в PHP. "
+"Чтобы это окружение заработало, добавьте эти строки в ваш файл ``.htaccess``:"
 
 #: ../../source/faq.rst:71
 msgid "Known issues with eAccelerator"
-msgstr ""
+msgstr "Проблемы с eAccelerator"
 
 #: ../../source/faq.rst:73
 msgid ""
-"Kanboard doesn't work very well with `eAccelerator "
-"<http://eaccelerator.net>`__. The issue caused can be a blank page or an "
-"Apache crash:"
+"Kanboard doesn't work very well with `eAccelerator <http://eaccelerator."
+"net>`__. The issue caused can be a blank page or an Apache crash:"
 msgstr ""
+"Канборд не очень хорошо работает с `eAccelerator <http://eaccelerator."
+"net>`__. Проблема в том, что выдается чистая страница или падает Apache:"
 
 #: ../../source/faq.rst:81
 msgid ""
@@ -134,86 +161,108 @@ msgid ""
 "manually which files you want to cache with the config parameter "
 "``eaccelerator.filter``."
 msgstr ""
+"Лучшее решение, чтобы избежать этой проблемы, выключить eAccelerator или "
+"прописать в конфиге какие файлы вы хотите кешировать (параметр "
+"``eaccelerator.filter``)."
 
 #: ../../source/faq.rst:85
 msgid ""
-"The project `eAccelerator seems dead and not updated since 2012 "
-"<https://github.com/eaccelerator/eaccelerator/commits/master>`__. We "
-"recommend to switch to the last version of PHP because it's bundled with "
-"`OPcache <http://php.net/manual/en/intro.opcache.php>`__."
+"The project `eAccelerator seems dead and not updated since 2012 <https://"
+"github.com/eaccelerator/eaccelerator/commits/master>`__. We recommend to "
+"switch to the last version of PHP because it's bundled with `OPcache <http://"
+"php.net/manual/en/intro.opcache.php>`__."
 msgstr ""
+"Проект `eAccelerator выглядит мертвым и не обновляется с 2012 <https://"
+"github.com/eaccelerator/eaccelerator/commits/master>`__. Мы рекомендуем "
+"перейти на последнюю версию PHP, потому что в него включен `OPcache <http://"
+"php.net/manual/en/intro.opcache.php>`__."
 
 #: ../../source/faq.rst:91
 msgid "Why the minimum requirement is PHP 5.3.3?"
-msgstr ""
+msgstr "Почему минимальная рекомендуемая версия PHP 5.3.3?"
 
 #: ../../source/faq.rst:93
 msgid ""
-"Kanboard uses the function ``password_hash()`` to crypt passwords but "
-"it's available only for PHP >= 5.5."
+"Kanboard uses the function ``password_hash()`` to crypt passwords but it's "
+"available only for PHP >= 5.5."
 msgstr ""
+"Канборд использует функцию ``password_hash()`` для шифрования пароля, а эта "
+"функция доступна только для PHP >= 5.5."
 
 #: ../../source/faq.rst:96
 msgid ""
-"However, there is a back-port for `older versions of PHP "
-"<https://github.com/ircmaxell/password_compat#requirements>`__. This "
-"library requires at least PHP 5.3.7 to work correctly."
+"However, there is a back-port for `older versions of PHP <https://github.com/"
+"ircmaxell/password_compat#requirements>`__. This library requires at least "
+"PHP 5.3.7 to work correctly."
 msgstr ""
+"Однако, имеется back-port для `более ранних версий PHP <https://github.com/"
+"ircmaxell/password_compat#requirements>`__. Эта библиотека требует минимум "
+"PHP 5.3.7 для корректной работы."
 
 #: ../../source/faq.rst:100
 msgid ""
 "Apparently, Centos and Debian back-ports security patches so PHP 5.3.3 "
 "should be ok."
 msgstr ""
+"По всей видимости, патчи безопасности back-port имеются в Centos и Debian, "
+"поэтому PHP 5.3.3 подходит для работы Канборд."
 
 #: ../../source/faq.rst:103
 msgid ""
-"Kanboard v1.0.10 and v1.0.11 requires at least PHP 5.3.7 but this change "
-"has been reverted to be compatible with PHP 5.3.3 with Kanboard >= "
-"v1.0.12"
+"Kanboard v1.0.10 and v1.0.11 requires at least PHP 5.3.7 but this change has "
+"been reverted to be compatible with PHP 5.3.3 with Kanboard >= v1.0.12"
 msgstr ""
+"Канборд v1.0.10 и v1.0.11 требует минимум PHP 5.3.7, но эти изменения "
+"возвращены на PHP 5.3.3 в Канборде >= v1.0.12"
 
 #: ../../source/faq.rst:108
 msgid "How to test Kanboard with the PHP built-in web server?"
-msgstr ""
+msgstr "Как проверить работу Канборда со встроенным веб-сервером PHP?"
 
 #: ../../source/faq.rst:110
 msgid ""
-"If you don't want to install a web server like Apache on localhost. You "
-"can test with the `embedded web server of PHP "
-"<http://www.php.net/manual/en/features.commandline.webserver.php>`__:"
+"If you don't want to install a web server like Apache on localhost. You can "
+"test with the `embedded web server of PHP <http://www.php.net/manual/en/"
+"features.commandline.webserver.php>`__:"
 msgstr ""
+"Если вы не хотите устанавливать веб сервер типа Apache, то вы можете "
+"протестировать работу Канборда на `встроенном в PHP веб сервере <http://www."
+"php.net/manual/en/features.commandline.webserver.php>`__:"
 
 #: ../../source/faq.rst:122
 msgid "How to install Kanboard on Yunohost?"
-msgstr ""
+msgstr "Как установить Канборд на Yunohost?"
 
 #: ../../source/faq.rst:124
 msgid ""
-"`YunoHost <https://yunohost.org/>`__ is a server operating system aiming "
-"to make self-hosting accessible to everyone."
+"`YunoHost <https://yunohost.org/>`__ is a server operating system aiming to "
+"make self-hosting accessible to everyone."
 msgstr ""
+"`YunoHost <https://yunohost.org/>`__ это серверная операционная система, "
+"цель которой предоставить хостинг для всех."
 
 #: ../../source/faq.rst:127
 msgid ""
-"There is a `package to install Kanboard on Yunohost easily "
-"<https://github.com/mbugeia/kanboard_ynh>`__."
+"There is a `package to install Kanboard on Yunohost easily <https://github."
+"com/mbugeia/kanboard_ynh>`__."
 msgstr ""
+"Отсюда можно `загрузить инсталяционный пакет Kanboard для Yunohost <https://"
+"github.com/mbugeia/kanboard_ynh>`__."
 
 #: ../../source/faq.rst:131
 msgid "Where can I find a list of related projects?"
-msgstr ""
+msgstr "Где я могу найти список связанных с Канборд проектов?"
 
 #: ../../source/faq.rst:133
 msgid ""
-"[Kanboard API python client by @freekoder](https://github.com/freekoder"
-"/kanboard-py)"
+"[Kanboard API python client by @freekoder](https://github.com/freekoder/"
+"kanboard-py)"
 msgstr ""
 
 #: ../../source/faq.rst:135
 msgid ""
-"`Kanboard Presenter by David Eberlein <https://github.com/davideberlein"
-"/kanboard-presenter>`__"
+"`Kanboard Presenter by David Eberlein <https://github.com/davideberlein/"
+"kanboard-presenter>`__"
 msgstr ""
 
 #: ../../source/faq.rst:137
@@ -222,140 +271,51 @@ msgstr ""
 
 #: ../../source/faq.rst:138
 msgid ""
-"[Kanboard for Yunohost by "
-"@mbugeia](https://github.com/mbugeia/kanboard\\_ynh)"
+"[Kanboard for Yunohost by @mbugeia](https://github.com/mbugeia/kanboard"
+"\\_ynh)"
 msgstr ""
 
 #: ../../source/faq.rst:140
 msgid ""
-"[Trello import script by @matueranet](https://github.com/matueranet"
-"/kanboard-import-trello)"
+"[Trello import script by @matueranet](https://github.com/matueranet/kanboard-"
+"import-trello)"
 msgstr ""
 
 #: ../../source/faq.rst:142
 msgid ""
-"`Chrome extension by Timo <https://chrome.google.com/webstore/detail"
-"/kanboard-quickmenu/akjbeplnnihghabpgcfmfhfmifjljneh?utm_source=chrome-"
-"ntp-icon>`__, `Source code "
-"<https://github.com/BlueTeck/kanboard_chrome_extension>`__"
+"`Chrome extension by Timo <https://chrome.google.com/webstore/detail/"
+"kanboard-quickmenu/akjbeplnnihghabpgcfmfhfmifjljneh?utm_source=chrome-ntp-"
+"icon>`__, `Source code <https://github.com/BlueTeck/"
+"kanboard_chrome_extension>`__"
 msgstr ""
 
 #: ../../source/faq.rst:146
 msgid ""
-"[Python client script by "
-"@dzudek](https://gist.github.com/fguillot/84c70d4928eb1e0cb374)"
+"[Python client script by @dzudek](https://gist.github.com/"
+"fguillot/84c70d4928eb1e0cb374)"
 msgstr ""
 
 #: ../../source/faq.rst:148
 msgid ""
-"[Shell script for SQLite to MySQL/MariaDB migration by "
-"@oliviermaridat](https://github.com/oliviermaridat/kanboard-sqlite2mysql)"
+"[Shell script for SQLite to MySQL/MariaDB migration by @oliviermaridat]"
+"(https://github.com/oliviermaridat/kanboard-sqlite2mysql)"
 msgstr ""
 
 #: ../../source/faq.rst:150
 msgid ""
-"`Git hooks for integration with Kanboard by Gene Pavlovsky "
-"<https://github.com/gene-pavlovsky/kanboard-git-hooks>`__"
+"`Git hooks for integration with Kanboard by Gene Pavlovsky <https://github."
+"com/gene-pavlovsky/kanboard-git-hooks>`__"
 msgstr ""
 
 #: ../../source/faq.rst:154
 msgid "Are there some tutorials about Kanboard in other languages?"
-msgstr ""
+msgstr "Имеются ли руководства по Канборду на других языках?"
 
 #: ../../source/faq.rst:156
 msgid ""
-"`German article series about Kanboard <http://demaya.de/wp/2014/07"
-"/kanboard-eine-jira-alternative-im-detail-installation/>`__"
+"`German article series about Kanboard <http://demaya.de/wp/2014/07/kanboard-"
+"eine-jira-alternative-im-detail-installation/>`__"
 msgstr ""
-
-#~ msgid ""
-#~ "Kanboard works well with any great "
-#~ "VPS hosting provider such as Digital "
-#~ "Ocean, Linode or Gandi."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you use PHP < 7.0, you "
-#~ "need to have the openssl extension "
-#~ "enabled or /dev/urandom accessible from "
-#~ "the application if restricted by an "
-#~ "open_basedir restriction."
-#~ msgstr ""
-
-#~ msgid "Page not found and the URL seems wrong (&amp;amp;)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This issue comes from your PHP "
-#~ "configuration, the value of "
-#~ "arg_separator.output is not the PHP's "
-#~ "default, there is different ways to "
-#~ "fix that:"
-#~ msgstr ""
-
-#~ msgid "Change the value directly in your php.ini if you can:"
-#~ msgstr ""
-
-#~ msgid "Override the value with a .htaccess:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "php-cgi under Apache does not pass"
-#~ " HTTP Basic user/pass to PHP by "
-#~ "default. For this workaround to work,"
-#~ " add these lines to your .htaccess"
-#~ " file:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Kanboard doesn't work very well with "
-#~ "eAccelerator. The issue caused can be"
-#~ " a blank page or an Apache "
-#~ "crash:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The best way to avoid this issue"
-#~ " is to disable eAccelerator or define"
-#~ " manually which files you want to "
-#~ "cache with the config parameter "
-#~ "eaccelerator.filter."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The project eAccelerator seems dead and"
-#~ " not updated since 2012. We recommend"
-#~ " to switch to the last version "
-#~ "of PHP because it's bundled with "
-#~ "OPcache."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Kanboard uses the function password_hash() "
-#~ "to crypt passwords but it's available"
-#~ " only for PHP >= 5.5."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "However, there is a back-port for"
-#~ " older versions of PHP. This library"
-#~ " requires at least PHP 5.3.7 to "
-#~ "work correctly."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you don't want to install a "
-#~ "web server like Apache on localhost. "
-#~ "You can test with the embedded web"
-#~ " server of PHP:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "YunoHost is a server operating system"
-#~ " aiming to make self-hosting "
-#~ "accessible to everyone."
-#~ msgstr ""
-
-#~ msgid "There is a package to install Kanboard on Yunohost easily."
-#~ msgstr ""
-
+"`Серия статей про Kanboard на немецком языке <http://demaya.de/wp/2014/07/"
+"kanboard-eine-jira-alternative-im-detail-installation/>`__ . `Русская "
+"документация по Канборд <http://kanboard.ru/doc/>`__."

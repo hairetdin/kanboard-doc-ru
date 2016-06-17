@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Frequently Asked Questions &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Часто задаваемые вопросы &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,98 +40,75 @@
           <div class="body" role="main">
             
   <div class="section" id="frequently-asked-questions">
-<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Часто задаваемые вопросы<a class="headerlink" href="#frequently-asked-questions" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="can-you-recommend-a-web-hosting-provider-for-kanboard">
-<h2>Can you recommend a web hosting provider for Kanboard?<a class="headerlink" href="#can-you-recommend-a-web-hosting-provider-for-kanboard" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Kanboard works well with any great VPS hosting provider such as <a class="reference external" href="https://www.digitalocean.com/?refcode=4b541f47aae4">Digital
-Ocean</a>,
-<a class="reference external" href="https://www.linode.com/?r=4e381ac8a61116f40c60dc7438acc719610d8b11">Linode</a>
-or <a class="reference external" href="https://www.gandi.net/">Gandi</a>.</p>
-<p>To have the best performances, choose a provider with fast disk I/O
-because Kanboard use Sqlite by default. Avoid hosting providers that use
-a shared NFS mount point.</p>
+<h2>Вы можете порекомендовать веб хостинг провайдера для Канборд?<a class="headerlink" href="#can-you-recommend-a-web-hosting-provider-for-kanboard" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Работу Канборд поддерживают несколько крупных провайдеров VPS, такие как <a class="reference external" href="https://www.digitalocean.com/?refcode=4b541f47aae4">Digital Ocean</a>, <a class="reference external" href="https://www.linode.com/?r=4e381ac8a61116f40c60dc7438acc719610d8b11">Linode</a> или <a class="reference external" href="https://www.gandi.net/">Gandi</a>.</p>
+<p>Для получения большей производительности, выбирайте провайдера с быстрыми дисками чтения/записи, потому что Канборд использует по умолчанию Sqlite. Избегайте провайдеров которые используют подключения NFS.</p>
 </div>
 <div class="section" id="i-get-a-blank-page-after-installing-or-upgrading-kanboard">
-<h2>I get a blank page after installing or upgrading Kanboard<a class="headerlink" href="#i-get-a-blank-page-after-installing-or-upgrading-kanboard" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>У меня выводится пустая страница после установки или обновления Канборд<a class="headerlink" href="#i-get-a-blank-page-after-installing-or-upgrading-kanboard" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Check if you have installed all requirements on your server</li>
-<li>Check the PHP and Apache error logs</li>
-<li>Check if the files have the correct permission</li>
-<li>If you use an aggressive OPcode caching, reload your web-server or
-php-fpm</li>
+<li><p class="first">Проверьте, установили ли вы всё на сервер, что было указано в требованиях</p>
+</li>
+<li><p class="first">Посмотрите ошибки в PHP и Apache логах</p>
+</li>
+<li><p class="first">Проверьте права доступа к файлам</p>
+</li>
+<li><p class="first">Если вы используете кеширование OPcode, перезапустите ваш веб сервер или php-fpm</p>
+</li>
 </ul>
 </div>
 <div class="section" id="i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system">
-<h2>I have the error &#8220;There is no suitable CSPRNG installed on your system&#8221;<a class="headerlink" href="#i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system" title="Ссылка на этот заголовок">¶</a></h2>
-<p>If you use PHP &lt; 7.0, you need to have the openssl extension enabled or
-<code class="docutils literal"><span class="pre">/dev/urandom</span></code> accessible from the application if restricted by an
-<code class="docutils literal"><span class="pre">open_basedir</span></code> restriction.</p>
+<h2>У меня выводится ошибка &#8220;There is no suitable CSPRNG installed on your system&#8221;<a class="headerlink" href="#i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если вы используете PHP &lt; 7.0, то вам нужно включить расширение openssl или доступ из приложения к <code class="docutils literal"><span class="pre">/dev/urandom</span></code>, если имеются ограничения от <code class="docutils literal"><span class="pre">open_basedir</span></code>.</p>
 </div>
 <div class="section" id="page-not-found-and-the-url-seems-wrong-amp">
-<h2>Page not found and the URL seems wrong (&amp;amp;)<a class="headerlink" href="#page-not-found-and-the-url-seems-wrong-amp" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Страница не найдена и URL выглядит криво (&amp;amp;)<a class="headerlink" href="#page-not-found-and-the-url-seems-wrong-amp" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>The URL looks like
-<code class="docutils literal"><span class="pre">/?controller=auth&amp;amp;action=login&amp;amp;redirect_query=</span></code> instead of
-<code class="docutils literal"><span class="pre">?controller=auth&amp;action=login&amp;redirect_query=</span></code></li>
-<li>Kanboard returns a &#8220;Page not found&#8221; error</li>
+<li><p class="first">UTL выглядит как <code class="docutils literal"><span class="pre">/?controller=auth&amp;amp;action=login&amp;amp;redirect_query=</span></code> вместо <code class="docutils literal"><span class="pre">?controller=auth&amp;action=login&amp;redirect_query=</span></code></p>
+</li>
+<li><p class="first">Канборд выдает ошибку &#8220;Страница не найдена&#8221;</p>
+</li>
 </ul>
-<p>This issue comes from your PHP configuration, the value of
-<code class="docutils literal"><span class="pre">arg_separator.output</span></code> is not the PHP&#8217;s default, there is different
-ways to fix that:</p>
-<p>Change the value directly in your <code class="docutils literal"><span class="pre">php.ini</span></code> if you can:</p>
+<p>Эта ошибка исходит из настроек конфигурации вашего PHP, значение <code class="docutils literal"><span class="pre">arg_separator.output</span></code> отсутствует в базовой настройке. Есть разные пути решения этой проблемы:</p>
+<p>Измените значение прямо в вашем <code class="docutils literal"><span class="pre">php.ini</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">arg_separator</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&amp;&quot;</span>
 </pre></div>
 </div>
-<p>Override the value with a <code class="docutils literal"><span class="pre">.htaccess</span></code>:</p>
+<p>Переделайте значение с помощью <code class="docutils literal"><span class="pre">.htaccess</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>php_value arg_separator.output &quot;&amp;&quot;
 </pre></div>
 </div>
-<p>Otherwise Kanboard will try to override the value directly in PHP.</p>
+<p>Иначе Канборд будет брать значение напрямую из PHP.</p>
 </div>
 <div class="section" id="authentication-failure-with-the-api-and-apache-php-fpm">
-<h2>Authentication failure with the API and Apache + PHP-FPM<a class="headerlink" href="#authentication-failure-with-the-api-and-apache-php-fpm" title="Ссылка на этот заголовок">¶</a></h2>
-<p>php-cgi under Apache does not pass HTTP Basic user/pass to PHP by
-default. For this workaround to work, add these lines to your
-<code class="docutils literal"><span class="pre">.htaccess</span></code> file:</p>
+<h2>Ошибка аутентификации в API и Apache + PHP-FPM<a class="headerlink" href="#authentication-failure-with-the-api-and-apache-php-fpm" title="Ссылка на этот заголовок">¶</a></h2>
+<p>По умолчанию, php-cgi под Apache не передает HTTP Basic user/pass в PHP. Чтобы это окружение заработало, добавьте эти строки в ваш файл <code class="docutils literal"><span class="pre">.htaccess</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>RewriteCond %{HTTP:Authorization} ^(.+)$
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </pre></div>
 </div>
 </div>
 <div class="section" id="known-issues-with-eaccelerator">
-<h2>Known issues with eAccelerator<a class="headerlink" href="#known-issues-with-eaccelerator" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Kanboard doesn&#8217;t work very well with
-<a class="reference external" href="http://eaccelerator.net">eAccelerator</a>. The issue caused can be a
-blank page or an Apache crash:</p>
+<h2>Проблемы с eAccelerator<a class="headerlink" href="#known-issues-with-eaccelerator" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Канборд не очень хорошо работает с <a class="reference external" href="http://eaccelerator.net">eAccelerator</a>. Проблема в том, что выдается чистая страница или падает Apache:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>[Wed Mar 05 21:36:56 2014] [notice] child pid 22630 exit signal Segmentation fault (11)
 </pre></div>
 </div>
-<p>The best way to avoid this issue is to disable eAccelerator or define
-manually which files you want to cache with the config parameter
-<code class="docutils literal"><span class="pre">eaccelerator.filter</span></code>.</p>
-<p>The project <a class="reference external" href="https://github.com/eaccelerator/eaccelerator/commits/master">eAccelerator seems dead and not updated since
-2012</a>.
-We recommend to switch to the last version of PHP because it&#8217;s bundled
-with <a class="reference external" href="http://php.net/manual/en/intro.opcache.php">OPcache</a>.</p>
+<p>Лучшее решение, чтобы избежать этой проблемы, выключить eAccelerator или прописать в конфиге какие файлы вы хотите кешировать (параметр <code class="docutils literal"><span class="pre">eaccelerator.filter</span></code>).</p>
+<p>Проект <a class="reference external" href="https://github.com/eaccelerator/eaccelerator/commits/master">eAccelerator выглядит мертвым и не обновляется с 2012</a>. Мы рекомендуем перейти на последнюю версию PHP, потому что в него включен <a class="reference external" href="http://php.net/manual/en/intro.opcache.php">OPcache</a>.</p>
 </div>
 <div class="section" id="why-the-minimum-requirement-is-php-5-3-3">
-<h2>Why the minimum requirement is PHP 5.3.3?<a class="headerlink" href="#why-the-minimum-requirement-is-php-5-3-3" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Kanboard uses the function <code class="docutils literal"><span class="pre">password_hash()</span></code> to crypt passwords but
-it&#8217;s available only for PHP &gt;= 5.5.</p>
-<p>However, there is a back-port for <a class="reference external" href="https://github.com/ircmaxell/password_compat#requirements">older versions of
-PHP</a>. This
-library requires at least PHP 5.3.7 to work correctly.</p>
-<p>Apparently, Centos and Debian back-ports security patches so PHP 5.3.3
-should be ok.</p>
-<p>Kanboard v1.0.10 and v1.0.11 requires at least PHP 5.3.7 but this change
-has been reverted to be compatible with PHP 5.3.3 with Kanboard &gt;=
-v1.0.12</p>
+<h2>Почему минимальная рекомендуемая версия PHP 5.3.3?<a class="headerlink" href="#why-the-minimum-requirement-is-php-5-3-3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Канборд использует функцию <code class="docutils literal"><span class="pre">password_hash()</span></code> для шифрования пароля, а эта функция доступна только для PHP &gt;= 5.5.</p>
+<p>Однако, имеется back-port для <a class="reference external" href="https://github.com/ircmaxell/password_compat#requirements">более ранних версий PHP</a>. Эта библиотека требует минимум PHP 5.3.7 для корректной работы.</p>
+<p>По всей видимости, патчи безопасности back-port имеются в Centos и Debian, поэтому PHP 5.3.3 подходит для работы Канборд.</p>
+<p>Канборд v1.0.10 и v1.0.11 требует минимум PHP 5.3.7, но эти изменения возвращены на PHP 5.3.3 в Канборде &gt;= v1.0.12</p>
 </div>
 <div class="section" id="how-to-test-kanboard-with-the-php-built-in-web-server">
-<h2>How to test Kanboard with the PHP built-in web server?<a class="headerlink" href="#how-to-test-kanboard-with-the-php-built-in-web-server" title="Ссылка на этот заголовок">¶</a></h2>
-<p>If you don&#8217;t want to install a web server like Apache on localhost. You
-can test with the <a class="reference external" href="http://www.php.net/manual/en/features.commandline.webserver.php">embedded web server of
-PHP</a>:</p>
+<h2>Как проверить работу Канборда со встроенным веб-сервером PHP?<a class="headerlink" href="#how-to-test-kanboard-with-the-php-built-in-web-server" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если вы не хотите устанавливать веб сервер типа Apache, то вы можете протестировать работу Канборда на <a class="reference external" href="http://www.php.net/manual/en/features.commandline.webserver.php">встроенном в PHP веб сервере</a>:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>unzip kanboard-VERSION.zip
 cd kanboard
 php -S localhost:8000
@@ -141,14 +117,12 @@ open http://localhost:8000/
 </div>
 </div>
 <div class="section" id="how-to-install-kanboard-on-yunohost">
-<h2>How to install Kanboard on Yunohost?<a class="headerlink" href="#how-to-install-kanboard-on-yunohost" title="Ссылка на этот заголовок">¶</a></h2>
-<p><a class="reference external" href="https://yunohost.org/">YunoHost</a> is a server operating system aiming
-to make self-hosting accessible to everyone.</p>
-<p>There is a <a class="reference external" href="https://github.com/mbugeia/kanboard_ynh">package to install Kanboard on Yunohost
-easily</a>.</p>
+<h2>Как установить Канборд на Yunohost?<a class="headerlink" href="#how-to-install-kanboard-on-yunohost" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference external" href="https://yunohost.org/">YunoHost</a> это серверная операционная система, цель которой предоставить хостинг для всех.</p>
+<p>Отсюда можно <a class="reference external" href="https://github.com/mbugeia/kanboard_ynh">загрузить инсталяционный пакет Kanboard для Yunohost</a>.</p>
 </div>
 <div class="section" id="where-can-i-find-a-list-of-related-projects">
-<h2>Where can I find a list of related projects?<a class="headerlink" href="#where-can-i-find-a-list-of-related-projects" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Где я могу найти список связанных с Канборд проектов?<a class="headerlink" href="#where-can-i-find-a-list-of-related-projects" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
 <li>[Kanboard API python client by
 &#64;freekoder](<a class="reference external" href="https://github.com/freekoder/kanboard-py">https://github.com/freekoder/kanboard-py</a>)</li>
@@ -172,10 +146,10 @@ Pavlovsky</a></li>
 </ul>
 </div>
 <div class="section" id="are-there-some-tutorials-about-kanboard-in-other-languages">
-<h2>Are there some tutorials about Kanboard in other languages?<a class="headerlink" href="#are-there-some-tutorials-about-kanboard-in-other-languages" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Имеются ли руководства по Канборду на других языках?<a class="headerlink" href="#are-there-some-tutorials-about-kanboard-in-other-languages" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://demaya.de/wp/2014/07/kanboard-eine-jira-alternative-im-detail-installation/">German article series about
-Kanboard</a></li>
+<li><p class="first"><a class="reference external" href="http://demaya.de/wp/2014/07/kanboard-eine-jira-alternative-im-detail-installation/">Серия статей про Kanboard на немецком языке</a> . <a class="reference external" href="http://kanboard.ru/doc/">Русская документация по Канборд</a>.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -188,18 +162,18 @@ Kanboard</a></li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Frequently Asked Questions</a><ul>
-<li><a class="reference internal" href="#can-you-recommend-a-web-hosting-provider-for-kanboard">Can you recommend a web hosting provider for Kanboard?</a></li>
-<li><a class="reference internal" href="#i-get-a-blank-page-after-installing-or-upgrading-kanboard">I get a blank page after installing or upgrading Kanboard</a></li>
-<li><a class="reference internal" href="#i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system">I have the error &#8220;There is no suitable CSPRNG installed on your system&#8221;</a></li>
-<li><a class="reference internal" href="#page-not-found-and-the-url-seems-wrong-amp">Page not found and the URL seems wrong (&amp;amp;)</a></li>
-<li><a class="reference internal" href="#authentication-failure-with-the-api-and-apache-php-fpm">Authentication failure with the API and Apache + PHP-FPM</a></li>
-<li><a class="reference internal" href="#known-issues-with-eaccelerator">Known issues with eAccelerator</a></li>
-<li><a class="reference internal" href="#why-the-minimum-requirement-is-php-5-3-3">Why the minimum requirement is PHP 5.3.3?</a></li>
-<li><a class="reference internal" href="#how-to-test-kanboard-with-the-php-built-in-web-server">How to test Kanboard with the PHP built-in web server?</a></li>
-<li><a class="reference internal" href="#how-to-install-kanboard-on-yunohost">How to install Kanboard on Yunohost?</a></li>
-<li><a class="reference internal" href="#where-can-i-find-a-list-of-related-projects">Where can I find a list of related projects?</a></li>
-<li><a class="reference internal" href="#are-there-some-tutorials-about-kanboard-in-other-languages">Are there some tutorials about Kanboard in other languages?</a></li>
+<li><a class="reference internal" href="#">Часто задаваемые вопросы</a><ul>
+<li><a class="reference internal" href="#can-you-recommend-a-web-hosting-provider-for-kanboard">Вы можете порекомендовать веб хостинг провайдера для Канборд?</a></li>
+<li><a class="reference internal" href="#i-get-a-blank-page-after-installing-or-upgrading-kanboard">У меня выводится пустая страница после установки или обновления Канборд</a></li>
+<li><a class="reference internal" href="#i-have-the-error-there-is-no-suitable-csprng-installed-on-your-system">У меня выводится ошибка &#8220;There is no suitable CSPRNG installed on your system&#8221;</a></li>
+<li><a class="reference internal" href="#page-not-found-and-the-url-seems-wrong-amp">Страница не найдена и URL выглядит криво (&amp;amp;)</a></li>
+<li><a class="reference internal" href="#authentication-failure-with-the-api-and-apache-php-fpm">Ошибка аутентификации в API и Apache + PHP-FPM</a></li>
+<li><a class="reference internal" href="#known-issues-with-eaccelerator">Проблемы с eAccelerator</a></li>
+<li><a class="reference internal" href="#why-the-minimum-requirement-is-php-5-3-3">Почему минимальная рекомендуемая версия PHP 5.3.3?</a></li>
+<li><a class="reference internal" href="#how-to-test-kanboard-with-the-php-built-in-web-server">Как проверить работу Канборда со встроенным веб-сервером PHP?</a></li>
+<li><a class="reference internal" href="#how-to-install-kanboard-on-yunohost">Как установить Канборд на Yunohost?</a></li>
+<li><a class="reference internal" href="#where-can-i-find-a-list-of-related-projects">Где я могу найти список связанных с Канборд проектов?</a></li>
+<li><a class="reference internal" href="#are-there-some-tutorials-about-kanboard-in-other-languages">Имеются ли руководства по Канборду на других языках?</a></li>
 </ul>
 </li>
 </ul>
