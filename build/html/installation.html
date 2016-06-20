@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Инсталяция &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,48 +40,53 @@
           <div class="body" role="main">
             
   <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Firstly, check the <a class="reference external" href="requirements.markdown">requirements</a> before to go
-further.</p>
+<h1>Инсталяция<a class="headerlink" href="#installation" title="Ссылка на этот заголовок">¶</a></h1>
+<p>В первую очередь, ознакомтесь с <a class="reference external" href="requirements.html">требованиями</a>.</p>
 <div class="section" id="from-the-archive-stable-version">
-<h2>From the archive (stable version)<a class="headerlink" href="#from-the-archive-stable-version" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Инсталяция из архива (стабильная версия)<a class="headerlink" href="#from-the-archive-stable-version" title="Ссылка на этот заголовок">¶</a></h2>
 <ol class="arabic simple">
-<li>You must have a web server with PHP installed</li>
-<li>Download the source code and copy the directory <code class="docutils literal"><span class="pre">kanboard</span></code> where
-you want</li>
-<li>Check if the directory <code class="docutils literal"><span class="pre">data</span></code> is writeable</li>
-<li>With your browser go to <a class="reference external" href="http://yourpersonalserver/kanboard">http://yourpersonalserver/kanboard</a></li>
-<li>The default login and password is <strong>admin/admin</strong></li>
-<li>Start to use the software</li>
-<li>Don&#8217;t forget to change your password!</li>
+<li><p class="first">У вас должен быть установлен веб сервер с PHP</p>
+</li>
+<li><p class="first">Скачайте исходный код и скопируйте директорию <code class="docutils literal"><span class="pre">kanboard</span></code> в каталог веб сервера</p>
+</li>
+<li><p class="first">Проверьте, чтобы директория <code class="docutils literal"><span class="pre">data</span></code> была доступна на запись</p>
+</li>
+<li><p class="first">В вашем браузере перейдите по ссылке <a class="reference external" href="http:/">http:/</a>/вашвебсервер/kanboard</p>
+</li>
+<li><p class="first">Логин и пароль по умолчанию - <strong>admin/admin</strong></p>
+</li>
+<li><p class="first">Все, теперь вы можете работать в Канборд</p>
+</li>
+<li><p class="first">Не забудьте сменить пароль!</p>
+</li>
 </ol>
-<p>The data folder is used to store:</p>
+<p>Место хранения данных:</p>
 <ul class="simple">
-<li>Sqlite database: <code class="docutils literal"><span class="pre">db.sqlite</span></code></li>
-<li>Debug file: <code class="docutils literal"><span class="pre">debug.log</span></code> (if debug mode enabled)</li>
-<li>Uploaded files: <code class="docutils literal"><span class="pre">files/*</span></code></li>
-<li>Image thumbnails: <code class="docutils literal"><span class="pre">files/thumbnails/*</span></code></li>
+<li><p class="first">База данных Sqlite: <code class="docutils literal"><span class="pre">db.sqlite</span></code></p>
+</li>
+<li><p class="first">Файл отладки: <code class="docutils literal"><span class="pre">debug.log</span></code> (если включена отладка)</p>
+</li>
+<li><p class="first">Загруженные файлы: <code class="docutils literal"><span class="pre">files/*</span></code></p>
+</li>
+<li><p class="first">Изображения: <code class="docutils literal"><span class="pre">files/thumbnails/*</span></code></p>
+</li>
 </ul>
-<p>People who are using a remote database (Mysql/Postgresql) and a remote
-file storage (Aws S3 or similar) don&#8217;t necessarily need to have a
-persistent local data folder or to change the permission.</p>
+<p>Те, кто использует удаленную базу данных (Mysql/Postgresql) и удаленное файловое хранилище (Aws S3 или подобное), могут не назначать права доступа к локальным данным.</p>
 </div>
 <div class="section" id="from-the-repository-development-version">
-<h2>From the repository (development version)<a class="headerlink" href="#from-the-repository-development-version" title="Ссылка на этот заголовок">¶</a></h2>
-<p>You must install <a class="reference external" href="https://getcomposer.org/">composer</a> to use this
-method.</p>
+<h2>Инсталяция из репозитория (разрабатываемая версия)<a class="headerlink" href="#from-the-repository-development-version" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Вы можете установить <a class="reference external" href="https://getcomposer.org/">composer</a> для этого метода инсталяции.</p>
 <ol class="arabic simple">
 <li><code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/fguillot/kanboard.git</span></code></li>
 <li><code class="docutils literal"><span class="pre">composer</span> <span class="pre">install</span> <span class="pre">--no-dev</span></code></li>
-<li>Go to the third step just above</li>
+<li><p class="first">Далее, перейдите к третьему шагу <a class="reference external" href="installation.html#from-the-archive-stable-version">Инсталяция из архива</a></p>
+</li>
 </ol>
-<p>Note: This method will install the <strong>current development version</strong>, use
-at your own risk.</p>
+<p><strong>Внимание</strong>: Инсталируя <strong>текущую разрабатываемую версию</strong>, вы должны понимать, что это нестабильная версия и берете все риски по работе Канборд на себя.</p>
 </div>
 <div class="section" id="installation-outside-of-the-document-root">
-<h2>Installation outside of the document root<a class="headerlink" href="#installation-outside-of-the-document-root" title="Ссылка на этот заголовок">¶</a></h2>
-<p>If you would like to install Kanboard outside of the web server document
-root, you need to create at least these symlinks:</p>
+<h2>Инсталяция в другой каталог<a class="headerlink" href="#installation-outside-of-the-document-root" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если вы хотите инсталировать Канборд в другую директорию, вне корневого каталога веб сервера, вам нужно создать, как минимум, следующие символьные ссылки:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>.
 ├── assets -&gt; ../kanboard/assets
 ├── doc -&gt; ../kanboard/doc
@@ -92,25 +96,23 @@ root, you need to create at least these symlinks:</p>
 └── robots.txt -&gt; ../kanboard/robots.txt
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">.htaccess</span></code> is optional because its content can be included
-directly in the Apache configuration.</p>
-<p>You can also define a custom location for the plugins and files folders
-by changing the <a class="reference external" href="config.markdown">config file</a>.</p>
+<p><code class="docutils literal"><span class="pre">.htaccess</span></code> необязательно, потому что его содержимое может быть включена прямо в конфигурацию Apache.</p>
+<p>Вы можете указать текущее месторасположение директорий плагинов и файлов изменив <a class="reference external" href="config.html">конфигурационный файл</a>.</p>
 </div>
 <div class="section" id="security">
-<h2>Security<a class="headerlink" href="#security" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Безопасность<a class="headerlink" href="#security" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Don&#8217;t forget to change the default user/password</li>
-<li>Don&#8217;t allow everybody to access to the directory <code class="docutils literal"><span class="pre">data</span></code> from the
-URL. There is already a <code class="docutils literal"><span class="pre">.htaccess</span></code> for Apache but nothing for
-Nginx.</li>
+<li><p class="first">Не забудьте изменить логин и пароль пользователя admin, назначенный по умолчанию</p>
+</li>
+<li><p class="first">Не предоставляйте всем права на директорию <code class="docutils literal"><span class="pre">data</span></code> через URL.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Примечание<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
-job</a></li>
+<li><p class="first">Некоторые возможности Канборда требуют, чтобы <a class="reference external" href="cronjob.html">ежедневно выполнялись фоновые задачи</a>.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -123,12 +125,12 @@ job</a></li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Installation</a><ul>
-<li><a class="reference internal" href="#from-the-archive-stable-version">From the archive (stable version)</a></li>
-<li><a class="reference internal" href="#from-the-repository-development-version">From the repository (development version)</a></li>
-<li><a class="reference internal" href="#installation-outside-of-the-document-root">Installation outside of the document root</a></li>
-<li><a class="reference internal" href="#security">Security</a></li>
-<li><a class="reference internal" href="#notes">Notes</a></li>
+<li><a class="reference internal" href="#">Инсталяция</a><ul>
+<li><a class="reference internal" href="#from-the-archive-stable-version">Инсталяция из архива (стабильная версия)</a></li>
+<li><a class="reference internal" href="#from-the-repository-development-version">Инсталяция из репозитория (разрабатываемая версия)</a></li>
+<li><a class="reference internal" href="#installation-outside-of-the-document-root">Инсталяция в другой каталог</a></li>
+<li><a class="reference internal" href="#security">Безопасность</a></li>
+<li><a class="reference internal" href="#notes">Примечание</a></li>
 </ul>
 </li>
 </ul>
