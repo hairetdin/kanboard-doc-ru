@@ -3,24 +3,26 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-21 16:44+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/ubuntu-installation.rst:2
 msgid "How to install Kanboard on Ubuntu?"
-msgstr ""
+msgstr "Как инсталировать Канборд на Ubuntu?"
 
 #: ../../source/ubuntu-installation.rst:5
 msgid "Ubuntu Xenial 16.04 LTS"
@@ -30,13 +32,13 @@ msgstr ""
 #: ../../source/ubuntu-installation.rst:28
 #: ../../source/ubuntu-installation.rst:48
 msgid "Install Apache and PHP:"
-msgstr ""
+msgstr "Установите Apache и PHP:"
 
 #: ../../source/ubuntu-installation.rst:15
 #: ../../source/ubuntu-installation.rst:35
 #: ../../source/ubuntu-installation.rst:55
 msgid "Install Kanboard:"
-msgstr ""
+msgstr "Установите Канборд:"
 
 #: ../../source/ubuntu-installation.rst:26
 msgid "Ubuntu Trusty 14.04 LTS"
@@ -51,7 +53,5 @@ msgid ""
 "Some features of Kanboard require that you run `a daily background job "
 "<cronjob.markdown>`__."
 msgstr ""
-
-#~ msgid "Some features of Kanboard require that you run a daily background job."
-#~ msgstr ""
-
+"Некоторые возможности Канборда требуют `запуска ежедневных фоновых задач "
+"<cronjob.html>`__."

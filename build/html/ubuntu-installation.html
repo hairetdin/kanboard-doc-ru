@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>How to install Kanboard on Ubuntu? &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Как инсталировать Канборд на Ubuntu? &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,16 +40,16 @@
           <div class="body" role="main">
             
   <div class="section" id="how-to-install-kanboard-on-ubuntu">
-<h1>How to install Kanboard on Ubuntu?<a class="headerlink" href="#how-to-install-kanboard-on-ubuntu" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Как инсталировать Канборд на Ubuntu?<a class="headerlink" href="#how-to-install-kanboard-on-ubuntu" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="ubuntu-xenial-16-04-lts">
 <h2>Ubuntu Xenial 16.04 LTS<a class="headerlink" href="#ubuntu-xenial-16-04-lts" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Install Apache and PHP:</p>
+<p>Установите Apache и PHP:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>sudo apt-get update
 sudo apt-get install -y apache2 libapache2-mod-php7.0 php7.0-cli php7.0-mbstring php7.0-sqlite3 \
     php7.0-opcache php7.0-json php7.0-mysql php7.0-pgsql php7.0-ldap php7.0-gd
 </pre></div>
 </div>
-<p>Install Kanboard:</p>
+<p>Установите Канборд:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
 sudo wget https://kanboard.net/kanboard-latest.zip
 sudo unzip kanboard-latest.zip
@@ -61,12 +60,12 @@ sudo rm kanboard-latest.zip
 </div>
 <div class="section" id="ubuntu-trusty-14-04-lts">
 <h2>Ubuntu Trusty 14.04 LTS<a class="headerlink" href="#ubuntu-trusty-14-04-lts" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Install Apache and PHP:</p>
+<p>Установите Apache и PHP:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>sudo apt-get update
 sudo apt-get install -y php5 php5-sqlite php5-mysql php5-pgsql php5-ldap php5-gd php5-json php5-mcrypt unzip
 </pre></div>
 </div>
-<p>Install Kanboard:</p>
+<p>Установите Канборд:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
 sudo wget https://kanboard.net/kanboard-latest.zip
 sudo unzip kanboard-latest.zip
@@ -77,12 +76,12 @@ sudo rm kanboard-latest.zip
 </div>
 <div class="section" id="ubuntu-precise-12-04-lts">
 <h2>Ubuntu Precise 12.04 LTS<a class="headerlink" href="#ubuntu-precise-12-04-lts" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Install Apache and PHP:</p>
+<p>Установите Apache и PHP:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>sudo apt-get update
 sudo apt-get install -y php5 php5-sqlite php5-mysql php5-pgsql php5-ldap php5-gd php5-json php5-mcrypt unzip
 </pre></div>
 </div>
-<p>Install Kanboard:</p>
+<p>Установите Канборд:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www
 sudo wget https://kanboard.net/kanboard-latest.zip
 sudo unzip kanboard-latest.zip
@@ -90,8 +89,7 @@ sudo chown -R www-data:www-data kanboard/data
 sudo rm kanboard-latest.zip
 </pre></div>
 </div>
-<p>Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
-job</a>.</p>
+<p>Некоторые возможности Канборда требуют <a class="reference external" href="cronjob.html">запуска ежедневных фоновых задач</a>.</p>
 </div>
 </div>
 
@@ -103,7 +101,7 @@ job</a>.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">How to install Kanboard on Ubuntu?</a><ul>
+<li><a class="reference internal" href="#">Как инсталировать Канборд на Ubuntu?</a><ul>
 <li><a class="reference internal" href="#ubuntu-xenial-16-04-lts">Ubuntu Xenial 16.04 LTS</a></li>
 <li><a class="reference internal" href="#ubuntu-trusty-14-04-lts">Ubuntu Trusty 14.04 LTS</a></li>
 <li><a class="reference internal" href="#ubuntu-precise-12-04-lts">Ubuntu Precise 12.04 LTS</a></li>
