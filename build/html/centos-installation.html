@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Centos Installation &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Инсталяция Канборд на Centos &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="search" title="Поиск" href="search.html" />
     <link rel="top" title="Документация Kanboard russian 0.0.1" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,21 +40,20 @@
           <div class="body" role="main">
             
   <div class="section" id="centos-installation">
-<h1>Centos Installation<a class="headerlink" href="#centos-installation" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Note: Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
-job</a>.</p>
+<h1>Инсталяция Канборд на Centos<a class="headerlink" href="#centos-installation" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>Внимание</strong>: Некоторые возможности Канборда требуют <a class="reference external" href="cronjob.html">запуск ежедневных фоновых задач</a>.</p>
 <div class="section" id="centos-7">
 <h2>Centos 7<a class="headerlink" href="#centos-7" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Install PHP and Apache:</p>
+<p>Установите PHP и Apache:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>yum install -y php php-mbstring php-pdo php-gd unzip wget
 </pre></div>
 </div>
-<p>By default Centos 7 use PHP 5.4.16 and Apache 2.4.6.</p>
-<p>Restart Apache:</p>
+<p>По умолчанию, Centos 7 использует PHP 5.4.16 и Apache 2.4.6.</p>
+<p>Перезапустите Apache:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>systemctl restart httpd.service
 </pre></div>
 </div>
-<p>Install Kanboard:</p>
+<p>Установите Канборд:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
 wget https://kanboard.net/kanboard-latest.zip
 unzip kanboard-latest.zip
@@ -63,36 +61,35 @@ chown -R apache:apache kanboard/data
 rm kanboard-latest.zip
 </pre></div>
 </div>
-<p>If SELinux is enabled, be sure that the Apache user can write to the
-directory data:</p>
+<p>Если включен SELinux, убедитесь что пользователь веб сервера Apache имеет права на запись в директорию data:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>chcon -R -t httpd_sys_content_rw_t /var/www/html/kanboard/data
 </pre></div>
 </div>
-<p>Be sure to configure your server to allow Kanboard to send emails and
-make external network requests, by example with SELinux:</p>
+<p>Убедитесь, что Канборд может посылать email сообщения и делать внешние сетевые запросы, например с SELinux:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>setsebool -P httpd_can_network_connect=1
 </pre></div>
 </div>
-<p>Allowing external connections is necessary if you use LDAP, SMTP, Web
-hooks or any third-party integration.</p>
+<p>Позволяет делать внешние подключения если используется LDAP, SMTP, Web hooks или другая интеграция.</p>
 </div>
 <div class="section" id="centos-6-x">
 <h2>Centos 6.x<a class="headerlink" href="#centos-6-x" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Install PHP and Apache:</p>
+<p>Установите PHP и Apache:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>yum install -y php php-mbstring php-pdo php-gd unzip wget
 </pre></div>
 </div>
-<p>By default Centos 6.5 use PHP 5.3.3 and Apache 2.2.15.</p>
-<p>Enable short tags:</p>
+<p>По умолчанию, Centos 6.5 использует PHP 5.3.3 и Apache 2.2.15.</p>
+<p>Включите короткие теги:</p>
 <ul class="simple">
-<li>Edit the file <code class="docutils literal"><span class="pre">/etc/php.ini</span></code></li>
-<li>Change the line <code class="docutils literal"><span class="pre">short_open_tag</span> <span class="pre">=</span> <span class="pre">On</span></code></li>
+<li><p class="first">Отредактируйте файл <code class="docutils literal"><span class="pre">/etc/php.ini</span></code></p>
+</li>
+<li><p class="first">Измените строку <code class="docutils literal"><span class="pre">short_open_tag</span> <span class="pre">=</span> <span class="pre">On</span></code> (вместо <code class="docutils literal"><span class="pre">short_open_tag</span> <span class="pre">=</span> <span class="pre">Off</span></code>)</p>
+</li>
 </ul>
-<p>Restart Apache:</p>
+<p>Перезапустите Apache:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>service httpd restart
 </pre></div>
 </div>
-<p>Install Kanboard:</p>
+<p>Установите Канборд:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd /var/www/html
 wget https://kanboard.net/kanboard-latest.zip
 unzip kanboard-latest.zip
@@ -100,7 +97,7 @@ chown -R apache:apache kanboard/data
 rm kanboard-latest.zip
 </pre></div>
 </div>
-<p>Go to <code class="docutils literal"><span class="pre">http://your_server/kanboard/</span></code>.</p>
+<p>Готово. Можете работать с Канборд. Откройте в браузере <code class="docutils literal"><span class="pre">http://ваш_сервер/kanboard/</span></code>.</p>
 </div>
 </div>
 
@@ -112,7 +109,7 @@ rm kanboard-latest.zip
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Centos Installation</a><ul>
+<li><a class="reference internal" href="#">Инсталяция Канборд на Centos</a><ul>
 <li><a class="reference internal" href="#centos-7">Centos 7</a></li>
 <li><a class="reference internal" href="#centos-6-x">Centos 6.x</a></li>
 </ul>
