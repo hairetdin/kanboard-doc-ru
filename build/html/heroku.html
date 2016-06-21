@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Deploy Kanboard on Heroku &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Развертывание Канборд на Heroku &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,20 +40,20 @@
           <div class="body" role="main">
             
   <div class="section" id="deploy-kanboard-on-heroku">
-<h1>Deploy Kanboard on Heroku<a class="headerlink" href="#deploy-kanboard-on-heroku" title="Ссылка на этот заголовок">¶</a></h1>
-<p>You can try Kanboard for free on <a class="reference external" href="https://www.heroku.com/">Heroku</a>.
-You can use this one click install button or follow the manual
-instructions below:</p>
+<h1>Развертывание Канборд на Heroku<a class="headerlink" href="#deploy-kanboard-on-heroku" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Вы можете бесплатно испытать работу Kanboard на <a class="reference external" href="https://www.heroku.com/">Heroku</a>. Вам нужно нажать кнопку <strong>Deploy to Heroku</strong> и следовать руководству приведенному ниже:</p>
 <p><a class="reference external" href="https://heroku.com/deploy?template=https://github.com/fguillot/kanboard"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.png" /></a></p>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Требования<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Heroku account, you can use a free account</li>
-<li>Heroku command line tools installed</li>
+<li><p class="first">Учетная запись на Heroku. Вы можете зарегистрироваться бесплатно.</p>
+</li>
+<li><p class="first">Установленная утилита командной строки Heroku</p>
+</li>
 </ul>
 </div>
 <div class="section" id="manual-instructions">
-<h2>Manual instructions<a class="headerlink" href="#manual-instructions" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Руководство по установке<a class="headerlink" href="#manual-instructions" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span># Get the last development version
 git clone https://github.com/fguillot/kanboard.git
 cd kanboard
@@ -72,14 +72,12 @@ heroku open
 </div>
 </div>
 <div class="section" id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Ограничения<a class="headerlink" href="#limitations" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>The storage of Heroku is ephemeral, that means uploaded files through
-Kanboard are not persistent after a reboot. You may want to install a
-plugin to store your files in a cloud storage provider like <a class="reference external" href="https://github.com/kanboard/plugin-s3">Amazon
-S3</a>.</li>
-<li>Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
-job</a>.</li>
+<li><p class="first">Хранилище на Heroku эфимерное. Это означает, что файлы, загружаемые через Канборд, будут отсутствовать в системе после перезагрузки. Вы можете установить плагин для хранения файлов в облаке, например <a class="reference external" href="https://github.com/kanboard/plugin-s3">Amazon S3</a>.</p>
+</li>
+<li><p class="first">Некоторые возможности Канборда требуют, чтобы вы выполняли <a class="reference external" href="cronjob.html">запуск ежедневных фоновых задач</a>.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -92,10 +90,10 @@ job</a>.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Deploy Kanboard on Heroku</a><ul>
-<li><a class="reference internal" href="#requirements">Requirements</a></li>
-<li><a class="reference internal" href="#manual-instructions">Manual instructions</a></li>
-<li><a class="reference internal" href="#limitations">Limitations</a></li>
+<li><a class="reference internal" href="#">Развертывание Канборд на Heroku</a><ul>
+<li><a class="reference internal" href="#requirements">Требования</a></li>
+<li><a class="reference internal" href="#manual-instructions">Руководство по установке</a></li>
+<li><a class="reference internal" href="#limitations">Ограничения</a></li>
 </ul>
 </li>
 </ul>
