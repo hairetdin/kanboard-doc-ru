@@ -3,138 +3,160 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-21 18:09+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/windows-iis-installation.rst:2
 msgid "Installation on Windows 2008/2012 with IIS"
-msgstr ""
+msgstr "Инсталяция Kanboard на Windows 2008/2012 с IIS"
 
 #: ../../source/windows-iis-installation.rst:4
 msgid ""
-"This guide will help you to setup step by step Kanboard on a Windows "
-"Server with IIS and PHP."
+"This guide will help you to setup step by step Kanboard on a Windows Server "
+"with IIS and PHP."
 msgstr ""
+"Это пошаговое руководство поможет вам установить Канборд на Windows Server с "
+"IIS и PHP."
 
 #: ../../source/windows-iis-installation.rst:8
 msgid "PHP installation"
-msgstr ""
+msgstr "Установка PHP"
 
 #: ../../source/windows-iis-installation.rst:10
 msgid ""
-"Install IIS on your server (Add a new role and don't forget to enable "
-"CGI/FastCGI)"
+"Install IIS on your server (Add a new role and don't forget to enable CGI/"
+"FastCGI)"
 msgstr ""
+"Установите IIS на ваш Windows сервер (Добавьте новую роль и не забудьте "
+"включить CGI/FastCGI)"
 
 #: ../../source/windows-iis-installation.rst:12
 msgid "Install PHP by following the official documentation:"
 msgstr ""
+"При инсталяции PHP можете использовать следующую официальную документацию:"
 
 #: ../../source/windows-iis-installation.rst:14
 msgid ""
-"`Microsoft IIS 5.1 and IIS 6.0 "
-"<http://php.net/manual/en/install.windows.iis6.php>`__"
+"`Microsoft IIS 5.1 and IIS 6.0 <http://php.net/manual/en/install.windows."
+"iis6.php>`__"
 msgstr ""
 
 #: ../../source/windows-iis-installation.rst:16
 msgid ""
-"`Microsoft IIS 7.0 and later "
-"<http://php.net/manual/en/install.windows.iis7.php>`__"
+"`Microsoft IIS 7.0 and later <http://php.net/manual/en/install.windows.iis7."
+"php>`__"
 msgstr ""
 
 #: ../../source/windows-iis-installation.rst:18
-msgid "`PHP for Windows is available here <http://windows.php.net/download/>`__"
+msgid ""
+"`PHP for Windows is available here <http://windows.php.net/download/>`__"
 msgstr ""
 
 #: ../../source/windows-iis-installation.rst:21
 msgid "Edit the ``php.ini``, uncomment these PHP modules:"
-msgstr ""
+msgstr "Отредактируйте ``php.ini``, раскоментируйте эти PHP модули:"
 
 #: ../../source/windows-iis-installation.rst:31
 msgid "Set the time zone:"
-msgstr ""
+msgstr "Установите часовой пояс"
 
 #: ../../source/windows-iis-installation.rst:37
 msgid ""
 "The list of supported time zones can be found in the `PHP documentation "
 "<http://php.net/manual/en/timezones.america.php>`__."
 msgstr ""
+"Список поддерживаемых часовых поясов можно посмотреть в `документации PHP "
+"<http://php.net/manual/en/timezones.america.php>`__."
 
 #: ../../source/windows-iis-installation.rst:40
 msgid "Check if PHP runs correctly:"
-msgstr ""
+msgstr "Проверьте, что PHP работает корректно:"
 
 #: ../../source/windows-iis-installation.rst:42
 msgid ""
 "Go the IIS document root ``C:\\inetpub\\wwwroot`` and create a file "
 "``phpinfo.php``:"
 msgstr ""
+"Перейдите в корневой каталог IIS ``C:\\inetpub\\wwwroot`` и создайте файл "
+"``phpinfo.php``, со следующим содержимым:"
 
 #: ../../source/windows-iis-installation.rst:53
 msgid ""
-"Open a browser at ``http://localhost/phpinfo.php`` and you should see the"
-" current PHP settings. If you got an error 500, something is not "
-"correctly done in your installation."
+"Open a browser at ``http://localhost/phpinfo.php`` and you should see the "
+"current PHP settings. If you got an error 500, something is not correctly "
+"done in your installation."
 msgstr ""
+"В браузере откройте страницу ``http://localhost/phpinfo.php`` и вы должны "
+"увидеть текущие настройки PHP. Если вы видите ошибку 500, значит что-то "
+"сделано неправильно при установке."
 
 #: ../../source/windows-iis-installation.rst:57
 msgid "Notes:"
-msgstr ""
+msgstr "Примечание:"
 
 #: ../../source/windows-iis-installation.rst:59
 msgid "If you use PHP < 5.4, you have to enable the short tags in your php.ini"
 msgstr ""
+"Если вы используете PHP < 5.4, то необходимо включить короткие теги (short "
+"tags) в php.ini"
 
 #: ../../source/windows-iis-installation.rst:61
 msgid "Don't forget to enable the required php extensions mentioned above"
-msgstr ""
+msgstr "Не забудьте включить необходимые php расширения, упомянутые выше"
 
 #: ../../source/windows-iis-installation.rst:62
 msgid ""
 "If you got an error about \"the library MSVCP110.dll is missing\", you "
-"probably need to download the Visual C++ Redistributable for Visual "
-"Studio from the Microsoft website."
+"probably need to download the Visual C++ Redistributable for Visual Studio "
+"from the Microsoft website."
 msgstr ""
+"Если вы наблюдаете ошибку \"the library MSVCP110.dll is missing\", то "
+"возможно вам нужно скачать распространяемый пакет Visual C++ для Visual "
+"Studio с сайта Microsoft."
 
 #: ../../source/windows-iis-installation.rst:67
 msgid "Kanboard installation"
-msgstr ""
+msgstr "Установка Канборд"
 
 #: ../../source/windows-iis-installation.rst:69
 msgid "Download the zip file"
-msgstr ""
+msgstr "Скачайте zip файл"
 
 #: ../../source/windows-iis-installation.rst:70
 msgid "Decompress the archive in ``C:\\inetpub\\wwwroot\\kanboard`` by example"
-msgstr ""
+msgstr "Распакуйте архив в ``C:\\inetpub\\wwwroot\\kanboard`` (например)"
 
 #: ../../source/windows-iis-installation.rst:71
 msgid "Make sure the directory ``data`` is writable by the IIS user"
 msgstr ""
+"Убедитесь, что у пользователя вебсервера IIS имеется доступ на запись на "
+"директорию ``data`` "
 
 #: ../../source/windows-iis-installation.rst:72
 msgid "Open your web browser to use Kanboard http://localhost/kanboard/"
-msgstr ""
+msgstr "Откройте веб браузер и используйте Kanboard http://localhost/kanboard/"
 
 #: ../../source/windows-iis-installation.rst:73
 msgid "The default credentials are **admin/admin**"
-msgstr ""
+msgstr "Пользователь и пароль по умолчанию - **admin/admin**"
 
 #: ../../source/windows-iis-installation.rst:76
 msgid "Tested configurations"
-msgstr ""
+msgstr "Работа Канборд тестировалось на"
 
 #: ../../source/windows-iis-installation.rst:78
 msgid "Windows 2008 R2 Standard Edition / IIS 7.5 / PHP 5.5.16"
@@ -146,31 +168,12 @@ msgstr ""
 
 #: ../../source/windows-iis-installation.rst:82
 msgid "Notes"
-msgstr ""
+msgstr "Примечание"
 
 #: ../../source/windows-iis-installation.rst:84
 msgid ""
 "Some features of Kanboard require that you run `a daily background job "
 "<cronjob.markdown>`__."
 msgstr ""
-
-#~ msgid "Edit the php.ini, uncomment these PHP modules:"
-#~ msgstr ""
-
-#~ msgid "The list of supported time zones can be found in the PHP documentation."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Go the IIS document root "
-#~ "C:\\inetpub\\wwwroot and create a file "
-#~ "phpinfo.php:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Open a browser at http://localhost/phpinfo.php"
-#~ " and you should see the current "
-#~ "PHP settings. If you got an error"
-#~ " 500, something is not correctly done"
-#~ " in your installation."
-#~ msgstr ""
-
+"Некоторые возможности Канборда требуют `запуск выполнения ежедневных фоновых "
+"задач <cronjob.html>`__."

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation on Windows 2008/2012 with IIS &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Инсталяция Kanboard на Windows 2008/2012 с IIS &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,15 +40,15 @@
           <div class="body" role="main">
             
   <div class="section" id="installation-on-windows-2008-2012-with-iis">
-<h1>Installation on Windows 2008/2012 with IIS<a class="headerlink" href="#installation-on-windows-2008-2012-with-iis" title="Ссылка на этот заголовок">¶</a></h1>
-<p>This guide will help you to setup step by step Kanboard on a Windows
-Server with IIS and PHP.</p>
+<h1>Инсталяция Kanboard на Windows 2008/2012 с IIS<a class="headerlink" href="#installation-on-windows-2008-2012-with-iis" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Это пошаговое руководство поможет вам установить Канборд на Windows Server с IIS и PHP.</p>
 <div class="section" id="php-installation">
-<h2>PHP installation<a class="headerlink" href="#php-installation" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Установка PHP<a class="headerlink" href="#php-installation" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Install IIS on your server (Add a new role and don&#8217;t forget to enable
-CGI/FastCGI)</li>
-<li>Install PHP by following the official documentation:<ul>
+<li><p class="first">Установите IIS на ваш Windows сервер (Добавьте новую роль и не забудьте включить CGI/FastCGI)</p>
+</li>
+<li><p class="first">При инсталяции PHP можете использовать следующую официальную документацию:</p>
+<ul>
 <li><a class="reference external" href="http://php.net/manual/en/install.windows.iis6.php">Microsoft IIS 5.1 and IIS
 6.0</a></li>
 <li><a class="reference external" href="http://php.net/manual/en/install.windows.iis7.php">Microsoft IIS 7.0 and
@@ -58,7 +58,7 @@ here</a></li>
 </ul>
 </li>
 </ul>
-<p>Edit the <code class="docutils literal"><span class="pre">php.ini</span></code>, uncomment these PHP modules:</p>
+<p>Отредактируйте <code class="docutils literal"><span class="pre">php.ini</span></code>, раскоментируйте эти PHP модули:</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="n">extension</span><span class="o">=</span><span class="n">php_gd2</span><span class="o">.</span><span class="n">dll</span>
 <span class="n">extension</span><span class="o">=</span><span class="n">php_ldap</span><span class="o">.</span><span class="n">dll</span>
 <span class="n">extension</span><span class="o">=</span><span class="n">php_mbstring</span><span class="o">.</span><span class="n">dll</span>
@@ -66,15 +66,13 @@ here</a></li>
 <span class="n">extension</span><span class="o">=</span><span class="n">php_pdo_sqlite</span><span class="o">.</span><span class="n">dll</span>
 </pre></div>
 </div>
-<p>Set the time zone:</p>
+<p>Установите часовой пояс</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="n">date</span><span class="o">.</span><span class="n">timezone</span> <span class="o">=</span> <span class="n">America</span><span class="o">/</span><span class="n">Montreal</span>
 </pre></div>
 </div>
-<p>The list of supported time zones can be found in the <a class="reference external" href="http://php.net/manual/en/timezones.america.php">PHP
-documentation</a>.</p>
-<p>Check if PHP runs correctly:</p>
-<p>Go the IIS document root <code class="docutils literal"><span class="pre">C:\inetpub\wwwroot</span></code> and create a file
-<code class="docutils literal"><span class="pre">phpinfo.php</span></code>:</p>
+<p>Список поддерживаемых часовых поясов можно посмотреть в <a class="reference external" href="http://php.net/manual/en/timezones.america.php">документации PHP</a>.</p>
+<p>Проверьте, что PHP работает корректно:</p>
+<p>Перейдите в корневой каталог IIS <code class="docutils literal"><span class="pre">C:\inetpub\wwwroot</span></code> и создайте файл <code class="docutils literal"><span class="pre">phpinfo.php</span></code>, со следующим содержимым:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 phpinfo();
@@ -82,41 +80,44 @@ phpinfo();
 ?&gt;
 </pre></div>
 </div>
-<p>Open a browser at <code class="docutils literal"><span class="pre">http://localhost/phpinfo.php</span></code> and you should see
-the current PHP settings. If you got an error 500, something is not
-correctly done in your installation.</p>
-<p>Notes:</p>
+<p>В браузере откройте страницу <code class="docutils literal"><span class="pre">http://localhost/phpinfo.php</span></code> и вы должны увидеть текущие настройки PHP. Если вы видите ошибку 500, значит что-то сделано неправильно при установке.</p>
+<p>Примечание:</p>
 <ul class="simple">
-<li>If you use PHP &lt; 5.4, you have to enable the short tags in your
-php.ini</li>
-<li>Don&#8217;t forget to enable the required php extensions mentioned above</li>
-<li>If you got an error about &#8220;the library MSVCP110.dll is missing&#8221;, you
-probably need to download the Visual C++ Redistributable for Visual
-Studio from the Microsoft website.</li>
+<li><p class="first">Если вы используете PHP &lt; 5.4, то необходимо включить короткие теги (short tags) в php.ini</p>
+</li>
+<li><p class="first">Не забудьте включить необходимые php расширения, упомянутые выше</p>
+</li>
+<li><p class="first">Если вы наблюдаете ошибку &#8220;the library MSVCP110.dll is missing&#8221;, то возможно вам нужно скачать распространяемый пакет Visual C++ для Visual Studio с сайта Microsoft.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="kanboard-installation">
-<h2>Kanboard installation<a class="headerlink" href="#kanboard-installation" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Установка Канборд<a class="headerlink" href="#kanboard-installation" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Download the zip file</li>
-<li>Decompress the archive in <code class="docutils literal"><span class="pre">C:\inetpub\wwwroot\kanboard</span></code> by example</li>
-<li>Make sure the directory <code class="docutils literal"><span class="pre">data</span></code> is writable by the IIS user</li>
-<li>Open your web browser to use Kanboard <a class="reference external" href="http://localhost/kanboard/">http://localhost/kanboard/</a></li>
-<li>The default credentials are <strong>admin/admin</strong></li>
+<li><p class="first">Скачайте zip файл</p>
+</li>
+<li><p class="first">Распакуйте архив в <code class="docutils literal"><span class="pre">C:\inetpub\wwwroot\kanboard</span></code> (например)</p>
+</li>
+<li><p class="first">Убедитесь, что у пользователя вебсервера IIS имеется доступ на запись на директорию <code class="docutils literal"><span class="pre">data</span></code></p>
+</li>
+<li><p class="first">Откройте веб браузер и используйте Kanboard <a class="reference external" href="http://localhost/kanboard/">http://localhost/kanboard/</a></p>
+</li>
+<li><p class="first">Пользователь и пароль по умолчанию - <strong>admin/admin</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="tested-configurations">
-<h2>Tested configurations<a class="headerlink" href="#tested-configurations" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Работа Канборд тестировалось на<a class="headerlink" href="#tested-configurations" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
 <li>Windows 2008 R2 Standard Edition / IIS 7.5 / PHP 5.5.16</li>
 <li>Windows 2012 Standard Edition / IIS 8.5 / PHP 5.3.29</li>
 </ul>
 </div>
 <div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Примечание<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
-job</a>.</li>
+<li><p class="first">Некоторые возможности Канборда требуют <a class="reference external" href="cronjob.html">запуск выполнения ежедневных фоновых задач</a>.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -129,11 +130,11 @@ job</a>.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Installation on Windows 2008/2012 with IIS</a><ul>
-<li><a class="reference internal" href="#php-installation">PHP installation</a></li>
-<li><a class="reference internal" href="#kanboard-installation">Kanboard installation</a></li>
-<li><a class="reference internal" href="#tested-configurations">Tested configurations</a></li>
-<li><a class="reference internal" href="#notes">Notes</a></li>
+<li><a class="reference internal" href="#">Инсталяция Kanboard на Windows 2008/2012 с IIS</a><ul>
+<li><a class="reference internal" href="#php-installation">Установка PHP</a></li>
+<li><a class="reference internal" href="#kanboard-installation">Установка Канборд</a></li>
+<li><a class="reference internal" href="#tested-configurations">Работа Канборд тестировалось на</a></li>
+<li><a class="reference internal" href="#notes">Примечание</a></li>
 </ul>
 </li>
 </ul>
