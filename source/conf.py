@@ -56,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Kanboard russian'
-copyright = u'2016, hairetdin'
+copyright = u'2016, Kanboard.ru'
 author = u'hairetdin'
 
 # The version info for the project you're documenting, acts as replacement for
