@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation on Windows Server and Apache &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Установка Канборд на Windows Server и Apache &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,40 +40,37 @@
           <div class="body" role="main">
             
   <div class="section" id="installation-on-windows-server-and-apache">
-<h1>Installation on Windows Server and Apache<a class="headerlink" href="#installation-on-windows-server-and-apache" title="Ссылка на этот заголовок">¶</a></h1>
-<p>This guide will help you to setup step by step Kanboard on a Windows
-Server with Apache and PHP.</p>
-<p>Note: If you have a 64 bits platform choose &#8220;x64&#8221; otherwise choose &#8220;x86&#8221;
-for 32-bit systems.</p>
+<h1>Установка Канборд на Windows Server и Apache<a class="headerlink" href="#installation-on-windows-server-and-apache" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Это руководство поможет вам шаг за шагом установить Канборд на Windows Server с Apache и PHP</p>
+<p><strong>Внимание</strong>: Если у вас 64 разрядная платформа, то вам нужно выбрать &#8220;x64&#8221;, и выберите &#8220;x86&#8221; для 32 разрядной операционной системы.</p>
 <div class="section" id="visual-c-redistributable-installation">
-<h2>Visual C++ Redistributable Installation<a class="headerlink" href="#visual-c-redistributable-installation" title="Ссылка на этот заголовок">¶</a></h2>
-<p>PHP and Apache are compiled with Visual Studio so you need to install
-this library if it&#8217;s not already done.</p>
+<h2>Установка распространяемого пакета Visual C++<a class="headerlink" href="#visual-c-redistributable-installation" title="Ссылка на этот заголовок">¶</a></h2>
+<p>PHP и Apache скомпилированы с Visual Studio, поэтому вам нужно установить эту библиотеку, если вы не сделали это ранее.</p>
 <ol class="arabic simple">
-<li>Download the library from the <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">official Microsoft
-website</a></li>
-<li>Run the installer <code class="docutils literal"><span class="pre">vcredist_x64.exe</span></code> or <code class="docutils literal"><span class="pre">vcredist_x86.exe</span></code>
-according to your platform</li>
+<li><p class="first">Скачайте библиотеку с <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">официального вебсайта Microsoft</a></p>
+</li>
+<li><p class="first">Запустите установку <code class="docutils literal"><span class="pre">vcredist_x64.exe</span></code> или <code class="docutils literal"><span class="pre">vcredist_x86.exe</span></code>, в соответствии с вашей платформой</p>
+</li>
 </ol>
 </div>
 <div class="section" id="apache-installation">
-<h2>Apache installation<a class="headerlink" href="#apache-installation" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Установка Apache<a class="headerlink" href="#apache-installation" title="Ссылка на этот заголовок">¶</a></h2>
 <ol class="arabic simple">
-<li>Download Apache binary from <a class="reference external" href="http://www.apachelounge.com/download/">Apache
-Lounge</a></li>
-<li>Unzip the Apache24 folder to <code class="docutils literal"><span class="pre">C:\Apache24</span></code></li>
+<li><p class="first">Скачайте исходники Apache с <a class="reference external" href="http://www.apachelounge.com/download/">Apache Lounge</a></p>
+</li>
+<li><p class="first">Разархивируйте Apache24 в каталог <code class="docutils literal"><span class="pre">C:\Apache24</span></code></p>
+</li>
 </ol>
 <div class="section" id="define-the-server-name">
-<h3>Define the server name<a class="headerlink" href="#define-the-server-name" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Open the file <code class="docutils literal"><span class="pre">C:\Apache24\conf\httpd.conf</span></code> and add the directive:</p>
+<h3>Назначение имени сервера<a class="headerlink" href="#define-the-server-name" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Откройте файл <code class="docutils literal"><span class="pre">C:\Apache24\conf\httpd.conf</span></code> и добавьте директиву:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>ServerName localhost
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-the-apache-service">
-<h3>Install the Apache service<a class="headerlink" href="#install-the-apache-service" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Open a command prompt (<code class="docutils literal"><span class="pre">cmd.exe</span></code>) and go to the directory
-<code class="docutils literal"><span class="pre">C:\Apache24\bin</span></code>:</p>
+<h3>Установка сервиса Apache<a class="headerlink" href="#install-the-apache-service" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Откройте консоль (<code class="docutils literal"><span class="pre">cmd.exe</span></code>), перейдите в каталог <code class="docutils literal"><span class="pre">C:\Apache24\bin</span></code> и установите сервис Apache:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>cd C:\Apache24\bin
 
 # Install the windows service
@@ -82,36 +79,35 @@ httpd.exe -k install
 </div>
 </div>
 <div class="section" id="install-apachemonitor">
-<h3>Install ApacheMonitor<a class="headerlink" href="#install-apachemonitor" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Установка ApacheMonitor<a class="headerlink" href="#install-apachemonitor" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
-<li>Double click on <code class="docutils literal"><span class="pre">C:\Apache24\bin\ApacheMonitor.exe</span></code>, or put it in
-your startup folder.</li>
-<li>Right click on the icon and start Apache</li>
+<li><p class="first">Выполните <code class="docutils literal"><span class="pre">C:\Apache24\bin\ApacheMonitor.exe</span></code> и добавьте его в автозагрузку.</p>
+</li>
+<li><p class="first">Теперь во всплывающем меню, при нажатии правой кнопки мыши на иконке, нажмите запустить Apache</p>
+</li>
 </ul>
 </div>
 <div class="section" id="check-the-apache-installation">
-<h3>Check the Apache installation<a class="headerlink" href="#check-the-apache-installation" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Go to <a class="reference external" href="http://localhost/">http://localhost/</a> you should see a blank page with the text &#8220;It
-works!&#8221;.</p>
+<h3>Проверка работы Apache<a class="headerlink" href="#check-the-apache-installation" title="Ссылка на этот заголовок">¶</a></h3>
+<p>В браузере откройте <a class="reference external" href="http://localhost/">http://localhost/</a>. Вы должны увидеть пустую страницу и текст &#8220;It works!&#8221;.</p>
 </div>
 </div>
 <div class="section" id="php-installation">
-<h2>PHP installation<a class="headerlink" href="#php-installation" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Установка PHP<a class="headerlink" href="#php-installation" title="Ссылка на этот заголовок">¶</a></h2>
 <ol class="arabic simple">
-<li>Download the last stable version of PHP from the <a class="reference external" href="http://windows.php.net/download/">official PHP
-website</a>, choose the <strong>Thread
-Safe</strong> version and use the exact same build type as Apache: x86 or
-x64</li>
-<li>Unzip the files to <code class="docutils literal"><span class="pre">C:\php</span></code></li>
-<li>Navigate to the PHP folder and rename the file <code class="docutils literal"><span class="pre">php.ini-production</span></code>
-to <code class="docutils literal"><span class="pre">php.ini</span></code></li>
+<li><p class="first">Скачайте последнюю стабильную версию PHP с <a class="reference external" href="http://windows.php.net/download/">официального сайта PHP</a>, выберите версию <strong>Thread Safe</strong> и используйте соответствующую разрядность: x86 or x64.</p>
+</li>
+<li><p class="first">Разархивируйте файлы в <code class="docutils literal"><span class="pre">C:\php</span></code></p>
+</li>
+<li><p class="first">Перейдите в каталог PHP (<code class="docutils literal"><span class="pre">C:\php</span></code>) и переименуйе файл <code class="docutils literal"><span class="pre">php.ini-production</span></code> в <code class="docutils literal"><span class="pre">php.ini</span></code></p>
+</li>
 </ol>
-<p>Edit the <code class="docutils literal"><span class="pre">php.ini</span></code>:</p>
-<p>Uncomment extension directory:</p>
+<p>Отредактируйте <code class="docutils literal"><span class="pre">php.ini</span></code>:</p>
+<p>Раскоментируйте директорию расширений:</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="n">extension_dir</span> <span class="o">=</span> <span class="s2">&quot;C:/php/ext&quot;</span>
 </pre></div>
 </div>
-<p>Uncomment these PHP modules:</p>
+<p>Раскоментируйте следующие модули PHP:</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="n">extension</span><span class="o">=</span><span class="n">php_gd2</span><span class="o">.</span><span class="n">dll</span>
 <span class="n">extension</span><span class="o">=</span><span class="n">php_ldap</span><span class="o">.</span><span class="n">dll</span>
 <span class="n">extension</span><span class="o">=</span><span class="n">php_mbstring</span><span class="o">.</span><span class="n">dll</span>
@@ -119,14 +115,13 @@ to <code class="docutils literal"><span class="pre">php.ini</span></code></li>
 <span class="n">extension</span><span class="o">=</span><span class="n">php_pdo_sqlite</span><span class="o">.</span><span class="n">dll</span>
 </pre></div>
 </div>
-<p>Set the time zone:</p>
+<p>Установите часовой пояс:</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="n">date</span><span class="o">.</span><span class="n">timezone</span> <span class="o">=</span> <span class="n">America</span><span class="o">/</span><span class="n">Montreal</span>
 </pre></div>
 </div>
-<p>The list of supported time zones can be found in the <a class="reference external" href="http://php.net/manual/en/timezones.america.php">PHP
-documentation</a>.</p>
-<p>Load the PHP module for Apache:</p>
-<p>Add this configuration in the file <code class="docutils literal"><span class="pre">C:\Apache24\conf\httpd.conf</span></code>:</p>
+<p>Список всех поддерживаемых часовых поясов можно посмотреть в <a class="reference external" href="http://php.net/manual/en/timezones.america.php">документации PHP</a>.</p>
+<p>Загрузка модулей PHP для Apache:</p>
+<p>Добавьте следующие строки конфигурации в файл <code class="docutils literal"><span class="pre">C:\Apache24\conf\httpd.conf</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>LoadModule php5_module &quot;c:/php/php5apache2_4.dll&quot;
 AddHandler application/x-httpd-php .php
 
@@ -137,10 +132,9 @@ PHPIniDir &quot;C:/php&quot;
 DirectoryIndex index.php index.html
 </pre></div>
 </div>
-<p>Restart Apache.</p>
-<p>Test your PHP installation:</p>
-<p>Create a file named <code class="docutils literal"><span class="pre">phpinfo.php</span></code> in the folder
-<code class="docutils literal"><span class="pre">C:\Apache24\htdocs</span></code>:</p>
+<p>Перезапустите Apache.</p>
+<p>Проверка работы PHP:</p>
+<p>Создайте файл <code class="docutils literal"><span class="pre">phpinfo.php</span></code> в каталоге <code class="docutils literal"><span class="pre">C:\Apache24\htdocs</span></code>:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 phpinfo();
@@ -148,29 +142,32 @@ phpinfo();
 ?&gt;
 </pre></div>
 </div>
-<p>Go to <a class="reference external" href="http://localhost/phpinfo.php">http://localhost/phpinfo.php</a> and should see all information about
-your PHP installation.</p>
+<p>Откройте в браузере <a class="reference external" href="http://localhost/phpinfo.php">http://localhost/phpinfo.php</a> и вы должны увидеть информацию о PHP.</p>
 </div>
 <div class="section" id="kanboard-installation">
-<h2>Kanboard installation<a class="headerlink" href="#kanboard-installation" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Устновка Канборд<a class="headerlink" href="#kanboard-installation" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Download the zip file</li>
-<li>Decompress the archive in <code class="docutils literal"><span class="pre">C:\Apache24\htdocs\kanboard</span></code> by example</li>
-<li>Open your web browser to use Kanboard <a class="reference external" href="http://localhost/kanboard/">http://localhost/kanboard/</a></li>
-<li>The default credentials are <strong>admin/admin</strong></li>
+<li><p class="first"><a class="reference external" href="https://kanboard.net/downloads">Скачайте zip файл</a></p>
+</li>
+<li><p class="first">Разархивируйте архив в <code class="docutils literal"><span class="pre">C:\Apache24\htdocs\kanboard</span></code></p>
+</li>
+<li><p class="first">Откройте в браузере <a class="reference external" href="http://localhost/kanboard/">http://localhost/kanboard/</a>. Ура. Теперь вы можете работать в Канборд. Все легко и просто.</p>
+</li>
+<li><p class="first">Учетная запись и пароль по умолчанию - <strong>admin/admin</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="tested-configuration">
-<h2>Tested configuration<a class="headerlink" href="#tested-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Протестировано на<a class="headerlink" href="#tested-configuration" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
 <li>Windows 2008 R2 / Apache 2.4.12 / PHP 5.6.8</li>
 </ul>
 </div>
 <div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Примечание<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Some features of Kanboard require that you run <a class="reference external" href="cronjob.markdown">a daily background
-job</a>.</li>
+<li><p class="first">Некоторые функции Канборда требуют выполнять <a class="reference external" href="cronjob.html">запуск ежедневных фоновых задач</a>.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -183,19 +180,19 @@ job</a>.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Installation on Windows Server and Apache</a><ul>
-<li><a class="reference internal" href="#visual-c-redistributable-installation">Visual C++ Redistributable Installation</a></li>
-<li><a class="reference internal" href="#apache-installation">Apache installation</a><ul>
-<li><a class="reference internal" href="#define-the-server-name">Define the server name</a></li>
-<li><a class="reference internal" href="#install-the-apache-service">Install the Apache service</a></li>
-<li><a class="reference internal" href="#install-apachemonitor">Install ApacheMonitor</a></li>
-<li><a class="reference internal" href="#check-the-apache-installation">Check the Apache installation</a></li>
+<li><a class="reference internal" href="#">Установка Канборд на Windows Server и Apache</a><ul>
+<li><a class="reference internal" href="#visual-c-redistributable-installation">Установка распространяемого пакета Visual C++</a></li>
+<li><a class="reference internal" href="#apache-installation">Установка Apache</a><ul>
+<li><a class="reference internal" href="#define-the-server-name">Назначение имени сервера</a></li>
+<li><a class="reference internal" href="#install-the-apache-service">Установка сервиса Apache</a></li>
+<li><a class="reference internal" href="#install-apachemonitor">Установка ApacheMonitor</a></li>
+<li><a class="reference internal" href="#check-the-apache-installation">Проверка работы Apache</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#php-installation">PHP installation</a></li>
-<li><a class="reference internal" href="#kanboard-installation">Kanboard installation</a></li>
-<li><a class="reference internal" href="#tested-configuration">Tested configuration</a></li>
-<li><a class="reference internal" href="#notes">Notes</a></li>
+<li><a class="reference internal" href="#php-installation">Установка PHP</a></li>
+<li><a class="reference internal" href="#kanboard-installation">Устновка Канборд</a></li>
+<li><a class="reference internal" href="#tested-configuration">Протестировано на</a></li>
+<li><a class="reference internal" href="#notes">Примечание</a></li>
 </ul>
 </li>
 </ul>
