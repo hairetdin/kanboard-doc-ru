@@ -3,32 +3,34 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-22 13:13+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/docker.rst:2
 msgid "How to run Kanboard with Docker?"
-msgstr ""
+msgstr "Как запустить Канборд с Docker?"
 
 #: ../../source/docker.rst:4
 msgid "Kanboard can run easily with `Docker <https://www.docker.com>`__."
-msgstr ""
+msgstr "Канборд можно легко запустить с `Docker <https://www.docker.com>`__."
 
 #: ../../source/docker.rst:6
 msgid "The image size is approximately **50MB** and contains:"
-msgstr ""
+msgstr "Размер образа, приблизительно, **50MB** содержит:"
 
 #: ../../source/docker.rst:8
 msgid "`Alpine Linux <http://alpinelinux.org/>`__"
@@ -48,182 +50,163 @@ msgstr ""
 
 #: ../../source/docker.rst:13
 msgid ""
-"The Kanboard cronjob is also running everyday at midnight. URL rewriting "
-"is enabled in the included config file."
+"The Kanboard cronjob is also running everyday at midnight. URL rewriting is "
+"enabled in the included config file."
 msgstr ""
+"Канборд запускает фоновые задачи каждый день в полночь. Переписывание URL "
+"(URL rewriting) включено в базовой конфигурации."
 
 #: ../../source/docker.rst:16
-msgid "When the container is running, the memory utilization is around **20MB**."
-msgstr ""
+msgid ""
+"When the container is running, the memory utilization is around **20MB**."
+msgstr "Когда контейнер запущен, использование памяти около **20MB**."
 
 #: ../../source/docker.rst:20
 msgid "Use the stable version"
-msgstr ""
+msgstr "Использование стабильной версии"
 
 #: ../../source/docker.rst:22
 msgid "To fetch the latest stable release of Kanboard use the tag **stable**:"
 msgstr ""
+"Для получения последней стабильной версии Канборда используйте тег "
+"**stable**:"
 
 #: ../../source/docker.rst:30
 msgid "Use the development version (automated build)"
-msgstr ""
+msgstr "Использование разрабатываемой версии (автоматической сборки)"
 
 #: ../../source/docker.rst:32
 msgid ""
-"Every new commit on the repository trigger a new build on the `Docker Hub"
-" <https://registry.hub.docker.com/u/kanboard/kanboard/>`__."
+"Every new commit on the repository trigger a new build on the `Docker Hub "
+"<https://registry.hub.docker.com/u/kanboard/kanboard/>`__."
 msgstr ""
+"Каждый новый коммит в репозитории вызывает новую сборку в `Docker Hub "
+"<https://registry.hub.docker.com/u/kanboard/kanboard/>`__."
 
 #: ../../source/docker.rst:40
 msgid ""
-"The tag **latest** is the **development version** of Kanboard, use at "
-"your own risk."
+"The tag **latest** is the **development version** of Kanboard, use at your "
+"own risk."
 msgstr ""
+"Используя **разрабатываемую версию** Канборда с тегом **latest**, вы "
+"принимаете на себя все риски нестабильной версии."
 
 #: ../../source/docker.rst:44
 msgid "Build your own Docker image"
-msgstr ""
+msgstr "Создание своего образа Docker"
 
 #: ../../source/docker.rst:46
 msgid ""
 "There is a ``Dockerfile`` in the Kanboard repository to build your own "
 "image. Clone the Kanboard repository and run the following command:"
 msgstr ""
+"Для сборки своего образа, в репозитории Канборда имеется ``Dockerfile``. "
+"Склонируйте репозиторий Канборда и выполните следующую команду:"
 
 #: ../../source/docker.rst:53
 msgid "or"
-msgstr ""
+msgstr "или"
 
 #: ../../source/docker.rst:59
 msgid "To run your container in background on the port 80:"
-msgstr ""
+msgstr "Для запуска вашего контейнера в фоновом режиме на порту 80:"
 
 #: ../../source/docker.rst:66
 msgid "Volumes"
-msgstr ""
+msgstr "Тома"
 
 #: ../../source/docker.rst:68
 msgid "You can attach 2 volumes to your container:"
-msgstr ""
+msgstr "Вы можете прикрепить 2 тома к вашему контейнеру:"
 
 #: ../../source/docker.rst:70
 msgid "Data folder: ``/var/www/kanboard/data``"
-msgstr ""
+msgstr "Каталог с данными: ``/var/www/kanboard/data``"
 
 #: ../../source/docker.rst:71
 msgid "Plugins folder: ``/var/www/kanboard/plugins``"
-msgstr ""
+msgstr "Католог с плагинами: ``/var/www/kanboard/plugins``"
 
 #: ../../source/docker.rst:73
 msgid ""
-"Use the flag ``-v`` to mount a volume on the host machine like described "
-"in `official Docker documentation "
-"<https://docs.docker.com/engine/userguide/containers/dockervolumes/>`__."
+"Use the flag ``-v`` to mount a volume on the host machine like described in "
+"`official Docker documentation <https://docs.docker.com/engine/userguide/"
+"containers/dockervolumes/>`__."
 msgstr ""
+"Используйте опцию ``-v`` для монтирования тома на удаленной машине как "
+"описано в `официальной документации Docker <https://docs.docker.com/engine/"
+"userguide/containers/dockervolumes/>`__."
 
 #: ../../source/docker.rst:78
 msgid "Upgrade your container"
-msgstr ""
+msgstr "Обновление вашего контейнера"
 
 #: ../../source/docker.rst:80
 msgid "Pull the new image"
-msgstr ""
+msgstr "Загрузите новый образ"
 
 #: ../../source/docker.rst:81
 msgid "Remove the old container"
-msgstr ""
+msgstr "Удалите старый контейнер"
 
 #: ../../source/docker.rst:82
 msgid "Restart a new container with the same volumes"
-msgstr ""
+msgstr "Перезапустите новый контейнер с теми же томами"
 
 #: ../../source/docker.rst:85
 msgid "Environment variables"
-msgstr ""
+msgstr "Переменные окружения"
 
 #: ../../source/docker.rst:87
 msgid ""
-"The list of environment variables is available on `this page "
-"<env.markdown>`__."
-msgstr ""
+"The list of environment variables is available on `this page <env."
+"markdown>`__."
+msgstr "Список переменных окружения доступен на `этой странице <env.html>`__."
 
 #: ../../source/docker.rst:91
 msgid "Config files"
-msgstr ""
+msgstr "Файлы конфигурации"
 
 #: ../../source/docker.rst:93
 msgid ""
-"The container already include a custom config file located at "
-"``/var/www/kanboard/config.php``."
+"The container already include a custom config file located at ``/var/www/"
+"kanboard/config.php``."
 msgstr ""
+"Контейнер уже содержит конфигурационный файл расположенный в ``/var/www/"
+"kanboard/config.php``."
 
 #: ../../source/docker.rst:95
 msgid ""
-"You can store your own config file on the data volume: "
-"``/var/www/kanboard/data/config.php``."
+"You can store your own config file on the data volume: ``/var/www/kanboard/"
+"data/config.php``."
 msgstr ""
+"Вы можете сохранить свой конфиг файл в томе с данными: ``/var/www/kanboard/"
+"data/config.php``."
 
 #: ../../source/docker.rst:99
 msgid "References"
-msgstr ""
+msgstr "Ссылки"
 
 #: ../../source/docker.rst:101
 msgid ""
-"`Official Kanboard images "
-"<https://registry.hub.docker.com/u/kanboard/kanboard/>`__"
+"`Official Kanboard images <https://registry.hub.docker.com/u/kanboard/"
+"kanboard/>`__"
 msgstr ""
+"`Официальные образы Канборд <https://registry.hub.docker.com/u/kanboard/"
+"kanboard/>`__"
 
 #: ../../source/docker.rst:103
 msgid "`Docker documentation <https://docs.docker.com/>`__"
-msgstr ""
+msgstr "`Документация Docker <https://docs.docker.com/>`__"
 
 #: ../../source/docker.rst:104
 msgid "`Dockerfile stable version <https://github.com/kanboard/docker>`__"
-msgstr ""
+msgstr "`Стабильная версия Dockerfile <https://github.com/kanboard/docker>`__"
 
 #: ../../source/docker.rst:105
 msgid ""
-"`Dockerfile dev version "
-"<https://github.com/fguillot/kanboard/blob/master/Dockerfile>`__"
+"`Dockerfile dev version <https://github.com/fguillot/kanboard/blob/master/"
+"Dockerfile>`__"
 msgstr ""
-
-#~ msgid "Kanboard can run easily with Docker."
-#~ msgstr ""
-
-#~ msgid "The image size is approximately 50MB and contains:"
-#~ msgstr ""
-
-#~ msgid "When the container is running, the memory utilization is around 20MB."
-#~ msgstr ""
-
-#~ msgid "To fetch the latest stable release of Kanboard use the tag stable:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Every new commit on the repository "
-#~ "trigger a new build on the Docker"
-#~ " Hub."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The tag latest is the development "
-#~ "version of Kanboard, use at your "
-#~ "own risk."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "There is a Dockerfile in the "
-#~ "Kanboard repository to build your own"
-#~ " image. Clone the Kanboard repository "
-#~ "and run the following command:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Use the flag -v to mount a "
-#~ "volume on the host machine like "
-#~ "described in official Docker documentation."
-#~ msgstr ""
-
-#~ msgid "The list of environment variables is available on this page."
-#~ msgstr ""
-
+"`Разрабатываемая версия Dockerfile <https://github.com/fguillot/kanboard/"
+"blob/master/Dockerfile>`__"
