@@ -3,58 +3,64 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-23 17:59+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/email-configuration.rst:2
 msgid "Email configuration"
-msgstr ""
+msgstr "Настройка email"
 
 #: ../../source/email-configuration.rst:5
 msgid "User settings"
-msgstr ""
+msgstr "Настройки пользователя"
 
 #: ../../source/email-configuration.rst:7
 msgid "To receive email notifications, users of Kanboard must have:"
 msgstr ""
+"Для получение уведомлений на email, пользователи Канборда должны иметь:"
 
 #: ../../source/email-configuration.rst:9
 msgid "Activated notifications in their profile"
-msgstr ""
+msgstr "Включенные уведомления, должны быть включены в профиле пользователя"
 
 #: ../../source/email-configuration.rst:10
 msgid "Have a valid email address in their profile"
-msgstr ""
+msgstr "Должен быть прописан правильный email адрес в профиле пользователя"
 
 #: ../../source/email-configuration.rst:11
 msgid "Be a member of the project that will trigger notifications"
-msgstr ""
+msgstr "Быть участником проекта, который отсылает уведомления"
 
 #: ../../source/email-configuration.rst:13
 msgid ""
 "Note: The logged user who performs the action doesn't receive any "
 "notifications, only other project members."
 msgstr ""
+"Примечание: Пользователь, выполнивший вход в Канборд и выполняющий действие, "
+"не будет получать уведомления. Уведомления будут получать только другие "
+"участники проекта."
 
 #: ../../source/email-configuration.rst:17
 msgid "Email transports"
-msgstr ""
+msgstr "Email шлюзы"
 
 #: ../../source/email-configuration.rst:19
 msgid "There are several email transports available:"
-msgstr ""
+msgstr "В Канборд доступны несколько шлюзов для email:"
 
 #: ../../source/email-configuration.rst:21
 msgid "SMTP"
@@ -67,109 +73,126 @@ msgstr ""
 #: ../../source/email-configuration.rst:23
 #: ../../source/email-configuration.rst:79
 msgid "PHP native mail function"
-msgstr ""
+msgstr "Встроенная mail функция PHP"
 
 #: ../../source/email-configuration.rst:24
 msgid ""
-"Other methods can be provided by external plugins: Postmark, Sendgrid and"
-" Mailgun"
+"Other methods can be provided by external plugins: Postmark, Sendgrid and "
+"Mailgun"
 msgstr ""
+"Другие методы могут предоставить внешние плагины: Postmark, Sendgrid and "
+"Mailgun"
 
 #: ../../source/email-configuration.rst:28
 msgid "Server settings"
-msgstr ""
+msgstr "Настройки сервера"
 
 #: ../../source/email-configuration.rst:30
 msgid ""
-"By default, Kanboard will use the bundled PHP mail function to send "
-"emails. Usually that requires no configuration if your server can already"
-" send emails."
+"By default, Kanboard will use the bundled PHP mail function to send emails. "
+"Usually that requires no configuration if your server can already send "
+"emails."
 msgstr ""
+"По умолчанию, Канборд использует встроенную в PHP функцию для передачи email "
+"сообщений. Обычно не требуется дополнительных настроек, если ваш сервер уже "
+"может отправлять email сообщения."
 
 #: ../../source/email-configuration.rst:34
 msgid ""
-"However, it's possible to use other methods, the SMTP protocol and "
-"Sendmail."
+"However, it's possible to use other methods, the SMTP protocol and Sendmail."
 msgstr ""
+"Если вы захотите использовать другие методы: SMTP протокол и Sendmail, то "
+"ниже приведены инструкции по настройке."
 
 #: ../../source/email-configuration.rst:38
 msgid "SMTP configuration"
-msgstr ""
+msgstr "Настройка SMTP"
 
 #: ../../source/email-configuration.rst:40
 msgid ""
-"Rename the file ``config.default.php`` to ``config.php`` and change these"
-" values:"
+"Rename the file ``config.default.php`` to ``config.php`` and change these "
+"values:"
 msgstr ""
+"Переименуйте файл ``config.default.php`` в ``config.php`` и измените "
+"следующие значения:"
 
 #: ../../source/email-configuration.rst:56
 msgid "It's also possible to use a secure connection, TLS or SSL:"
-msgstr ""
+msgstr "Возможно понадобится использовать шифрованное подключение TLS или SSL:"
 
 #: ../../source/email-configuration.rst:63
 msgid "Sendmail configuration"
-msgstr ""
+msgstr "Настройка Sendmail"
 
 #: ../../source/email-configuration.rst:65
 msgid ""
-"By default the sendmail command will be ``/usr/sbin/sendmail -bs`` but "
-"you can customize that in your config file."
+"By default the sendmail command will be ``/usr/sbin/sendmail -bs`` but you "
+"can customize that in your config file."
 msgstr ""
+"По умолчанию команда отправки сообщений выглядит так ``/usr/sbin/sendmail -"
+"bs``, но вы можете изменить ее в файле конфигурации."
 
 #: ../../source/email-configuration.rst:68
 msgid "Example:"
-msgstr ""
+msgstr "Например:"
 
 #: ../../source/email-configuration.rst:81
 msgid "This is the default configuration:"
-msgstr ""
+msgstr "Это конфигурация по умолчанию:"
 
 #: ../../source/email-configuration.rst:88
 msgid "The sender email address"
-msgstr ""
+msgstr "Email адрес отправителя"
 
 #: ../../source/email-configuration.rst:90
 msgid ""
-"By default, emails will use the sender address "
-"``notifications@kanboard.local``. It's not possible to reply to this "
-"address."
+"By default, emails will use the sender address ``notifications@kanboard."
+"local``. It's not possible to reply to this address."
 msgstr ""
+"По умолчанию, сообщения отправляются с адресом отправителя "
+"``notifications@kanboard.local``. На этот адрес нельзя ответить."
 
 #: ../../source/email-configuration.rst:94
 msgid ""
 "You can customize this address by changing the value of the constant "
 "``MAIL_FROM`` in your config file."
 msgstr ""
+"Вы можете настроить этот адрес изменив значение константы ``MAIL_FROM`` в "
+"вашем конфигурационном файле."
 
 #: ../../source/email-configuration.rst:101
 msgid ""
 "That can be useful if your SMTP server configuration doesn't accept the "
 "default address."
 msgstr ""
+"Это может быть полезным, если ваш SMTP сервер не принимает неправильные "
+"адреса."
 
 #: ../../source/email-configuration.rst:105
 msgid "How to display a link to the task in notifications?"
-msgstr ""
+msgstr "Как отобразить ссылку на задачу в уведомлении?"
 
 #: ../../source/email-configuration.rst:107
 msgid ""
 "To do that, you have to specify the URL of your Kanboard installation in "
-"your `Application Settings <https://kanboard.net/documentation"
-"/application-configuration>`__. By default, nothing is defined, so no "
-"links will be displayed."
+"your `Application Settings <https://kanboard.net/documentation/application-"
+"configuration>`__. By default, nothing is defined, so no links will be "
+"displayed."
 msgstr ""
+"Чтобы сделать это, вы должны указать URL вашего установленного Канборда в "
+"`Настройках приложения <application-configuration.html>`__."
 
 #: ../../source/email-configuration.rst:112
 msgid "Examples:"
-msgstr ""
+msgstr "Например:"
 
 #: ../../source/email-configuration.rst:114
 msgid "http://demo.kanboard.net/"
-msgstr ""
+msgstr "http://demo.kanboard.ru/"
 
 #: ../../source/email-configuration.rst:115
 msgid "http://myserver/kanboard/"
-msgstr ""
+msgstr "http://имясервера/kanboard/"
 
 #: ../../source/email-configuration.rst:116
 msgid "http://kanboard.mydomain.com/"
@@ -177,77 +200,48 @@ msgstr ""
 
 #: ../../source/email-configuration.rst:118
 msgid "Don't forget the ending slash ``/``."
-msgstr ""
+msgstr "Не забудьте добавить в конце слеш ``/``."
 
 #: ../../source/email-configuration.rst:120
 msgid ""
-"You need to define that manually because Kanboard cannot guess the URL "
-"from a command line script and some people have a very specific "
-"configuration."
+"You need to define that manually because Kanboard cannot guess the URL from "
+"a command line script and some people have a very specific configuration."
 msgstr ""
+"Вы должны сделать это вручную, потому что Канборд не может угадать URL из "
+"скрипта командной строки и некоторые конфигурации веб серверов очень "
+"специфичны."
 
 #: ../../source/email-configuration.rst:125
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Решение проблем"
 
 #: ../../source/email-configuration.rst:127
 msgid ""
 "If no emails are sent and you are sure that everything is configured "
 "correctly:"
 msgstr ""
+"Если email сообщения не отправляются и вы уверены, что все настроили "
+"правильно:"
 
 #: ../../source/email-configuration.rst:130
 msgid "Check your spam folder"
-msgstr ""
+msgstr "Проверьте папку Спам"
 
 #: ../../source/email-configuration.rst:131
 msgid ""
 "Enable the debug mode and check the debug file ``data/debug.log``, you "
 "should see the exact error"
 msgstr ""
+"Включите режим отладки и посмотрите отладочный файл ``data/debug.log``, вы "
+"можете увидеть конкретную ошибку"
 
 #: ../../source/email-configuration.rst:133
 msgid ""
-"Be sure that your server or your hosting provider allows you to send "
-"emails"
+"Be sure that your server or your hosting provider allows you to send emails"
 msgstr ""
+"Убедитесь, что ваш сервер или ваш хостинг провайдер позволяет вам отсылать "
+"email сообщения"
 
 #: ../../source/email-configuration.rst:135
 msgid "If you use SeLinux, allow PHP to send emails"
-msgstr ""
-
-#~ msgid ""
-#~ "Rename the file config.default.php to "
-#~ "config.php and change these values:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "By default the sendmail command will "
-#~ "be /usr/sbin/sendmail -bs but you can"
-#~ " customize that in your config file."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "By default, emails will use the "
-#~ "sender address notifications@kanboard.local. It's"
-#~ " not possible to reply to this "
-#~ "address."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You can customize this address by "
-#~ "changing the value of the constant "
-#~ "MAIL_FROM in your config file."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To do that, you have to specify"
-#~ " the URL of your Kanboard "
-#~ "installation in your Application Settings. "
-#~ "By default, nothing is defined, so "
-#~ "no links will be displayed."
-#~ msgstr ""
-
-#~ msgid "Don't forget the ending slash /."
-#~ msgstr ""
-
+msgstr "Если вы используете SeLinux, разрешите PHP отсылать email сообщения."

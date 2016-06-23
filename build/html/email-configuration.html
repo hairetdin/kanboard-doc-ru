@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Email configuration &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Настройка email &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,40 +40,39 @@
           <div class="body" role="main">
             
   <div class="section" id="email-configuration">
-<h1>Email configuration<a class="headerlink" href="#email-configuration" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Настройка email<a class="headerlink" href="#email-configuration" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="user-settings">
-<h2>User settings<a class="headerlink" href="#user-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<p>To receive email notifications, users of Kanboard must have:</p>
+<h2>Настройки пользователя<a class="headerlink" href="#user-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Для получение уведомлений на email, пользователи Канборда должны иметь:</p>
 <ul class="simple">
-<li>Activated notifications in their profile</li>
-<li>Have a valid email address in their profile</li>
-<li>Be a member of the project that will trigger notifications</li>
+<li><p class="first">Включенные уведомления, должны быть включены в профиле пользователя</p>
+</li>
+<li><p class="first">Должен быть прописан правильный email адрес в профиле пользователя</p>
+</li>
+<li><p class="first">Быть участником проекта, который отсылает уведомления</p>
+</li>
 </ul>
-<p>Note: The logged user who performs the action doesn&#8217;t receive any
-notifications, only other project members.</p>
+<p>Примечание: Пользователь, выполнивший вход в Канборд и выполняющий действие, не будет получать уведомления. Уведомления будут получать только другие участники проекта.</p>
 </div>
 <div class="section" id="email-transports">
-<h2>Email transports<a class="headerlink" href="#email-transports" title="Ссылка на этот заголовок">¶</a></h2>
-<p>There are several email transports available:</p>
+<h2>Email шлюзы<a class="headerlink" href="#email-transports" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В Канборд доступны несколько шлюзов для email:</p>
 <ul class="simple">
 <li>SMTP</li>
 <li>Sendmail</li>
-<li>PHP native mail function</li>
-<li>Other methods can be provided by external plugins: Postmark, Sendgrid
-and Mailgun</li>
+<li><p class="first">Встроенная mail функция PHP</p>
+</li>
+<li><p class="first">Другие методы могут предоставить внешние плагины: Postmark, Sendgrid and Mailgun</p>
+</li>
 </ul>
 </div>
 <div class="section" id="server-settings">
-<h2>Server settings<a class="headerlink" href="#server-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<p>By default, Kanboard will use the bundled PHP mail function to send
-emails. Usually that requires no configuration if your server can
-already send emails.</p>
-<p>However, it&#8217;s possible to use other methods, the SMTP protocol and
-Sendmail.</p>
+<h2>Настройки сервера<a class="headerlink" href="#server-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<p>По умолчанию, Канборд использует встроенную в PHP функцию для передачи email сообщений. Обычно не требуется дополнительных настроек, если ваш сервер уже может отправлять email сообщения.</p>
+<p>Если вы захотите использовать другие методы: SMTP протокол и Sendmail, то ниже приведены инструкции по настройке.</p>
 <div class="section" id="smtp-configuration">
-<h3>SMTP configuration<a class="headerlink" href="#smtp-configuration" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Rename the file <code class="docutils literal"><span class="pre">config.default.php</span></code> to <code class="docutils literal"><span class="pre">config.php</span></code> and change
-these values:</p>
+<h3>Настройка SMTP<a class="headerlink" href="#smtp-configuration" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Переименуйте файл <code class="docutils literal"><span class="pre">config.default.php</span></code> в <code class="docutils literal"><span class="pre">config.php</span></code> и измените следующие значения:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// We choose &quot;smtp&quot; as mail transport
 define(&#39;MAIL_TRANSPORT&#39;, &#39;smtp&#39;);
 
@@ -86,16 +85,15 @@ define(&#39;MAIL_SMTP_USERNAME&#39;, &#39;username&#39;);
 define(&#39;MAIL_SMTP_PASSWORD&#39;, &#39;super password&#39;);
 </pre></div>
 </div>
-<p>It&#8217;s also possible to use a secure connection, TLS or SSL:</p>
+<p>Возможно понадобится использовать шифрованное подключение TLS или SSL:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;MAIL_SMTP_ENCRYPTION&#39;, &#39;ssl&#39;); // Valid values are &quot;null&quot;, &quot;ssl&quot; or &quot;tls&quot;
 </pre></div>
 </div>
 </div>
 <div class="section" id="sendmail-configuration">
-<h3>Sendmail configuration<a class="headerlink" href="#sendmail-configuration" title="Ссылка на этот заголовок">¶</a></h3>
-<p>By default the sendmail command will be <code class="docutils literal"><span class="pre">/usr/sbin/sendmail</span> <span class="pre">-bs</span></code> but
-you can customize that in your config file.</p>
-<p>Example:</p>
+<h3>Настройка Sendmail<a class="headerlink" href="#sendmail-configuration" title="Ссылка на этот заголовок">¶</a></h3>
+<p>По умолчанию команда отправки сообщений выглядит так <code class="docutils literal"><span class="pre">/usr/sbin/sendmail</span> <span class="pre">-bs</span></code>, но вы можете изменить ее в файле конфигурации.</p>
+<p>Например:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// We choose &quot;sendmail&quot; as mail transport
 define(&#39;MAIL_TRANSPORT&#39;, &#39;sendmail&#39;);
 
@@ -105,54 +103,48 @@ define(&#39;MAIL_SENDMAIL_COMMAND&#39;, &#39;/usr/sbin/sendmail -bs&#39;);
 </div>
 </div>
 <div class="section" id="php-native-mail-function">
-<h3>PHP native mail function<a class="headerlink" href="#php-native-mail-function" title="Ссылка на этот заголовок">¶</a></h3>
-<p>This is the default configuration:</p>
+<h3>Встроенная mail функция PHP<a class="headerlink" href="#php-native-mail-function" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Это конфигурация по умолчанию:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;MAIL_TRANSPORT&#39;</span><span class="p">,</span> <span class="s1">&#39;mail&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="the-sender-email-address">
-<h3>The sender email address<a class="headerlink" href="#the-sender-email-address" title="Ссылка на этот заголовок">¶</a></h3>
-<p>By default, emails will use the sender address
-<code class="docutils literal"><span class="pre">notifications&#64;kanboard.local</span></code>. It&#8217;s not possible to reply to this
-address.</p>
-<p>You can customize this address by changing the value of the constant
-<code class="docutils literal"><span class="pre">MAIL_FROM</span></code> in your config file.</p>
+<h3>Email адрес отправителя<a class="headerlink" href="#the-sender-email-address" title="Ссылка на этот заголовок">¶</a></h3>
+<p>По умолчанию, сообщения отправляются с адресом отправителя <code class="docutils literal"><span class="pre">notifications&#64;kanboard.local</span></code>. На этот адрес нельзя ответить.</p>
+<p>Вы можете настроить этот адрес изменив значение константы <code class="docutils literal"><span class="pre">MAIL_FROM</span></code> в вашем конфигурационном файле.</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;MAIL_FROM&#39;</span><span class="p">,</span> <span class="s1">&#39;kanboard@mydomain.tld&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>That can be useful if your SMTP server configuration doesn&#8217;t accept the
-default address.</p>
+<p>Это может быть полезным, если ваш SMTP сервер не принимает неправильные адреса.</p>
 </div>
 <div class="section" id="how-to-display-a-link-to-the-task-in-notifications">
-<h3>How to display a link to the task in notifications?<a class="headerlink" href="#how-to-display-a-link-to-the-task-in-notifications" title="Ссылка на этот заголовок">¶</a></h3>
-<p>To do that, you have to specify the URL of your Kanboard installation in
-your <a class="reference external" href="https://kanboard.net/documentation/application-configuration">Application
-Settings</a>.
-By default, nothing is defined, so no links will be displayed.</p>
-<p>Examples:</p>
+<h3>Как отобразить ссылку на задачу в уведомлении?<a class="headerlink" href="#how-to-display-a-link-to-the-task-in-notifications" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Чтобы сделать это, вы должны указать URL вашего установленного Канборда в <a class="reference external" href="application-configuration.html">Настройках приложения</a>.</p>
+<p>Например:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://demo.kanboard.net/">http://demo.kanboard.net/</a></li>
-<li><a class="reference external" href="http://myserver/kanboard/">http://myserver/kanboard/</a></li>
+<li><p class="first"><a class="reference external" href="http://demo.kanboard.ru/">http://demo.kanboard.ru/</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="http:/">http:/</a>/имясервера/kanboard/</p>
+</li>
 <li><a class="reference external" href="http://kanboard.mydomain.com/">http://kanboard.mydomain.com/</a></li>
 </ul>
-<p>Don&#8217;t forget the ending slash <code class="docutils literal"><span class="pre">/</span></code>.</p>
-<p>You need to define that manually because Kanboard cannot guess the URL
-from a command line script and some people have a very specific
-configuration.</p>
+<p>Не забудьте добавить в конце слеш <code class="docutils literal"><span class="pre">/</span></code>.</p>
+<p>Вы должны сделать это вручную, потому что Канборд не может угадать URL из скрипта командной строки и некоторые конфигурации веб серверов очень специфичны.</p>
 </div>
 </div>
 <div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Ссылка на этот заголовок">¶</a></h2>
-<p>If no emails are sent and you are sure that everything is configured
-correctly:</p>
+<h2>Решение проблем<a class="headerlink" href="#troubleshooting" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если email сообщения не отправляются и вы уверены, что все настроили правильно:</p>
 <ul class="simple">
-<li>Check your spam folder</li>
-<li>Enable the debug mode and check the debug file <code class="docutils literal"><span class="pre">data/debug.log</span></code>,
-you should see the exact error</li>
-<li>Be sure that your server or your hosting provider allows you to send
-emails</li>
-<li>If you use SeLinux, allow PHP to send emails</li>
+<li><p class="first">Проверьте папку Спам</p>
+</li>
+<li><p class="first">Включите режим отладки и посмотрите отладочный файл <code class="docutils literal"><span class="pre">data/debug.log</span></code>, вы можете увидеть конкретную ошибку</p>
+</li>
+<li><p class="first">Убедитесь, что ваш сервер или ваш хостинг провайдер позволяет вам отсылать email сообщения</p>
+</li>
+<li><p class="first">Если вы используете SeLinux, разрешите PHP отсылать email сообщения.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -165,18 +157,18 @@ emails</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Email configuration</a><ul>
-<li><a class="reference internal" href="#user-settings">User settings</a></li>
-<li><a class="reference internal" href="#email-transports">Email transports</a></li>
-<li><a class="reference internal" href="#server-settings">Server settings</a><ul>
-<li><a class="reference internal" href="#smtp-configuration">SMTP configuration</a></li>
-<li><a class="reference internal" href="#sendmail-configuration">Sendmail configuration</a></li>
-<li><a class="reference internal" href="#php-native-mail-function">PHP native mail function</a></li>
-<li><a class="reference internal" href="#the-sender-email-address">The sender email address</a></li>
-<li><a class="reference internal" href="#how-to-display-a-link-to-the-task-in-notifications">How to display a link to the task in notifications?</a></li>
+<li><a class="reference internal" href="#">Настройка email</a><ul>
+<li><a class="reference internal" href="#user-settings">Настройки пользователя</a></li>
+<li><a class="reference internal" href="#email-transports">Email шлюзы</a></li>
+<li><a class="reference internal" href="#server-settings">Настройки сервера</a><ul>
+<li><a class="reference internal" href="#smtp-configuration">Настройка SMTP</a></li>
+<li><a class="reference internal" href="#sendmail-configuration">Настройка Sendmail</a></li>
+<li><a class="reference internal" href="#php-native-mail-function">Встроенная mail функция PHP</a></li>
+<li><a class="reference internal" href="#the-sender-email-address">Email адрес отправителя</a></li>
+<li><a class="reference internal" href="#how-to-display-a-link-to-the-task-in-notifications">Как отобразить ссылку на задачу в уведомлении?</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#troubleshooting">Решение проблем</a></li>
 </ul>
 </li>
 </ul>
