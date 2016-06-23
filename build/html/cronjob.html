@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Background Job Scheduling &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Ежедневные фоновые задачи &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,32 +40,29 @@
           <div class="body" role="main">
             
   <div class="section" id="background-job-scheduling">
-<h1>Background Job Scheduling<a class="headerlink" href="#background-job-scheduling" title="Ссылка на этот заголовок">¶</a></h1>
-<p>To work properly, Kanboard requires that a background job run on a daily
-basis. Usually on Unix platforms, this process is done by <code class="docutils literal"><span class="pre">cron</span></code>.</p>
-<p>This background job is necessary for these features:</p>
+<h1>Ежедневные фоновые задачи<a class="headerlink" href="#background-job-scheduling" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Для корректной работы, Канборд должен запускать ежедневные фоновые задачи. На Unix платформах этот процесс выполнятся в <code class="docutils literal"><span class="pre">cron</span></code>.</p>
+<p>Фоновые задачи необходимы для следующих возможностей:</p>
 <ul class="simple">
-<li>Reports and analytics (calculate daily stats of each projects)</li>
-<li>Send overdue task notifications</li>
-<li>Execute automatic actions connected to the event &#8220;Daily background
-job for tasks&#8221;</li>
+<li><p class="first">Отчеты и аналитика (подсчет ежедневной статистики для каждого проекта)</p>
+</li>
+<li><p class="first">Рассылка оповещений для просроченных задач</p>
+</li>
+<li><p class="first">Выполнение автоматических действий подключенных к событиям &#8220;Ежедневные фоновые процессы для задач&#8221;</p>
+</li>
 </ul>
 <div class="section" id="configuration-on-unix-and-linux-platforms">
-<h2>Configuration on Unix and Linux platforms<a class="headerlink" href="#configuration-on-unix-and-linux-platforms" title="Ссылка на этот заголовок">¶</a></h2>
-<p>There are multiple ways to define a cronjob on Unix/Linux operating
-systems, this example is for Ubuntu 14.04. The procedure is similar to
-other systems.</p>
-<p>Edit the crontab of your web server user:</p>
+<h2>Настройка на Unix и Linux платформах<a class="headerlink" href="#configuration-on-unix-and-linux-platforms" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Есть несколько вариантов для создания фоновых задач под операционной системой Unix/Linux. Здесь приведен пример для Ubuntu 14.04. Для других систем процедура похожа.</p>
+<p>Отредактируйте crontab под пользователем вашего веб сервера:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>sudo crontab -u www-data -e
 </pre></div>
 </div>
-<p>Example to execute the daily cronjob at 8am:</p>
+<p>Пример запуска ежедневной фоновой задачи в 8 утра:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>0 8 * * * cd /path/to/kanboard &amp;&amp; ./kanboard cronjob &gt;/dev/null 2&gt;&amp;1
 </pre></div>
 </div>
-<p>Note: the cronjob process must have write access to the database in case
-you are using Sqlite. Usually, running the cronjob under the web server
-user is enough.</p>
+<p>Примечание: процес выполнения фоновых задач должен иметь права доступа к вашей базе данных в случае если вы используете Sqlite. Обычно, достаточно запускать фоновую задачу под пользователем веб сервера.</p>
 </div>
 </div>
 
@@ -77,8 +74,8 @@ user is enough.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Background Job Scheduling</a><ul>
-<li><a class="reference internal" href="#configuration-on-unix-and-linux-platforms">Configuration on Unix and Linux platforms</a></li>
+<li><a class="reference internal" href="#">Ежедневные фоновые задачи</a><ul>
+<li><a class="reference internal" href="#configuration-on-unix-and-linux-platforms">Настройка на Unix и Linux платформах</a></li>
 </ul>
 </li>
 </ul>
