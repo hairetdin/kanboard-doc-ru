@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Config file &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Конфигурационный файл &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,45 +40,41 @@
           <div class="body" role="main">
             
   <div class="section" id="config-file">
-<h1>Config file<a class="headerlink" href="#config-file" title="Ссылка на этот заголовок">¶</a></h1>
-<p>You can customize the default settings of Kanboard by adding a file
-<code class="docutils literal"><span class="pre">config.php</span></code> at the project root or in the <code class="docutils literal"><span class="pre">data</span></code> folder. You can
-also rename the file <code class="docutils literal"><span class="pre">config.default.php</span></code> to <code class="docutils literal"><span class="pre">config.php</span></code> and change
-the desired values.</p>
+<h1>Конфигурационный файл<a class="headerlink" href="#config-file" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Вы можете изменить базовые настройки Канборда добавив файл <code class="docutils literal"><span class="pre">config.php</span></code> в корень проекта или в каталог <code class="docutils literal"><span class="pre">data</span></code>. Вы, также, можете переименовать файл <code class="docutils literal"><span class="pre">config.default.php</span></code> в <code class="docutils literal"><span class="pre">config.php</span></code> и установить желаемые значения.</p>
 <div class="section" id="enable-disable-debug-mode">
-<h2>Enable/Disable debug mode<a class="headerlink" href="#enable-disable-debug-mode" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Включение/выключение режима отладки<a class="headerlink" href="#enable-disable-debug-mode" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;DEBUG&#39;, true);
 define(&#39;LOG_DRIVER&#39;, &#39;file&#39;); // Other drivers are: syslog, stdout, stderr or file
 </pre></div>
 </div>
-<p>The log driver must be defined if you enable the debug mode. The debug
-mode logs all SQL queries and the time taken to generate pages.</p>
+<p>Обработчик логов может быть определен если вы включите режим отладки. Режим отладки фиксирует все SQL запросы и время затрачиваемое на генерацию страниц.</p>
 </div>
 <div class="section" id="plugins">
-<h2>Plugins<a class="headerlink" href="#plugins" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Plugin folder:</p>
+<h2>Плагины<a class="headerlink" href="#plugins" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Каталог плагинов:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;PLUGINS_DIR&#39;</span><span class="p">,</span> <span class="s1">&#39;data/plugins&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Enable/disable plugin installation from the user interface:</p>
+<p>Включение/выключение установки плагинов через интерфейс пользователя:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;PLUGIN_INSTALLER&#39;, true); // Default is true
 </pre></div>
 </div>
 </div>
 <div class="section" id="folder-for-uploaded-files">
-<h2>Folder for uploaded files<a class="headerlink" href="#folder-for-uploaded-files" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Каталог для загружаемых файлов<a class="headerlink" href="#folder-for-uploaded-files" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;FILES_DIR&#39;</span><span class="p">,</span> <span class="s1">&#39;data/files&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="enable-disable-url-rewrite">
-<h2>Enable/disable url rewrite<a class="headerlink" href="#enable-disable-url-rewrite" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Включение/выключение переопределения url адресов<a class="headerlink" href="#enable-disable-url-rewrite" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="email-configuration">
-<h2>Email configuration<a class="headerlink" href="#email-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройка email<a class="headerlink" href="#email-configuration" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// E-mail address for the &quot;From&quot; header (notifications)
 define(&#39;MAIL_FROM&#39;, &#39;notifications@kanboard.local&#39;);
 
@@ -98,7 +94,7 @@ define(&#39;MAIL_SENDMAIL_COMMAND&#39;, &#39;/usr/sbin/sendmail -bs&#39;);
 </div>
 </div>
 <div class="section" id="database-settings">
-<h2>Database settings<a class="headerlink" href="#database-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройки базы данных<a class="headerlink" href="#database-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Database driver: sqlite, mysql or postgres (sqlite by default)
 define(&#39;DB_DRIVER&#39;, &#39;sqlite&#39;);
 
@@ -129,7 +125,7 @@ define(&#39;DB_SSL_CA&#39;, null);
 </div>
 </div>
 <div class="section" id="ldap-settings">
-<h2>LDAP settings<a class="headerlink" href="#ldap-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройки LDAP<a class="headerlink" href="#ldap-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable LDAP authentication (false by default)
 define(&#39;LDAP_AUTH&#39;, false);
 
@@ -225,7 +221,7 @@ define(&#39;LDAP_GROUP_ATTRIBUTE_NAME&#39;, &#39;cn&#39;);
 </div>
 </div>
 <div class="section" id="reverse-proxy-authentication-settings">
-<h2>Reverse-Proxy Authentication settings<a class="headerlink" href="#reverse-proxy-authentication-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройки аутентификации Reverse-Proxy<a class="headerlink" href="#reverse-proxy-authentication-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable/disable the reverse proxy authentication
 define(&#39;REVERSE_PROXY_AUTH&#39;, false);
 
@@ -241,14 +237,14 @@ define(&#39;REVERSE_PROXY_DEFAULT_DOMAIN&#39;, &#39;&#39;);
 </div>
 </div>
 <div class="section" id="rememberme-authentication-settings">
-<h2>RememberMe Authentication settings<a class="headerlink" href="#rememberme-authentication-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройки аутентификации RememberMe<a class="headerlink" href="#rememberme-authentication-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable/disable remember me authentication
 define(&#39;REMEMBER_ME_AUTH&#39;, true);
 </pre></div>
 </div>
 </div>
 <div class="section" id="secure-http-headers-settings">
-<h2>Secure HTTP headers settings<a class="headerlink" href="#secure-http-headers-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройки Secure HTTP headers<a class="headerlink" href="#secure-http-headers-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable or disable &quot;Strict-Transport-Security&quot; HTTP header
 define(&#39;ENABLE_HSTS&#39;, true);
 
@@ -258,9 +254,8 @@ define(&#39;ENABLE_XFRAME&#39;, true);
 </div>
 </div>
 <div class="section" id="logging">
-<h2>Logging<a class="headerlink" href="#logging" title="Ссылка на этот заголовок">¶</a></h2>
-<p>By default, Kanboard do not log anything. If you want to enable the
-logging, you have to set a log driver.</p>
+<h2>Запись событий<a class="headerlink" href="#logging" title="Ссылка на этот заголовок">¶</a></h2>
+<p>По умолчанию, Канборд записывает не все события. Если вы хотите включить запись событий, вы должны установить обработчик логов.</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Available log drivers: syslog, stderr, stdout or file
 define(&#39;LOG_DRIVER&#39;, &#39;&#39;);
 
@@ -270,7 +265,7 @@ define(&#39;LOG_FILE&#39;, __DIR__.DIRECTORY_SEPARATOR.&#39;data&#39;.DIRECTORY_
 </div>
 </div>
 <div class="section" id="brute-force-protection">
-<h2>Brute-force protection<a class="headerlink" href="#brute-force-protection" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Защита от Brute-force<a class="headerlink" href="#brute-force-protection" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Enable captcha after 3 authentication failure
 define(&#39;BRUTEFORCE_CAPTCHA&#39;, 3);
 
@@ -283,7 +278,7 @@ define(&#39;BRUTEFORCE_LOCKDOWN_DURATION&#39;, 15);
 </div>
 </div>
 <div class="section" id="session">
-<h2>Session<a class="headerlink" href="#session" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Сессии<a class="headerlink" href="#session" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Session duration in second (0 = until the browser is closed)
 // See http://php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime
 define(&#39;SESSION_DURATION&#39;, 0);
@@ -291,8 +286,8 @@ define(&#39;SESSION_DURATION&#39;, 0);
 </div>
 </div>
 <div class="section" id="http-client-proxy">
-<h2>HTTP client proxy<a class="headerlink" href="#http-client-proxy" title="Ссылка на этот заголовок">¶</a></h2>
-<p>If external HTTP requests need to be sent through a proxy:</p>
+<h2>Проксирование клиентских HTTP<a class="headerlink" href="#http-client-proxy" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если внешние запросы HTTP необходимо пробрасывать через прокси:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;HTTP_PROXY_HOSTNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;HTTP_PROXY_PORT&#39;</span><span class="p">,</span> <span class="s1">&#39;3128&#39;</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;HTTP_PROXY_USERNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
@@ -301,7 +296,7 @@ define(&#39;SESSION_DURATION&#39;, 0);
 </div>
 </div>
 <div class="section" id="various-settings">
-<h2>Various settings<a class="headerlink" href="#various-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Другие настройки<a class="headerlink" href="#various-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Escape html inside markdown text
 define(&#39;MARKDOWN_ESCAPE_HTML&#39;, true);
 
@@ -329,22 +324,22 @@ define(&#39;API_AUTHENTICATION_TOKEN&#39;, &#39;My unique API Token&#39;);
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Config file</a><ul>
-<li><a class="reference internal" href="#enable-disable-debug-mode">Enable/Disable debug mode</a></li>
-<li><a class="reference internal" href="#plugins">Plugins</a></li>
-<li><a class="reference internal" href="#folder-for-uploaded-files">Folder for uploaded files</a></li>
-<li><a class="reference internal" href="#enable-disable-url-rewrite">Enable/disable url rewrite</a></li>
-<li><a class="reference internal" href="#email-configuration">Email configuration</a></li>
-<li><a class="reference internal" href="#database-settings">Database settings</a></li>
-<li><a class="reference internal" href="#ldap-settings">LDAP settings</a></li>
-<li><a class="reference internal" href="#reverse-proxy-authentication-settings">Reverse-Proxy Authentication settings</a></li>
-<li><a class="reference internal" href="#rememberme-authentication-settings">RememberMe Authentication settings</a></li>
-<li><a class="reference internal" href="#secure-http-headers-settings">Secure HTTP headers settings</a></li>
-<li><a class="reference internal" href="#logging">Logging</a></li>
-<li><a class="reference internal" href="#brute-force-protection">Brute-force protection</a></li>
-<li><a class="reference internal" href="#session">Session</a></li>
-<li><a class="reference internal" href="#http-client-proxy">HTTP client proxy</a></li>
-<li><a class="reference internal" href="#various-settings">Various settings</a></li>
+<li><a class="reference internal" href="#">Конфигурационный файл</a><ul>
+<li><a class="reference internal" href="#enable-disable-debug-mode">Включение/выключение режима отладки</a></li>
+<li><a class="reference internal" href="#plugins">Плагины</a></li>
+<li><a class="reference internal" href="#folder-for-uploaded-files">Каталог для загружаемых файлов</a></li>
+<li><a class="reference internal" href="#enable-disable-url-rewrite">Включение/выключение переопределения url адресов</a></li>
+<li><a class="reference internal" href="#email-configuration">Настройка email</a></li>
+<li><a class="reference internal" href="#database-settings">Настройки базы данных</a></li>
+<li><a class="reference internal" href="#ldap-settings">Настройки LDAP</a></li>
+<li><a class="reference internal" href="#reverse-proxy-authentication-settings">Настройки аутентификации Reverse-Proxy</a></li>
+<li><a class="reference internal" href="#rememberme-authentication-settings">Настройки аутентификации RememberMe</a></li>
+<li><a class="reference internal" href="#secure-http-headers-settings">Настройки Secure HTTP headers</a></li>
+<li><a class="reference internal" href="#logging">Запись событий</a></li>
+<li><a class="reference internal" href="#brute-force-protection">Защита от Brute-force</a></li>
+<li><a class="reference internal" href="#session">Сессии</a></li>
+<li><a class="reference internal" href="#http-client-proxy">Проксирование клиентских HTTP</a></li>
+<li><a class="reference internal" href="#various-settings">Другие настройки</a></li>
 </ul>
 </li>
 </ul>
