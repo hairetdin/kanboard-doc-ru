@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Plugin Directory Configuration &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Настройка директории плагинов &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,20 +40,19 @@
           <div class="body" role="main">
             
   <div class="section" id="plugin-directory-configuration">
-<h1>Plugin Directory Configuration<a class="headerlink" href="#plugin-directory-configuration" title="Ссылка на этот заголовок">¶</a></h1>
-<p>To install, update and remove plugins from the user interface, you must
-have those requirements:</p>
+<h1>Настройка директории плагинов<a class="headerlink" href="#plugin-directory-configuration" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Для установки, обновления и удаления плагинов в интерфейсе пользователя, вам необходимо выполнить следующие пункты:</p>
 <ul class="simple">
-<li>The plugin directory must be writeable by the web server user</li>
-<li>The Zip extension must be available on your server</li>
-<li>The config parameter <code class="docutils literal"><span class="pre">PLUGIN_INSTALLER</span></code> must be set at <code class="docutils literal"><span class="pre">true</span></code></li>
+<li><p class="first">Директория плагинов должна быть доступна на запись от пользователя веб сервера</p>
+</li>
+<li><p class="first">Расширение zip должно быть доступно на вашем сервере</p>
+</li>
+<li><p class="first">Параметр в конфигурации <code class="docutils literal"><span class="pre">PLUGIN_INSTALLER</span></code> должен быть установлен в <code class="docutils literal"><span class="pre">true</span></code></p>
+</li>
 </ul>
-<p>To disable this feature, change the value of <code class="docutils literal"><span class="pre">PLUGIN_INSTALLER</span></code> to
-<code class="docutils literal"><span class="pre">false</span></code> in your config file. You can also change the permissions of
-the plugin folder on the filesystem.</p>
-<p>Only administrators are allowed to install plugins from the user
-interface.</p>
-<p>By default, only plugin listed on Kanboard&#8217;s website are available.</p>
+<p>Для отключения этой возможности, измените значение в конфигурационном файле <code class="docutils literal"><span class="pre">PLUGIN_INSTALLER</span></code> на <code class="docutils literal"><span class="pre">false</span></code>. Также, вы должны изменить права доступа на директорию плагинов.</p>
+<p>Только администраторы могут устанавливать плагины через пользовательский интерфейс.</p>
+<p>По умолчанию, доступны только плагины из списка на веб сайте Канборда.</p>
 </div>
 
 

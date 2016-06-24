@@ -3,65 +3,68 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-24 09:42+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/plugin-directory.rst:2
 msgid "Plugin Directory Configuration"
-msgstr ""
+msgstr "Настройка директории плагинов"
 
 #: ../../source/plugin-directory.rst:4
 msgid ""
-"To install, update and remove plugins from the user interface, you must "
-"have those requirements:"
+"To install, update and remove plugins from the user interface, you must have "
+"those requirements:"
 msgstr ""
+"Для установки, обновления и удаления плагинов в интерфейсе пользователя, вам "
+"необходимо выполнить следующие пункты:"
 
 #: ../../source/plugin-directory.rst:7
 msgid "The plugin directory must be writeable by the web server user"
 msgstr ""
+"Директория плагинов должна быть доступна на запись от пользователя веб "
+"сервера"
 
 #: ../../source/plugin-directory.rst:8
 msgid "The Zip extension must be available on your server"
-msgstr ""
+msgstr "Расширение zip должно быть доступно на вашем сервере"
 
 #: ../../source/plugin-directory.rst:9
 msgid "The config parameter ``PLUGIN_INSTALLER`` must be set at ``true``"
 msgstr ""
+"Параметр в конфигурации ``PLUGIN_INSTALLER`` должен быть установлен в "
+"``true``"
 
 #: ../../source/plugin-directory.rst:11
 msgid ""
 "To disable this feature, change the value of ``PLUGIN_INSTALLER`` to "
-"``false`` in your config file. You can also change the permissions of the"
-" plugin folder on the filesystem."
+"``false`` in your config file. You can also change the permissions of the "
+"plugin folder on the filesystem."
 msgstr ""
+"Для отключения этой возможности, измените значение в конфигурационном файле "
+"``PLUGIN_INSTALLER`` на ``false``. Также, вы должны изменить права доступа "
+"на директорию плагинов."
 
 #: ../../source/plugin-directory.rst:15
 msgid ""
-"Only administrators are allowed to install plugins from the user "
-"interface."
+"Only administrators are allowed to install plugins from the user interface."
 msgstr ""
+"Только администраторы могут устанавливать плагины через пользовательский "
+"интерфейс."
 
 #: ../../source/plugin-directory.rst:18
 msgid "By default, only plugin listed on Kanboard's website are available."
-msgstr ""
-
-#~ msgid ""
-#~ "To disable this feature, change the "
-#~ "value of PLUGIN_INSTALLER to false in"
-#~ " your config file. You can also "
-#~ "change the permissions of the plugin "
-#~ "folder on the filesystem."
-#~ msgstr ""
-
+msgstr "По умолчанию, доступны только плагины из списка на веб сайте Канборда."
