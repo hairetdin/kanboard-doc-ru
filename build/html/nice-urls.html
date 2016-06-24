@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>URL rewriting &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Переопределение URL &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,53 +40,54 @@
           <div class="body" role="main">
             
   <div class="section" id="url-rewriting">
-<h1>URL rewriting<a class="headerlink" href="#url-rewriting" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Kanboard is able to work indifferently with URL rewriting enabled or
-not.</p>
+<h1>Переопределение URL<a class="headerlink" href="#url-rewriting" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Канборд может работать и с переопределенными URL и с простыми.</p>
 <ul class="simple">
-<li>Example of URL rewritten: <code class="docutils literal"><span class="pre">/board/123</span></code></li>
-<li>Otherwise: <code class="docutils literal"><span class="pre">?controller=board&amp;action=show&amp;project_id=123</span></code></li>
+<li><p class="first">Пример переопределенного URL: <code class="docutils literal"><span class="pre">/board/123</span></code></p>
+</li>
+<li><p class="first">По другому: <code class="docutils literal"><span class="pre">?controller=board&amp;action=show&amp;project_id=123</span></code></p>
+</li>
 </ul>
-<p>If you use Kanboard with Apache and with the mode rewrite enabled, nice
-URLs will be used automatically. In case you get a &#8220;404 Not Found&#8221;, you
-might need to set at least the following overrides for your DocumentRoot
-to get the .htaccess files working:</p>
+<p>Если вы используете Канборд с Apache и включенным mode rewrite, красивые URL будут использоваться автоматически. В случае, если вы получаете ошибку &#8220;404 Not Found&#8221;, то возможно надо внести изменения в DocumentRoot:</p>
 <div class="code sh highlight-python"><div class="highlight"><pre><span></span>&lt;Directory /var/www/kanboard/&gt;
     AllowOverride FileInfo Options=All,MultiViews AuthConfig
 &lt;/Directory&gt;
 </pre></div>
 </div>
 <div class="section" id="url-shortcuts">
-<h2>URL Shortcuts<a class="headerlink" href="#url-shortcuts" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>URL ярлыки<a class="headerlink" href="#url-shortcuts" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Go to the task #123: <strong>/t/123</strong></li>
-<li>Go to the board of the project #2: <strong>/b/2</strong></li>
-<li>Go to the project calendar #5: <strong>/c/5</strong></li>
-<li>Go to the list view of the project #8: <strong>/l/8</strong></li>
-<li>Go to the project settings for the project id #42: <strong>/p/42</strong></li>
+<li><p class="first">Перейти к задаче #123: <strong>/t/123</strong></p>
+</li>
+<li><p class="first">Перейти на доску в проект #2: <strong>/b/2</strong></p>
+</li>
+<li><p class="first">Перейти в календарь проекта #5: <strong>/c/5</strong></p>
+</li>
+<li><p class="first">Перейти к просмотру списком проекта #8: <strong>/l/8</strong></p>
+</li>
+<li><p class="first">Перейти к настройкам проекта для проекта id #42: <strong>/p/42</strong></p>
+</li>
 </ul>
 </div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
-<p>By default, Kanboard will check if the Apache mode rewrite is enabled.</p>
-<p>To avoid the automatic detection of URL rewriting from the web server,
-you can enable this feature in your config file:</p>
+<h2>Настройка<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>По умолчанию, Канборд проверяет включен ли в Apache mode rewrite.</p>
+<p>Для исключения автоматической проверки переопределения URL на веб сервере, вы должны включить эту опцию в вашем конфигурационном фале:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>When this constant is at <code class="docutils literal"><span class="pre">true</span></code>:</p>
+<p>Когда константа имеет значение <code class="docutils literal"><span class="pre">true</span></code>:</p>
 <ul class="simple">
-<li>URLs generated from command line tools will be also converted</li>
-<li>If you use another web server than Apache, by example Nginx or
-Microsoft IIS, you have to configure yourself the URL rewriting</li>
+<li><p class="first">Сгенерированные из утилиты командной строки URL будут также преобразованы</p>
+</li>
+<li><p class="first">Если вы используете другой веб сервер вместо Apache, например Nginx или Microsoft IIS, вы можете сами настроить переопределение URL</p>
+</li>
 </ul>
-<p>Note: Kanboard always fallback to old school URLs when it&#8217;s not
-configured, this configuration is optional.</p>
+<p>Примечание: Канборд всегда использует URL по &#8220;старинке&#8221;, если данная константа не настроена. Эта настройка опциональна.</p>
 </div>
 <div class="section" id="nginx-configuration-example">
-<h2>Nginx configuration example<a class="headerlink" href="#nginx-configuration-example" title="Ссылка на этот заголовок">¶</a></h2>
-<p>In the section <code class="docutils literal"><span class="pre">server</span></code> of your Nginx config file you can use this
-example:</p>
+<h2>Пример настройки Nginx<a class="headerlink" href="#nginx-configuration-example" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В разделе <code class="docutils literal"><span class="pre">server</span></code>, вашего конфигурационного файла Nginx, вы можете использовать этот пример:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>index index.php;
 
 location / {
@@ -118,15 +119,15 @@ location ~ /\.ht {
 }
 </pre></div>
 </div>
-<p>In your Kanboard <code class="docutils literal"><span class="pre">config.php</span></code>:</p>
+<p>В конфигурационном файле Канборда <code class="docutils literal"><span class="pre">config.php</span></code>:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Adapt the example above according to your own configuration.</p>
+<p>Адаптируйте пример приведенный выше к вашей конфигурации.</p>
 </div>
 <div class="section" id="iis-configuration-example">
-<h2>IIS configuration example<a class="headerlink" href="#iis-configuration-example" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Create a web.config in you installation folder:</p>
+<h2>Пример настройки IIS<a class="headerlink" href="#iis-configuration-example" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Создайте web.config в каталоге где установлен Канборд:</p>
 <div class="code xml highlight-python"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;configuration&gt;
     &lt;system.webServer&gt;
@@ -145,11 +146,11 @@ location ~ /\.ht {
 &lt;/configuration&gt;
 </pre></div>
 </div>
-<p>In your Kanboard <code class="docutils literal"><span class="pre">config.php</span></code>:</p>
+<p>В конфигурационном файле Канборда <code class="docutils literal"><span class="pre">config.php</span></code>:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;ENABLE_URL_REWRITE&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Adapt the example above according to your own configuration.</p>
+<p>Адаптируйте пример приведенный выше к вашей конфигурации.</p>
 </div>
 </div>
 
@@ -161,11 +162,11 @@ location ~ /\.ht {
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">URL rewriting</a><ul>
-<li><a class="reference internal" href="#url-shortcuts">URL Shortcuts</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
-<li><a class="reference internal" href="#nginx-configuration-example">Nginx configuration example</a></li>
-<li><a class="reference internal" href="#iis-configuration-example">IIS configuration example</a></li>
+<li><a class="reference internal" href="#">Переопределение URL</a><ul>
+<li><a class="reference internal" href="#url-shortcuts">URL ярлыки</a></li>
+<li><a class="reference internal" href="#configuration">Настройка</a></li>
+<li><a class="reference internal" href="#nginx-configuration-example">Пример настройки Nginx</a></li>
+<li><a class="reference internal" href="#iis-configuration-example">Пример настройки IIS</a></li>
 </ul>
 </li>
 </ul>
