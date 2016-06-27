@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sqlite database management &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Настройка базы данных Sqlite &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,60 +40,50 @@
           <div class="body" role="main">
             
   <div class="section" id="sqlite-database-management">
-<h1>Sqlite database management<a class="headerlink" href="#sqlite-database-management" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Kanboard uses Sqlite by default to store its data. All tasks, projects
-and users are stored inside this database.</p>
-<p>Technically, the database is just a single file located inside the
-directory <code class="docutils literal"><span class="pre">data</span></code> and named <code class="docutils literal"><span class="pre">db.sqlite</span></code>.</p>
+<h1>Настройка базы данных Sqlite<a class="headerlink" href="#sqlite-database-management" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Канборд использует для хранения данных Sqlite по умолчанию. Все задачи, проекты и учетные записи пользователей храняться в этой базе данных.</p>
+<p>База данных Sqlite хранит данные в файле <code class="docutils literal"><span class="pre">db.sqlite</span></code> в директории <code class="docutils literal"><span class="pre">data</span></code>.</p>
 <div class="section" id="export-backup">
-<h2>Export/Backup<a class="headerlink" href="#export-backup" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Экспорт/Резервное копирование<a class="headerlink" href="#export-backup" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="command-line">
-<h3>Command line<a class="headerlink" href="#command-line" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Doing a backup is very easy, just copy the file <code class="docutils literal"><span class="pre">data/db.sqlite</span></code>
-somewhere else when nobody use the software.</p>
+<h3>Командная строка<a class="headerlink" href="#command-line" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Создание резервных копий выполняется просто, надо скопировать файл <code class="docutils literal"><span class="pre">data/db.sqlite</span></code> туда, где у вас будут хранится резервные копии.</p>
 </div>
 <div class="section" id="user-interface">
-<h3>User interface<a class="headerlink" href="#user-interface" title="Ссылка на этот заголовок">¶</a></h3>
-<p>You can also download at any time the database directly from the
-<strong>settings</strong> menu.</p>
-<p>The downloaded database is compressed with Gzip, the filename becomes
-<code class="docutils literal"><span class="pre">db.sqlite.gz</span></code>.</p>
+<h3>Пользовательский интерфейс<a class="headerlink" href="#user-interface" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Также, в любое время, вы можете скачать базу данных прямо через меню <strong>Настройки</strong>.</p>
+<p>Выгружаемая база данных упакована с помощью Gzip и имя базы выглядитит как <code class="docutils literal"><span class="pre">db.sqlite.gz</span></code>.</p>
 </div>
 </div>
 <div class="section" id="import-restoration">
-<h2>Import/Restoration<a class="headerlink" href="#import-restoration" title="Ссылка на этот заголовок">¶</a></h2>
-<p>There is actually no way to restore the database from the user
-interface. The restoration must be done manually when no body use the
-software.</p>
+<h2>Импорт/Восстановление<a class="headerlink" href="#import-restoration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Загрузить базу данных через пользовательский интерфейс невозможно. Восстановление должно быть выполнено вручную, когда никто не работает с программой.</p>
 <ul class="simple">
-<li>To restore an old backup, just replace and overwrite the actual file
-<code class="docutils literal"><span class="pre">data/db.sqlite</span></code>.</li>
-<li>To uncompress a gzipped database, execute this command from a
-terminal <code class="docutils literal"><span class="pre">gunzip</span> <span class="pre">db.sqlite.gz</span></code>.</li>
+<li><p class="first">Для восстановления резервной копии, достаточно заменить рабочий файл <code class="docutils literal"><span class="pre">data/db.sqlite</span></code>.</p>
+</li>
+<li><p class="first">Для разархивирования базы данных упакованной с помощью gzip, выполните следующую команду в терминале: <code class="docutils literal"><span class="pre">gunzip</span> <span class="pre">db.sqlite.gz</span></code>.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Occasionally, it&#8217;s possible to optimize the database file by running the
-command <code class="docutils literal"><span class="pre">VACUUM</span></code>. This command rebuild the entire database and can be
-used for several reasons:</p>
+<h2>Оптимизация<a class="headerlink" href="#optimization" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Время от времени, рекомендуется оптимизировать базу данных выполнив команду <code class="docutils literal"><span class="pre">VACUUM</span></code>. Эта команда пересоздает всю базу данных и используется в следующих случаях:</p>
 <ul class="simple">
-<li>Reduce the file size, deleting data produce empty space but doesn&#8217;t
-change the file size.</li>
-<li>The database is fragmented due to frequent inserts or updates.</li>
+<li><p class="first">Для уменьшения размера файла базы данных. В процессе работы пользователей, после удаления записей, в базе данных остается пустое пространство и, соответственно, размер файла базы данных остается прежним.</p>
+</li>
+<li><p class="first">Дефрагментация, база данных фрагментирована выполнением частыми вставками или обновлениями.</p>
+</li>
 </ul>
 <div class="section" id="from-the-command-line">
-<h3>From the command line<a class="headerlink" href="#from-the-command-line" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Выполнение оптимизации в командной строке<a class="headerlink" href="#from-the-command-line" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span></span>sqlite3 data/db.sqlite &#39;VACUUM&#39;
 </pre></div>
 </div>
 </div>
 <div class="section" id="from-the-user-interface">
-<h3>From the user interface<a class="headerlink" href="#from-the-user-interface" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Go to the menu <strong>settings</strong> and click on the link <strong>Optimize the
-database</strong>.</p>
-<p>For more information, read the <a class="reference external" href="https://sqlite.org/lang_vacuum.html">Sqlite
-documentation</a>.</p>
+<h3>Выполнение оптимизации через пользовательский интерфейс<a class="headerlink" href="#from-the-user-interface" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Перейдите в правое выпадающее меню <strong>Настройки</strong> и нажмите на ссылку <strong>Оптимизировать базу данных</strong></p>
+<p>Для дополнительной информации, изучите <a class="reference external" href="https://sqlite.org/lang_vacuum.html">документацию Sqlite</a>.</p>
 </div>
 </div>
 </div>
@@ -106,16 +96,16 @@ documentation</a>.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Sqlite database management</a><ul>
-<li><a class="reference internal" href="#export-backup">Export/Backup</a><ul>
-<li><a class="reference internal" href="#command-line">Command line</a></li>
-<li><a class="reference internal" href="#user-interface">User interface</a></li>
+<li><a class="reference internal" href="#">Настройка базы данных Sqlite</a><ul>
+<li><a class="reference internal" href="#export-backup">Экспорт/Резервное копирование</a><ul>
+<li><a class="reference internal" href="#command-line">Командная строка</a></li>
+<li><a class="reference internal" href="#user-interface">Пользовательский интерфейс</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#import-restoration">Import/Restoration</a></li>
-<li><a class="reference internal" href="#optimization">Optimization</a><ul>
-<li><a class="reference internal" href="#from-the-command-line">From the command line</a></li>
-<li><a class="reference internal" href="#from-the-user-interface">From the user interface</a></li>
+<li><a class="reference internal" href="#import-restoration">Импорт/Восстановление</a></li>
+<li><a class="reference internal" href="#optimization">Оптимизация</a><ul>
+<li><a class="reference internal" href="#from-the-command-line">Выполнение оптимизации в командной строке</a></li>
+<li><a class="reference internal" href="#from-the-user-interface">Выполнение оптимизации через пользовательский интерфейс</a></li>
 </ul>
 </li>
 </ul>
