@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>LDAP Authentication &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Аутентификация LDAP &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,12 +40,14 @@
           <div class="body" role="main">
             
   <div class="section" id="ldap-authentication">
-<h1>LDAP Authentication<a class="headerlink" href="#ldap-authentication" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Аутентификация LDAP<a class="headerlink" href="#ldap-authentication" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Требования<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>PHP LDAP extension enabled</li>
-<li>LDAP server:<ul>
+<li><p class="first">Включенное в PHP раширение LDAP</p>
+</li>
+<li><p class="first">Сервер LDAP:</p>
+<ul>
 <li>OpenLDAP</li>
 <li>Microsoft Active Directory</li>
 <li>Novell eDirectory</li>
@@ -54,57 +56,60 @@
 </ul>
 </div>
 <div class="section" id="workflow">
-<h2>Workflow<a class="headerlink" href="#workflow" title="Ссылка на этот заголовок">¶</a></h2>
-<p>When the LDAP authentication is activated, the login process works like
-that:</p>
+<h2>Рабочий процесс<a class="headerlink" href="#workflow" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Когда активирована аутентификация LDAP, процесс входа выглядит следующим образом:</p>
 <ol class="arabic simple">
-<li>Try first to authenticate the user by using the database</li>
-<li>If the user is not found inside the database, a LDAP authentication
-is performed</li>
-<li>If the LDAP authentication is successful, by default a local user is
-created automatically with no password and marked as LDAP users.</li>
+<li><p class="first">Выполняется попытка аутентификации пользователя в базе данных Канборда</p>
+</li>
+<li><p class="first">Если пользователь не найден в базе Канборда, выполняется аутентификация LDAP</p>
+</li>
+<li><p class="first">Если аутентификация LDAP выполнена успешно, по умолчанию, локальный пользователь (в Канборде) создается автоматически без пароля и помечается как пользователь LDAP.</p>
+</li>
 </ol>
-<p>The full name and the email address are automatically fetched from the
-LDAP server.</p>
+<p>Полное имя и email адрес автоматически подгружаются из сервера LDAP.</p>
 </div>
 <div class="section" id="authentication-types">
-<h2>Authentication Types<a class="headerlink" href="#authentication-types" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Типы аутентификации<a class="headerlink" href="#authentication-types" title="Ссылка на этот заголовок">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
 <col width="82%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Description</th>
+<tr class="row-odd"><th class="head"><p class="first last">Тип</p>
+</th>
+<th class="head"><p class="first last">Описание</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Proxy User</td>
-<td>A specific user is used to browse LDAP directory</td>
+<td><p class="first last">Использовать специального пользователя для просмотра директории LDAP</p>
+</td>
 </tr>
 <tr class="row-odd"><td>User</td>
-<td>The end-user credentials are used for browsing LDAP directory</td>
+<td><p class="first last">Использовать учетные данные конечного пользователя для просмотра директории LDAP</p>
+</td>
 </tr>
 <tr class="row-even"><td>Anonymous</td>
-<td>No authentication is performed for LDAP browsing</td>
+<td><p class="first last">Не надо выполнять аутентификацию для доступа к каталогу LDAP</p>
+</td>
 </tr>
 </tbody>
 </table>
-<p><strong>The recommended authentication method is &#8220;Proxy&#8221;</strong>.</p>
+<p><strong>Рекомендуемый метод аутентификации - &#8220;Proxy&#8221;</strong>.</p>
 <div class="section" id="anonymous-mode">
-<h3>Anonymous mode<a class="headerlink" href="#anonymous-mode" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Анонимный (Anonymous) метод<a class="headerlink" href="#anonymous-mode" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_BIND_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;anonymous&#39;</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_USERNAME&#39;</span><span class="p">,</span> <span class="n">null</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_PASSWORD&#39;</span><span class="p">,</span> <span class="n">null</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>This is the default value but some LDAP servers don&#8217;t allow anonymous
-browsing for security reasons.</p>
+<p>Этот метод используется по умолчанию, но некоторые сервера LDAP не поддерживают доступ анонимам, из соображений безопасности.</p>
 </div>
 <div class="section" id="proxy-mode">
-<h3>Proxy mode<a class="headerlink" href="#proxy-mode" title="Ссылка на этот заголовок">¶</a></h3>
-<p>A specific user is used to browse the LDAP directory:</p>
+<h3>Proxy метод<a class="headerlink" href="#proxy-mode" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Специальный пользователь используется для доступа к директории LDAP:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_BIND_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;proxy&#39;</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_USERNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;my proxy user&#39;</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_PASSWORD&#39;</span><span class="p">,</span> <span class="s1">&#39;my proxy password&#39;</span><span class="p">);</span>
@@ -112,46 +117,42 @@ browsing for security reasons.</p>
 </div>
 </div>
 <div class="section" id="user-mode">
-<h3>User mode<a class="headerlink" href="#user-mode" title="Ссылка на этот заголовок">¶</a></h3>
-<p>This method uses the credentials provided by the end-user.</p>
-<p>For example, Microsoft Active Directory doesn&#8217;t allow anonymous browsing
-by default and if you don&#8217;t want to use a proxy user you can use this
-method.</p>
+<h3>Пользовательский метод (user)<a class="headerlink" href="#user-mode" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Этот метод используется для доступа под учетной записью конечного пользователя.</p>
+<p>Например, Microsoft Active Directory не разрешает подключение под анонимным пользователем и если вы не хотите использовать пользователя proxy, то используйте этот метод.</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_BIND_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_USERNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">@kanboard.local&#39;</span><span class="p">);</span>
 <span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_PASSWORD&#39;</span><span class="p">,</span> <span class="n">null</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>In this case, the constant <code class="docutils literal"><span class="pre">LDAP_USERNAME</span></code> is used as a pattern to the
-ldap username, examples:</p>
+<p>В этом методе, константа <code class="docutils literal"><span class="pre">LDAP_USERNAME</span></code> использутся как шаблон для пользователя ldap, например:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">%s&#64;kanboard.local</span></code> will be replaced by <code class="docutils literal"><span class="pre">my_user&#64;kanboard.local</span></code></li>
-<li><code class="docutils literal"><span class="pre">KANBOARD\\%s</span></code> will be replaced by <code class="docutils literal"><span class="pre">KANBOARD\my_user</span></code></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">%s&#64;kanboard.local</span></code> будет заменен <code class="docutils literal"><span class="pre">my_user&#64;kanboard.local</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">KANBOARD\\%s</span></code> будет заменен на <code class="docutils literal"><span class="pre">KANBOARD\my_user</span></code></p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="user-ldap-filter">
-<h2>User LDAP filter<a class="headerlink" href="#user-ldap-filter" title="Ссылка на этот заголовок">¶</a></h2>
-<p>The configuration parameter <code class="docutils literal"><span class="pre">LDAP_USER_FILTER</span></code> is used to find users
-in LDAP directory.</p>
-<p>Examples:</p>
+<h2>Фильтр пользователей LDAP<a class="headerlink" href="#user-ldap-filter" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Параметр конфигурации <code class="docutils literal"><span class="pre">LDAP_USER_FILTER</span></code> используется для поиска пользователей по директории LDAP.</p>
+<p>Например:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">(&amp;(objectClass=user)(sAMAccountName=%s))</span></code> is replaced by
-<code class="docutils literal"><span class="pre">(&amp;(objectClass=user)(sAMAccountName=my_username))</span></code></li>
-<li><code class="docutils literal"><span class="pre">uid=%s</span></code> is replaced by <code class="docutils literal"><span class="pre">uid=my_username</span></code></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">(&amp;(objectClass=user)(sAMAccountName=%s))</span></code> будет заменено на <code class="docutils literal"><span class="pre">(&amp;(objectClass=user)(sAMAccountName=указанный_пользователь))</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">uid=%s</span></code> is replaced by <code class="docutils literal"><span class="pre">uid=указанный_пользователь</span></code></p>
+</li>
 </ul>
-<p>Other examples of <a class="reference external" href="http://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx">filters for Active
-Directory</a></p>
-<p>Example to filter access to Kanboard:</p>
+<p>Другие примеры <a class="reference external" href="http://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx">фильтров для Active Directory</a></p>
+<p>Пример фильра доступа в Канборд:</p>
 <p><code class="docutils literal"><span class="pre">(&amp;(objectClass=user)(sAMAccountName=%s)(memberOf=CN=Kanboard</span> <span class="pre">Users,CN=Users,DC=kanboard,DC=local))</span></code></p>
-<p>This example allows only people members of the group &#8220;Kanboard Users&#8221; to
-connect to Kanboard.</p>
+<p>Этот пример разрешает подключатся к Канборду только пользователям участникам группы &#8220;Kanboard Users&#8221;</p>
 </div>
 <div class="section" id="example-for-microsoft-active-directory">
-<h2>Example for Microsoft Active Directory<a class="headerlink" href="#example-for-microsoft-active-directory" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Let&#8217;s say we have a domain <code class="docutils literal"><span class="pre">KANBOARD</span></code> (kanboard.local) and the primary
-controller is <code class="docutils literal"><span class="pre">myserver.kanboard.local</span></code>.</p>
-<p>First example with proxy mode:</p>
+<h2>Пример для Microsoft Active Directory<a class="headerlink" href="#example-for-microsoft-active-directory" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Предположим, что мы имеем домен <code class="docutils literal"><span class="pre">KANBOARD</span></code> (kanboard.local) и контролер домена <code class="docutils literal"><span class="pre">myserver.kanboard.local</span></code>.</p>
+<p>Первый пример для метода прокси (proxy):</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 // Enable LDAP authentication (false by default)
@@ -169,7 +170,7 @@ define(&#39;LDAP_USER_BASE_DN&#39;, &#39;CN=Users,DC=kanboard,DC=local&#39;);
 define(&#39;LDAP_USER_FILTER&#39;, &#39;(&amp;(objectClass=user)(sAMAccountName=%s))&#39;);
 </pre></div>
 </div>
-<p>Second example with user mode:</p>
+<p>Второй пример с пользовательским методом (user):</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 // Enable LDAP authentication (false by default)
@@ -189,10 +190,9 @@ define(&#39;LDAP_USER_FILTER&#39;, &#39;(&amp;(objectClass=user)(sAMAccountName=
 </div>
 </div>
 <div class="section" id="example-for-openldap">
-<h2>Example for OpenLDAP<a class="headerlink" href="#example-for-openldap" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Our LDAP server is <code class="docutils literal"><span class="pre">myserver.example.com</span></code> and all users are stored
-under <code class="docutils literal"><span class="pre">ou=People,dc=example,dc=com</span></code>.</p>
-<p>For this example we use the anonymous binding.</p>
+<h2>Пример для OpenLDAP<a class="headerlink" href="#example-for-openldap" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Наш сервер LDAP - <code class="docutils literal"><span class="pre">myserver.example.com</span></code> и все пользователи хранятся в <code class="docutils literal"><span class="pre">ou=People,dc=example,dc=com</span></code>.</p>
+<p>Для этого примера мы использовали анонимное подключение.</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 // Enable LDAP authentication (false by default)
@@ -208,31 +208,26 @@ define(&#39;LDAP_USER_FILTER&#39;, &#39;uid=%s&#39;);
 </div>
 </div>
 <div class="section" id="disable-automatic-account-creation">
-<h2>Disable automatic account creation<a class="headerlink" href="#disable-automatic-account-creation" title="Ссылка на этот заголовок">¶</a></h2>
-<p>By default, Kanboard will create a user account automatically if nothing
-is found.</p>
-<p>You can disable this behavior if you prefer to create user accounts
-manually to restrict Kanboard to only some people.</p>
-<p>Just change the value of <code class="docutils literal"><span class="pre">LDAP_ACCOUNT_CREATION</span></code> to <code class="docutils literal"><span class="pre">false</span></code>:</p>
+<h2>Выключение автоматического создания учетных записей<a class="headerlink" href="#disable-automatic-account-creation" title="Ссылка на этот заголовок">¶</a></h2>
+<p>По умолчанию, Канборд автоматически создает учетную запись пользователя, если такой пользователь не найден.</p>
+<p>Вы можете выключить это поведение, если вы предпочитаете создавать учетные записи вручную.</p>
+<p>Для этого установите значение <code class="docutils literal"><span class="pre">LDAP_ACCOUNT_CREATION</span></code> в <code class="docutils literal"><span class="pre">false</span></code>:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Automatically create user account
 define(&#39;LDAP_ACCOUNT_CREATION&#39;, false);
 </pre></div>
 </div>
 </div>
 <div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Ссылка на этот заголовок">¶</a></h2>
-<p>If SELinux is enabled, you have to allow Apache to reach out your LDAP
-server.</p>
+<h2>Устранение неисправностей<a class="headerlink" href="#troubleshooting" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если включен SELinux, вы должны разрешить Apache доступ к вашему серверу LDAP.</p>
 <ul class="simple">
-<li>You can switch SELinux to the permissive mode or disable it (not
-recommended)</li>
-<li>You can allow all network connections, by example
-<code class="docutils literal"><span class="pre">setsebool</span> <span class="pre">-P</span> <span class="pre">httpd_can_network_connect=1</span></code> or have a more
-restrictive rule</li>
+<li><p class="first">Вы должны переключить SELinux в разрешающий режим (permissive mode) или совсем выключить (не рекомендуется)</p>
+</li>
+<li><p class="first">Вы должны разрешить все сетевые подключения, например <code class="docutils literal"><span class="pre">setsebool</span> <span class="pre">-P</span> <span class="pre">httpd_can_network_connect=1</span></code> или назначить более ограничивающие правила</p>
+</li>
 </ul>
-<p>In any case, refer to the official Redhat/Centos documentation.</p>
-<p>If you are not able to setup correctly the LDAP authentication, you can
-<a class="reference external" href="config.markdown">enable the debug mode</a> and watch log files.</p>
+<p>В любом случае, ознакомтесь с официальной документацией Redhat/Centos.</p>
+<p>Если вам не удается настроить аутентификацию LDAP, то вы можете <a class="reference external" href="config.html">включить режим отладки</a> и посмотреть файлы событий.</p>
 </div>
 </div>
 
@@ -244,20 +239,20 @@ restrictive rule</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">LDAP Authentication</a><ul>
-<li><a class="reference internal" href="#requirements">Requirements</a></li>
-<li><a class="reference internal" href="#workflow">Workflow</a></li>
-<li><a class="reference internal" href="#authentication-types">Authentication Types</a><ul>
-<li><a class="reference internal" href="#anonymous-mode">Anonymous mode</a></li>
-<li><a class="reference internal" href="#proxy-mode">Proxy mode</a></li>
-<li><a class="reference internal" href="#user-mode">User mode</a></li>
+<li><a class="reference internal" href="#">Аутентификация LDAP</a><ul>
+<li><a class="reference internal" href="#requirements">Требования</a></li>
+<li><a class="reference internal" href="#workflow">Рабочий процесс</a></li>
+<li><a class="reference internal" href="#authentication-types">Типы аутентификации</a><ul>
+<li><a class="reference internal" href="#anonymous-mode">Анонимный (Anonymous) метод</a></li>
+<li><a class="reference internal" href="#proxy-mode">Proxy метод</a></li>
+<li><a class="reference internal" href="#user-mode">Пользовательский метод (user)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#user-ldap-filter">User LDAP filter</a></li>
-<li><a class="reference internal" href="#example-for-microsoft-active-directory">Example for Microsoft Active Directory</a></li>
-<li><a class="reference internal" href="#example-for-openldap">Example for OpenLDAP</a></li>
-<li><a class="reference internal" href="#disable-automatic-account-creation">Disable automatic account creation</a></li>
-<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#user-ldap-filter">Фильтр пользователей LDAP</a></li>
+<li><a class="reference internal" href="#example-for-microsoft-active-directory">Пример для Microsoft Active Directory</a></li>
+<li><a class="reference internal" href="#example-for-openldap">Пример для OpenLDAP</a></li>
+<li><a class="reference internal" href="#disable-automatic-account-creation">Выключение автоматического создания учетных записей</a></li>
+<li><a class="reference internal" href="#troubleshooting">Устранение неисправностей</a></li>
 </ul>
 </li>
 </ul>
