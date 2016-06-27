@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Postgresql configuration &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Настройка Postgresql &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,29 +40,29 @@
           <div class="body" role="main">
             
   <div class="section" id="postgresql-configuration">
-<h1>Postgresql configuration<a class="headerlink" href="#postgresql-configuration" title="Ссылка на этот заголовок">¶</a></h1>
-<p>By default, Kanboard use Sqlite to store its data but it&#8217;s also possible
-to use Postgresql.</p>
+<h1>Настройка Postgresql<a class="headerlink" href="#postgresql-configuration" title="Ссылка на этот заголовок">¶</a></h1>
+<p>По умолчанию, Канборд использует для хранения данных Sqlite, но возможно использовать и Postgresql.</p>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Требования<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Postgresql server already installed and configured</li>
-<li>The PHP extension <code class="docutils literal"><span class="pre">pdo_pgsql</span></code> installed (Debian/Ubuntu:
-<code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">php5-pgsql</span></code>)</li>
+<li><p class="first">Установленный и настроенный сервер Postgresql</p>
+</li>
+<li><p class="first">Установленное PHP расширение - <code class="docutils literal"><span class="pre">pdo_pgsql</span></code> (Debian/Ubuntu: <code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">php5-pgsql</span></code>)</p>
+</li>
 </ul>
-<p>Note: Kanboard is tested with <strong>Postgresql 9.3 and 9.4</strong></p>
+<p>Примечание: работа Канборда протестирована с <strong>Postgresql 9.3 и 9.4</strong></p>
 </div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройка<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="create-an-empty-database-with-the-command-pgsql">
-<h3>Create an empty database with the command <code class="docutils literal"><span class="pre">pgsql</span></code>:<a class="headerlink" href="#create-an-empty-database-with-the-command-pgsql" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Создайте пустую базу данных выполнив команду <code class="docutils literal"><span class="pre">pgsql</span></code>:<a class="headerlink" href="#create-an-empty-database-with-the-command-pgsql" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="code sql highlight-python"><div class="highlight"><pre><span></span>CREATE DATABASE kanboard;
 </pre></div>
 </div>
 </div>
 <div class="section" id="create-a-config-file">
-<h3>Create a config file<a class="headerlink" href="#create-a-config-file" title="Ссылка на этот заголовок">¶</a></h3>
-<p>The file <code class="docutils literal"><span class="pre">config.php</span></code> should contain those values:</p>
+<h3>Создание конфигурационного файла<a class="headerlink" href="#create-a-config-file" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Файл <code class="docutils literal"><span class="pre">config.php</span></code> должен содержать следующие значения:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 // We choose to use Postgresql instead of Sqlite
@@ -75,20 +75,16 @@ define(&#39;DB_HOSTNAME&#39;, &#39;REPLACE_ME&#39;);
 define(&#39;DB_NAME&#39;, &#39;kanboard&#39;);
 </pre></div>
 </div>
-<p>Note: You can also rename the template file <code class="docutils literal"><span class="pre">config.default.php</span></code> to
-<code class="docutils literal"><span class="pre">config.php</span></code>.</p>
+<p>Примечание: Вы можете переименовать демонстрационный файл <code class="docutils literal"><span class="pre">config.default.php</span></code> в <code class="docutils literal"><span class="pre">config.php</span></code>.</p>
 </div>
 <div class="section" id="importing-sql-dump-alternative-method">
-<h3>Importing SQL dump (alternative method)<a class="headerlink" href="#importing-sql-dump-alternative-method" title="Ссылка на этот заголовок">¶</a></h3>
-<p>For the first time, Kanboard will run one by one each database migration
-and this process can take some time according to your configuration.</p>
-<p>To avoid any issues or potential timeouts you can initialize the
-database directly by importing the SQL schema:</p>
+<h3>Импортирование дампа SQL (альтернативный метод)<a class="headerlink" href="#importing-sql-dump-alternative-method" title="Ссылка на этот заголовок">¶</a></h3>
+<p>В первый раз, Канборд запускает по очереди каждую миграцию базы данных и этот процес может занять некоторое время, в зависимости от вашей конфигурации.</p>
+<p>Для избежания проблем или задержек вы можете инициализировать базу данных напрямую посредством импорта схемы SQL:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>psql -U postgres my_database &lt; app/Schema/Sql/postgres.sql
 </pre></div>
 </div>
-<p>The file <code class="docutils literal"><span class="pre">app/Schema/Sql/postgres.sql</span></code> is a sql dump that represents
-the last version of the database.</p>
+<p>Файл <code class="docutils literal"><span class="pre">app/Schema/Sql/postgres.sql</span></code> - это sql дамп, который представляет последнюю версию базы данных.</p>
 </div>
 </div>
 </div>
@@ -101,12 +97,12 @@ the last version of the database.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Postgresql configuration</a><ul>
-<li><a class="reference internal" href="#requirements">Requirements</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a><ul>
-<li><a class="reference internal" href="#create-an-empty-database-with-the-command-pgsql">Create an empty database with the command <code class="docutils literal"><span class="pre">pgsql</span></code>:</a></li>
-<li><a class="reference internal" href="#create-a-config-file">Create a config file</a></li>
-<li><a class="reference internal" href="#importing-sql-dump-alternative-method">Importing SQL dump (alternative method)</a></li>
+<li><a class="reference internal" href="#">Настройка Postgresql</a><ul>
+<li><a class="reference internal" href="#requirements">Требования</a></li>
+<li><a class="reference internal" href="#configuration">Настройка</a><ul>
+<li><a class="reference internal" href="#create-an-empty-database-with-the-command-pgsql">Создайте пустую базу данных выполнив команду <code class="docutils literal"><span class="pre">pgsql</span></code>:</a></li>
+<li><a class="reference internal" href="#create-a-config-file">Создание конфигурационного файла</a></li>
+<li><a class="reference internal" href="#importing-sql-dump-alternative-method">Импортирование дампа SQL (альтернативный метод)</a></li>
 </ul>
 </li>
 </ul>
