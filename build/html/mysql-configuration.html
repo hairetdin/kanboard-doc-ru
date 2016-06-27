@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Mysql/MariaDB Configuration &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Настройка Mysql/MariaDB &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,30 +40,30 @@
           <div class="body" role="main">
             
   <div class="section" id="mysql-mariadb-configuration">
-<h1>Mysql/MariaDB Configuration<a class="headerlink" href="#mysql-mariadb-configuration" title="Ссылка на этот заголовок">¶</a></h1>
-<p>By default Kanboard use Sqlite to stores its data. However it&#8217;s possible
-to use Mysql or MariaDB instead of Sqlite.</p>
+<h1>Настройка Mysql/MariaDB<a class="headerlink" href="#mysql-mariadb-configuration" title="Ссылка на этот заголовок">¶</a></h1>
+<p>По умолчанию Канборд использует для хранения данных Sqlite. Вместо Sqlite возможно использовать Mysql или MariaDB.</p>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Требования<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Mysql server</li>
-<li>The PHP extension <code class="docutils literal"><span class="pre">pdo_mysql</span></code> installed</li>
+<li><p class="first">Сервер Mysql</p>
+</li>
+<li><p class="first">Установленное расширение PHP - <code class="docutils literal"><span class="pre">pdo_mysql</span></code></p>
+</li>
 </ul>
-<p>Note: Kanboard is tested with <strong>Mysql &gt;= 5.5 and MariaDB &gt;= 10.0</strong></p>
+<p>Примечание: работа Канборда протестирована с <strong>Mysql &gt;= 5.5 и MariaDB &gt;= 10.0</strong></p>
 </div>
 <div class="section" id="mysql-configuration">
-<h2>Mysql configuration<a class="headerlink" href="#mysql-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Настройка Mysql<a class="headerlink" href="#mysql-configuration" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="create-a-database">
-<h3>Create a database<a class="headerlink" href="#create-a-database" title="Ссылка на этот заголовок">¶</a></h3>
-<p>The first step is to create a database on your Mysql server. By example,
-you can do that with the command line mysql client:</p>
+<h3>Создание базы данных<a class="headerlink" href="#create-a-database" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Первым шагом надо создать базу данных на вашем сервере Mysql. Например, вы можете создать базу в командной строке клиента mysql:</p>
 <div class="code sql highlight-python"><div class="highlight"><pre><span></span>CREATE DATABASE kanboard;
 </pre></div>
 </div>
 </div>
 <div class="section" id="create-a-config-file">
-<h3>Create a config file<a class="headerlink" href="#create-a-config-file" title="Ссылка на этот заголовок">¶</a></h3>
-<p>The file <code class="docutils literal"><span class="pre">config.php</span></code> should contains those values:</p>
+<h3>Создание файла конфигурации<a class="headerlink" href="#create-a-config-file" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Файл <code class="docutils literal"><span class="pre">config.php</span></code> должен содержать следующие значения:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 
 // We choose to use Mysql instead of Sqlite
@@ -76,25 +76,21 @@ define(&#39;DB_HOSTNAME&#39;, &#39;REPLACE_ME&#39;);
 define(&#39;DB_NAME&#39;, &#39;kanboard&#39;);
 </pre></div>
 </div>
-<p>Note: You can also rename the template file <code class="docutils literal"><span class="pre">config.default.php</span></code> to
-<code class="docutils literal"><span class="pre">config.php</span></code>.</p>
+<p>Примечание: Вы можете переименовать демонстрационный файл <code class="docutils literal"><span class="pre">config.default.php</span></code> в <code class="docutils literal"><span class="pre">config.php</span></code>.</p>
 </div>
 <div class="section" id="importing-sql-dump-alternative-method">
-<h3>Importing SQL dump (alternative method)<a class="headerlink" href="#importing-sql-dump-alternative-method" title="Ссылка на этот заголовок">¶</a></h3>
-<p>For the first time, Kanboard will run one by one each database migration
-and this process can take some time according to your configuration.</p>
-<p>To avoid any potential timeout you can initialize the database directly
-by importing the SQL schema:</p>
+<h3>Импорт SQL дампа (альтернативный метод)<a class="headerlink" href="#importing-sql-dump-alternative-method" title="Ссылка на этот заголовок">¶</a></h3>
+<p>В первый раз, Канборд запускает по очереди каждую миграцию базы данных и этот процес может занять некоторое время, в зависимости от вашей конфигурации.</p>
+<p>Чтобы избежать задержек, вы можете инициализировать базу данных напрямую, имопртируя SQL схему:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>mysql -u root -p my_database &lt; app/Schema/Sql/mysql.sql
 </pre></div>
 </div>
-<p>The file <code class="docutils literal"><span class="pre">app/Schema/Sql/mysql.sql</span></code> is a SQL dump that represents the
-last version of the database.</p>
+<p>Файл <a href="#id1"><span class="problematic" id="id2">``</span></a>app/Schema/Sql/mysql.sql``это SQL дамп, который представляет последнюю версию базы данных.</p>
 </div>
 </div>
 <div class="section" id="ssl-configuration">
-<h2>SSL configuration<a class="headerlink" href="#ssl-configuration" title="Ссылка на этот заголовок">¶</a></h2>
-<p>These parameters have to be defined to enable the Mysql SSL connection:</p>
+<h2>Конфигурация SSL<a class="headerlink" href="#ssl-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Эти параметры должны быть указаны для включения соединения Mysql SSL:</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>// Mysql SSL key
 define(&#39;DB_SSL_KEY&#39;, &#39;/path/to/client-key.pem&#39;);
 
@@ -116,15 +112,15 @@ define(&#39;DB_SSL_CA&#39;, &#39;/path/to/ca-cert.pem&#39;);
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Mysql/MariaDB Configuration</a><ul>
-<li><a class="reference internal" href="#requirements">Requirements</a></li>
-<li><a class="reference internal" href="#mysql-configuration">Mysql configuration</a><ul>
-<li><a class="reference internal" href="#create-a-database">Create a database</a></li>
-<li><a class="reference internal" href="#create-a-config-file">Create a config file</a></li>
-<li><a class="reference internal" href="#importing-sql-dump-alternative-method">Importing SQL dump (alternative method)</a></li>
+<li><a class="reference internal" href="#">Настройка Mysql/MariaDB</a><ul>
+<li><a class="reference internal" href="#requirements">Требования</a></li>
+<li><a class="reference internal" href="#mysql-configuration">Настройка Mysql</a><ul>
+<li><a class="reference internal" href="#create-a-database">Создание базы данных</a></li>
+<li><a class="reference internal" href="#create-a-config-file">Создание файла конфигурации</a></li>
+<li><a class="reference internal" href="#importing-sql-dump-alternative-method">Импорт SQL дампа (альтернативный метод)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ssl-configuration">SSL configuration</a></li>
+<li><a class="reference internal" href="#ssl-configuration">Конфигурация SSL</a></li>
 </ul>
 </li>
 </ul>
