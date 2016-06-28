@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>LDAP Configuration Examples &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Пример конфигурации LDAP &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,15 +40,20 @@
           <div class="body" role="main">
             
   <div class="section" id="ldap-configuration-examples">
-<h1>LDAP Configuration Examples<a class="headerlink" href="#ldap-configuration-examples" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Пример конфигурации LDAP<a class="headerlink" href="#ldap-configuration-examples" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="microsoft-active-directory">
 <h2>Microsoft Active Directory<a class="headerlink" href="#microsoft-active-directory" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>User authentication</li>
-<li>Download the user profile picture from Active Directory</li>
-<li>Set user language from LDAP attribute</li>
-<li>Kanboard roles are mapped to Active Directory groups</li>
-<li>LDAP group providers is enabled</li>
+<li><p class="first">Аутентификация пользователя</p>
+</li>
+<li><p class="first">Загрузка пользовательского профиля из Active Directory</p>
+</li>
+<li><p class="first">Установка языка пользователя из атрибутов LDAP</p>
+</li>
+<li><p class="first">Роли в Канборд сопоставляются с группами в Active Directory</p>
+</li>
+<li><p class="first">Поставщики групп LDAP включены</p>
+</li>
 </ul>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_AUTH&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
 
@@ -78,8 +83,8 @@
 </div>
 </div>
 <div class="section" id="openldap-with-memberof-overlay">
-<h2>OpenLDAP with memberOf overlay<a class="headerlink" href="#openldap-with-memberof-overlay" title="Ссылка на этот заголовок">¶</a></h2>
-<p>User LDIF example:</p>
+<h2>OpenLDAP с memberOf overlay<a class="headerlink" href="#openldap-with-memberof-overlay" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Пример LDIF пользователя:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>dn: uid=manager,ou=Users,dc=kanboard,dc=local
 objectClass: top
 objectClass: person
@@ -95,7 +100,7 @@ userPassword: password
 memberOf: cn=Kanboard Managers,ou=Groups,dc=kanboard,dc=local
 </pre></div>
 </div>
-<p>Group LDIF example:</p>
+<p>Пример LDIF группы:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>dn: cn=Kanboard Managers,ou=Groups,dc=kanboard,dc=local
 objectClass: top
 objectClass: groupOfNames
@@ -103,11 +108,14 @@ cn: Kanboard Managers
 member: uid=manager,ou=Users,dc=kanboard,dc=local
 </pre></div>
 </div>
-<p>Kanboard Configuration:</p>
+<p>Конфигурация Канборд:</p>
 <ul class="simple">
-<li>User authentication</li>
-<li>Kanboard roles are mapped to LDAP groups</li>
-<li>LDAP group providers is enabled</li>
+<li><p class="first">Аутентификация пользователя</p>
+</li>
+<li><p class="first">Роли в Канборд сопоставляются с группами LDAP</p>
+</li>
+<li><p class="first">Поставщики групп LDAP включены</p>
+</li>
 </ul>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_AUTH&#39;</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
 
@@ -132,8 +140,8 @@ member: uid=manager,ou=Users,dc=kanboard,dc=local
 </div>
 </div>
 <div class="section" id="openldap-with-posix-groups-memberuid">
-<h2>OpenLDAP with Posix groups (memberUid)<a class="headerlink" href="#openldap-with-posix-groups-memberuid" title="Ссылка на этот заголовок">¶</a></h2>
-<p>User LDIF example:</p>
+<h2>OpenLDAP с Posix groups (memberUid)<a class="headerlink" href="#openldap-with-posix-groups-memberuid" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Пример LDIF пользователя:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>dn: uid=manager,ou=Users,dc=kanboard,dc=local
 objectClass: inetOrgPerson
 objectClass: posixAccount
@@ -150,7 +158,7 @@ homeDirectory: /home/manager
 mail: manager@kanboard.local
 </pre></div>
 </div>
-<p>Group LDIF example:</p>
+<p>Пример LDIF группы:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>dn: cn=Kanboard Managers,ou=Groups,dc=kanboard,dc=local
 objectClass: posixGroup
 cn: Kanboard Managers
@@ -158,11 +166,14 @@ gidNumber: 5001
 memberUid: manager
 </pre></div>
 </div>
-<p>Kanboard Configuration:</p>
+<p>Конфигурация Канборд:</p>
 <ul class="simple">
-<li>User authentication</li>
-<li>Kanboard roles are mapped to LDAP groups</li>
-<li>LDAP group providers is enabled</li>
+<li><p class="first">Аутентификация пользователя</p>
+</li>
+<li><p class="first">Роли в Канборд сопоставляются с группами LDAP</p>
+</li>
+<li><p class="first">Поставщики групп LDAP включены</p>
+</li>
 </ul>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;LDAP_AUTH&#39;, true);
 
@@ -190,8 +201,8 @@ define(&#39;LDAP_GROUP_ATTRIBUTE_NAME&#39;, &#39;cn&#39;);
 </div>
 </div>
 <div class="section" id="openldap-with-groupofnames">
-<h2>OpenLDAP with groupOfNames<a class="headerlink" href="#openldap-with-groupofnames" title="Ссылка на этот заголовок">¶</a></h2>
-<p>User LDIF example:</p>
+<h2>OpenLDAP с groupOfNames<a class="headerlink" href="#openldap-with-groupofnames" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Пример LDIF пользователя:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>dn: uid=manager,ou=Users,dc=kanboard,dc=local
 objectClass: top
 objectClass: person
@@ -206,7 +217,7 @@ mail: manager@kanboard.local
 userPassword: password
 </pre></div>
 </div>
-<p>Group LDIF example:</p>
+<p>Пример LDIF группы:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>dn: cn=Kanboard Managers,ou=Groups,dc=kanboard,dc=local
 objectClass: top
 objectClass: groupOfNames
@@ -214,11 +225,14 @@ cn: Kanboard Managers
 member: uid=manager,ou=Users,dc=kanboard,dc=local
 </pre></div>
 </div>
-<p>Kanboard Configuration:</p>
+<p>Конфигурация Канборд:</p>
 <ul class="simple">
-<li>User authentication</li>
-<li>Kanboard roles are mapped to LDAP groups</li>
-<li>LDAP group providers is enabled</li>
+<li><p class="first">Аутентификация пользователя</p>
+</li>
+<li><p class="first">Роли в Канборд сопоставляются с группами LDAP</p>
+</li>
+<li><p class="first">Поставщики групп LDAP включены</p>
+</li>
 </ul>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span>define(&#39;LDAP_AUTH&#39;, true);
 
@@ -255,11 +269,11 @@ define(&#39;LDAP_GROUP_ATTRIBUTE_NAME&#39;, &#39;cn&#39;);
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">LDAP Configuration Examples</a><ul>
+<li><a class="reference internal" href="#">Пример конфигурации LDAP</a><ul>
 <li><a class="reference internal" href="#microsoft-active-directory">Microsoft Active Directory</a></li>
-<li><a class="reference internal" href="#openldap-with-memberof-overlay">OpenLDAP with memberOf overlay</a></li>
-<li><a class="reference internal" href="#openldap-with-posix-groups-memberuid">OpenLDAP with Posix groups (memberUid)</a></li>
-<li><a class="reference internal" href="#openldap-with-groupofnames">OpenLDAP with groupOfNames</a></li>
+<li><a class="reference internal" href="#openldap-with-memberof-overlay">OpenLDAP с memberOf overlay</a></li>
+<li><a class="reference internal" href="#openldap-with-posix-groups-memberuid">OpenLDAP с Posix groups (memberUid)</a></li>
+<li><a class="reference internal" href="#openldap-with-groupofnames">OpenLDAP с groupOfNames</a></li>
 </ul>
 </li>
 </ul>
