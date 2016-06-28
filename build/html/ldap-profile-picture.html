@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>LDAP User Profile Photo &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Фотография пользователя из профиля LDAP &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,29 +40,22 @@
           <div class="body" role="main">
             
   <div class="section" id="ldap-user-profile-photo">
-<h1>LDAP User Profile Photo<a class="headerlink" href="#ldap-user-profile-photo" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Kanboard can download automatically user pictures from the LDAP server.</p>
-<p>This feature is enabled only if LDAP authentication is activated and the
-parameter <code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_PHOTO</span></code> is defined.</p>
+<h1>Фотография пользователя из профиля LDAP<a class="headerlink" href="#ldap-user-profile-photo" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Канборд может автоматически загружать фотографию пользователя из сервера LDAP.</p>
+<p>Эта функция возможна только если активирована аутентификация LDAP и указан параметр <code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_PHOTO</span></code>.</p>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
-<p>In your <code class="docutils literal"><span class="pre">config.php</span></code>, you have to set the LDAP attribute used to store
-the image.</p>
+<h2>Настройка<a class="headerlink" href="#configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В вашем <code class="docutils literal"><span class="pre">config.php</span></code>, вы должны установить атрибут LDAP, используемый для хранения изображения.</p>
 <div class="code php highlight-python"><div class="highlight"><pre><span></span><span class="n">define</span><span class="p">(</span><span class="s1">&#39;LDAP_USER_ATTRIBUTE_PHOTO&#39;</span><span class="p">,</span> <span class="s1">&#39;jpegPhoto&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Usually, the attributes <code class="docutils literal"><span class="pre">jpegPhoto</span></code> or <code class="docutils literal"><span class="pre">thumbnailPhoto</span></code> are used.
-The image can be stored in JPEG or PNG format.</p>
-<p>To upload the image in the user profile, Active Directory administrators
-may use software like <a class="reference external" href="http://www.cjwdev.co.uk/Software/ADPhotoEdit/Info.html">AD Photo
-Edit</a>.</p>
+<p>Обычно используются атрибуты <code class="docutils literal"><span class="pre">jpegPhoto</span></code> или <code class="docutils literal"><span class="pre">thumbnailPhoto</span></code>. Изображения могут хранится в формате JPEG или PNG.</p>
+<p>Для загрузки изображения в пользовательски профиль, администраторы Active Directory могут использовать программу <a class="reference external" href="http://www.cjwdev.co.uk/Software/ADPhotoEdit/Info.html">AD Photo Edit</a>.</p>
 </div>
 <div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
-<p>The profile image is <strong>downloaded at login time only if the user do not
-already have uploaded an image previously</strong>.</p>
-<p>To change the user photo, the previous one have to be removed manually
-in the user profile.</p>
+<h2>Примечание<a class="headerlink" href="#notes" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Изображение из профиля <strong>загружается при входе, только если изображение не было ранее загружено</strong></p>
+<p>Для смены изображения, нужно вручную удалить ранее загруженное изображение из профиля пользователя.</p>
 </div>
 </div>
 
@@ -74,9 +67,9 @@ in the user profile.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">LDAP User Profile Photo</a><ul>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
-<li><a class="reference internal" href="#notes">Notes</a></li>
+<li><a class="reference internal" href="#">Фотография пользователя из профиля LDAP</a><ul>
+<li><a class="reference internal" href="#configuration">Настройка</a></li>
+<li><a class="reference internal" href="#notes">Примечание</a></li>
 </ul>
 </li>
 </ul>
