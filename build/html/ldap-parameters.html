@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>LDAP Configuration Parameters &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Параметры LDAP для конфигурации &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,8 +40,8 @@
           <div class="body" role="main">
             
   <div class="section" id="ldap-configuration-parameters">
-<h1>LDAP Configuration Parameters<a class="headerlink" href="#ldap-configuration-parameters" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Here is the list of available LDAP parameters:</p>
+<h1>Параметры LDAP для конфигурации<a class="headerlink" href="#ldap-configuration-parameters" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Список доступных параметров LDAP:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -49,109 +49,145 @@
 <col width="88%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Default value</th>
-<th class="head">Description</th>
+<tr class="row-odd"><th class="head"><p class="first last">Параметр</p>
+</th>
+<th class="head"><p class="first last">Значение по умолчанию</p>
+</th>
+<th class="head"><p class="first last">Описание</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_AUTH</span></code></td>
 <td>false</td>
-<td>Enable LDAP authentication</td>
+<td><p class="first last">Включить аутентификацию LDAP</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_SERVER</span></code></td>
-<td>Empty</td>
-<td>LDAP server hostname</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Имя сервера LDAP</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_PORT</span></code></td>
 <td>389</td>
-<td>LDAP server port</td>
+<td><p class="first last">Порт сервера LDAP</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_SSL_VERIFY</span></code></td>
 <td>true</td>
-<td>Validate certificate for <code class="docutils literal"><span class="pre">ldaps://</span></code> style URL</td>
+<td><p class="first last">Проверка сертификата для URL <code class="docutils literal"><span class="pre">ldaps://</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_START_TLS</span></code></td>
 <td>false</td>
-<td>Enable LDAP start TLS</td>
+<td><p class="first last">Включение LDAP start TLS</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_USERNAME_CASE_SENSITIVE</span></code></td>
 <td>false</td>
-<td>Kanboard lowercase the ldap username to avoid duplicate users (the database is case sensitive)</td>
+<td><p class="first last">Включение/выключение нижнего и верхнего регистра букв в Канборд для пользователей ldap для исключения дублирования пользователей (база данных чувствительна к регистру)</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_BIND_TYPE</span></code></td>
 <td>anonymous</td>
-<td>Bind type: &#8220;anonymous&#8221;, &#8220;user&#8221; or &#8220;proxy&#8221;</td>
+<td><p class="first last">Тип подключения: &#8220;anonymous&#8221;, &#8220;user&#8221; or &#8220;proxy&#8221;</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_USERNAME</span></code></td>
 <td>null</td>
-<td>LDAP username to use with proxy mode or username pattern to use with user mode</td>
+<td><p class="first last">Имя пользователя LDAP для использования в методе proxy или шаблон имени пользователя для использования в методе user</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_PASSWORD</span></code></td>
 <td>null</td>
-<td>LDAP password to use for proxy mode</td>
+<td><p class="first last">Пароль LDAP при использовании метода proxy</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_USER_BASE_DN</span></code></td>
-<td>Empty</td>
-<td>LDAP DN for users (Example: &#8220;CN=Users,DC=kanboard,DC=local&#8221;)</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Уникальное имя (DN) LDAP для пользователей (Пример: &#8220;CN=Users,DC=kanboard,DC=local&#8221;)</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_USER_FILTER</span></code></td>
-<td>Empty</td>
-<td>LDAP pattern to use when searching for a user account (Example: &#8220;(&amp;(objectClass=user)(sAMAccountName=%s))&#8221;)</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Шаблон LDAP, который используется для поиска пользователей (Пример: &#8220;(&amp;(objectClass=user)(sAMAccountName=%s))&#8221;)</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_USERNAME</span></code></td>
 <td>uid</td>
-<td>LDAP attribute for username (Example: &#8220;samaccountname&#8221;)</td>
+<td><p class="first last">Атрибут LDAP для имени пользователя (Например: &#8220;samaccountname&#8221;)</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_FULLNAME</span></code></td>
 <td>cn</td>
-<td>LDAP attribute for user full name (Example: &#8220;displayname&#8221;)</td>
+<td><p class="first last">Атрибут LDAP полного имени пользователя (Например: &#8220;displayname&#8221;)</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_EMAIL</span></code></td>
 <td>mail</td>
-<td>LDAP attribute for user email</td>
+<td><p class="first last">Атрибут LDAP для email пользователя</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_GROUPS</span></code></td>
 <td>memberof</td>
-<td>LDAP attribute to find groups in user profile</td>
+<td><p class="first last">Атрибут LDAP для поиска групп в профиле пользователя</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_PHOTO</span></code></td>
-<td>Empty</td>
-<td>LDAP attribute to find user photo (jpegPhoto or thumbnailPhoto</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Атрибут LDAP для поиска фотографии пользователя (jpegPhoto или thumbnailPhoto)</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_USER_ATTRIBUTE_LANGUAGE</span></code></td>
-<td>Empty</td>
-<td>LDAP attribute for user language (preferredlanguage), the accepted language format is &#8220;fr-FR&#8221;</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Атрибут LDAP для языка пользователя (preferredlanguage), применимый формат языка - &#8220;ru-RU&#8221;</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_USER_CREATION</span></code></td>
 <td>true</td>
-<td>Enable automatic LDAP user creation</td>
+<td><p class="first last">Включение автоматического создания пользователя из LDAP</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_GROUP_ADMIN_DN</span></code></td>
-<td>Empty</td>
-<td>LDAP DN for administrators (Example: &#8220;CN=Kanboard-Admins,CN=Users,DC=kanboard,DC=local&#8221;)</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Уникальное имя (DN) LDAP для администраторов (Например: &#8220;CN=Kanboard-Admins,CN=Users,DC=kanboard,DC=local&#8221;)</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_GROUP_MANAGER_DN</span></code></td>
-<td>Empty</td>
-<td>LDAP DN for managers (Example: &#8220;CN=Kanboard Managers,CN=Users,DC=kanboard,DC=local&#8221;)</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Уникальное имя (DN) LDAP для менеджеров (Например: &#8220;CN=Kanboard Managers,CN=Users,DC=kanboard,DC=local&#8221;)</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_GROUP_PROVIDER</span></code></td>
 <td>false</td>
-<td>Enable LDAP group provider for project permissions</td>
+<td><p class="first last">Включение поставщика групп LDAP для &#8220;Разрешения&#8221; в проектах</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">LDAP_GROUP_BASE_DN</span></code></td>
-<td>Empty</td>
-<td>LDAP Base DN for groups</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Уникальное имя (Base DN) LDAP для групп</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">LDAP_GROUP_FILTER</span></code></td>
-<td>Empty</td>
-<td>LDAP group filter (Example: &#8220;(&amp;(objectClass=group)(sAMAccountName=%s*))&#8221;) | | <code class="docutils literal"><span class="pre">LDAP_GROUP_USER_FILTER</span></code> | Empty | If defined, Kanboard will search user groups in LDAP_GROUP_BASE_DN with this filter, it&#8217;s useful only for posixGroups (Example: <code class="docutils literal"><span class="pre">(&amp;(objectClass=posixGroup)(memberUid=%s))</span></code>) | | <code class="docutils literal"><span class="pre">LDAP_GROUP_ATTRIBUTE_NAME</span></code> | cn | LDAP attribute for the group name |</td>
+<td><p class="first last">Нет значения</p>
+</td>
+<td><p class="first last">Фильтр групп LDAP (Например: &#8220;(&amp;(objectClass=group)(sAMAccountName=%s*))&#8221;) | | <code class="docutils literal"><span class="pre">LDAP_GROUP_USER_FILTER</span></code> | Empty | Если определено, то Канборд будет искать группы пользователей в LDAP_GROUP_BASE_DN с помощью этого фильтра, это удобно только для posixGroups (Например: <code class="docutils literal"><span class="pre">(&amp;(objectClass=posixGroup)(memberUid=%s))</span></code>) | | <code class="docutils literal"><span class="pre">LDAP_GROUP_ATTRIBUTE_NAME</span></code> | cn | атрибут LDAP для имени группы |</p>
+</td>
 </tr>
 </tbody>
 </table>
-<p>Notes:</p>
+<p>Примечание</p>
 <ul class="simple">
-<li>LDAP attributes must be in lowercase</li>
+<li><p class="first">Атрибуты LDAP должны быть в нижнем регистре</p>
+</li>
 </ul>
 </div>
 
