@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 12:28+0500\n"
-"PO-Revision-Date: 2016-06-16 10:58+0500\n"
+"PO-Revision-Date: 2016-06-30 09:05+0500\n"
 "Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
@@ -438,7 +438,7 @@ msgstr "`Руководство для участников проекта <cont
 
 #: ../../source/index.rst:152
 msgid "`Translations <translations.markdown>`__"
-msgstr "`Переводы <translations.html>`__"
+msgstr "`Переводы на другие языки <translations.html>`__"
 
 #: ../../source/index.rst:153
 msgid "`Coding standards <coding-standards.markdown>`__"
