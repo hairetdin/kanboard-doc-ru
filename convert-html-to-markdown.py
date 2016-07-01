@@ -9,13 +9,20 @@ import os
 import pypandoc
 import fileinput
 import re
+from shutil import copytree
 
-doc_root_dir = os.getcwd()
+root_dir = os.getcwd()
 source_dir = os.getcwd() + '/build/html'
+assets_dir = ['_images', '_sources', '_static']
 cwd = os.chdir(source_dir)
-out_dir = doc_root_dir + '/build/markdown'
+out_dir = root_dir + '/build/markdown'
+
 if not os.path.exists(out_dir):
     os.makedirs(out_dir)
+
+for a_dir in assets_dir:
+    out_asset_dir = os.path.join(out_dir, a_dir)
+    copytree(os.path.join(source_dir, a_dir), out_asset_dir)
 
 pdoc_args = []
 
