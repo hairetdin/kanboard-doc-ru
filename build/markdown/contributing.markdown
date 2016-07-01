@@ -1,114 +1,290 @@
-Contributor Guidelines[¶](#contributor-guidelines "Ссылка на этот заголовок")
-=============================================================================
+Руководство для участников проекта[¶](#contributor-guidelines "Ссылка на этот заголовок")
 
-How can I help?[¶](#how-can-i-help "Ссылка на этот заголовок")
---------------------------------------------------------------
+=========================================================================================
 
-Kanboard is not perfect but there are many ways to help:
 
--   Give feedback
--   Report bugs
--   Add or update translations
--   Improve the documentation
--   Writing code
--   Tell your friends that Kanboard is awesome :)
 
-Before doing any large undertaking, open a new issue and explain your
-proposal.
+Как я могу помочь проекту?[¶](#how-can-i-help "Ссылка на этот заголовок")
 
-I want to give feedback[¶](#i-want-to-give-feedback "Ссылка на этот заголовок")
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
--   You think something should be improved (user interface, feature
-    requests)
--   Check if your idea is not already proposed
--   Open a new issue
--   Describe your idea
--   You can also up-vote with +1 on existing proposals
 
-I want to report a bug[¶](#i-want-to-report-a-bug "Ссылка на этот заголовок")
------------------------------------------------------------------------------
 
--   Check if the issue is not already reported
--   Open a new ticket
--   Explain what is broken
--   Describe how to reproduce the bug
--   Describe your environment (Kanboard version, OS, web server, PHP
-    version, database version, hosting provider)
+Канборд пока не идеален, поэтому есть несколько вариантов помочь
 
-I want to translate Kanboard[¶](#i-want-to-translate-kanboard "Ссылка на этот заголовок")
------------------------------------------------------------------------------------------
+проекту:
 
-Kanboard is translated in many languages. However, translations are not
-complete, take look at the [translation guide to
-contribute](https://kanboard.net/documentation/translations).
 
-I want to improve the documentation[¶](#i-want-to-improve-the-documentation "Ссылка на этот заголовок")
--------------------------------------------------------------------------------------------------------
 
--   You think something is not clear, there is grammatical errors, typo
-    errors, anything.
--   The documentation is written in Markdown and stored in the folder
+-   Присылать отзывы
+
+
+
+-   Сообщать об ошибках
+
+
+
+-   Добавлять или обновлять переводы
+
+
+
+-   Улучшать документацию
+
+
+
+-   Писать код
+
+
+
+-   Рассказать друзьям, что Канборд отличная программа :)
+
+
+
+Перед тем как начать большое дело, создайте новое “обсуждение вопроса”
+
+(issue) на
+
+[https://github.com/fguillot/kanboard/issues](https://github.com/fguillot/kanboard/issues)
+
+и объясните ваше предложение.
+
+
+
+Я хочу внести предложения по проекту[¶](#i-want-to-give-feedback "Ссылка на этот заголовок")
+
+--------------------------------------------------------------------------------------------
+
+
+
+-   У вас есть идея по улучшению (пользовательский интерфейс или другие
+
+    возможности)
+
+
+
+-   Посмотрите в обсуждениях (issue), может ваша идея уже предложена
+
+    кем-то
+
+
+
+-   Откройте новое обсуждение (issue)
+
+
+
+-   Опишите вашу идею
+
+
+
+-   Вы можете проголосовать +1 за имеющиеся предложения
+
+
+
+Я хочу сообщить об ошибке[¶](#i-want-to-report-a-bug "Ссылка на этот заголовок")
+
+--------------------------------------------------------------------------------
+
+
+
+-   Убедитесь, что обсуждение вопроса (issue) ранее не публиковалось
+
+
+
+-   Откройте новую заявку (ticket)
+
+
+
+-   Опишите, что именно не работает
+
+
+
+-   Опишите, как воспроизвести ошибку (последовательность, как вы вышли
+
+    на данную ошибку)
+
+
+
+-   Опишите ваше окружение (версию Канборда, какая ОС, веб сервер,
+
+    версию PHP, база данных и версия, хостинг провайдер)
+
+
+
+Я хочу перевести Канборд на другой язык[¶](#i-want-to-translate-kanboard "Ссылка на этот заголовок")
+
+----------------------------------------------------------------------------------------------------
+
+
+
+Канборд уже переведен на несколько языков. Вы можете улучшить эти
+
+переводы. Некоторые переводы еще не завершены. Для того, чтобы сделать
+
+перевод, ознакомтесь с [руководством по переводу на другой
+
+язык](translations.markdown).
+
+
+
+Я хочу улучшить документацию[¶](#i-want-to-improve-the-documentation "Ссылка на этот заголовок")
+
+------------------------------------------------------------------------------------------------
+
+
+
+-   Вы считаете, что что-то недостаточно хорошо описано, имеются
+
+    грамматические или орфографические ошибки, что-то еще.
+
+
+
+-   Документация написана в формате Markdown и хранится в каталоге
+
     `docs`{.docutils .literal}.
--   Edit the files and send a pull-request.
--   The documentation on the official website is synchronized with the
-    repository.
 
-I want to contribute to the code[¶](#i-want-to-contribute-to-the-code "Ссылка на этот заголовок")
--------------------------------------------------------------------------------------------------
 
-Pull-requests are always welcome however, to be accepted you have to
-follow those directives:
 
--   **Before doing any large change or design proposal, open a new
-    ticket to start a discussion.**
--   If you want to add a new feature, respect the philosophy behind
-    Kanboard. **We focus on simplicity**, we don’t want to have a
-    bloated software.
--   The same apply for the user interface, **simplicity and
-    efficiency**.
--   Send only one pull-request per feature or bug fix.
--   A smaller pull-request is easier to review and faster it will be
-    merged.
--   Make sure the [unit tests pass](tests.markdown).
--   Respect the [coding standards](coding-standards.markdown).
--   Write maintainable code, avoid code duplication, use PHP good
-    practices.
+-   Редактируйте файлы и присылайте pull-request.
 
-In any case, if you are not sure about something open a new ticket.
 
-Tell your friends that Kanboard is awesome :)[¶](#tell-your-friends-that-kanboard-is-awesome "Ссылка на этот заголовок")
-------------------------------------------------------------------------------------------------------------------------
 
-If you use Kanboard, spread the word around you. Tell them that free and
-open source software are cool :)
+-   Документация на официальном вебсайте синхронизируется с
 
-### [Оглавление](index.html)
+    репозиторием.
 
--   [Contributor Guidelines](#)
-    -   [How can I help?](#how-can-i-help)
-    -   [I want to give feedback](#i-want-to-give-feedback)
-    -   [I want to report a bug](#i-want-to-report-a-bug)
-    -   [I want to translate Kanboard](#i-want-to-translate-kanboard)
-    -   [I want to improve the
-        documentation](#i-want-to-improve-the-documentation)
-    -   [I want to contribute to the
-        code](#i-want-to-contribute-to-the-code)
-    -   [Tell your friends that Kanboard is awesome
+
+
+Я хочу внести свой вклад в код[¶](#i-want-to-contribute-to-the-code "Ссылка на этот заголовок")
+
+-----------------------------------------------------------------------------------------------
+
+
+
+Pull-requests всегда приветствуются, однако, чтобы они были приняты, вы
+
+должны следовать следующим указаниям:
+
+
+
+-   **Перед тем как внести большое изменение или переделать дизайн,
+
+    откройте новую заявку (ticket) для обсуждения.**
+
+
+
+-   Если вы хотите добавить новую возможность, уважайте филосовию
+
+    Канборда: **Мы фокусируемся на простоте**, мы не хотим иметь
+
+    раздутую программу.
+
+
+
+-   Это же относится и к пользовательскому интерфейсу: **простота и
+
+    производительность**
+
+
+
+-   Присылайте только по одному pull-request для новой возможности или
+
+    исправления ошибки.
+
+
+
+-   Небольшие pull-request легче просмотреть и быстрее влить в проект.
+
+
+
+-   Убедитесь, что [модульные тесты выполняются успешно](tests.markdown).
+
+
+
+-   Уважайте [стандарты кодирования](coding-standards.markdown).
+
+
+
+-   Пишите код, который могут поддерживать другие, избегайте
+
+    дублирования, используйте лучше практики PHP.
+
+
+
+В любом случае, если вы не уверены в чем-то - открывайте новую заявку
+
+(ticket)
+
+
+
+Рассказать друзьям, что Канборд отличная программа :)[¶](#tell-your-friends-that-kanboard-is-awesome "Ссылка на этот заголовок")
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Если вы используете Канборд, покажите его и окружающим. Расскажите всем
+
+о прелестях бесплатного и опенсурсного программного обеспечения.
+
+
+
+### [Оглавление](index.markdown)
+
+
+
+-   [Руководство для участников проекта](#)
+
+    -   [Как я могу помочь проекту?](#how-can-i-help)
+
+    -   [Я хочу внести предложения по проекту](#i-want-to-give-feedback)
+
+    -   [Я хочу сообщить об ошибке](#i-want-to-report-a-bug)
+
+    -   [Я хочу перевести Канборд на другой
+
+        язык](#i-want-to-translate-kanboard)
+
+    -   [Я хочу улучшить
+
+        документацию](#i-want-to-improve-the-documentation)
+
+    -   [Я хочу внести свой вклад в
+
+        код](#i-want-to-contribute-to-the-code)
+
+    -   [Рассказать друзьям, что Канборд отличная программа
+
         :)](#tell-your-friends-that-kanboard-is-awesome)
+
+
 
 ### Related Topics
 
--   [Documentation overview](index.html)
+
+
+-   [Documentation overview](index.markdown)
+
+
 
 ### Эта страница
 
+
+
 -   [Исходный текст](_sources/contributing.txt)
+
+
 
 ### Быстрый поиск
 
+
+
 Введите слова для поиска или имя модуля, класса или функции.
 
+
+
 ©2016, Kanboard.ru. | Powered by [Sphinx 1.3.3](http://sphinx-doc.org/)
+
 & [Alabaster 0.7.8](https://github.com/bitprophet/alabaster) | [Page
+
 source](_sources/contributing.txt)
+
