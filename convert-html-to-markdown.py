@@ -24,7 +24,7 @@ for a_dir in assets_dir:
     out_asset_dir = os.path.join(out_dir, a_dir)
     copytree(os.path.join(source_dir, a_dir), out_asset_dir)
 
-pdoc_args = []
+pdoc_args = ['--no-wrap']
 
 
 def replace_html_to_md(file_name):
