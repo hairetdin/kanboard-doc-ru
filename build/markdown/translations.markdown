@@ -1,102 +1,130 @@
-Translations[¶](#translations "Ссылка на этот заголовок")
+Переводы на другие языки (локализация)[¶](#translations "Ссылка на этот заголовок")
 
-=========================================================
+===================================================================================
 
 
 
-How to translate Kanboard to a new language?[¶](#how-to-translate-kanboard-to-a-new-language "Ссылка на этот заголовок")
+Как перевести Канборд на новый язык?[¶](#how-to-translate-kanboard-to-a-new-language "Ссылка на этот заголовок")
 
-------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
 
 
 
--   Translations are stored inside the directory `app/Locale`{.docutils .literal}
+-   Переводы хранятся в директории `app/Locale`{.docutils .literal}
 
--   There is a subdirectory for each language, for example in French we have `fr_FR`{.docutils .literal}, Italian `it_IT`{.docutils .literal} etc.
 
--   A translation is a PHP file that returns an Array with a key-value pairs
 
--   The key is the original text in English and the value is the translation of the corresponding language
+-   В этой директории есть поддиректории для разных языков, например, для русского имеется `ru_RU`{.docutils .literal}, для французского - `fr_FR`{.docutils .literal} и т.д.
 
--   **French translations are always up to date**
 
--   Always use the last version (branch master)
 
+-   Переводы находятся в PHP файле, который возвращает массив с парой ключ-значение
 
 
-### Create a new translation:[¶](#create-a-new-translation "Ссылка на этот заголовок")
 
+-   Ключ - оригинальный текст на английском и значение - перевод на соответсвующем языке
 
 
-1.  Make a new directory: `app/Locale/xx_XX`{.docutils .literal} for example `app/Locale/fr_CA`{.docutils .literal} for French Canadian
 
-2.  Create a new file for the translation: `app/Locale/xx_XX/translations.php`{.docutils .literal}
+-   **Французские переводы всегда в актуальном состоянии**
 
-3.  Use the content of the French locales and replace the values
 
-4.  Update the file `app/Model/Language.php`{.docutils .literal}
 
-5.  Check with your local installation of Kanboard if everything is OK
+-   Всегда используйте последнюю версию (branch master)
 
-6.  Send a [pull-request with Github](https://help.github.com/articles/using-pull-requests/)
 
 
+### Создание нового перевода[¶](#create-a-new-translation "Ссылка на этот заголовок")
 
-How to update an existing translation?[¶](#how-to-update-an-existing-translation "Ссылка на этот заголовок")
 
-------------------------------------------------------------------------------------------------------------
 
+1.  Создайте новую директорию: `app/Locale/xx_XX`{.docutils .literal}, например `app/Locale/fr_CA`{.docutils .literal} для канадского фрацузского
 
 
-1.  Open the translation file `app/Locale/xx_XX/translations.php`{.docutils .literal}
 
-2.  Missing translations are commented with `//`{.docutils .literal} and the values are empty, just fill blank and remove the comment
+2.  Создайте новый файл для перевода: `app/Locale/xx_XX/translations.php`{.docutils .literal}
 
-3.  Check with your local installation of Kanboard and send a [pull-request](https://help.github.com/articles/using-pull-requests/)
 
 
+3.  Используйте как образец содержимое французского перевода (локализации) и замените значения
 
-How to add new translated text in the application?[¶](#how-to-add-new-translated-text-in-the-application "Ссылка на этот заголовок")
 
-------------------------------------------------------------------------------------------------------------------------------------
 
+4.  Внесите изменения в файл `app/Model/Language.php`{.docutils .literal}
 
 
-Translations are displayed with the following functions in the source code:
 
+5.  Проверьте добавленный язык на локальной версии Канборда
 
 
--   `t()`{.docutils .literal}: display text with HTML escaping
 
--   `e()`{.docutils .literal}: display text without HTML escaping
+6.  Пошлите [pull-request на Github](https://help.github.com/articles/using-pull-requests/)
 
 
 
-Always use the english version in the source code.
+Как обновить имеющийся перевод?[¶](#how-to-update-an-existing-translation "Ссылка на этот заголовок")
 
+-----------------------------------------------------------------------------------------------------
 
 
-Text strings use the function `sprintf()`{.docutils .literal} to replace elements:
 
+1.  Откройте файл перевода `app/Locale/xx_XX/translations.php`{.docutils .literal}
 
 
--   `%s`{.docutils .literal} is used to replace a string
 
--   `%d`{.docutils .literal} is used to replace an integer
+2.  Отсутсвующие переводы закоментированы - `//`{.docutils .literal} и значения пустые, нужно заполнить значения и удалить коментарий
 
 
 
-All formats are available in the [PHP documentation](http://php.net/sprintf).
+3.  Проверьте внесенные изменения на локальной версии Канборда и пошлите [pull-request](https://help.github.com/articles/using-pull-requests/)
 
 
 
-How to find missing translations in the applications?[¶](#how-to-find-missing-translations-in-the-applications "Ссылка на этот заголовок")
+Как добавить новый текст перевода в приложение?[¶](#how-to-add-new-translated-text-in-the-application "Ссылка на этот заголовок")
 
-------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------
 
 
 
-From a terminal, run the following command:
+Переводы отображаются с помощью функций в исходном коде:
+
+
+
+-   `t()`{.docutils .literal}: показывает текст с HTML escaping
+
+
+
+-   `e()`{.docutils .literal}: показывает текст без HTML escaping
+
+
+
+Всегда используйте английскую версию исходного кода.
+
+
+
+Текстовые строки используют функцию `sprintf()`{.docutils .literal} для замены элементов:
+
+
+
+-   `%s`{.docutils .literal} используется для замены строки
+
+
+
+-   `%d`{.docutils .literal} используется для замены цифры
+
+
+
+Ознакомится с доступными форматами вы можете в [документации PHP](http://php.net/sprintf).
+
+
+
+Как найти отсутствующие переводы в приложении?[¶](#how-to-find-missing-translations-in-the-applications "Ссылка на этот заголовок")
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Из терминала запустите следующую команду:
 
 
 
@@ -104,17 +132,17 @@ From a terminal, run the following command:
 
 
 
-All missing and unused translations are displayed on the screen. Put that in the French locale and sync other locales (see below).
+Все отсутствующие и неиспользуемые переводы будут показаны на экране. Добавьте их во французскую локализацию и синхронизируйте с другими локализациями (смотрите ниже)
 
 
 
-How to synchronize translation files?[¶](#how-to-synchronize-translation-files "Ссылка на этот заголовок")
+Как синхронизировать файлы переводов?[¶](#how-to-synchronize-translation-files "Ссылка на этот заголовок")
 
 ----------------------------------------------------------------------------------------------------------
 
 
 
-From a Unix shell run this command:
+В оболочке Unix запустите следующую команду:
 
 
 
@@ -122,7 +150,7 @@ From a Unix shell run this command:
 
 
 
-The French translation is used a reference to other locales.
+Французский перевод используется для ссылки на другие локализации.
 
 
 
@@ -130,19 +158,19 @@ The French translation is used a reference to other locales.
 
 
 
--   [Translations](#)
+-   [Переводы на другие языки (локализация)](#)
 
-    -   [How to translate Kanboard to a new language?](#how-to-translate-kanboard-to-a-new-language)
+    -   [Как перевести Канборд на новый язык?](#how-to-translate-kanboard-to-a-new-language)
 
-        -   [Create a new translation:](#create-a-new-translation)
+        -   [Создание нового перевода](#create-a-new-translation)
 
-    -   [How to update an existing translation?](#how-to-update-an-existing-translation)
+    -   [Как обновить имеющийся перевод?](#how-to-update-an-existing-translation)
 
-    -   [How to add new translated text in the application?](#how-to-add-new-translated-text-in-the-application)
+    -   [Как добавить новый текст перевода в приложение?](#how-to-add-new-translated-text-in-the-application)
 
-    -   [How to find missing translations in the applications?](#how-to-find-missing-translations-in-the-applications)
+    -   [Как найти отсутствующие переводы в приложении?](#how-to-find-missing-translations-in-the-applications)
 
-    -   [How to synchronize translation files?](#how-to-synchronize-translation-files)
+    -   [Как синхронизировать файлы переводов?](#how-to-synchronize-translation-files)
 
 
 

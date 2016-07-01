@@ -1,52 +1,58 @@
-Automated tests[¶](#automated-tests "Ссылка на этот заголовок")
+Автоматизированные тесты[¶](#automated-tests "Ссылка на этот заголовок")
 
-===============================================================
-
-
-
-[PHPUnit](https://phpunit.de/) is used to run automated tests on Kanboard.
+========================================================================
 
 
 
-You can run tests across different databases (Sqlite, Mysql and Postgresql) to be sure that the result is the same everywhere.
+[PHPUnit](https://phpunit.de/) используется для запуска автоматизированных тестов в Канборд.
 
 
 
-Requirements[¶](#requirements "Ссылка на этот заголовок")
-
----------------------------------------------------------
+Вы можете запускать тесты для разных баз данных (Sqlite, Mysql and Postgresql), чтобы убедится, что результаты будут одинаковые.
 
 
 
--   Linux/Unix machine
+Требования[¶](#requirements "Ссылка на этот заголовок")
+
+-------------------------------------------------------
+
+
+
+-   Компьютер Linux/Unix
+
+
 
 -   PHP cli
 
--   PHPUnit installed
-
--   Mysql and Postgresql (optional)
 
 
+-   Установленный PHPUnit
 
-Unit Tests[¶](#unit-tests "Ссылка на этот заголовок")
+
+
+-   Mysql и Postgresql (опционально)
+
+
+
+Unit тесты[¶](#unit-tests "Ссылка на этот заголовок")
 
 -----------------------------------------------------
 
 
 
-### Test with Sqlite[¶](#test-with-sqlite "Ссылка на этот заголовок")
+### Тестирование с Sqlite[¶](#test-with-sqlite "Ссылка на этот заголовок")
 
 
 
-Sqlite tests use a in-memory database, nothing is written on the file system.
+Sqlite тестирование использует базу данных в памяти, без использования записи на файловую систему.
 
 
 
-The PHPUnit config file is `tests/units.sqlite.xml`{.docutils .literal}. From your Kanboard directory, run the command `phpunit -c tests/units.sqlite.xml`{.docutils .literal}.
+Конфигурационный файл PHPUnit - `tests/units.sqlite.xml`{.docutils .literal}. Из директории Kanboard запустите команду `phpunit -c tests/units.sqlite.xml`{.docutils .literal}.
 
 
 
-Example:
+Пример:
 
 
 
@@ -90,15 +96,15 @@ Example:
 
 
 
-### Test with Mysql[¶](#test-with-mysql "Ссылка на этот заголовок")
+### Тестирование с Mysql[¶](#test-with-mysql "Ссылка на этот заголовок")
 
 
 
-You must have Mysql or MariaDb installed on localhost.
+У вас должна быть локально установлена база данных Mysql или MariaDb.
 
 
 
-By default, those credentials are used:
+По умолчанию, используются следующие учетные данные:
 
 
 
@@ -112,23 +118,23 @@ By default, those credentials are used:
 
 
 
-For each execution the database is dropped and created again.
+При каждом выполнении база данных удаляется и создается снова.
 
 
 
-The PHPUnit config file is `tests/units.mysql.xml`{.docutils .literal}. From your Kanboard directory, run the command `phpunit -c tests/units.mysql.xml`{.docutils .literal}.
+Конфигурационный файл HPUnit - `tests/units.mysql.xml`{.docutils .literal}. Из директории Kanboard запустите команду `phpunit -c tests/units.mysql.xml`{.docutils .literal}.
 
 
 
-### Test with Postgresql[¶](#test-with-postgresql "Ссылка на этот заголовок")
+### Тестирование с Postgresql[¶](#test-with-postgresql "Ссылка на этот заголовок")
 
 
 
-You must have Postgresql installed on localhost.
+У вас должен быть локально установлен Postgresql.
 
 
 
-By default, those credentials are used:
+По умолчанию, используются следующие учетные данные:
 
 
 
@@ -142,39 +148,41 @@ By default, those credentials are used:
 
 
 
-Be sure to allow the user `postgres`{.docutils .literal} to create and drop databases. The database is recreated for each execution.
+Убедитесь, что пользователь `postgres`{.docutils .literal} может создавать и удалять базу данных. База данных пересоздается при каждом выполнении теста.
 
 
 
-The PHPUnit config file is `tests/units.postgres.xml`{.docutils .literal}. From your Kanboard directory, run the command `phpunit -c tests/units.postgres.xml`{.docutils .literal}.
+Конфигурационных файл PHPUnit - `tests/units.postgres.xml`{.docutils .literal}. Из директории Kanboard, запустите команду `phpunit -c tests/units.postgres.xml`{.docutils .literal}.
 
 
 
-Integration Tests[¶](#integration-tests "Ссылка на этот заголовок")
+Тесты интеграции[¶](#integration-tests "Ссылка на этот заголовок")
 
--------------------------------------------------------------------
-
-
-
-Actually only the API calls are tested.
+------------------------------------------------------------------
 
 
 
-Real HTTP calls are made with those tests. So a local instance of Kanboard is necessary and must listen on `http://localhost:8000/`{.docutils .literal}.
+Фактически тестируются только вызовы API.
 
 
 
-All data will be removed/altered by the test suite. Moreover the script will reset and set a new API key.
+Реальные HTTP calls выполняются с этими тестами. Поэтому, необходим локальный экземпляр Канборда, который слушает на `http://localhost:8000/`{.docutils .literal}.
 
 
 
-1.  Start a local instance of Kanboard `php -S 127.0.0.1:8000`{.docutils .literal}
-
-2.  Run the test suite from another terminal
+Все данные будут удалены/изменены при тестировании. Более того скрипт будет сброшен и установлен новый ключ API.
 
 
 
-The same method as above is used to run tests across different databases:
+1.  Запустите локольный экземпляр Канборда: `php -S 127.0.0.1:8000`{.docutils .literal}
+
+
+
+2.  Запустите тест в другом терминале
+
+
+
+Этот же метод используется для запуска тестов для разных баз данных:
 
 
 
@@ -186,7 +194,7 @@ The same method as above is used to run tests across different databases:
 
 
 
-Example:
+Пример:
 
 
 
@@ -214,13 +222,13 @@ Example:
 
 
 
-Continuous Integration with Travis-CI[¶](#continuous-integration-with-travis-ci "Ссылка на этот заголовок")
+Непрерывная интеграция с Travis-CI[¶](#continuous-integration-with-travis-ci "Ссылка на этот заголовок")
 
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
 
 
-After each commit pushed on the main repository, unit tests are executed across 5 different versions of PHP:
+После каждого commit влитого в мой репозиторий, юнит тесты выполняются для 5 различных версий PHP:
 
 
 
@@ -236,11 +244,11 @@ After each commit pushed on the main repository, unit tests are executed across 
 
 
 
-Each version of PHP is tested against the 3 supported database: Sqlite, Mysql and Postgresql.
+При тестировании каждой версии PHP используются 3 поддерживаемые базы данных: Sqlite, Mysql and Postgresql.
 
 
 
-The Travis config file `.travis.yml`{.docutils .literal} is located on the root directory of Kanboard.
+Конфигурационный файл Travis - `.travis.yml`{.docutils .literal} - находится в корневой директории Kanboard.
 
 
 
@@ -248,21 +256,21 @@ The Travis config file `.travis.yml`{.docutils .literal} is located on the root 
 
 
 
--   [Automated tests](#)
+-   [Автоматизированные тесты](#)
 
-    -   [Requirements](#requirements)
+    -   [Требования](#requirements)
 
-    -   [Unit Tests](#unit-tests)
+    -   [Unit тесты](#unit-tests)
 
-        -   [Test with Sqlite](#test-with-sqlite)
+        -   [Тестирование с Sqlite](#test-with-sqlite)
 
-        -   [Test with Mysql](#test-with-mysql)
+        -   [Тестирование с Mysql](#test-with-mysql)
 
-        -   [Test with Postgresql](#test-with-postgresql)
+        -   [Тестирование с Postgresql](#test-with-postgresql)
 
-    -   [Integration Tests](#integration-tests)
+    -   [Тесты интеграции](#integration-tests)
 
-    -   [Continuous Integration with Travis-CI](#continuous-integration-with-travis-ci)
+    -   [Непрерывная интеграция с Travis-CI](#continuous-integration-with-travis-ci)
 
 
 

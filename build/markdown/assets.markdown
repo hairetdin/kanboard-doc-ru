@@ -1,44 +1,50 @@
-How to build assets (Javascript and CSS files)[¶](#how-to-build-assets-javascript-and-css-files "Ссылка на этот заголовок")
+Как создать asset (Javascript и CSS файлы)[¶](#how-to-build-assets-javascript-and-css-files "Ссылка на этот заголовок")
 
-===========================================================================================================================
-
-
-
-Stylesheet and Javascript files are merged together and minified.
+=======================================================================================================================
 
 
 
--   Original CSS files are stored in the folder `assets/css/src/*.css`{.docutils .literal}
-
--   Original Javascript code is stored in the folder `assets/js/src/*.js`{.docutils .literal}
-
--   `assets/*/vendor.min.*`{.docutils .literal} are external dependencies merged and minified
-
--   `assets/*/app.min.*`{.docutils .literal} are application source code merged and minified
+Файлы CSS стилей и Javascript объединены вместе и минимизированы.
 
 
 
-Requirements[¶](#requirements "Ссылка на этот заголовок")
-
----------------------------------------------------------
+-   Оригинальные файлы CSS хранятся в каталоге `assets/css/src/*.css`{.docutils .literal}
 
 
 
--   [NodeJS](https://nodejs.org/) with `npm`{.docutils .literal}
+-   Оригинальные файлы Javascript хранятся в каталоге `assets/js/src/*.js`{.docutils .literal}
 
 
 
-Building Javascript and CSS files[¶](#building-javascript-and-css-files "Ссылка на этот заголовок")
-
----------------------------------------------------------------------------------------------------
+-   `assets/*/vendor.min.*`{.docutils .literal} - внешние зависимости объединены и минимизированы
 
 
 
-Kanboard use [Gulp](http://gulpjs.com/) to build the assets and [Bower](http://bower.io/) to manage dependencies. These tools are installed as NodeJS dependencies into the project.
+-   `assets/*/app.min.*`{.docutils .literal} - исходный код приложения объединены и минимизированы
 
 
 
-### Run everything[¶](#run-everything "Ссылка на этот заголовок")
+Требования[¶](#requirements "Ссылка на этот заголовок")
+
+-------------------------------------------------------
+
+
+
+-   [NodeJS](https://nodejs.org/) с `npm`{.docutils .literal}
+
+
+
+Сборка файлов Javascript и CSS[¶](#building-javascript-and-css-files "Ссылка на этот заголовок")
+
+------------------------------------------------------------------------------------------------
+
+
+
+Канборд использует [Gulp](http://gulpjs.com/) для сборки asset и [Bower](http://bower.io/) для управления зависимостями. Эти утилиты устанавлены в проекте как зависимости NodeJS.
+
+
+
+### Запустить все[¶](#run-everything "Ссылка на этот заголовок")
 
 
 
@@ -46,7 +52,7 @@ Kanboard use [Gulp](http://gulpjs.com/) to build the assets and [Bower](http://b
 
 
 
-### Build `vendor.min.js`{.docutils .literal} and `vendor.min.css`{.docutils .literal}[¶](#build-vendor-min-js-and-vendor-min-css "Ссылка на этот заголовок")
+### Собрать `vendor.min.js`{.docutils .literal} и `vendor.min.css`{.docutils .literal}[¶](#build-vendor-min-js-and-vendor-min-css "Ссылка на этот заголовок")
 
 
 
@@ -54,7 +60,7 @@ Kanboard use [Gulp](http://gulpjs.com/) to build the assets and [Bower](http://b
 
 
 
-### Build `app.min.js`{.docutils .literal}[¶](#build-app-min-js "Ссылка на этот заголовок")
+### Собрать `app.min.js`{.docutils .literal}[¶](#build-app-min-js "Ссылка на этот заголовок")
 
 
 
@@ -62,7 +68,7 @@ Kanboard use [Gulp](http://gulpjs.com/) to build the assets and [Bower](http://b
 
 
 
-### Build `app.min.css`{.docutils .literal}[¶](#build-app-min-css "Ссылка на этот заголовок")
+### Собрать `app.min.css`{.docutils .literal}[¶](#build-app-min-css "Ссылка на этот заголовок")
 
 
 
@@ -70,13 +76,13 @@ Kanboard use [Gulp](http://gulpjs.com/) to build the assets and [Bower](http://b
 
 
 
-Notes[¶](#notes "Ссылка на этот заголовок")
+Примечание[¶](#notes "Ссылка на этот заголовок")
 
--------------------------------------------
+------------------------------------------------
 
 
 
-Building assets is not possible from the Kanboard’s archive, you have to clone the repository.
+Сборка asset невозможна из архива Kanboard, вы должны клонировать репозиторий.
 
 
 
@@ -84,21 +90,21 @@ Building assets is not possible from the Kanboard’s archive, you have to clone
 
 
 
--   [How to build assets (Javascript and CSS files)](#)
+-   [Как создать asset (Javascript и CSS файлы)](#)
 
-    -   [Requirements](#requirements)
+    -   [Требования](#requirements)
 
-    -   [Building Javascript and CSS files](#building-javascript-and-css-files)
+    -   [Сборка файлов Javascript и CSS](#building-javascript-and-css-files)
 
-        -   [Run everything](#run-everything)
+        -   [Запустить все](#run-everything)
 
-        -   [Build `vendor.min.js`{.docutils .literal} and `vendor.min.css`{.docutils .literal}](#build-vendor-min-js-and-vendor-min-css)
+        -   [Собрать `vendor.min.js`{.docutils .literal} и `vendor.min.css`{.docutils .literal}](#build-vendor-min-js-and-vendor-min-css)
 
-        -   [Build `app.min.js`{.docutils .literal}](#build-app-min-js)
+        -   [Собрать `app.min.js`{.docutils .literal}](#build-app-min-js)
 
-        -   [Build `app.min.css`{.docutils .literal}](#build-app-min-css)
+        -   [Собрать `app.min.css`{.docutils .literal}](#build-app-min-css)
 
-    -   [Notes](#notes)
+    -   [Примечание](#notes)
 
 
 

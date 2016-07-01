@@ -1,50 +1,64 @@
-Coding standards[¶](#coding-standards "Ссылка на этот заголовок")
+Стандарты используемые при написании кода[¶](#coding-standards "Ссылка на этот заголовок")
 
-=================================================================
-
-
-
-PHP code[¶](#php-code "Ссылка на этот заголовок")
-
--------------------------------------------------
+==========================================================================================
 
 
 
--   Indentation: 4 spaces
+Код PHP[¶](#php-code "Ссылка на этот заголовок")
 
--   Line return: Unix =\> `\n`{.docutils .literal}
-
--   Encoding: UTF-8
-
--   Use only the opening tags `<?php`{.docutils .literal} or `<?=`{.docutils .literal} for templates, but **never** use `<?`{.docutils .literal}
-
--   Always write PHPdoc comments for methods and class properties
-
--   Coding style: [PSR-1](http://www.php-fig.org/psr/psr-1/) and [PSR-2](http://www.php-fig.org/psr/psr-2/)
+------------------------------------------------
 
 
 
-JavaScript code[¶](#javascript-code "Ссылка на этот заголовок")
-
----------------------------------------------------------------
+-   Отступ: 4 пробела
 
 
 
--   Indentation: 4 spaces
-
--   Line return: Unix =\> `\n`{.docutils .literal}
+-   Перевод строки: Unix =\> `\n`{.docutils .literal}
 
 
 
-CSS code[¶](#css-code "Ссылка на этот заголовок")
-
--------------------------------------------------
+-   Кодировка: UTF-8
 
 
 
--   Indentation: 4 spaces
+-   Используйте только открытые теги `<?php`{.docutils .literal} or `<?=`{.docutils .literal} для templates, но **никогда** не используйте `<?`{.docutils .literal}
 
--   Line return: Unix =\> `\n`{.docutils .literal}
+
+
+-   Всегда пишите коментарии PHPdoc для свойств методов и классов
+
+
+
+-   Стиль кодирования: [PSR-1](http://www.php-fig.org/psr/psr-1/) и [PSR-2](http://www.php-fig.org/psr/psr-2/)
+
+
+
+Код JavaScript[¶](#javascript-code "Ссылка на этот заголовок")
+
+--------------------------------------------------------------
+
+
+
+-   Отступ: 4 пробела
+
+
+
+-   Перевод строки: Unix =\> `\n`{.docutils .literal}
+
+
+
+Код CSS[¶](#css-code "Ссылка на этот заголовок")
+
+------------------------------------------------
+
+
+
+-   Отступ: 4 пробела
+
+
+
+-   Перевод строки: Unix =\> `\n`{.docutils .literal}
 
 
 
@@ -52,13 +66,13 @@ CSS code[¶](#css-code "Ссылка на этот заголовок")
 
 
 
--   [Coding standards](#)
+-   [Стандарты используемые при написании кода](#)
 
-    -   [PHP code](#php-code)
+    -   [Код PHP](#php-code)
 
-    -   [JavaScript code](#javascript-code)
+    -   [Код JavaScript](#javascript-code)
 
-    -   [CSS code](#css-code)
+    -   [Код CSS](#css-code)
 
 
 
