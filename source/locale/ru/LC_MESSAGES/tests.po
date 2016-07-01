@@ -3,92 +3,100 @@
 # This file is distributed under the same license as the Kanboard russian
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# amir <amir.hairetdinov@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kanboard russian 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-01 16:13+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-01 11:54+0500\n"
+"Last-Translator: amir <amir.hairetdinov@gmail.com>\n"
+"Language-Team: Russian <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../source/tests.rst:2
 msgid "Automated tests"
-msgstr ""
+msgstr "Автоматизированные тесты"
 
 #: ../../source/tests.rst:4
 msgid ""
-"`PHPUnit <https://phpunit.de/>`__ is used to run automated tests on "
-"Kanboard."
+"`PHPUnit <https://phpunit.de/>`__ is used to run automated tests on Kanboard."
 msgstr ""
+"`PHPUnit <https://phpunit.de/>`__ используется для запуска "
+"автоматизированных тестов в Канборд."
 
 #: ../../source/tests.rst:7
 msgid ""
-"You can run tests across different databases (Sqlite, Mysql and "
-"Postgresql) to be sure that the result is the same everywhere."
+"You can run tests across different databases (Sqlite, Mysql and Postgresql) "
+"to be sure that the result is the same everywhere."
 msgstr ""
+"Вы можете запускать тесты для разных баз данных (Sqlite, Mysql and "
+"Postgresql), чтобы убедится, что результаты будут одинаковые."
 
 #: ../../source/tests.rst:11
 msgid "Requirements"
-msgstr ""
+msgstr "Требования"
 
 #: ../../source/tests.rst:13
 msgid "Linux/Unix machine"
-msgstr ""
+msgstr "Компьютер Linux/Unix"
 
 #: ../../source/tests.rst:14
 msgid "PHP cli"
-msgstr ""
+msgstr "PHP cli "
 
 #: ../../source/tests.rst:15
 msgid "PHPUnit installed"
-msgstr ""
+msgstr "Установленный PHPUnit"
 
 #: ../../source/tests.rst:16
 msgid "Mysql and Postgresql (optional)"
-msgstr ""
+msgstr "Mysql и Postgresql (опционально)"
 
 #: ../../source/tests.rst:19
 msgid "Unit Tests"
-msgstr ""
+msgstr "Unit тесты"
 
 #: ../../source/tests.rst:22
 msgid "Test with Sqlite"
-msgstr ""
+msgstr "Тестирование с Sqlite"
 
 #: ../../source/tests.rst:24
 msgid ""
-"Sqlite tests use a in-memory database, nothing is written on the file "
-"system."
+"Sqlite tests use a in-memory database, nothing is written on the file system."
 msgstr ""
+"Sqlite тестирование использует базу данных в памяти, без использования "
+"записи на файловую систему."
 
 #: ../../source/tests.rst:27
 msgid ""
-"The PHPUnit config file is ``tests/units.sqlite.xml``. From your Kanboard"
-" directory, run the command ``phpunit -c tests/units.sqlite.xml``."
+"The PHPUnit config file is ``tests/units.sqlite.xml``. From your Kanboard "
+"directory, run the command ``phpunit -c tests/units.sqlite.xml``."
 msgstr ""
+"Конфигурационный файл PHPUnit - ``tests/units.sqlite.xml``. Из директории "
+"Kanboard запустите команду ``phpunit -c tests/units.sqlite.xml``."
 
 #: ../../source/tests.rst:31 ../../source/tests.rst:112
 msgid "Example:"
-msgstr ""
+msgstr "Пример:"
 
 #: ../../source/tests.rst:56
 msgid "Test with Mysql"
-msgstr ""
+msgstr "Тестирование с Mysql"
 
 #: ../../source/tests.rst:58
 msgid "You must have Mysql or MariaDb installed on localhost."
-msgstr ""
+msgstr "У вас должна быть локально установлена база данных Mysql или MariaDb."
 
 #: ../../source/tests.rst:60 ../../source/tests.rst:77
 msgid "By default, those credentials are used:"
-msgstr ""
+msgstr "По умолчанию, используются следующие учетные данные:"
 
 #: ../../source/tests.rst:62 ../../source/tests.rst:79
 msgid "Hostname: **localhost**"
@@ -108,21 +116,23 @@ msgstr ""
 
 #: ../../source/tests.rst:67
 msgid "For each execution the database is dropped and created again."
-msgstr ""
+msgstr "При каждом выполнении база данных удаляется и создается снова."
 
 #: ../../source/tests.rst:69
 msgid ""
 "The PHPUnit config file is ``tests/units.mysql.xml``. From your Kanboard "
 "directory, run the command ``phpunit -c tests/units.mysql.xml``."
 msgstr ""
+"Конфигурационный файл HPUnit - ``tests/units.mysql.xml``. Из директории "
+"Kanboard запустите команду ``phpunit -c tests/units.mysql.xml``."
 
 #: ../../source/tests.rst:73
 msgid "Test with Postgresql"
-msgstr ""
+msgstr "Тестирование с Postgresql"
 
 #: ../../source/tests.rst:75
 msgid "You must have Postgresql installed on localhost."
-msgstr ""
+msgstr "У вас должен быть локально установлен Postgresql."
 
 #: ../../source/tests.rst:80
 msgid "Username: **postgres**"
@@ -133,45 +143,53 @@ msgid ""
 "Be sure to allow the user ``postgres`` to create and drop databases. The "
 "database is recreated for each execution."
 msgstr ""
+"Убедитесь, что пользователь ``postgres`` может создавать и удалять базу "
+"данных. База данных пересоздается при каждом выполнении теста."
 
 #: ../../source/tests.rst:87
 msgid ""
-"The PHPUnit config file is ``tests/units.postgres.xml``. From your "
-"Kanboard directory, run the command ``phpunit -c "
-"tests/units.postgres.xml``."
+"The PHPUnit config file is ``tests/units.postgres.xml``. From your Kanboard "
+"directory, run the command ``phpunit -c tests/units.postgres.xml``."
 msgstr ""
+"Конфигурационных файл PHPUnit - ``tests/units.postgres.xml``. Из директории "
+"Kanboard, запустите команду ``phpunit -c tests/units.postgres.xml``."
 
 #: ../../source/tests.rst:92
 msgid "Integration Tests"
-msgstr ""
+msgstr "Тесты интеграции"
 
 #: ../../source/tests.rst:94
 msgid "Actually only the API calls are tested."
-msgstr ""
+msgstr "Фактически тестируются только вызовы API."
 
 #: ../../source/tests.rst:96
 msgid ""
-"Real HTTP calls are made with those tests. So a local instance of "
-"Kanboard is necessary and must listen on ``http://localhost:8000/``."
+"Real HTTP calls are made with those tests. So a local instance of Kanboard "
+"is necessary and must listen on ``http://localhost:8000/``."
 msgstr ""
+"Реальные HTTP calls выполняются с этими тестами. Поэтому, необходим "
+"локальный экземпляр Канборда, который слушает на ``http://localhost:8000/``."
 
 #: ../../source/tests.rst:99
 msgid ""
-"All data will be removed/altered by the test suite. Moreover the script "
-"will reset and set a new API key."
+"All data will be removed/altered by the test suite. Moreover the script will "
+"reset and set a new API key."
 msgstr ""
+"Все данные будут удалены/изменены при тестировании. Более того скрипт будет "
+"сброшен и установлен новый ключ API."
 
 #: ../../source/tests.rst:102
 msgid "Start a local instance of Kanboard ``php -S 127.0.0.1:8000``"
-msgstr ""
+msgstr "Запустите локольный экземпляр Канборда: ``php -S 127.0.0.1:8000`` "
 
 #: ../../source/tests.rst:103
 msgid "Run the test suite from another terminal"
-msgstr ""
+msgstr "Запустите тест в другом терминале"
 
 #: ../../source/tests.rst:105
-msgid "The same method as above is used to run tests across different databases:"
-msgstr ""
+msgid ""
+"The same method as above is used to run tests across different databases:"
+msgstr "Этот же метод используется для запуска тестов для разных баз данных:"
 
 #: ../../source/tests.rst:108
 msgid "Sqlite: ``phpunit -c tests/integration.sqlite.xml``"
@@ -187,13 +205,15 @@ msgstr ""
 
 #: ../../source/tests.rst:129
 msgid "Continuous Integration with Travis-CI"
-msgstr ""
+msgstr "Непрерывная интеграция с Travis-CI"
 
 #: ../../source/tests.rst:131
 msgid ""
 "After each commit pushed on the main repository, unit tests are executed "
 "across 5 different versions of PHP:"
 msgstr ""
+"После каждого commit влитого в мой репозиторий, юнит тесты выполняются для 5 "
+"различных версий PHP:"
 
 #: ../../source/tests.rst:134
 msgid "PHP 7.0"
@@ -220,54 +240,13 @@ msgid ""
 "Each version of PHP is tested against the 3 supported database: Sqlite, "
 "Mysql and Postgresql."
 msgstr ""
+"При тестировании каждой версии PHP используются 3 поддерживаемые базы "
+"данных: Sqlite, Mysql and Postgresql."
 
 #: ../../source/tests.rst:143
 msgid ""
-"The Travis config file ``.travis.yml`` is located on the root directory "
-"of Kanboard."
+"The Travis config file ``.travis.yml`` is located on the root directory of "
+"Kanboard."
 msgstr ""
-
-#~ msgid "PHPUnit is used to run automated tests on Kanboard."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The PHPUnit config file is "
-#~ "tests/units.sqlite.xml. From your Kanboard "
-#~ "directory, run the command phpunit -c"
-#~ " tests/units.sqlite.xml."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The PHPUnit config file is "
-#~ "tests/units.mysql.xml. From your Kanboard "
-#~ "directory, run the command phpunit -c"
-#~ " tests/units.mysql.xml."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Be sure to allow the user postgres"
-#~ " to create and drop databases. The"
-#~ " database is recreated for each "
-#~ "execution."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The PHPUnit config file is "
-#~ "tests/units.postgres.xml. From your Kanboard "
-#~ "directory, run the command phpunit -c"
-#~ " tests/units.postgres.xml."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Real HTTP calls are made with "
-#~ "those tests. So a local instance "
-#~ "of Kanboard is necessary and must "
-#~ "listen on http://localhost:8000/."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The Travis config file .travis.yml is"
-#~ " located on the root directory of "
-#~ "Kanboard."
-#~ msgstr ""
-
+"Конфигурационный файл Travis - ``.travis.yml`` - находится в корневой "
+"директории Kanboard."

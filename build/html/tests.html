@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Automated tests &mdash; Документация Kanboard russian 0.0.1</title>
+    <title>Автоматизированные тесты &mdash; Документация Kanboard russian 0.0.1</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -40,30 +40,29 @@
           <div class="body" role="main">
             
   <div class="section" id="automated-tests">
-<h1>Automated tests<a class="headerlink" href="#automated-tests" title="Ссылка на этот заголовок">¶</a></h1>
-<p><a class="reference external" href="https://phpunit.de/">PHPUnit</a> is used to run automated tests on
-Kanboard.</p>
-<p>You can run tests across different databases (Sqlite, Mysql and
-Postgresql) to be sure that the result is the same everywhere.</p>
+<h1>Автоматизированные тесты<a class="headerlink" href="#automated-tests" title="Ссылка на этот заголовок">¶</a></h1>
+<p><a class="reference external" href="https://phpunit.de/">PHPUnit</a> используется для запуска автоматизированных тестов в Канборд.</p>
+<p>Вы можете запускать тесты для разных баз данных (Sqlite, Mysql and Postgresql), чтобы убедится, что результаты будут одинаковые.</p>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Требования<a class="headerlink" href="#requirements" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li>Linux/Unix machine</li>
-<li>PHP cli</li>
-<li>PHPUnit installed</li>
-<li>Mysql and Postgresql (optional)</li>
+<li><p class="first">Компьютер Linux/Unix</p>
+</li>
+<li><p class="first">PHP cli</p>
+</li>
+<li><p class="first">Установленный PHPUnit</p>
+</li>
+<li><p class="first">Mysql и Postgresql (опционально)</p>
+</li>
 </ul>
 </div>
 <div class="section" id="unit-tests">
-<h2>Unit Tests<a class="headerlink" href="#unit-tests" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Unit тесты<a class="headerlink" href="#unit-tests" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="test-with-sqlite">
-<h3>Test with Sqlite<a class="headerlink" href="#test-with-sqlite" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Sqlite tests use a in-memory database, nothing is written on the file
-system.</p>
-<p>The PHPUnit config file is <code class="docutils literal"><span class="pre">tests/units.sqlite.xml</span></code>. From your
-Kanboard directory, run the command
-<code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.sqlite.xml</span></code>.</p>
-<p>Example:</p>
+<h3>Тестирование с Sqlite<a class="headerlink" href="#test-with-sqlite" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Sqlite тестирование использует базу данных в памяти, без использования записи на файловую систему.</p>
+<p>Конфигурационный файл PHPUnit - <code class="docutils literal"><span class="pre">tests/units.sqlite.xml</span></code>. Из директории Kanboard запустите команду <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.sqlite.xml</span></code>.</p>
+<p>Пример:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>phpunit -c tests/units.sqlite.xml
 
 PHPUnit 5.0.0 by Sebastian Bergmann and contributors.
@@ -87,55 +86,50 @@ OK (649 tests, 43595 assertions)
 </div>
 </div>
 <div class="section" id="test-with-mysql">
-<h3>Test with Mysql<a class="headerlink" href="#test-with-mysql" title="Ссылка на этот заголовок">¶</a></h3>
-<p>You must have Mysql or MariaDb installed on localhost.</p>
-<p>By default, those credentials are used:</p>
+<h3>Тестирование с Mysql<a class="headerlink" href="#test-with-mysql" title="Ссылка на этот заголовок">¶</a></h3>
+<p>У вас должна быть локально установлена база данных Mysql или MariaDb.</p>
+<p>По умолчанию, используются следующие учетные данные:</p>
 <ul class="simple">
 <li>Hostname: <strong>localhost</strong></li>
 <li>Username: <strong>root</strong></li>
 <li>Password: none</li>
 <li>Database: <strong>kanboard_unit_test</strong></li>
 </ul>
-<p>For each execution the database is dropped and created again.</p>
-<p>The PHPUnit config file is <code class="docutils literal"><span class="pre">tests/units.mysql.xml</span></code>. From your Kanboard
-directory, run the command <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.mysql.xml</span></code>.</p>
+<p>При каждом выполнении база данных удаляется и создается снова.</p>
+<p>Конфигурационный файл HPUnit - <code class="docutils literal"><span class="pre">tests/units.mysql.xml</span></code>. Из директории Kanboard запустите команду <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.mysql.xml</span></code>.</p>
 </div>
 <div class="section" id="test-with-postgresql">
-<h3>Test with Postgresql<a class="headerlink" href="#test-with-postgresql" title="Ссылка на этот заголовок">¶</a></h3>
-<p>You must have Postgresql installed on localhost.</p>
-<p>By default, those credentials are used:</p>
+<h3>Тестирование с Postgresql<a class="headerlink" href="#test-with-postgresql" title="Ссылка на этот заголовок">¶</a></h3>
+<p>У вас должен быть локально установлен Postgresql.</p>
+<p>По умолчанию, используются следующие учетные данные:</p>
 <ul class="simple">
 <li>Hostname: <strong>localhost</strong></li>
 <li>Username: <strong>postgres</strong></li>
 <li>Password: none</li>
 <li>Database: <strong>kanboard_unit_test</strong></li>
 </ul>
-<p>Be sure to allow the user <code class="docutils literal"><span class="pre">postgres</span></code> to create and drop databases. The
-database is recreated for each execution.</p>
-<p>The PHPUnit config file is <code class="docutils literal"><span class="pre">tests/units.postgres.xml</span></code>. From your
-Kanboard directory, run the command
-<code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.postgres.xml</span></code>.</p>
+<p>Убедитесь, что пользователь <code class="docutils literal"><span class="pre">postgres</span></code> может создавать и удалять базу данных. База данных пересоздается при каждом выполнении теста.</p>
+<p>Конфигурационных файл PHPUnit - <code class="docutils literal"><span class="pre">tests/units.postgres.xml</span></code>. Из директории Kanboard, запустите команду <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/units.postgres.xml</span></code>.</p>
 </div>
 </div>
 <div class="section" id="integration-tests">
-<h2>Integration Tests<a class="headerlink" href="#integration-tests" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Actually only the API calls are tested.</p>
-<p>Real HTTP calls are made with those tests. So a local instance of
-Kanboard is necessary and must listen on <code class="docutils literal"><span class="pre">http://localhost:8000/</span></code>.</p>
-<p>All data will be removed/altered by the test suite. Moreover the script
-will reset and set a new API key.</p>
+<h2>Тесты интеграции<a class="headerlink" href="#integration-tests" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Фактически тестируются только вызовы API.</p>
+<p>Реальные HTTP calls выполняются с этими тестами. Поэтому, необходим локальный экземпляр Канборда, который слушает на <code class="docutils literal"><span class="pre">http://localhost:8000/</span></code>.</p>
+<p>Все данные будут удалены/изменены при тестировании. Более того скрипт будет сброшен и установлен новый ключ API.</p>
 <ol class="arabic simple">
-<li>Start a local instance of Kanboard <code class="docutils literal"><span class="pre">php</span> <span class="pre">-S</span> <span class="pre">127.0.0.1:8000</span></code></li>
-<li>Run the test suite from another terminal</li>
+<li><p class="first">Запустите локольный экземпляр Канборда: <code class="docutils literal"><span class="pre">php</span> <span class="pre">-S</span> <span class="pre">127.0.0.1:8000</span></code></p>
+</li>
+<li><p class="first">Запустите тест в другом терминале</p>
+</li>
 </ol>
-<p>The same method as above is used to run tests across different
-databases:</p>
+<p>Этот же метод используется для запуска тестов для разных баз данных:</p>
 <ul class="simple">
 <li>Sqlite: <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/integration.sqlite.xml</span></code></li>
 <li>Mysql: <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/integration.mysql.xml</span></code></li>
 <li>Postgresql: <code class="docutils literal"><span class="pre">phpunit</span> <span class="pre">-c</span> <span class="pre">tests/integration.postgres.xml</span></code></li>
 </ul>
-<p>Example:</p>
+<p>Пример:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>phpunit -c tests/integration.sqlite.xml
 
 PHPUnit 5.0.0 by Sebastian Bergmann and contributors.
@@ -151,9 +145,8 @@ OK (135 tests, 526 assertions)
 </div>
 </div>
 <div class="section" id="continuous-integration-with-travis-ci">
-<h2>Continuous Integration with Travis-CI<a class="headerlink" href="#continuous-integration-with-travis-ci" title="Ссылка на этот заголовок">¶</a></h2>
-<p>After each commit pushed on the main repository, unit tests are executed
-across 5 different versions of PHP:</p>
+<h2>Непрерывная интеграция с Travis-CI<a class="headerlink" href="#continuous-integration-with-travis-ci" title="Ссылка на этот заголовок">¶</a></h2>
+<p>После каждого commit влитого в мой репозиторий, юнит тесты выполняются для 5 различных версий PHP:</p>
 <ul class="simple">
 <li>PHP 7.0</li>
 <li>PHP 5.6</li>
@@ -161,10 +154,8 @@ across 5 different versions of PHP:</p>
 <li>PHP 5.4</li>
 <li>PHP 5.3</li>
 </ul>
-<p>Each version of PHP is tested against the 3 supported database: Sqlite,
-Mysql and Postgresql.</p>
-<p>The Travis config file <code class="docutils literal"><span class="pre">.travis.yml</span></code> is located on the root directory
-of Kanboard.</p>
+<p>При тестировании каждой версии PHP используются 3 поддерживаемые базы данных: Sqlite, Mysql and Postgresql.</p>
+<p>Конфигурационный файл Travis - <code class="docutils literal"><span class="pre">.travis.yml</span></code> - находится в корневой директории Kanboard.</p>
 </div>
 </div>
 
@@ -176,16 +167,16 @@ of Kanboard.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Оглавление</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Automated tests</a><ul>
-<li><a class="reference internal" href="#requirements">Requirements</a></li>
-<li><a class="reference internal" href="#unit-tests">Unit Tests</a><ul>
-<li><a class="reference internal" href="#test-with-sqlite">Test with Sqlite</a></li>
-<li><a class="reference internal" href="#test-with-mysql">Test with Mysql</a></li>
-<li><a class="reference internal" href="#test-with-postgresql">Test with Postgresql</a></li>
+<li><a class="reference internal" href="#">Автоматизированные тесты</a><ul>
+<li><a class="reference internal" href="#requirements">Требования</a></li>
+<li><a class="reference internal" href="#unit-tests">Unit тесты</a><ul>
+<li><a class="reference internal" href="#test-with-sqlite">Тестирование с Sqlite</a></li>
+<li><a class="reference internal" href="#test-with-mysql">Тестирование с Mysql</a></li>
+<li><a class="reference internal" href="#test-with-postgresql">Тестирование с Postgresql</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#integration-tests">Integration Tests</a></li>
-<li><a class="reference internal" href="#continuous-integration-with-travis-ci">Continuous Integration with Travis-CI</a></li>
+<li><a class="reference internal" href="#integration-tests">Тесты интеграции</a></li>
+<li><a class="reference internal" href="#continuous-integration-with-travis-ci">Непрерывная интеграция с Travis-CI</a></li>
 </ul>
 </li>
 </ul>
