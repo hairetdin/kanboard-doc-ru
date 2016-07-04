@@ -13,7 +13,7 @@ from shutil import copytree
 
 root_dir = os.getcwd()
 source_dir = os.getcwd() + '/build/html'
-assets_dir = ['_images', '_sources', '_static']
+assets_dir = ['_images']
 cwd = os.chdir(source_dir)
 out_dir = root_dir + '/build/markdown'
 
