@@ -13,16 +13,17 @@ from shutil import copytree
 
 root_dir = os.getcwd()
 source_dir = os.getcwd() + '/build/html'
-assets_dir = ['_images']
 cwd = os.chdir(source_dir)
 out_dir = root_dir + '/build/markdown'
 
 if not os.path.exists(out_dir):
     os.makedirs(out_dir)
 
-for a_dir in assets_dir:
-    out_asset_dir = os.path.join(out_dir, a_dir)
-    copytree(os.path.join(source_dir, a_dir), out_asset_dir)
+# copy assets folder
+#assets_dir = ['_images']
+#for a_dir in assets_dir:
+#    out_asset_dir = os.path.join(out_dir, a_dir)
+#    copytree(os.path.join(source_dir, a_dir), out_asset_dir)
 
 pdoc_args = ['--no-wrap']
 
@@ -34,6 +35,14 @@ def replace_html_to_md(file_name):
             line = re.sub(r'.html', '.markdown', line)
         else:
             line = line
+        line = re.sub(r'_images', 'screenshots', line)
+        line = re.sub(r'©2016, Kanboard.ru. .*', '[Русская документация Kanboard](http://kanboard.ru/doc/)', line)
+        line = re.sub(r'-   \[Исходный текст\]\(_sources.*', ' ', line)
+        line = re.sub(r'Введите слова для поиска или имя модуля, класса или функции.', ' ', line)
+        line = re.sub(r'### Быстрый поиск', ' ', line)
+        line = re.sub(r'### Эта страница', ' ', line)
+        line = re.sub(r'### Related Topics', ' ', line)
+        line = re.sub(r'-   \[Documentation overview\]\(.*', ' ', line)
         print(line)
 
 for file_name in os.listdir(source_dir):
